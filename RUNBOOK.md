@@ -42,8 +42,3 @@ the Hub; accept the terms once and run `hf auth login` before `pin_models.py`.
 One runner per experiment under `scripts/wNN_*.py`, writing `results/wNN_<exp>/` (summary JSON + per-row
 JSONL). Long runs: `caffeinate -dims .venv/bin/python scripts/... 2>&1 | tee logs/<name>.log`. macOS lowers
 the priority of long MLX jobs after ~20–30 min; `sudo renice -n -5 -p <pid>` restores it.
-
-## 4. Anonymity
-
-`scripts/anon_check.sh` greps tracked files and history against a local blocklist and must pass before any
-push or artifact build.

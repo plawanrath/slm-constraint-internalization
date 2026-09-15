@@ -13,6 +13,5 @@ __pycache__/
 .DS_Store
 logs/*.log
 results/**/*.sqlite
-scripts/anon_blocklist.txt
 data/processed/
 *.egg-info/

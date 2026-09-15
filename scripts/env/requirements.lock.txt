@@ -60,8 +60,6 @@ requests==2.34.2
 rich==15.0.0
 rpds-py==2026.6.3
 safetensors==0.8.0
-## !! Could not determine repository location
--e /Users/plawanrath/Documents/GitHub-public/slm-constraint-internalization
 scipy==1.17.1
 sentencepiece==0.2.2
 shellingham==1.5.4
