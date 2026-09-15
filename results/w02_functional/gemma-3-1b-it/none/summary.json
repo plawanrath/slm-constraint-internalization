@@ -1,0 +1,63 @@
+{
+  "k_trials": 5,
+  "float_rel": 0.0001,
+  "float_abs": 1e-05,
+  "candidates": "/Users/plawanrath/Documents/GitHub-public/slm-constraint-internalization/results/w02_functional/gemma-3-1b-it/none/candidates.jsonl",
+  "dialects": {
+    "arith": {
+      "n_gold": 150,
+      "gold_excluded": {
+        "no_observable_output": 4,
+        "unprintable_memref_dtype": 1
+      },
+      "gold_gate_fail": [
+        "045_alloc-load-dealloc",
+        "150_void-dealloc"
+      ],
+      "gold_gate_pass": 143,
+      "cand_status_counts": {
+        "scored": 4,
+        "not_verify_valid": 136,
+        "signature_mismatch": 3
+      },
+      "n_scored": 4,
+      "n_scored_dim_relaxed": 0,
+      "n_functional_match": 3,
+      "match_rate_among_scored": 0.75,
+      "match_ci95_among_scored": [
+        0.25,
+        1.0
+      ],
+      "match_rate_among_gate_passed": 0.02097902097902098,
+      "match_ci95_among_gate_passed": [
+        0.0,
+        0.04895104895104895
+      ]
+    },
+    "linalg": {
+      "n_gold": 30,
+      "gold_excluded": {},
+      "gold_gate_fail": [],
+      "gold_gate_pass": 30,
+      "cand_status_counts": {
+        "not_verify_valid": 22,
+        "scored": 4,
+        "signature_mismatch": 4
+      },
+      "n_scored": 4,
+      "n_scored_dim_relaxed": 0,
+      "n_functional_match": 3,
+      "match_rate_among_scored": 0.75,
+      "match_ci95_among_scored": [
+        0.25,
+        1.0
+      ],
+      "match_rate_among_gate_passed": 0.1,
+      "match_ci95_among_gate_passed": [
+        0.0,
+        0.23333333333333334
+      ]
+    }
+  },
+  "elapsed_min": 3.4
+}

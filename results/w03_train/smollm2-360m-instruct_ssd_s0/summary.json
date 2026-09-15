@@ -1,0 +1,51 @@
+{
+  "tag": "smollm2-360m-instruct_ssd_s0",
+  "config": {
+    "model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "revision": "a10cc1512eabd3dde888204e902eca88bddb4951",
+    "method": "ssd",
+    "seed": 0,
+    "lora": false,
+    "lora_rank": 32,
+    "lr": 2e-05,
+    "epochs": 2,
+    "batch_prompts": 32,
+    "group": 4,
+    "temp": 0.8,
+    "max_tokens": 300,
+    "lam": 1.0,
+    "train_pool": "data/pools/train_v1.jsonl",
+    "dev_pool": "data/pools/dev_v1.jsonl",
+    "n_train": 2000,
+    "n_dev": 100,
+    "eval_every": 25,
+    "out_dir": "results/w03_train",
+    "tag": "smollm2-360m-instruct_ssd_s0",
+    "micro_batch": 4,
+    "reward": "task",
+    "beta": 0.1
+  },
+  "steps": 126,
+  "best": {
+    "dev_none": 0.3882,
+    "step": 125
+  },
+  "final_dev": {
+    "none": {
+      "verify": 0.75,
+      "reward": 0.3844,
+      "distinct": 84,
+      "mean_len": 77.7,
+      "unfinished": 1
+    },
+    "c1_c2": {
+      "verify": 0.75,
+      "reward": 0.3844,
+      "distinct": 84,
+      "mean_len": 76.3,
+      "unfinished": 0
+    }
+  },
+  "ckpt_dir": "/Users/plawanrath/Documents/GitHub-public/slm-constraint-internalization/models/ckpt/smollm2-360m-instruct_ssd_s0",
+  "elapsed_min": 156.7
+}

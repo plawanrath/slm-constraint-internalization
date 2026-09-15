@@ -81,17 +81,32 @@ class GrammarLogitsProcessor:
         return biased.reshape(shape)
 
 
-def replay_allowed_sets(llg_tok: LLTokenizer, grammar: str, gen_tokens: list[int]) -> np.ndarray:
+def _set_bit(row: np.ndarray, tok: int) -> None:
+    row[tok // 32] |= np.int32(1 << (tok % 32)) if tok % 32 < 31 else np.int32(-2147483648)
+
+
+def replay_allowed_sets(llg_tok: LLTokenizer, grammar: str, gen_tokens: list[int],
+                        eos_id: int | None = None) -> np.ndarray:
     """Bitmask (len(gen_tokens), ceil(vocab/32)) int32: row t is the allowed set *before*
-    emitting gen_tokens[t]. Raises if a token was never legal (the sequence was not
-    produced under this grammar)."""
+    emitting gen_tokens[t]. Once the grammar has accepted (matcher stopped) only EOS is
+    allowed; an EOS token is legal there and ends the replay. Raises if a token was never
+    legal (the sequence was not produced under this grammar)."""
     m = LLMatcher(llg_tok, grammar)
     n = len(gen_tokens)
     out = allocate_token_bitmask(max(n, 1), llg_tok.vocab_size)
+    eos = eos_id if eos_id is not None else llg_tok.eos_token
     for t, tok in enumerate(gen_tokens):
         if m.is_stopped():
-            out[t:] = 0; break
+            out[t:] = 0; _set_bit(out[t], eos)
+            if int(tok) == eos:
+                break
+            raise ValueError(f"token {tok} at position {t} after grammar acceptance (only EOS allowed)")
         fill_next_token_bitmask(m, out, t)
+        if int(tok) == eos:
+            # llguidance includes EOS in the mask only at accepting states
+            if not bitmask_to_bool(out[t], llg_tok.vocab_size)[eos]:
+                raise ValueError(f"EOS at position {t} is illegal under the grammar")
+            break
         m.consume_token(int(tok))
         if m.is_error():
             raise ValueError(f"token {tok} at position {t} is illegal under the grammar: {m.get_error()}")

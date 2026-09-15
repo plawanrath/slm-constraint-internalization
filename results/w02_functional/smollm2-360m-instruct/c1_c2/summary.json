@@ -1,0 +1,63 @@
+{
+  "k_trials": 5,
+  "float_rel": 0.0001,
+  "float_abs": 1e-05,
+  "candidates": "/Users/plawanrath/Documents/GitHub-public/slm-constraint-internalization/results/w02_functional/smollm2-360m-instruct/c1_c2/candidates.jsonl",
+  "dialects": {
+    "arith": {
+      "n_gold": 150,
+      "gold_excluded": {
+        "no_observable_output": 4,
+        "unprintable_memref_dtype": 1
+      },
+      "gold_gate_fail": [
+        "045_alloc-load-dealloc",
+        "150_void-dealloc"
+      ],
+      "gold_gate_pass": 143,
+      "cand_status_counts": {
+        "scored": 34,
+        "not_verify_valid": 96,
+        "signature_mismatch": 13
+      },
+      "n_scored": 34,
+      "n_scored_dim_relaxed": 0,
+      "n_functional_match": 22,
+      "match_rate_among_scored": 0.6470588235294118,
+      "match_ci95_among_scored": [
+        0.47058823529411764,
+        0.7941176470588235
+      ],
+      "match_rate_among_gate_passed": 0.15384615384615385,
+      "match_ci95_among_gate_passed": [
+        0.0979020979020979,
+        0.21678321678321677
+      ]
+    },
+    "linalg": {
+      "n_gold": 30,
+      "gold_excluded": {},
+      "gold_gate_fail": [],
+      "gold_gate_pass": 30,
+      "cand_status_counts": {
+        "scored": 6,
+        "not_verify_valid": 13,
+        "signature_mismatch": 11
+      },
+      "n_scored": 6,
+      "n_scored_dim_relaxed": 1,
+      "n_functional_match": 4,
+      "match_rate_among_scored": 0.6666666666666666,
+      "match_ci95_among_scored": [
+        0.3333333333333333,
+        1.0
+      ],
+      "match_rate_among_gate_passed": 0.13333333333333333,
+      "match_ci95_among_gate_passed": [
+        0.03333333333333333,
+        0.26666666666666666
+      ]
+    }
+  },
+  "elapsed_min": 3.9
+}

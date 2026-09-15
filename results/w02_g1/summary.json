@@ -1,0 +1,48 @@
+{
+  "model": "HuggingFaceTB/SmolLM2-135M-Instruct",
+  "n_prompts": 64,
+  "group": 2,
+  "history": [
+    {
+      "step": 0,
+      "loss": 1.0050724726170301,
+      "loss_mask": 0.9769357535988092,
+      "loss_grpo": 0.0281367227435112,
+      "n_rollouts": 128,
+      "mean_reward": 0.25,
+      "mean_legal_mass": 0.3764629083481816,
+      "dt_s": 19.3
+    },
+    {
+      "step": 1,
+      "loss": 0.7501022480428219,
+      "loss_mask": 0.7663767728954554,
+      "loss_grpo": -0.016274532303214073,
+      "n_rollouts": 128,
+      "mean_reward": 0.265625,
+      "mean_legal_mass": 0.4646937126495586,
+      "dt_s": 17.8
+    },
+    {
+      "step": 2,
+      "loss": 0.36830605985596776,
+      "loss_mask": 0.4006018778309226,
+      "loss_grpo": -0.032295819371938705,
+      "n_rollouts": 128,
+      "mean_reward": 0.234375,
+      "mean_legal_mass": 0.6699167166499911,
+      "dt_s": 16.9
+    },
+    {
+      "step": 3,
+      "loss": 0.24071465129964054,
+      "loss_mask": 0.2595478433649987,
+      "loss_grpo": -0.018833193578757346,
+      "n_rollouts": 128,
+      "mean_reward": 0.3359375,
+      "mean_legal_mass": 0.7714003007249572,
+      "dt_s": 17.6
+    }
+  ],
+  "g1_pass": true
+}

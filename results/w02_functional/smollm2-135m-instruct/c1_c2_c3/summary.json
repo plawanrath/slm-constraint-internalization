@@ -1,0 +1,63 @@
+{
+  "k_trials": 5,
+  "float_rel": 0.0001,
+  "float_abs": 1e-05,
+  "candidates": "/Users/plawanrath/Documents/GitHub-public/slm-constraint-internalization/results/w02_functional/smollm2-135m-instruct/c1_c2_c3/candidates.jsonl",
+  "dialects": {
+    "arith": {
+      "n_gold": 150,
+      "gold_excluded": {
+        "no_observable_output": 4,
+        "unprintable_memref_dtype": 1
+      },
+      "gold_gate_fail": [
+        "045_alloc-load-dealloc",
+        "150_void-dealloc"
+      ],
+      "gold_gate_pass": 143,
+      "cand_status_counts": {
+        "scored": 19,
+        "signature_mismatch": 61,
+        "not_verify_valid": 63
+      },
+      "n_scored": 19,
+      "n_scored_dim_relaxed": 0,
+      "n_functional_match": 11,
+      "match_rate_among_scored": 0.5789473684210527,
+      "match_ci95_among_scored": [
+        0.3684210526315789,
+        0.7894736842105263
+      ],
+      "match_rate_among_gate_passed": 0.07692307692307693,
+      "match_ci95_among_gate_passed": [
+        0.03496503496503497,
+        0.1258741258741259
+      ]
+    },
+    "linalg": {
+      "n_gold": 30,
+      "gold_excluded": {},
+      "gold_gate_fail": [],
+      "gold_gate_pass": 30,
+      "cand_status_counts": {
+        "scored": 5,
+        "signature_mismatch": 11,
+        "not_verify_valid": 14
+      },
+      "n_scored": 5,
+      "n_scored_dim_relaxed": 2,
+      "n_functional_match": 5,
+      "match_rate_among_scored": 1.0,
+      "match_ci95_among_scored": [
+        1.0,
+        1.0
+      ],
+      "match_rate_among_gate_passed": 0.16666666666666666,
+      "match_ci95_among_gate_passed": [
+        0.03333333333333333,
+        0.3
+      ]
+    }
+  },
+  "elapsed_min": 3.8
+}

@@ -1,0 +1,30 @@
+{
+  "n_candidates": 24000,
+  "n_kept": 12242,
+  "dropped": {
+    "exact_mlir_vs_protected": 2955,
+    "nl_8gram_overlap_vs_protected": 3592,
+    "dup_nl_within_pool": 5211
+  },
+  "n_protected": 790,
+  "ngram": 8,
+  "unique_mlir_in_kept": 6992,
+  "unique_nl_in_kept": 12242,
+  "gates": {
+    "pass": 12242
+  },
+  "gate_pass_rate": 1.0,
+  "train": {
+    "n": 7257,
+    "arith+func": 6000,
+    "linalg": 1257
+  },
+  "dev": {
+    "n": 500
+  },
+  "available_after_gates": {
+    "arith+func": 10860,
+    "linalg": 1382
+  },
+  "elapsed_min": 28.2
+}
