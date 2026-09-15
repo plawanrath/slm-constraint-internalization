@@ -1,0 +1,326 @@
+{
+  "google/gemma-3-270m-it": {
+    "revision": "ac82b4e820549b854eebf28ce6dedaf9fdfa17b3",
+    "load_s": 2.2,
+    "vocab": 262145,
+    "prompt_is_literal_chatml": false,
+    "cells": {
+      "none": {
+        "parse_valid": false,
+        "n_tokens": 61,
+        "tok_s": 363.7,
+        "dt": 0.17,
+        "finished": true,
+        "attempts": 1,
+        "mask_errors": [],
+        "text": "module {\n  func.func @f(%a : i32 , %b : i32) -> i32 {\n    %0 = arith.multiply %a , %b : i32\n    return %0 : i32\n  }\n}\n",
+        "verify_valid": false
+      },
+      "c1": {
+        "parse_valid": true,
+        "n_tokens": 69,
+        "tok_s": 330.8,
+        "dt": 0.21,
+        "finished": true,
+        "attempts": 1,
+        "mask_errors": [],
+        "text": "module {\n  func.func @f(%a : i32 , %b : i32) -> i32 {\n    %0 = arith.mulf %a , %b : i32\n    return %0 : i32\n  }\n}\n\n\n\n\n\n\n\n",
+        "replay_ok": true,
+        "verify_valid": false
+      },
+      "c1_c2": {
+        "parse_valid": true,
+        "n_tokens": 72,
+        "tok_s": 350.6,
+        "dt": 0.21,
+        "finished": true,
+        "attempts": 1,
+        "mask_errors": [],
+        "text": "module {\n  func.func @f(%a : i32 , %b : i32) -> i32 {\n    %0 = arith.mulf %a , %b : \n    \n\tf32 return %0 : i32\n  }\n}\n\n\n\n\n\n\n\n",
+        "replay_ok": true,
+        "verify_valid": false
+      },
+      "c1_c2_c3": {
+        "parse_valid": true,
+        "n_tokens": 69,
+        "tok_s": 42.3,
+        "dt": 1.63,
+        "finished": true,
+        "attempts": 5,
+        "mask_errors": [],
+        "text": "module {\n  func.func @f(%a : i32 , %b : i32) -> i32 {\n    %0 = arith.mulf %a , %b : f32\n    return %0 : i32\n  }\n}\n\n\n\n\n\n\n\n",
+        "verify_valid": false
+      }
+    }
+  },
+  "google/gemma-3-1b-it": {
+    "revision": "dcc83ea841ab6100d6b47a070329e1ba4cf78752",
+    "load_s": 2.2,
+    "vocab": 262145,
+    "prompt_is_literal_chatml": false,
+    "cells": {
+      "none": {
+        "parse_valid": false,
+        "n_tokens": 60,
+        "tok_s": 145.6,
+        "dt": 0.41,
+        "finished": true,
+        "attempts": 1,
+        "mask_errors": [],
+        "text": "module {\n  func.func @f(%a : i32 , %b : i32) -> i32 {\n    %0 = arith.mul %a , %b : i32\n    return %0 : i32\n  }\n}",
+        "verify_valid": false
+      },
+      "c1": {
+        "parse_valid": true,
+        "n_tokens": 67,
+        "tok_s": 139.4,
+        "dt": 0.48,
+        "finished": true,
+        "attempts": 1,
+        "mask_errors": [],
+        "text": "module {\n  func.func @f(%a : i32 , %b : i32) -> i32 {\n    %0 = arith.mulf %a , %b : i32\n    return %0 : i32\n  }\n}\n \n  \n  ",
+        "replay_ok": true,
+        "verify_valid": false
+      },
+      "c1_c2": {
+        "parse_valid": true,
+        "n_tokens": 63,
+        "tok_s": 141.8,
+        "dt": 0.44,
+        "finished": true,
+        "attempts": 1,
+        "mask_errors": [],
+        "text": "module {\n  func.func @f(%a : i32 , %b : i32) -> i32 {\n    %0 = arith.mulf %a , %b : \n    \n f32  \n}\n}\n  \n  \n ",
+        "replay_ok": true,
+        "verify_valid": false
+      },
+      "c1_c2_c3": {
+        "parse_valid": true,
+        "n_tokens": 65,
+        "tok_s": 30.9,
+        "dt": 2.1,
+        "finished": true,
+        "attempts": 3,
+        "mask_errors": [],
+        "text": "module {\n  func.func @f(%a : i32 , %b : i32) -> i32 {\n    %0 = arith.addi %a , %b : i32\n    return %0 : i32\n  }\n}\n  \n    ",
+        "verify_valid": true
+      }
+    }
+  },
+  "HuggingFaceTB/SmolLM2-135M-Instruct": {
+    "revision": "12fd25f77366fa6b3b4b768ec3050bf629380bac",
+    "load_s": 0.2,
+    "vocab": 49152,
+    "prompt_is_literal_chatml": true,
+    "cells": {
+      "none": {
+        "parse_valid": false,
+        "n_tokens": 300,
+        "tok_s": 541.1,
+        "dt": 0.55,
+        "finished": false,
+        "attempts": 1,
+        "mask_errors": [],
+        "text": "Here's a simple function that multiplies two i32 values:\n\n```python\ndef multiply(a, b):\n    return a * b\n```\n\nYou can use this function like this:\n\n```python\nprint(multiply(10, 20))  # Outputs: 200\n```\n\nThis function uses the `*` operator to multiply two i32 values, and the `%` operator to perform the multiplication. The result is returned as the output of the function.\n\nNote that this function as",
+        "verify_valid": false
+      },
+      "c1": {
+        "parse_valid": true,
+        "n_tokens": 65,
+        "tok_s": 411.1,
+        "dt": 0.16,
+        "finished": true,
+        "attempts": 1,
+        "mask_errors": [],
+        "text": "module {\n  func.func @f(%a : i32 , %b : i32) -> i32 {\n    %0 = arith.muli %a , %b : i32\n    return %0 : i32\n  }\n}\n\n\n\n\n\n\n\n",
+        "replay_ok": true,
+        "verify_valid": true
+      },
+      "c1_c2": {
+        "parse_valid": true,
+        "n_tokens": 65,
+        "tok_s": 439.0,
+        "dt": 0.15,
+        "finished": true,
+        "attempts": 1,
+        "mask_errors": [],
+        "text": "module {\n  func.func @f(%a : i32 , %b : i32) -> i32 {\n    %0 = arith.muli %a , %b : i32\n    return %0 : i32\n  }\n}\n\n\n\n\n\n\n\n",
+        "replay_ok": true,
+        "verify_valid": true
+      },
+      "c1_c2_c3": {
+        "parse_valid": true,
+        "n_tokens": 65,
+        "tok_s": 433.1,
+        "dt": 0.15,
+        "finished": true,
+        "attempts": 1,
+        "mask_errors": [],
+        "text": "module {\n  func.func @f(%a : i32 , %b : i32) -> i32 {\n    %0 = arith.muli %a , %b : i32\n    return %0 : i32\n  }\n}\n\n\n\n\n\n\n\n",
+        "verify_valid": true
+      }
+    }
+  },
+  "HuggingFaceTB/SmolLM2-360M-Instruct": {
+    "revision": "a10cc1512eabd3dde888204e902eca88bddb4951",
+    "load_s": 0.2,
+    "vocab": 49152,
+    "prompt_is_literal_chatml": true,
+    "cells": {
+      "none": {
+        "parse_valid": false,
+        "n_tokens": 237,
+        "tok_s": 348.1,
+        "dt": 0.68,
+        "finished": true,
+        "attempts": 1,
+        "mask_errors": [],
+        "text": "Example 1:\nTask: Write a function that adds two i32 values.\nMLIR:\nmodule {\n  func.func @f(%a : i32 , %b : i32) -> i32 {\n    %0 = arith.addi %a , %b : i32\n    return %0 : i32\n  }\n}\n\nExample 2:\nTask: Write a function returning the i32 constant 42.\nMLIR:\nmodule {\n  func.func @f() -> i32 {\n    %0 = arith.constant 42 : i32\n    return %0 : i32\n  }\n}\n\nExample 3:\nTask: Load element at index i from a memre",
+        "verify_valid": false
+      },
+      "c1": {
+        "parse_valid": true,
+        "n_tokens": 57,
+        "tok_s": 274.0,
+        "dt": 0.21,
+        "finished": true,
+        "attempts": 1,
+        "mask_errors": [],
+        "text": "module {\n  func.func @f(%a : i32 , %b : i32) -> i32 {\n    %0 = arith.muli %a , %b : i32\n    return %0 : i32\n  }\n}",
+        "replay_ok": true,
+        "verify_valid": true
+      },
+      "c1_c2": {
+        "parse_valid": true,
+        "n_tokens": 57,
+        "tok_s": 276.4,
+        "dt": 0.21,
+        "finished": true,
+        "attempts": 1,
+        "mask_errors": [],
+        "text": "module {\n  func.func @f(%a : i32 , %b : i32) -> i32 {\n    %0 = arith.muli %a , %b : i32\n    return %0 : i32\n  }\n}",
+        "replay_ok": true,
+        "verify_valid": true
+      },
+      "c1_c2_c3": {
+        "parse_valid": true,
+        "n_tokens": 57,
+        "tok_s": 276.1,
+        "dt": 0.21,
+        "finished": true,
+        "attempts": 1,
+        "mask_errors": [],
+        "text": "module {\n  func.func @f(%a : i32 , %b : i32) -> i32 {\n    %0 = arith.muli %a , %b : i32\n    return %0 : i32\n  }\n}",
+        "verify_valid": true
+      }
+    }
+  },
+  "HuggingFaceTB/SmolLM2-1.7B-Instruct": {
+    "revision": "31b70e2e869a7173562077fd711b654946d38674",
+    "load_s": 0.3,
+    "vocab": 49152,
+    "prompt_is_literal_chatml": true,
+    "cells": {
+      "none": {
+        "parse_valid": false,
+        "n_tokens": 56,
+        "tok_s": 101.1,
+        "dt": 0.55,
+        "finished": true,
+        "attempts": 1,
+        "mask_errors": [],
+        "text": "module {\n  func.func @f(%a : i32 , %b : i32) -> i32 {\n    %0 = arith.mul %a , %b : i32\n    return %0 : i32\n  }\n}",
+        "verify_valid": false
+      },
+      "c1": {
+        "parse_valid": true,
+        "n_tokens": 57,
+        "tok_s": 100.5,
+        "dt": 0.57,
+        "finished": true,
+        "attempts": 1,
+        "mask_errors": [],
+        "text": "module {\n  func.func @f(%a : i32 , %b : i32) -> i32 {\n    %0 = arith.muli %a , %b : i32\n    return %0 : i32\n  }\n}",
+        "replay_ok": true,
+        "verify_valid": true
+      },
+      "c1_c2": {
+        "parse_valid": true,
+        "n_tokens": 57,
+        "tok_s": 99.2,
+        "dt": 0.57,
+        "finished": true,
+        "attempts": 1,
+        "mask_errors": [],
+        "text": "module {\n  func.func @f(%a : i32 , %b : i32) -> i32 {\n    %0 = arith.muli %a , %b : i32\n    return %0 : i32\n  }\n}",
+        "replay_ok": true,
+        "verify_valid": true
+      },
+      "c1_c2_c3": {
+        "parse_valid": true,
+        "n_tokens": 57,
+        "tok_s": 100.5,
+        "dt": 0.57,
+        "finished": true,
+        "attempts": 1,
+        "mask_errors": [],
+        "text": "module {\n  func.func @f(%a : i32 , %b : i32) -> i32 {\n    %0 = arith.muli %a , %b : i32\n    return %0 : i32\n  }\n}",
+        "verify_valid": true
+      }
+    }
+  },
+  "HuggingFaceTB/SmolLM3-3B": {
+    "revision": "a07cc9a04f16550a088caea529712d1d335b0ac1",
+    "load_s": 1.2,
+    "vocab": 128256,
+    "prompt_is_literal_chatml": false,
+    "cells": {
+      "none": {
+        "parse_valid": false,
+        "n_tokens": 49,
+        "tok_s": 54.4,
+        "dt": 0.9,
+        "finished": true,
+        "attempts": 1,
+        "mask_errors": [],
+        "text": "module {\n  func.func @f(%a : i32 , %b : i32) -> i32 {\n    %0 = arith.multiply %a , %b : i32\n    return %0 : i32\n  }",
+        "verify_valid": false
+      },
+      "c1": {
+        "parse_valid": true,
+        "n_tokens": 52,
+        "tok_s": 55.6,
+        "dt": 0.94,
+        "finished": true,
+        "attempts": 1,
+        "mask_errors": [],
+        "text": "module {\n  func.func @f(%a : i32 , %b : i32) -> i32 {\n    %0 = arith.muli %a , %b : i32\n    return %0 : i32\n  } \n}",
+        "replay_ok": true,
+        "verify_valid": true
+      },
+      "c1_c2": {
+        "parse_valid": true,
+        "n_tokens": 52,
+        "tok_s": 55.7,
+        "dt": 0.93,
+        "finished": true,
+        "attempts": 1,
+        "mask_errors": [],
+        "text": "module {\n  func.func @f(%a : i32 , %b : i32) -> i32 {\n    %0 = arith.muli %a , %b : i32\n    return %0 : i32\n  } \n}",
+        "replay_ok": true,
+        "verify_valid": true
+      },
+      "c1_c2_c3": {
+        "parse_valid": true,
+        "n_tokens": 52,
+        "tok_s": 55.6,
+        "dt": 0.93,
+        "finished": true,
+        "attempts": 1,
+        "mask_errors": [],
+        "text": "module {\n  func.func @f(%a : i32 , %b : i32) -> i32 {\n    %0 = arith.muli %a , %b : i32\n    return %0 : i32\n  } \n}",
+        "verify_valid": true
+      }
+    }
+  }
+}

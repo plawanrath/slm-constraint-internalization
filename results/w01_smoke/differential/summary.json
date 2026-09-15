@@ -1,0 +1,31 @@
+{
+  "k_trials": 5,
+  "float_rel": 0.0001,
+  "float_abs": 1e-05,
+  "candidates": "/tmp/cands_smoke.jsonl",
+  "dialects": {
+    "arith": {
+      "n_gold": 3,
+      "gold_excluded": {},
+      "gold_gate_fail": [],
+      "gold_gate_pass": 3,
+      "cand_status_counts": {
+        "scored": 3
+      },
+      "n_scored": 3,
+      "n_scored_dim_relaxed": 0,
+      "n_functional_match": 3,
+      "match_rate_among_scored": 1.0,
+      "match_ci95_among_scored": [
+        1.0,
+        1.0
+      ],
+      "match_rate_among_gate_passed": 1.0,
+      "match_ci95_among_gate_passed": [
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "elapsed_min": 0.1
+}

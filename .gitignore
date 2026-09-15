@@ -1,0 +1,18 @@
+# docs/ holds plans, tracker, ADRs, daily logs, paper drafts, and private notes: never tracked
+docs/
+paper/
+# environments and weights
+.venv/
+models/
+*.safetensors
+*.gguf
+# caches
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+logs/*.log
+results/**/*.sqlite
+scripts/anon_blocklist.txt
+data/processed/
+*.egg-info/

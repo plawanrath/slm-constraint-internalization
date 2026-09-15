@@ -1,0 +1,8 @@
+# Pinned upstream model revisions (HF commit hashes). Regenerate with scripts/env/pin_models.py.
+# Format: <hf_repo>@<revision>
+HuggingFaceTB/SmolLM2-135M-Instruct@12fd25f77366fa6b3b4b768ec3050bf629380bac
+HuggingFaceTB/SmolLM2-360M-Instruct@a10cc1512eabd3dde888204e902eca88bddb4951
+HuggingFaceTB/SmolLM2-1.7B-Instruct@31b70e2e869a7173562077fd711b654946d38674
+HuggingFaceTB/SmolLM3-3B@a07cc9a04f16550a088caea529712d1d335b0ac1
+google/gemma-3-270m-it@ac82b4e820549b854eebf28ce6dedaf9fdfa17b3
+google/gemma-3-1b-it@dcc83ea841ab6100d6b47a070329e1ba4cf78752

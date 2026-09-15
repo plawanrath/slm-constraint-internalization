@@ -1,0 +1,17 @@
+services:
+  llvm:
+    build:
+      context: .
+      dockerfile: Dockerfile.llvm
+    image: sci-llvm:19.1.7
+    container_name: sci-llvm
+    volumes:
+      - ../..:/work
+      - llvm-cache:/cache
+    working_dir: /work
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+
+volumes:
+  llvm-cache:

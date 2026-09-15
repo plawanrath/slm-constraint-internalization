@@ -1,0 +1,111 @@
+// C1-only generation grammar: explicit WS + bounded identifiers, but NO
+// type-domain splits (ablation for isolating C2's contribution).
+// Op families lumped: ARITH_BIN accepts any binop, type comes from a single
+// `type` rule with no constraint that op↔type domains match.
+
+start: module_op
+
+module_op: "module" WS "{" WS func_def WS "}" WS?
+
+func_def: "func.func" WS SYM "(" params? ")" func_ret? WS "{" WS op_body WS "}"
+
+params: param (WS "," WS param)*
+param: SSA WS ":" WS type
+
+func_ret: WS "->" WS ret_types
+ret_types: type | "(" type (WS "," WS type)* ")"
+
+op_body: op
+       | op WS op
+       | op WS op WS op
+       | op WS op WS op WS op
+       | op WS op WS op WS op WS op
+       | op WS op WS op WS op WS op WS op
+
+op: op_const
+  | op_binop
+  | op_cmp
+  | op_select
+  | op_cast
+  | op_alloc
+  | op_load
+  | op_store
+  | op_dealloc
+  | op_dim
+  | op_linalg_named
+  | op_return_void
+  | op_return_val
+
+// C1 only: single constant rule, any literal, any type.
+op_const:  SSA WS "=" WS "arith.constant" WS CONST_LIT WS ":" WS type
+op_binop:  SSA WS "=" WS ARITH_BIN WS SSA WS "," WS SSA WS ":" WS type
+op_cmp:    SSA WS "=" WS ARITH_CMP WS CMP_PRED WS "," WS SSA WS "," WS SSA WS ":" WS type
+op_select: SSA WS "=" WS "arith.select" WS SSA WS "," WS SSA WS "," WS SSA WS ":" WS type
+op_cast:   SSA WS "=" WS ARITH_CAST WS SSA WS ":" WS type WS "to" WS type
+
+op_alloc:   SSA WS "=" WS "memref.alloc" "(" ")" WS ":" WS memref_type
+op_load:    SSA WS "=" WS "memref.load" WS SSA "[" idx_list? "]" WS ":" WS memref_type
+op_store:   "memref.store" WS SSA WS "," WS SSA "[" idx_list? "]" WS ":" WS memref_type
+op_dealloc: "memref.dealloc" WS SSA WS ":" WS memref_type
+op_dim:     SSA WS "=" WS "memref.dim" WS SSA WS "," WS SSA WS ":" WS memref_type
+
+// linalg named ops (C1-only: no type-domain split; one unified production).
+// Memref semantics only. Supports single forms:
+//   linalg.matmul  ins(%A, %B : T, T)  outs(%C : T)
+//   linalg.matvec  ins(%A, %x : T, T)  outs(%y : T)
+//   linalg.fill    ins(%v : T)         outs(%m : T)
+//   linalg.copy    ins(%s : T)         outs(%d : T)
+//   linalg.transpose ins(%s : T) outs(%d : T) permutation = [N,..]
+//   linalg.broadcast ins(%s : T) outs(%d : T) dimensions  = [N,..]
+//   linalg.{add,sub,mul,div}  ins(%a, %b : T, T) outs(%c : T)
+//   linalg.{exp,abs}          ins(%x : T)       outs(%y : T)
+op_linalg_named: LINALG_OP WS linalg_ins WS linalg_outs (WS linalg_attr)?
+linalg_ins:  "ins" WS? "(" WS? SSA (WS? "," WS? SSA)? WS? ":" WS type (WS? "," WS type)? WS? ")"
+linalg_outs: "outs" WS? "(" WS? SSA WS? ":" WS memref_type WS? ")"
+linalg_attr: ("permutation" | "dimensions") WS? "=" WS? "[" WS? (CONST_LIT (WS? "," WS? CONST_LIT)*)? WS? "]"
+LINALG_OP: "linalg.matmul" | "linalg.matvec" | "linalg.fill" | "linalg.copy"
+         | "linalg.transpose" | "linalg.broadcast"
+         | "linalg.add" | "linalg.sub" | "linalg.mul" | "linalg.div"
+         | "linalg.exp" | "linalg.abs"
+
+op_return_void: "return"
+op_return_val:  "return" WS SSA WS ":" WS type
+
+idx_list: SSA (WS "," WS SSA)*
+
+ARITH_BIN: "arith.addi" | "arith.subi" | "arith.muli"
+         | "arith.addf" | "arith.subf" | "arith.mulf"
+         | "arith.divsi" | "arith.divui" | "arith.divf"
+         | "arith.remsi" | "arith.remui" | "arith.remf"
+         | "arith.andi" | "arith.ori" | "arith.xori"
+         | "arith.shli" | "arith.shrsi" | "arith.shrui"
+         | "arith.maxsi" | "arith.maxui" | "arith.minsi" | "arith.minui"
+
+ARITH_CMP: "arith.cmpi" | "arith.cmpf"
+
+ARITH_CAST: "arith.extsi" | "arith.extui" | "arith.trunci"
+          | "arith.extf"  | "arith.truncf"
+          | "arith.sitofp" | "arith.uitofp"
+          | "arith.fptosi" | "arith.fptoui"
+          | "arith.index_cast" | "arith.index_castui"
+          | "arith.bitcast"
+
+CMP_PRED: "eq" | "ne" | "slt" | "sle" | "sgt" | "sge"
+        | "ult" | "ule" | "ugt" | "uge"
+        | "oeq" | "one" | "olt" | "ole" | "ogt" | "oge"
+        | "ueq" | "une" | "ord" | "uno" | "false" | "true"
+
+type: INT_TYPE | FLOAT_TYPE | INDEX_KW | memref_type
+INT_TYPE:   "i1" | "i8" | "i16" | "i32" | "i64"
+FLOAT_TYPE: "f16" | "bf16" | "f32" | "f64"
+INDEX_KW:   "index"
+
+memref_type: "memref" "<" memref_shape? type ">"
+memref_shape: DIM "x" (DIM "x")*
+DIM: /[0-9]+/ | "?"
+
+CONST_LIT: /-?[0-9]+(\.[0-9]+)?(e[+-]?[0-9]+)?/
+
+SSA: /%[a-zA-Z0-9_][a-zA-Z0-9_]{0,31}/
+SYM: /@[a-zA-Z_][a-zA-Z0-9_]{0,47}/
+WS: /[ \t\n]{1,8}/

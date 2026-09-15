@@ -1,0 +1,15 @@
+{"dialect": "arith", "id": "001_add-two-ints", "idx": 0, "trial": 0, "lower_ok": true, "exec_ok": true, "match": true, "err": ""}
+{"dialect": "arith", "id": "001_add-two-ints", "idx": 0, "trial": 1, "lower_ok": true, "exec_ok": true, "match": true, "err": ""}
+{"dialect": "arith", "id": "001_add-two-ints", "idx": 0, "trial": 2, "lower_ok": true, "exec_ok": true, "match": true, "err": ""}
+{"dialect": "arith", "id": "001_add-two-ints", "idx": 0, "trial": 3, "lower_ok": true, "exec_ok": true, "match": true, "err": ""}
+{"dialect": "arith", "id": "001_add-two-ints", "idx": 0, "trial": 4, "lower_ok": true, "exec_ok": true, "match": true, "err": ""}
+{"dialect": "arith", "id": "002_subtract-two-ints", "idx": 1, "trial": 0, "lower_ok": true, "exec_ok": true, "match": true, "err": ""}
+{"dialect": "arith", "id": "002_subtract-two-ints", "idx": 1, "trial": 1, "lower_ok": true, "exec_ok": true, "match": true, "err": ""}
+{"dialect": "arith", "id": "002_subtract-two-ints", "idx": 1, "trial": 2, "lower_ok": true, "exec_ok": true, "match": true, "err": ""}
+{"dialect": "arith", "id": "002_subtract-two-ints", "idx": 1, "trial": 3, "lower_ok": true, "exec_ok": true, "match": true, "err": ""}
+{"dialect": "arith", "id": "002_subtract-two-ints", "idx": 1, "trial": 4, "lower_ok": true, "exec_ok": true, "match": true, "err": ""}
+{"dialect": "arith", "id": "003_multiply-ints", "idx": 2, "trial": 0, "lower_ok": true, "exec_ok": true, "match": true, "err": ""}
+{"dialect": "arith", "id": "003_multiply-ints", "idx": 2, "trial": 1, "lower_ok": true, "exec_ok": true, "match": true, "err": ""}
+{"dialect": "arith", "id": "003_multiply-ints", "idx": 2, "trial": 2, "lower_ok": true, "exec_ok": true, "match": true, "err": ""}
+{"dialect": "arith", "id": "003_multiply-ints", "idx": 2, "trial": 3, "lower_ok": true, "exec_ok": true, "match": true, "err": ""}
+{"dialect": "arith", "id": "003_multiply-ints", "idx": 2, "trial": 4, "lower_ok": true, "exec_ok": true, "match": true, "err": ""}

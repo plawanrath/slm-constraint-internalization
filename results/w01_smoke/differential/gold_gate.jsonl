@@ -1,0 +1,3 @@
+{"dialect": "arith", "id": "001_add-two-ints", "idx": 0, "gate": "pass", "reason": null, "sig": {"name": "add", "arg_types": ["i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "002_subtract-two-ints", "idx": 1, "gate": "pass", "reason": null, "sig": {"name": "sub", "arg_types": ["i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "003_multiply-ints", "idx": 2, "gate": "pass", "reason": null, "sig": {"name": "mul", "arg_types": ["i64", "i64"], "ret": "i64"}}

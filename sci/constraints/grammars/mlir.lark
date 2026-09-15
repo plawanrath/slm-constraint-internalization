@@ -1,0 +1,370 @@
+// LARK grammar for a subset of MLIR covering arith + func + memref
+// with enough permissiveness to parse real L3 test samples (target-only subset).
+//
+// v2 changes vs v1 (iter 1 toward 95%):
+//   - SSA_VAL accepts `-`, `.`, `$` in names; optional `:N` multi-result suffix
+//   - func.return alias (alongside `return`)
+//   - trailing attr_dict on return
+//   - missing arith binops: ceildivsi, ceildivui, floordivsi, floordivui,
+//     maximumf (already), minimumf (already), maxnumf, minnumf
+//   - low-precision float types: f8E5M2, f8E4M3FN, f8E5M2FNUZ, f8E4M3FNUZ, f4E2M1FN
+//   - hex integer literals (`0xFF800000`) as constants
+//   - dense<...> attribute literal
+//   - full memref op set: subview, expand_shape, collapse_shape, reshape,
+//     reinterpret_cast, realloc, view, rank, prefetch, transpose, copy,
+//     alloca_scope (region-bearing), get_global, global
+//   - shape tokens parse cleanly via explicit regex `/[0-9?]+/x/`
+//   - func.func with `attributes { ... }` before body
+//   - comment handling improved (// and /* */ work regardless of content)
+
+start: top_item+
+
+top_item: type_alias_decl
+        | attr_alias_decl
+        | top_op_with_loc
+
+top_op_with_loc: top_op loc_suffix?
+loc_suffix: "loc" "(" LOC_CONTENT? ")"
+
+type_alias_decl: TYPE_ALIAS_NAME "=" type
+attr_alias_decl: ATTR_ALIAS_NAME "=" attr_value
+
+TYPE_ALIAS_NAME: /![a-zA-Z_][a-zA-Z0-9_]*/
+ATTR_ALIAS_NAME: /#[a-zA-Z_][a-zA-Z0-9_]*/
+
+top_op: module_op
+      | named_func_op
+      | return_op
+      | call_op
+      | global_memref_op
+      | arith_op
+      | memref_op
+      | linalg_op
+      | generic_op
+
+module_op: "module" SYM_NAME? attr_dict? "{" op* "}"
+
+op: op_inner loc_suffix?
+op_inner: named_func_op
+  | return_op
+  | call_op
+  | arith_op
+  | memref_op
+  | linalg_op
+  | alloca_scope_op
+  | alloca_scope_return
+  | global_memref_op
+  | generic_op
+
+// Function op — body is optional to cover both declarations (no body) and
+// definitions (with body). Merging these into one production avoids the
+// grammar ambiguity that slowed parsing.
+named_func_op: FUNC_KW VISIBILITY? SYM_NAME "(" func_args? ")" ("->" type_ret)? ("attributes" attr_dict)? func_body?
+
+// Function body: either a single implicit block of ops, or multiple labeled blocks.
+func_body: "{" block_body "}"
+block_body: op* (block_label op*)*
+block_label: BLOCK_ID block_args? ":"
+block_args: "(" block_arg ("," block_arg)* ")"
+block_arg: SSA_VAL ":" type
+BLOCK_ID: /\^[a-zA-Z_][a-zA-Z0-9_]*/
+
+FUNC_KW: "func.func" | "func"
+
+VISIBILITY: "private" | "public" | "nested"
+
+func_args: func_arg ("," func_arg)*
+// Named arg (%name: T) for definitions; positional (T) for declarations.
+func_arg: SSA_VAL ":" type attr_dict?
+        | type attr_dict?
+
+return_op: RETURN_KW (value_types)? attr_dict?
+
+RETURN_KW: "return" | "func.return"
+
+value_types: SSA_VAL ("," SSA_VAL)* (":" type_list)?
+
+call_op: (ssa_list "=")? CALL_KW SYM_NAME "(" ssa_list? ")" attr_dict? ":" function_type
+       | (ssa_list "=")? "call_indirect" SSA_VAL "(" ssa_list? ")" attr_dict? ":" function_type
+CALL_KW: "call" | "func.call"
+
+// Region-bearing memref op we need at least structurally.
+alloca_scope_op: (ssa_list "=")? "memref.alloca_scope" ("->" type_list)? "{" op* "}"
+alloca_scope_return: "memref.alloca_scope.return" (SSA_VAL)? attr_dict? (":" type_list)?
+
+// ---------------- arith dialect ----------------
+
+arith_op: arith_const
+        | arith_binop
+        | arith_cmp
+        | arith_select
+        | arith_cast
+        | arith_unary
+
+arith_const: SSA_VAL "=" CONSTANT_KW attr_dict? arith_const_value ":" type
+CONSTANT_KW: "arith.constant" | "constant"
+arith_const_value: attr_value | HEX_INT | dense_attr
+
+dense_attr: "dense" "<" (attr_value | array_attr) ">"
+
+// Binop may produce one result (addi, mulf, etc.) or a comma-separated pair
+// (mului_extended, addui_extended: low + high). `ssa_list` accepts both.
+arith_binop: ssa_list "=" ARITH_BINOP_NAME SSA_VAL "," SSA_VAL fastmath_flag? attr_dict? ":" type ("," type)?
+// Inline fastmath flag, e.g. `arith.addf %a, %b fastmath<fast> : f32`.
+fastmath_flag: "fastmath" "<" IDENT ("," IDENT)* ">"
+// cmpi/cmpf predicate can also be a quoted string: `arith.cmpf "ult", ...`.
+arith_cmp: SSA_VAL "=" ARITH_CMP_NAME (CMP_PREDICATE | ESCAPED_STRING) "," SSA_VAL "," SSA_VAL attr_dict? ":" type
+arith_select: SSA_VAL "=" "arith.select" SSA_VAL "," SSA_VAL "," SSA_VAL attr_dict? ":" type ("," type)?
+arith_cast: (SSA_VAL "=")? ARITH_CAST_NAME SSA_VAL ":" type "to" type
+arith_unary: SSA_VAL "=" ARITH_UNARY_NAME SSA_VAL fastmath_flag? attr_dict? ":" type
+
+// Generic op syntax: "dialect.op"(operands) attr_dict? : func_type
+// Used by MLIR to unambiguously represent any op regardless of custom printer.
+generic_op: (ssa_list "=")? ESCAPED_STRING "(" ssa_list? ")" generic_op_succs? attr_dict? ":" function_type
+generic_op_succs: "[" /[^\]]+/ "]"
+
+ARITH_BINOP_NAME: "arith.addi" | "arith.addf" | "arith.subi" | "arith.subf"
+                | "arith.muli" | "arith.mulf"
+                | "arith.divsi" | "arith.divui" | "arith.divf"
+                | "arith.ceildivsi" | "arith.ceildivui"
+                | "arith.floordivsi" | "arith.floordivui"
+                | "arith.remsi" | "arith.remui" | "arith.remf"
+                | "arith.andi" | "arith.ori" | "arith.xori"
+                | "arith.shli" | "arith.shrsi" | "arith.shrui"
+                | "arith.maxsi" | "arith.maxui" | "arith.minsi" | "arith.minui"
+                | "arith.maximumf" | "arith.minimumf"
+                | "arith.maxnumf"  | "arith.minnumf"
+                | "arith.addui_extended"
+                | "arith.mului_extended" | "arith.mulsi_extended"
+
+ARITH_CMP_NAME: "arith.cmpi" | "arith.cmpf"
+
+ARITH_CAST_NAME: "arith.index_cast" | "arith.index_castui"
+               | "arith.extsi" | "arith.extui" | "arith.extf"
+               | "arith.trunci" | "arith.truncf"
+               | "arith.sitofp" | "arith.uitofp"
+               | "arith.fptosi" | "arith.fptoui"
+               | "arith.bitcast"
+
+ARITH_UNARY_NAME: "arith.negf"
+
+CMP_PREDICATE: "eq" | "ne" | "slt" | "sle" | "sgt" | "sge"
+             | "ult" | "ule" | "ugt" | "uge"
+             | "oeq" | "one" | "olt" | "ole" | "ogt" | "oge"
+             | "ueq" | "une" | "ord" | "uno"
+             | "false" | "true"  // always-false / always-true predicates for arith.cmpf
+
+// ---------------- memref dialect ----------------
+
+memref_op: memref_alloc
+         | memref_alloca
+         | memref_dealloc
+         | memref_load
+         | memref_store
+         | memref_dim
+         | memref_cast
+         | memref_subview
+         | memref_expand_shape
+         | memref_collapse_shape
+         | memref_reshape
+         | memref_reinterpret_cast
+         | memref_realloc
+         | memref_view
+         | memref_rank
+         | memref_prefetch
+         | memref_transpose
+         | memref_copy
+         | memref_get_global
+         | memref_extract_aligned_ptr
+         | memref_memory_space_cast
+         | memref_store_no_assign
+         | memref_extract_strided_metadata
+         | memref_dma_start
+         | memref_dma_wait
+
+memref_alloc: SSA_VAL "=" "memref.alloc" "(" ssa_list? ")" ("[" ssa_list? "]")? attr_dict? ":" memref_type
+memref_alloca: SSA_VAL "=" "memref.alloca" "(" ssa_list? ")" ("[" ssa_list? "]")? attr_dict? ":" memref_type
+memref_dealloc: "memref.dealloc" SSA_VAL attr_dict? ":" memref_type
+memref_load: (SSA_VAL "=")? "memref.load" SSA_VAL "[" ssa_list? "]" attr_dict? ":" (memref_type | TYPE_ALIAS_NAME)
+memref_store: "memref.store" SSA_VAL "," SSA_VAL "[" ssa_list? "]" attr_dict? ":" (memref_type | TYPE_ALIAS_NAME)
+memref_dim: SSA_VAL "=" "memref.dim" SSA_VAL "," SSA_VAL attr_dict? ":" memref_type
+memref_cast: SSA_VAL "=" "memref.cast" SSA_VAL ":" memref_type "to" memref_type
+memref_subview: SSA_VAL "=" "memref.subview" SSA_VAL subview_range subview_range subview_range attr_dict? ":" memref_type "to" memref_type
+memref_expand_shape: SSA_VAL "=" "memref.expand_shape" SSA_VAL reassoc_list ("output_shape" "[" ssa_or_int_list "]")? attr_dict? ":" memref_type "into" memref_type
+memref_collapse_shape: SSA_VAL "=" "memref.collapse_shape" SSA_VAL reassoc_list attr_dict? ":" memref_type "into" memref_type
+memref_reshape: SSA_VAL "=" "memref.reshape" SSA_VAL "(" SSA_VAL ")" attr_dict? ":" function_type
+memref_reinterpret_cast: SSA_VAL "=" "memref.reinterpret_cast" SSA_VAL "to" "offset" ":" "[" ssa_or_int "]" "," "sizes" ":" "[" ssa_or_int_list "]" "," "strides" ":" "[" ssa_or_int_list "]" attr_dict? ":" memref_type "to" memref_type
+memref_realloc: SSA_VAL "=" "memref.realloc" SSA_VAL ("(" ssa_list ")")? attr_dict? ":" memref_type "to" memref_type
+memref_view: SSA_VAL "=" "memref.view" SSA_VAL "[" SSA_VAL "]" "[" ssa_list? "]" attr_dict? ":" memref_type "to" memref_type
+memref_rank: SSA_VAL "=" "memref.rank" SSA_VAL attr_dict? ":" memref_type
+memref_prefetch: "memref.prefetch" SSA_VAL "[" ssa_list? "]" "," attr_value "," attr_value "," attr_value attr_dict? ":" memref_type
+memref_transpose: SSA_VAL "=" "memref.transpose" SSA_VAL (affine_map_inline | permutation_inline) attr_dict? ":" memref_type "to" memref_type
+permutation_inline: "(" perm_dim ("," perm_dim)* ")" "->" "(" perm_dim ("," perm_dim)* ")"
+perm_dim: IDENT
+memref_extract_aligned_ptr: SSA_VAL "=" "memref.extract_aligned_pointer_as_index" SSA_VAL attr_dict? (":" memref_type)? ("->" type)?
+memref_memory_space_cast: SSA_VAL "=" "memref.memory_space_cast" SSA_VAL ":" memref_type "to" memref_type
+memref_extract_strided_metadata: ssa_list "=" "memref.extract_strided_metadata" SSA_VAL attr_dict? ":" memref_type ("->" type_list)?
+// memref.dma_start: %src[idx], %dst[idx], %num_elements, %tag[idx] : memref, memref, memref
+memref_dma_start: "memref.dma_start" dma_operand "," dma_operand "," SSA_VAL ("," dma_operand)* attr_dict? ":" (memref_type | TYPE_ALIAS_NAME) ("," (memref_type | TYPE_ALIAS_NAME))*
+dma_operand: SSA_VAL ("[" ssa_list? "]")?
+memref_dma_wait: "memref.dma_wait" SSA_VAL "[" ssa_list? "]" "," SSA_VAL attr_dict? ":" memref_type
+// No-assign form of memref.store (it has no result).
+memref_store_no_assign: "memref.store" SSA_VAL "," SSA_VAL "[" ssa_list? "]" attr_dict? ":" memref_type
+memref_copy: "memref.copy" SSA_VAL "," SSA_VAL attr_dict? ":" memref_type "to" memref_type
+memref_get_global: SSA_VAL "=" "memref.get_global" SYM_NAME attr_dict? ":" memref_type
+
+// memref.global uses STRING-literal visibility (e.g. "private") not bare keyword.
+global_memref_op: "memref.global" ESCAPED_STRING? ("constant")? (SSA_VAL | SYM_NAME) attr_dict? ":" memref_type ("=" (attr_value | dense_attr | "uninitialized"))?
+
+subview_range: "[" ssa_or_int_list? "]"
+ssa_or_int_list: ssa_or_int ("," ssa_or_int)*
+ssa_or_int: SSA_VAL | SIGNED_INT
+reassoc_list: "[" (reassoc_group ("," reassoc_group)*)? "]"
+reassoc_group: "[" (SIGNED_INT ("," SIGNED_INT)*)? "]"
+
+// affine_map body may contain `->` which embeds a `>`; alternation with Y-first
+// matches `->` as a unit before the naive "any non-angle" fallback.
+affine_map_inline: "affine_map" AFFINE_MAP_BLOB
+AFFINE_MAP_BLOB: /<(?:->|[^<>])+>/
+
+// ---------------- types ----------------
+
+type_list: type ("," type)*
+type_ret: type_list | "(" type_list? ")"
+
+type: int_type
+    | float_type
+    | index_type
+    | memref_type
+    | tensor_type
+    | vector_type
+    | function_type
+    | none_type
+    | complex_type
+    | tuple_type
+    | TYPE_ALIAS_NAME
+    | DOTTED_IDENT
+
+tuple_type: "tuple" "<" (type ("," type)*)? ">"
+
+// MLIR permits arbitrary-bitwidth integers (i4, i11, i7, etc.).
+int_type: /i[0-9]+/ | /si[0-9]+/ | /ui[0-9]+/
+float_type: FLOAT_KW
+FLOAT_KW: "f16" | "bf16" | "f32" | "f64" | "f80" | "f128"
+        | "f8E5M2" | "f8E5M2FNUZ" | "f8E4M3" | "f8E4M3FN" | "f8E4M3FNUZ"
+        | "f8E3M4" | "f4E2M1FN" | "f6E2M3FN" | "f6E3M2FN"
+index_type: "index"
+none_type: "none"
+complex_type: "complex" "<" type ">"
+
+memref_type: "memref" "<" (shape_dims | UNRANKED_SHAPE)? type memref_layout_list? ">"
+UNRANKED_SHAPE: /\*x/
+memref_layout_list: ("," memref_layout)+
+memref_layout: strided_layout | affine_map_inline | ATTR_ALIAS_NAME | attr_value
+
+strided_layout: "strided" "<" "[" strided_dim_list? "]" ("," "offset" ":" strided_offset)? ">"
+strided_dim_list: strided_dim ("," strided_dim)*
+strided_dim: SIGNED_INT | "?"
+strided_offset: SIGNED_INT | "?"
+
+tensor_type: "tensor" "<" shape_dims? type ("," attr_value)? ">"
+vector_type: "vector" "<" shape_dims? type ">"
+
+// MLIR shape syntax: `N x M x ... x T` where N, M, ... are non-negative ints or `?`.
+// The `x` is literal between dims and before the element type.
+// We use a single terminal that lexes each dim+x together to avoid Lark treating
+// "x" as the identifier start of the type.
+shape_dims: SHAPE_DIM_X+
+// Accept plain int dims (`4x`), unknown dims (`?x`), and scalable dims (`[N]x`).
+// No lookahead (llguidance's Rust regex doesn't support it); types never
+// start with `x` so the greedy-match is unambiguous.
+SHAPE_DIM_X: /(\?|\[[0-9]+\]|[0-9]+)x/
+
+function_type: "(" (type ("," type)*)? ")" "->" ("(" type_list? ")" | type)
+
+// ---------------- attributes ----------------
+
+attr_dict: "{" (attr_entry ("," attr_entry)*)? "}"
+attr_entry: IDENT "=" attr_value
+          | IDENT
+          | SYM_NAME "=" attr_value
+          | STRING_ATTR_KEY "=" attr_value
+
+STRING_ATTR_KEY: ESCAPED_STRING
+
+attr_value: typed_int_attr
+          | int_literal
+          | float_literal
+          | HEX_INT
+          | string_literal
+          | bool_literal
+          | "unit"
+          | dense_attr
+          | "array" "<" type (":" array_attr_elems)? ">"
+          | affine_map_inline
+          | "loc" "(" LOC_CONTENT? ")"
+          | type
+          | array_attr
+          | dict_attr
+          | SYM_REF
+          | IDENT
+
+// Typed integer attribute, e.g. `64 : i64` or `0xFF : i32`.
+typed_int_attr: (int_literal | HEX_INT) ":" (int_type | index_type)
+
+LOC_CONTENT: /[^()]+/
+
+int_literal: SIGNED_INT
+float_literal: SIGNED_FLOAT
+bool_literal: "true" | "false"
+string_literal: ESCAPED_STRING
+array_attr: "[" (attr_value ("," attr_value)*)? "]"
+array_attr_elems: attr_value ("," attr_value)*
+dict_attr: "{" (attr_entry ("," attr_entry)*)? "}"
+
+ssa_list: SSA_VAL ("," SSA_VAL)*
+
+// ---------------- terminals ----------------
+//
+// ---------------- linalg dialect (named ops, memref semantics) ---------------
+// Covers: matmul, matvec, fill, copy, transpose, broadcast, add, sub, mul, div,
+// exp, abs. Memref + tensor both parsed (generation is memref-only).
+// linalg.generic and complex conv ops intentionally omitted.
+
+linalg_op: linalg_named_op
+
+linalg_named_op: (ssa_list "=")? LINALG_OP_NAME linalg_ins_clause linalg_outs_clause linalg_attr_clause? attr_dict? ("->" type_list)?
+
+linalg_ins_clause:  "ins"  "(" ssa_list ":" type_list ")"
+linalg_outs_clause: "outs" "(" ssa_list ":" type_list ")"
+
+linalg_attr_clause: LINALG_ATTR_NAME "=" linalg_perm_list
+LINALG_ATTR_NAME: "permutation" | "dimensions" | "iterator" | "broadcastDimensions"
+linalg_perm_list: "[" (SIGNED_INT ("," SIGNED_INT)*)? "]"
+               | "array" "<" IDENT ":" (SIGNED_INT ("," SIGNED_INT)*)? ">"
+
+LINALG_OP_NAME: "linalg.matmul" | "linalg.matvec" | "linalg.fill"
+              | "linalg.copy"   | "linalg.transpose" | "linalg.broadcast"
+              | "linalg.add"    | "linalg.sub"   | "linalg.mul"
+              | "linalg.div"    | "linalg.exp"   | "linalg.abs"
+
+// MLIR SSA names accept `[a-zA-Z_$.-][0-9a-zA-Z_$.-]*`, optional `:N` suffix
+// for multi-result ops, and optional `#N` for result index access.
+
+SSA_VAL: /%[a-zA-Z_$.\-][a-zA-Z0-9_$.\-]*(\#[0-9]+)?(:[0-9]+)?/ | /%[0-9]+(:[0-9]+)?/
+SYM_NAME: /@[a-zA-Z_$.][a-zA-Z0-9_$.\-]*/
+SYM_REF: /@[a-zA-Z_$.][a-zA-Z0-9_$.\-]*(::@[a-zA-Z_$.][a-zA-Z0-9_$.\-]*)*/
+DOTTED_IDENT: /[a-zA-Z_][a-zA-Z0-9_]*(\.[a-zA-Z_][a-zA-Z0-9_]*)+/
+IDENT: /[a-zA-Z_][a-zA-Z0-9_]*/
+HEX_INT: /0x[0-9A-Fa-f]+/
+
+%import common.SIGNED_INT
+%import common.SIGNED_FLOAT
+%import common.ESCAPED_STRING
+%import common.WS
+%import common.CPP_COMMENT
+%import common.C_COMMENT
+
+%ignore WS
+%ignore CPP_COMMENT
+%ignore C_COMMENT

@@ -1,0 +1,786 @@
+{
+  "memref.alloc": {
+    "attributes": [
+      "anonymous_508"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "index"
+      ],
+      [
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.alloca": {
+    "attributes": [
+      "anonymous_508"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "index"
+      ],
+      [
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.alloca_scope": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      0
+    ],
+    "operand_types": [],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.alloca_scope.return": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      0
+    ],
+    "result_types": [],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.assume_alignment": {
+    "attributes": [
+      "anonymous_517"
+    ],
+    "operand_arity": [
+      1,
+      1
+    ],
+    "operand_types": [
+      [
+        "memref"
+      ]
+    ],
+    "result_arity": [
+      0,
+      0
+    ],
+    "result_types": [],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.atomic_rmw": {
+    "attributes": [
+      "AtomicRMWKindAttr"
+    ],
+    "operand_arity": [
+      2,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ],
+      [
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.atomic_yield": {
+    "attributes": [],
+    "operand_arity": [
+      1,
+      1
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      0
+    ],
+    "result_types": [],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.cast": {
+    "attributes": [],
+    "operand_arity": [
+      1,
+      1
+    ],
+    "operand_types": [
+      [
+        "memref"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "memref"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.collapse_shape": {
+    "attributes": [
+      "IndexListArrayAttr"
+    ],
+    "operand_arity": [
+      1,
+      1
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.copy": {
+    "attributes": [],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      0
+    ],
+    "result_types": [],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.dealloc": {
+    "attributes": [],
+    "operand_arity": [
+      1,
+      1
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      0
+    ],
+    "result_types": [],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.dim": {
+    "attributes": [],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "index"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.dma_start": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      0
+    ],
+    "result_types": [],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.dma_wait": {
+    "attributes": [],
+    "operand_arity": [
+      2,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "memref"
+      ],
+      [
+        "index"
+      ],
+      [
+        "index"
+      ]
+    ],
+    "result_arity": [
+      0,
+      0
+    ],
+    "result_types": [],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.expand_shape": {
+    "attributes": [
+      "IndexListArrayAttr",
+      "DenseI64ArrayAttr"
+    ],
+    "operand_arity": [
+      1,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.extract_aligned_pointer_as_index": {
+    "attributes": [],
+    "operand_arity": [
+      1,
+      1
+    ],
+    "operand_types": [
+      [
+        "memref"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "index"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.extract_strided_metadata": {
+    "attributes": [],
+    "operand_arity": [
+      1,
+      1
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      2,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ],
+      [
+        "index"
+      ],
+      [
+        "index"
+      ],
+      [
+        "index"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.generic_atomic_rmw": {
+    "attributes": [],
+    "operand_arity": [
+      1,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.get_global": {
+    "attributes": [
+      "FlatSymbolRefAttr"
+    ],
+    "operand_arity": [
+      0,
+      0
+    ],
+    "operand_types": [],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.global": {
+    "attributes": [
+      "SymbolNameAttr",
+      "anonymous_570",
+      "MemRefTypeAttr",
+      "anonymous_571",
+      "UnitAttr",
+      "anonymous_505"
+    ],
+    "operand_arity": [
+      0,
+      0
+    ],
+    "operand_types": [],
+    "result_arity": [
+      0,
+      0
+    ],
+    "result_types": [],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.load": {
+    "attributes": [
+      "anonymous_576"
+    ],
+    "operand_arity": [
+      1,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.memory_space_cast": {
+    "attributes": [],
+    "operand_arity": [
+      1,
+      1
+    ],
+    "operand_types": [
+      [
+        "memref"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "memref"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.prefetch": {
+    "attributes": [
+      "BoolAttr",
+      "anonymous_579",
+      "BoolAttr"
+    ],
+    "operand_arity": [
+      1,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "memref"
+      ],
+      [
+        "index"
+      ]
+    ],
+    "result_arity": [
+      0,
+      0
+    ],
+    "result_types": [],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.rank": {
+    "attributes": [],
+    "operand_arity": [
+      1,
+      1
+    ],
+    "operand_types": [
+      [
+        "memref"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "index"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.realloc": {
+    "attributes": [
+      "anonymous_508"
+    ],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.reinterpret_cast": {
+    "attributes": [
+      "DenseI64ArrayAttr",
+      "DenseI64ArrayAttr",
+      "DenseI64ArrayAttr"
+    ],
+    "operand_arity": [
+      1,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "index"
+      ],
+      [
+        "index"
+      ],
+      [
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "memref"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.reshape": {
+    "attributes": [],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "memref"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "memref"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.store": {
+    "attributes": [
+      "anonymous_576"
+    ],
+    "operand_arity": [
+      2,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ],
+      [
+        "index"
+      ]
+    ],
+    "result_arity": [
+      0,
+      0
+    ],
+    "result_types": [],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.subview": {
+    "attributes": [
+      "DenseI64ArrayAttr",
+      "DenseI64ArrayAttr",
+      "DenseI64ArrayAttr"
+    ],
+    "operand_arity": [
+      1,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "memref"
+      ],
+      [
+        "index"
+      ],
+      [
+        "index"
+      ],
+      [
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "memref"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.transpose": {
+    "attributes": [
+      "AffineMapAttr"
+    ],
+    "operand_arity": [
+      1,
+      1
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  },
+  "memref.view": {
+    "attributes": [],
+    "operand_arity": [
+      2,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "index"
+      ],
+      [
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "memref"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/MemRef/IR/MemRefOps.td"
+  }
+}

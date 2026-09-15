@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Host wrapper: `docker exec` into the long-lived LLVM container (no per-call startup cost).
+set -euo pipefail
+CONTAINER="${SCI_LLVM_CONTAINER:-sci-llvm}"
+if ! docker ps --format '{{.Names}}' | grep -q "^${CONTAINER}$"; then
+    echo "error: container '${CONTAINER}' not running; start it with: docker compose -f scripts/env/docker-compose.yml up -d" >&2
+    exit 127
+fi
+exec docker exec -i -w /work "${CONTAINER}" mlir-translate "$@"

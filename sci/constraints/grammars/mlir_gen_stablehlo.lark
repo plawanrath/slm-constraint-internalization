@@ -1,0 +1,80 @@
+// Generation grammar — StableHLO extension.
+// Covers 10 named StableHLO ops under tensor semantics for cross-IR
+// generalization experiments.
+//
+// Ops in scope:
+//   elementwise binary: stablehlo.add, subtract, multiply, divide
+//   elementwise unary:  stablehlo.abs, exponential
+//   structural:         stablehlo.transpose, broadcast_in_dim, reshape
+//   linalg-like:        stablehlo.dot_general
+//
+// All ops use tensor<...> types (not memref).
+// `stablehlo.reduce` and `stablehlo.convolution` are intentionally excluded
+// (they carry regions / complex attribute structure).
+
+start: module_op
+
+module_op: "module" WS "{" WS func_def WS "}" WS?
+
+func_def: "func.func" WS SYM "(" params? ")" func_ret? WS "{" WS op_body WS "}"
+
+params: param (WS? "," WS param)*
+param: SSA WS ":" WS tensor_type
+
+func_ret: WS "->" WS tensor_type
+
+// Function body is (zero or more ops) followed by a terminator return.
+// Right-recursive to avoid LALR ambiguity at the trailing WS.
+op_body: op_return_val
+       | op WS op_body
+
+op: op_ew_bin
+  | op_ew_un
+  | op_transpose
+  | op_broadcast_in_dim
+  | op_reshape
+  | op_dot_general
+
+// Element-wise binary
+op_ew_bin: SSA WS "=" WS SHLO_EW_BIN WS SSA WS "," WS SSA WS ":" WS tensor_type
+
+// Element-wise unary
+op_ew_un: SSA WS "=" WS SHLO_EW_UN WS SSA WS ":" WS tensor_type
+
+// stablehlo.transpose %a, dims = [1, 0] : (tensor<MxNxT>) -> tensor<NxMxT>
+op_transpose: SSA WS "=" WS "stablehlo.transpose" WS SSA WS "," WS "dims" WS "=" WS perm_list WS ":" WS "(" tensor_type ")" WS "->" WS tensor_type
+
+// stablehlo.broadcast_in_dim %a, dims = [0] : (tensor<NxT>) -> tensor<MxNxT>
+op_broadcast_in_dim: SSA WS "=" WS "stablehlo.broadcast_in_dim" WS SSA WS "," WS "dims" WS "=" WS perm_list WS ":" WS "(" tensor_type ")" WS "->" WS tensor_type
+
+// stablehlo.reshape %a : (tensor<MxNxT>) -> tensor<PxT>
+op_reshape: SSA WS "=" WS "stablehlo.reshape" WS SSA WS ":" WS "(" tensor_type ")" WS "->" WS tensor_type
+
+// stablehlo.dot_general %a, %b, contracting_dims = [1] x [0] : (tensor<MxKxT>, tensor<KxNxT>) -> tensor<MxNxT>
+op_dot_general: SSA WS "=" WS "stablehlo.dot_general" WS SSA WS "," WS SSA WS "," WS "contracting_dims" WS "=" WS dim_pair WS ":" WS "(" tensor_type WS "," WS tensor_type ")" WS "->" WS tensor_type
+
+op_return_val: "return" WS SSA WS ":" WS tensor_type
+
+perm_list: "[" INT (WS? "," WS INT)* "]"
+dim_pair: "[" INT "]" WS "x" WS "[" INT "]"
+
+// Tensor types. Always ranked with known or `?` dims. Shape uses `x` without
+// surrounding whitespace (matches MLIR convention: `4x8xf32`).
+tensor_type: "tensor" "<" tensor_shape elem_type ">"
+tensor_shape: DIM "x" (DIM "x")*
+
+elem_type: FLOAT_TYPE | INT_TYPE
+
+SHLO_EW_BIN: "stablehlo.add" | "stablehlo.subtract" | "stablehlo.multiply" | "stablehlo.divide"
+SHLO_EW_UN:  "stablehlo.abs" | "stablehlo.exponential"
+
+FLOAT_TYPE: "f16" | "f32" | "f64" | "bf16"
+INT_TYPE:   "i8" | "i16" | "i32" | "i64" | "i1"
+
+DIM: /[0-9]+/ | "?"
+INT: /-?[0-9]+/
+
+SSA: /%[a-zA-Z0-9_][a-zA-Z0-9_]{0,31}/
+SYM: /@[a-zA-Z_][a-zA-Z0-9_]{0,47}/
+
+WS: /[ \t\n]{1,8}/

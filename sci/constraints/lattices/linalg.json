@@ -1,0 +1,2697 @@
+{
+  "linalg.abs": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.add": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.batch_matmul": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.batch_matmul_transpose_a": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.batch_matmul_transpose_b": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.batch_matvec": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.batch_mmt4d": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.batch_reduce_matmul": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.batch_vecmat": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.broadcast": {
+    "attributes": [
+      "DenseI64ArrayAttr"
+    ],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "tensor"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.ceil": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.conv_1d": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.conv_1d_ncw_fcw": {
+    "attributes": [
+      "anonymous_603",
+      "anonymous_603"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.conv_1d_nwc_wcf": {
+    "attributes": [
+      "anonymous_603",
+      "anonymous_603"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.conv_2d": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.conv_2d_nchw_fchw": {
+    "attributes": [
+      "anonymous_613",
+      "anonymous_613"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.conv_2d_ngchw_fgchw": {
+    "attributes": [
+      "anonymous_613",
+      "anonymous_613"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.conv_2d_ngchw_gfchw": {
+    "attributes": [
+      "anonymous_613",
+      "anonymous_613"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.conv_2d_ngchw_gfchw_q": {
+    "attributes": [
+      "anonymous_613",
+      "anonymous_613"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.conv_2d_nhwc_fhwc": {
+    "attributes": [
+      "anonymous_613",
+      "anonymous_613"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.conv_2d_nhwc_fhwc_q": {
+    "attributes": [
+      "anonymous_613",
+      "anonymous_613"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.conv_2d_nhwc_hwcf": {
+    "attributes": [
+      "anonymous_613",
+      "anonymous_613"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.conv_2d_nhwc_hwcf_q": {
+    "attributes": [
+      "anonymous_613",
+      "anonymous_613"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.conv_3d": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.conv_3d_ncdhw_fcdhw": {
+    "attributes": [
+      "anonymous_641",
+      "anonymous_641"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.conv_3d_ndhwc_dhwcf": {
+    "attributes": [
+      "anonymous_641",
+      "anonymous_641"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.conv_3d_ndhwc_dhwcf_q": {
+    "attributes": [
+      "anonymous_641",
+      "anonymous_641"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.copy": {
+    "attributes": [
+      "anonymous_502"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.depthwise_conv_1d_ncw_cw": {
+    "attributes": [
+      "anonymous_603",
+      "anonymous_603"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.depthwise_conv_1d_nwc_wc": {
+    "attributes": [
+      "anonymous_603",
+      "anonymous_603"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.depthwise_conv_1d_nwc_wcm": {
+    "attributes": [
+      "anonymous_603",
+      "anonymous_603"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.depthwise_conv_2d_nchw_chw": {
+    "attributes": [
+      "anonymous_613",
+      "anonymous_613"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.depthwise_conv_2d_nhwc_hwc": {
+    "attributes": [
+      "anonymous_613",
+      "anonymous_613"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.depthwise_conv_2d_nhwc_hwc_q": {
+    "attributes": [
+      "anonymous_613",
+      "anonymous_613"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.depthwise_conv_2d_nhwc_hwcm": {
+    "attributes": [
+      "anonymous_613",
+      "anonymous_613"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.depthwise_conv_2d_nhwc_hwcm_q": {
+    "attributes": [
+      "anonymous_613",
+      "anonymous_613"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.depthwise_conv_3d_ncdhw_cdhw": {
+    "attributes": [
+      "anonymous_641",
+      "anonymous_641"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.depthwise_conv_3d_ndhwc_dhwc": {
+    "attributes": [
+      "anonymous_641",
+      "anonymous_641"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.depthwise_conv_3d_ndhwc_dhwcm": {
+    "attributes": [
+      "anonymous_641",
+      "anonymous_641"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.div": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.div_unsigned": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.dot": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.elemwise_binary": {
+    "attributes": [
+      "anonymous_537",
+      "anonymous_502"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.elemwise_unary": {
+    "attributes": [
+      "anonymous_507",
+      "anonymous_502"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.erf": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.exp": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.fill": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.fill_rng_2d": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.floor": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.generic": {
+    "attributes": [
+      "AffineMapArrayAttr",
+      "IteratorTypeArrayAttr",
+      "anonymous_475",
+      "anonymous_475"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.index": {
+    "attributes": [
+      "anonymous_533"
+    ],
+    "operand_arity": [
+      0,
+      0
+    ],
+    "operand_types": [],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "index"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgOps.td"
+  },
+  "linalg.log": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.map": {
+    "attributes": [],
+    "operand_arity": [
+      1,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "tensor"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.matmul": {
+    "attributes": [
+      "anonymous_502"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.matmul_transpose_a": {
+    "attributes": [
+      "anonymous_502"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.matmul_transpose_b": {
+    "attributes": [
+      "anonymous_502"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.matvec": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.max": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.min": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.mmt4d": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.mul": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.negf": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.pooling_nchw_max": {
+    "attributes": [
+      "anonymous_613",
+      "anonymous_613"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.pooling_nchw_sum": {
+    "attributes": [
+      "anonymous_613",
+      "anonymous_613"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.pooling_ncw_max": {
+    "attributes": [
+      "anonymous_603",
+      "anonymous_603"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.pooling_ncw_sum": {
+    "attributes": [
+      "anonymous_603",
+      "anonymous_603"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.pooling_ndhwc_max": {
+    "attributes": [
+      "anonymous_641",
+      "anonymous_641"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.pooling_ndhwc_min": {
+    "attributes": [
+      "anonymous_641",
+      "anonymous_641"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.pooling_ndhwc_sum": {
+    "attributes": [
+      "anonymous_641",
+      "anonymous_641"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.pooling_nhwc_max": {
+    "attributes": [
+      "anonymous_613",
+      "anonymous_613"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.pooling_nhwc_max_unsigned": {
+    "attributes": [
+      "anonymous_613",
+      "anonymous_613"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.pooling_nhwc_min": {
+    "attributes": [
+      "anonymous_613",
+      "anonymous_613"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.pooling_nhwc_min_unsigned": {
+    "attributes": [
+      "anonymous_613",
+      "anonymous_613"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.pooling_nhwc_sum": {
+    "attributes": [
+      "anonymous_613",
+      "anonymous_613"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.pooling_nwc_max": {
+    "attributes": [
+      "anonymous_603",
+      "anonymous_603"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.pooling_nwc_max_unsigned": {
+    "attributes": [
+      "anonymous_603",
+      "anonymous_603"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.pooling_nwc_min": {
+    "attributes": [
+      "anonymous_603",
+      "anonymous_603"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.pooling_nwc_min_unsigned": {
+    "attributes": [
+      "anonymous_603",
+      "anonymous_603"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.pooling_nwc_sum": {
+    "attributes": [
+      "anonymous_603",
+      "anonymous_603"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.powf": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.quantized_batch_matmul": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.quantized_matmul": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.reciprocal": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.reduce": {
+    "attributes": [
+      "anonymous_495"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "tensor"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.round": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.rsqrt": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.select": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.softmax": {
+    "attributes": [
+      "I64Attr"
+    ],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgOps.td"
+  },
+  "linalg.sqrt": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.square": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.sub": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.tanh": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.transpose": {
+    "attributes": [
+      "DenseI64ArrayAttr"
+    ],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "tensor"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.vecmat": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgStructuredOps.td"
+  },
+  "linalg.winograd_filter_transform": {
+    "attributes": [
+      "I64Attr",
+      "I64Attr"
+    ],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgOps.td"
+  },
+  "linalg.winograd_input_transform": {
+    "attributes": [
+      "I64Attr",
+      "I64Attr"
+    ],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgOps.td"
+  },
+  "linalg.winograd_output_transform": {
+    "attributes": [
+      "I64Attr",
+      "I64Attr"
+    ],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgOps.td"
+  },
+  "linalg.yield": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      0
+    ],
+    "result_types": [],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Linalg/IR/LinalgOps.td"
+  }
+}

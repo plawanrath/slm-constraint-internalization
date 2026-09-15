@@ -1,0 +1,158 @@
+// Generation grammar for MLIR (arith + func + memref subset).
+//
+// v2: C2-aware — splits op families by type domain so grammar enforces:
+//   - arith.addi et al. take INT_TYPE only; arith.addf et al. take FLOAT_TYPE only
+//   - arith.cmpi/cmpf use correct predicate families and operand type classes
+//   - arith.constant literals are typed: int-literal pairs with int/index type,
+//     float-literal pairs with float type
+//   - arith.cast families respect source→target (int↔int widen/trunc,
+//     int↔float convert, bitcast)
+//   - return is either void or typed (no "return %0" without type)
+//
+// Explicit WS productions, no `%ignore` (required for llguidance). Bounded
+// identifiers (SSA ≤32 chars, SYM ≤48 chars). Capped op body (≤6 ops / func).
+//
+// Gen grammar ⊆ parse grammar: outputs parse under `mlir.lark`.
+
+start: module_op
+
+module_op: "module" WS "{" WS func_def WS "}" WS?
+
+func_def: "func.func" WS SYM "(" params? ")" func_ret? WS "{" WS op_body WS "}"
+
+params: param (WS "," WS param)*
+param: SSA WS ":" WS type
+
+func_ret: WS "->" WS ret_types
+ret_types: type | "(" type (WS "," WS type)* ")"
+
+// Cap at up to 6 ops per function body via explicit alternation; llguidance
+// doesn't support `(X)~0..N` syntax. Forces grammar termination.
+op_body: op
+       | op WS op
+       | op WS op WS op
+       | op WS op WS op WS op
+       | op WS op WS op WS op WS op
+       | op WS op WS op WS op WS op WS op
+
+op: op_const_int
+  | op_const_float
+  | op_const_index
+  | op_binop_int
+  | op_binop_float
+  | op_cmp_int
+  | op_cmp_float
+  | op_select_int
+  | op_select_float
+  | op_cast_int_widen
+  | op_cast_int_to_float
+  | op_cast_float_to_int
+  | op_cast_float_widen
+  | op_cast_index
+  | op_bitcast
+  | op_alloc
+  | op_load
+  | op_store
+  | op_dealloc
+  | op_dim
+  | op_return_void
+  | op_return_val
+
+// ---------- arith.constant (C2: literal type matches result type) ----------
+
+op_const_int:   SSA WS "=" WS "arith.constant" WS INT_LIT WS ":" WS INT_TYPE
+op_const_float: SSA WS "=" WS "arith.constant" WS FLOAT_LIT WS ":" WS FLOAT_TYPE
+op_const_index: SSA WS "=" WS "arith.constant" WS INT_LIT WS ":" WS INDEX_KW
+
+// ---------- arith binary ops (C2: operand/result types match op's domain) ----
+
+op_binop_int:   SSA WS "=" WS ARITH_BIN_INT   WS SSA WS "," WS SSA WS ":" WS INT_OR_INDEX
+op_binop_float: SSA WS "=" WS ARITH_BIN_FLOAT WS SSA WS "," WS SSA WS ":" WS FLOAT_TYPE
+
+// ---------- arith comparisons (C2: predicate family + operand types) -------
+
+op_cmp_int:   SSA WS "=" WS "arith.cmpi" WS ICMP_PRED WS "," WS SSA WS "," WS SSA WS ":" WS INT_OR_INDEX
+op_cmp_float: SSA WS "=" WS "arith.cmpf" WS FCMP_PRED WS "," WS SSA WS "," WS SSA WS ":" WS FLOAT_TYPE
+
+// ---------- arith.select (C2: condition i1, same-type else-both slots) -----
+
+op_select_int:   SSA WS "=" WS "arith.select" WS SSA WS "," WS SSA WS "," WS SSA WS ":" WS INT_OR_INDEX
+op_select_float: SSA WS "=" WS "arith.select" WS SSA WS "," WS SSA WS "," WS SSA WS ":" WS FLOAT_TYPE
+
+// ---------- arith casts (C2: source/target type domains) -------------------
+
+op_cast_int_widen:     SSA WS "=" WS INT_WIDEN_NAME  WS SSA WS ":" WS INT_TYPE WS "to" WS INT_TYPE
+op_cast_int_to_float:  SSA WS "=" WS I2F_NAME        WS SSA WS ":" WS INT_OR_INDEX WS "to" WS FLOAT_TYPE
+op_cast_float_to_int:  SSA WS "=" WS F2I_NAME        WS SSA WS ":" WS FLOAT_TYPE WS "to" WS INT_OR_INDEX
+op_cast_float_widen:   SSA WS "=" WS FLOAT_WIDEN     WS SSA WS ":" WS FLOAT_TYPE WS "to" WS FLOAT_TYPE
+op_cast_index:         SSA WS "=" WS INDEX_CAST_KW   WS SSA WS ":" WS INT_OR_INDEX WS "to" WS INT_OR_INDEX
+op_bitcast:            SSA WS "=" WS "arith.bitcast" WS SSA WS ":" WS type WS "to" WS type
+
+// ---------- memref ops (C2: element type consistency where feasible) ------
+
+op_alloc:   SSA WS "=" WS "memref.alloc" "(" ")" WS ":" WS memref_type
+op_load:    SSA WS "=" WS "memref.load" WS SSA "[" idx_list? "]" WS ":" WS memref_type
+op_store:   "memref.store" WS SSA WS "," WS SSA "[" idx_list? "]" WS ":" WS memref_type
+op_dealloc: "memref.dealloc" WS SSA WS ":" WS memref_type
+op_dim:     SSA WS "=" WS "memref.dim" WS SSA WS "," WS SSA WS ":" WS memref_type
+
+// ---------- return ---------------------------------------------------------
+
+// C2: if returning a value, type is mandatory.
+op_return_void: "return"
+op_return_val:  "return" WS SSA WS ":" WS type
+
+idx_list: SSA (WS "," WS SSA)*
+
+// -------- keyword enums --------
+
+ARITH_BIN_INT: "arith.addi" | "arith.subi" | "arith.muli"
+             | "arith.divsi" | "arith.divui"
+             | "arith.andi" | "arith.ori" | "arith.xori"
+             | "arith.shli" | "arith.shrsi" | "arith.shrui"
+             | "arith.maxsi" | "arith.maxui" | "arith.minsi" | "arith.minui"
+             | "arith.remsi" | "arith.remui"
+
+ARITH_BIN_FLOAT: "arith.addf" | "arith.subf" | "arith.mulf"
+               | "arith.divf" | "arith.remf"
+
+// integer comparison predicates
+ICMP_PRED: "eq" | "ne" | "slt" | "sle" | "sgt" | "sge"
+         | "ult" | "ule" | "ugt" | "uge"
+
+// float comparison predicates (ordered / unordered)
+FCMP_PRED: "oeq" | "one" | "olt" | "ole" | "ogt" | "oge"
+         | "ueq" | "une" | "ult" | "ule" | "ugt" | "uge"
+         | "ord" | "uno"
+         | "false" | "true"
+
+// cast families
+INT_WIDEN_NAME: "arith.extsi" | "arith.extui" | "arith.trunci"
+I2F_NAME:       "arith.sitofp" | "arith.uitofp"
+F2I_NAME:       "arith.fptosi" | "arith.fptoui"
+FLOAT_WIDEN:    "arith.extf" | "arith.truncf"
+INDEX_CAST_KW:  "arith.index_cast" | "arith.index_castui"
+
+// -------- types --------
+
+type: INT_TYPE | FLOAT_TYPE | INDEX_KW | memref_type
+INT_TYPE:   "i1" | "i8" | "i16" | "i32" | "i64"
+FLOAT_TYPE: "f16" | "bf16" | "f32" | "f64"
+INDEX_KW:   "index"
+INT_OR_INDEX: INT_TYPE | INDEX_KW
+
+memref_type: "memref" "<" memref_shape? type ">"
+memref_shape: DIM "x" (DIM "x")*
+DIM: /[0-9]+/ | "?"
+
+// -------- literals --------
+
+INT_LIT:   /-?[0-9]+/
+FLOAT_LIT: /-?[0-9]+\.[0-9]+(e[+-]?[0-9]+)?/
+
+// SSA / SYM names bounded to prevent identifier-loop runaway under constraint.
+SSA: /%[a-zA-Z0-9_][a-zA-Z0-9_]{0,31}/
+SYM: /@[a-zA-Z_][a-zA-Z0-9_]{0,47}/
+
+// Bounded whitespace. 1-8 chars covers typical indentation.
+WS: /[ \t\n]{1,8}/

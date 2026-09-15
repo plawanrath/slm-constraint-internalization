@@ -1,0 +1,2054 @@
+{
+  "arith.addf": {
+    "attributes": [
+      "anonymous_451"
+    ],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ],
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.addi": {
+    "attributes": [
+      "anonymous_466"
+    ],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ],
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.addui_extended": {
+    "attributes": [],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ],
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "result_arity": [
+      2,
+      2
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.andi": {
+    "attributes": [],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ],
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.bitcast": {
+    "attributes": [],
+    "operand_arity": [
+      1,
+      1
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.ceildivsi": {
+    "attributes": [],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ],
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.ceildivui": {
+    "attributes": [],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ],
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.cmpf": {
+    "attributes": [
+      "Arith_CmpFPredicateAttr",
+      "anonymous_451"
+    ],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ],
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.cmpi": {
+    "attributes": [
+      "Arith_CmpIPredicateAttr"
+    ],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.constant": {
+    "attributes": [
+      "TypedAttrInterface"
+    ],
+    "operand_arity": [
+      0,
+      0
+    ],
+    "operand_types": [],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.divf": {
+    "attributes": [
+      "anonymous_451"
+    ],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ],
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.divsi": {
+    "attributes": [],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ],
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.divui": {
+    "attributes": [],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ],
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.extf": {
+    "attributes": [
+      "anonymous_475"
+    ],
+    "operand_arity": [
+      1,
+      1
+    ],
+    "operand_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.extsi": {
+    "attributes": [],
+    "operand_arity": [
+      1,
+      1
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.extui": {
+    "attributes": [],
+    "operand_arity": [
+      1,
+      1
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.floordivsi": {
+    "attributes": [],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ],
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.fptosi": {
+    "attributes": [],
+    "operand_arity": [
+      1,
+      1
+    ],
+    "operand_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.fptoui": {
+    "attributes": [],
+    "operand_arity": [
+      1,
+      1
+    ],
+    "operand_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.index_cast": {
+    "attributes": [],
+    "operand_arity": [
+      1,
+      1
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.index_castui": {
+    "attributes": [],
+    "operand_arity": [
+      1,
+      1
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.maximumf": {
+    "attributes": [
+      "anonymous_451"
+    ],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ],
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.maxnumf": {
+    "attributes": [
+      "anonymous_451"
+    ],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ],
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.maxsi": {
+    "attributes": [],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ],
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.maxui": {
+    "attributes": [],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ],
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.minimumf": {
+    "attributes": [
+      "anonymous_451"
+    ],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ],
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.minnumf": {
+    "attributes": [
+      "anonymous_451"
+    ],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ],
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.minsi": {
+    "attributes": [],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ],
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.minui": {
+    "attributes": [],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ],
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.mulf": {
+    "attributes": [
+      "anonymous_451"
+    ],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ],
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.muli": {
+    "attributes": [
+      "anonymous_466"
+    ],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ],
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.mulsi_extended": {
+    "attributes": [],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ],
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "result_arity": [
+      2,
+      2
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ],
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.mului_extended": {
+    "attributes": [],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ],
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "result_arity": [
+      2,
+      2
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ],
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.negf": {
+    "attributes": [
+      "anonymous_451"
+    ],
+    "operand_arity": [
+      1,
+      1
+    ],
+    "operand_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.ori": {
+    "attributes": [],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ],
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.remf": {
+    "attributes": [
+      "anonymous_451"
+    ],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ],
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.remsi": {
+    "attributes": [],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ],
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.remui": {
+    "attributes": [],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ],
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.select": {
+    "attributes": [],
+    "operand_arity": [
+      3,
+      3
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.shli": {
+    "attributes": [
+      "anonymous_466"
+    ],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ],
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.shrsi": {
+    "attributes": [],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ],
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.shrui": {
+    "attributes": [],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ],
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.sitofp": {
+    "attributes": [],
+    "operand_arity": [
+      1,
+      1
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.subf": {
+    "attributes": [
+      "anonymous_451"
+    ],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ],
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.subi": {
+    "attributes": [
+      "anonymous_466"
+    ],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ],
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.truncf": {
+    "attributes": [
+      "anonymous_477",
+      "anonymous_475"
+    ],
+    "operand_arity": [
+      1,
+      1
+    ],
+    "operand_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.trunci": {
+    "attributes": [],
+    "operand_arity": [
+      1,
+      1
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.uitofp": {
+    "attributes": [],
+    "operand_arity": [
+      1,
+      1
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "f16",
+        "bf16",
+        "f32",
+        "f64"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  },
+  "arith.xori": {
+    "attributes": [],
+    "operand_arity": [
+      2,
+      2
+    ],
+    "operand_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ],
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "i1",
+        "i8",
+        "i16",
+        "i32",
+        "i64",
+        "i128",
+        "index"
+      ]
+    ],
+    "same_type_classes": [
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Arith/IR/ArithOps.td"
+  }
+}

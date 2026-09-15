@@ -1,0 +1,114 @@
+{
+  "func.call": {
+    "attributes": [
+      "FlatSymbolRefAttr"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Func/IR/FuncOps.td"
+  },
+  "func.call_indirect": {
+    "attributes": [],
+    "operand_arity": [
+      1,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Func/IR/FuncOps.td"
+  },
+  "func.constant": {
+    "attributes": [
+      "FlatSymbolRefAttr"
+    ],
+    "operand_arity": [
+      0,
+      0
+    ],
+    "operand_types": [],
+    "result_arity": [
+      1,
+      1
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Func/IR/FuncOps.td"
+  },
+  "func.func": {
+    "attributes": [
+      "SymbolNameAttr",
+      "anonymous_405",
+      "anonymous_409",
+      "anonymous_410",
+      "anonymous_410"
+    ],
+    "operand_arity": [
+      0,
+      0
+    ],
+    "operand_types": [],
+    "result_arity": [
+      0,
+      0
+    ],
+    "result_types": [],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Func/IR/FuncOps.td"
+  },
+  "func.return": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      0
+    ],
+    "result_types": [],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/Func/IR/FuncOps.td"
+  }
+}

@@ -1,0 +1,424 @@
+{
+  "version": "1.0",
+  "schema_doc": "30 hand-authored (input, expected_output) tuples for functional execution. Inputs are statically-shaped to keep references hand-computable. exec_ok = candidate lowers + runs; output_match = stdout matches expected.",
+  "tools": {
+    "arith+func": "mlir-opt (--convert-arith-to-llvm --convert-func-to-llvm --reconcile-unrealized-casts) | mlir-translate --mlir-to-llvmir | lli (in the pinned LLVM container)",
+    "linalg+memref": "mlir-opt (--convert-linalg-to-loops --convert-scf-to-cf --convert-arith-to-llvm --finalize-memref-to-llvm --convert-func-to-llvm --reconcile-unrealized-casts) | mlir-cpu-runner --shared-libs=libmlir_runner_utils.so:libmlir_c_runner_utils.so",
+    "stablehlo": "iree-compile --iree-hal-target-backends=llvm-cpu | iree-run-module --device=local-task --input=<...>"
+  },
+  "references": [
+    {
+      "id": "F01_arith_add",
+      "dialect": "arith+func",
+      "source_benchmark": "mlir_spec_150",
+      "source_id": "001_add-two-ints",
+      "nl": "Write a function `add` that takes two i32 values and returns their sum.",
+      "canonical_fn_name": "add",
+      "canonical_signature": "(i32, i32) -> i32",
+      "inputs": [{"type": "i32", "value": 7}, {"type": "i32", "value": 3}],
+      "result_type": "i32",
+      "expected_output": 10,
+      "expected_stdout_regex": "^10\\b"
+    },
+    {
+      "id": "F02_arith_mul_i64",
+      "dialect": "arith+func",
+      "source_benchmark": "mlir_spec_150",
+      "source_id": "003_multiply-ints",
+      "nl": "Write a function `mul` that multiplies two i64 values and returns their product.",
+      "canonical_fn_name": "mul",
+      "canonical_signature": "(i64, i64) -> i64",
+      "inputs": [{"type": "i64", "value": 6}, {"type": "i64", "value": 7}],
+      "result_type": "i64",
+      "expected_output": 42,
+      "expected_stdout_regex": "^42\\b"
+    },
+    {
+      "id": "F03_arith_addf_f32",
+      "dialect": "arith+func",
+      "source_benchmark": "mlir_spec_150",
+      "source_id": "004_add-floats",
+      "nl": "Write a function `addf` that takes two f32 values and returns their sum.",
+      "canonical_fn_name": "addf",
+      "canonical_signature": "(f32, f32) -> f32",
+      "inputs": [{"type": "f32", "value": 1.5}, {"type": "f32", "value": 2.25}],
+      "result_type": "f32",
+      "expected_output": 3.75,
+      "expected_stdout_regex": "^3\\.75\\b"
+    },
+    {
+      "id": "F04_arith_const42",
+      "dialect": "arith+func",
+      "source_benchmark": "mlir_spec_150",
+      "source_id": "005_integer-constant",
+      "nl": "Write a function that returns the constant integer 42 as an i32.",
+      "canonical_fn_name": "const42",
+      "canonical_signature": "() -> i32",
+      "inputs": [],
+      "result_type": "i32",
+      "expected_output": 42,
+      "expected_stdout_regex": "^42\\b"
+    },
+    {
+      "id": "F05_arith_chain_addmul",
+      "dialect": "arith+func",
+      "source_benchmark": "mlir_spec_150",
+      "source_id": "008_chain-add-then-multiply",
+      "nl": "Write a function that computes `(a + b) * c` on i32 inputs and returns the i32 result.",
+      "canonical_fn_name": "fma_like",
+      "canonical_signature": "(i32, i32, i32) -> i32",
+      "inputs": [{"type": "i32", "value": 2}, {"type": "i32", "value": 3}, {"type": "i32", "value": 4}],
+      "result_type": "i32",
+      "expected_output": 20,
+      "expected_stdout_regex": "^20\\b"
+    },
+    {
+      "id": "F06_arith_band",
+      "dialect": "arith+func",
+      "source_benchmark": "mlir_spec_150",
+      "source_id": "016_bitwise-and",
+      "nl": "Write a function that computes the bitwise AND of two i32 values.",
+      "canonical_fn_name": "band",
+      "canonical_signature": "(i32, i32) -> i32",
+      "inputs": [{"type": "i32", "value": 12}, {"type": "i32", "value": 10}],
+      "result_type": "i32",
+      "expected_output": 8,
+      "expected_stdout_regex": "^8\\b"
+    },
+    {
+      "id": "F07_arith_inc",
+      "dialect": "arith+func",
+      "source_benchmark": "mlir_spec_150",
+      "source_id": "033_increment-by-one",
+      "nl": "Write a function that takes an i32 and returns it incremented by 1.",
+      "canonical_fn_name": "inc",
+      "canonical_signature": "(i32) -> i32",
+      "inputs": [{"type": "i32", "value": 41}],
+      "result_type": "i32",
+      "expected_output": 42,
+      "expected_stdout_regex": "^42\\b"
+    },
+    {
+      "id": "F08_arith_double_f32",
+      "dialect": "arith+func",
+      "source_benchmark": "mlir_spec_150",
+      "source_id": "034_double-value",
+      "nl": "Write a function that doubles an f32 value.",
+      "canonical_fn_name": "dbl",
+      "canonical_signature": "(f32) -> f32",
+      "inputs": [{"type": "f32", "value": 3.5}],
+      "result_type": "f32",
+      "expected_output": 7.0,
+      "expected_stdout_regex": "^7(\\.0+)?\\b"
+    },
+    {
+      "id": "F09_arith_square_i32",
+      "dialect": "arith+func",
+      "source_benchmark": "mlir_spec_150",
+      "source_id": "040_square",
+      "nl": "Write a function that computes x squared for an i32 x.",
+      "canonical_fn_name": "square",
+      "canonical_signature": "(i32) -> i32",
+      "inputs": [{"type": "i32", "value": 7}],
+      "result_type": "i32",
+      "expected_output": 49,
+      "expected_stdout_regex": "^49\\b"
+    },
+    {
+      "id": "F10_arith_cube_f32",
+      "dialect": "arith+func",
+      "source_benchmark": "mlir_spec_150",
+      "source_id": "041_cube",
+      "nl": "Write a function that computes x * x * x for an f32 x.",
+      "canonical_fn_name": "cube",
+      "canonical_signature": "(f32) -> f32",
+      "inputs": [{"type": "f32", "value": 2.0}],
+      "result_type": "f32",
+      "expected_output": 8.0,
+      "expected_stdout_regex": "^8(\\.0+)?\\b"
+    },
+
+    {
+      "id": "F11_linalg_fill_zero_1d",
+      "dialect": "linalg+memref",
+      "source_benchmark": "linalg_spec_30",
+      "source_id": "06_fill-zero-1d",
+      "nl": "Write a function that fills a 1-D f32 memref with zeros.",
+      "canonical_fn_name": "f0",
+      "canonical_signature": "(memref<?xf32>) -> ()",
+      "memref_inputs": [
+        {"name": "m", "shape": [4], "dtype": "f32", "init": "alloc_only"}
+      ],
+      "memref_print": [
+        {"name": "m", "shape": [4], "dtype": "f32"}
+      ],
+      "expected_stdout_regex": "data\\s*=\\s*\\[\\s*0(\\.0+)?\\s*,\\s*0(\\.0+)?\\s*,\\s*0(\\.0+)?\\s*,\\s*0(\\.0+)?\\s*\\]"
+    },
+    {
+      "id": "F12_linalg_fill_value_2d",
+      "dialect": "linalg+memref",
+      "source_benchmark": "linalg_spec_30",
+      "source_id": "07_fill-value-param",
+      "nl": "Write a function that fills a 2-D f32 memref with a given f32 value passed as a parameter.",
+      "canonical_fn_name": "fp",
+      "canonical_signature": "(f32, memref<?x?xf32>) -> ()",
+      "scalar_inputs": [{"type": "f32", "value": 5.0}],
+      "memref_inputs": [
+        {"name": "m", "shape": [2, 2], "dtype": "f32", "init": "alloc_only"}
+      ],
+      "memref_print": [
+        {"name": "m", "shape": [2, 2], "dtype": "f32"}
+      ],
+      "expected_stdout_regex": "(5(\\.0+)?[^\\d]+){4}"
+    },
+    {
+      "id": "F13_linalg_fill_i32_const",
+      "dialect": "linalg+memref",
+      "source_benchmark": "linalg_spec_30",
+      "source_id": "08_fill-i32",
+      "nl": "Write a function that fills a 1-D i32 memref with the integer constant 7.",
+      "canonical_fn_name": "f7",
+      "canonical_signature": "(memref<?xi32>) -> ()",
+      "memref_inputs": [
+        {"name": "m", "shape": [4], "dtype": "i32", "init": "alloc_only"}
+      ],
+      "memref_print": [
+        {"name": "m", "shape": [4], "dtype": "i32"}
+      ],
+      "expected_stdout_regex": "(7[^\\d]+){4}"
+    },
+    {
+      "id": "F14_linalg_copy_1d",
+      "dialect": "linalg+memref",
+      "source_benchmark": "linalg_spec_30",
+      "source_id": "09_copy-1d",
+      "nl": "Write a function that copies a 1-D f32 memref into another 1-D f32 memref of the same shape.",
+      "canonical_fn_name": "c1",
+      "canonical_signature": "(memref<?xf32>, memref<?xf32>) -> ()",
+      "memref_inputs": [
+        {"name": "s", "shape": [4], "dtype": "f32", "init": "fill", "fill_value": 3.5},
+        {"name": "d", "shape": [4], "dtype": "f32", "init": "alloc_only"}
+      ],
+      "memref_print": [
+        {"name": "d", "shape": [4], "dtype": "f32"}
+      ],
+      "expected_stdout_regex": "(3\\.5[^\\d]+){4}"
+    },
+    {
+      "id": "F15_linalg_copy_2d_static",
+      "dialect": "linalg+memref",
+      "source_benchmark": "linalg_spec_30",
+      "source_id": "10_copy-2d-static",
+      "nl": "Write a function that copies a 4x4xf32 static memref into another 4x4xf32 memref.",
+      "canonical_fn_name": "c2",
+      "canonical_signature": "(memref<4x4xf32>, memref<4x4xf32>) -> ()",
+      "memref_inputs": [
+        {"name": "s", "shape": [4, 4], "dtype": "f32", "init": "fill", "fill_value": 1.25, "static": true},
+        {"name": "d", "shape": [4, 4], "dtype": "f32", "init": "alloc_only", "static": true}
+      ],
+      "memref_print": [
+        {"name": "d", "shape": [4, 4], "dtype": "f32"}
+      ],
+      "expected_stdout_regex": "(1\\.25[^\\d]+){4}"
+    },
+    {
+      "id": "F16_linalg_add_elemwise",
+      "dialect": "linalg+memref",
+      "source_benchmark": "linalg_spec_30",
+      "source_id": "20_add-elemwise",
+      "nl": "linalg.add elementwise on two 1-D f32 memrefs",
+      "canonical_fn_name": "ae",
+      "canonical_signature": "(memref<?xf32>, memref<?xf32>, memref<?xf32>) -> ()",
+      "memref_inputs": [
+        {"name": "a", "shape": [4], "dtype": "f32", "init": "fill", "fill_value": 2.0},
+        {"name": "b", "shape": [4], "dtype": "f32", "init": "fill", "fill_value": 3.0},
+        {"name": "c", "shape": [4], "dtype": "f32", "init": "alloc_only"}
+      ],
+      "memref_print": [
+        {"name": "c", "shape": [4], "dtype": "f32"}
+      ],
+      "expected_stdout_regex": "(5(\\.0+)?[^\\d]+){4}"
+    },
+    {
+      "id": "F17_linalg_mul_elemwise_2d",
+      "dialect": "linalg+memref",
+      "source_benchmark": "linalg_spec_30",
+      "source_id": "22_mul-elemwise-2d",
+      "nl": "linalg.mul elementwise on two 2-D f32 memrefs (2x2)",
+      "canonical_fn_name": "me",
+      "canonical_signature": "(memref<?x?xf32>, memref<?x?xf32>, memref<?x?xf32>) -> ()",
+      "memref_inputs": [
+        {"name": "a", "shape": [2, 2], "dtype": "f32", "init": "fill", "fill_value": 3.0},
+        {"name": "b", "shape": [2, 2], "dtype": "f32", "init": "fill", "fill_value": 4.0},
+        {"name": "c", "shape": [2, 2], "dtype": "f32", "init": "alloc_only"}
+      ],
+      "memref_print": [
+        {"name": "c", "shape": [2, 2], "dtype": "f32"}
+      ],
+      "expected_stdout_regex": "(12(\\.0+)?[^\\d]+){4}"
+    },
+    {
+      "id": "F18_linalg_matmul_2x2",
+      "dialect": "linalg+memref",
+      "source_benchmark": "linalg_spec_30",
+      "source_id": "02_matmul-static-2x2",
+      "nl": "Write a function that performs matrix multiplication of two 2x2 f32 memrefs and writes the result into the output 2x2 f32 memref.",
+      "canonical_fn_name": "mm22",
+      "canonical_signature": "(memref<2x2xf32>, memref<2x2xf32>, memref<2x2xf32>) -> ()",
+      "memref_inputs": [
+        {"name": "A", "shape": [2, 2], "dtype": "f32", "init": "fill", "fill_value": 1.0, "static": true},
+        {"name": "B", "shape": [2, 2], "dtype": "f32", "init": "fill", "fill_value": 1.0, "static": true},
+        {"name": "C", "shape": [2, 2], "dtype": "f32", "init": "fill", "fill_value": 0.0, "static": true}
+      ],
+      "memref_print": [
+        {"name": "C", "shape": [2, 2], "dtype": "f32"}
+      ],
+      "expected_stdout_regex": "(2(\\.0+)?[^\\d]+){4}"
+    },
+    {
+      "id": "F19_linalg_exp_elemwise",
+      "dialect": "linalg+memref",
+      "source_benchmark": "linalg_spec_30",
+      "source_id": "24_exp-elemwise",
+      "nl": "linalg.exp elementwise on a 1-D f32 memref",
+      "canonical_fn_name": "ee",
+      "canonical_signature": "(memref<?xf32>, memref<?xf32>) -> ()",
+      "memref_inputs": [
+        {"name": "x", "shape": [4], "dtype": "f32", "init": "fill", "fill_value": 0.0},
+        {"name": "y", "shape": [4], "dtype": "f32", "init": "alloc_only"}
+      ],
+      "memref_print": [
+        {"name": "y", "shape": [4], "dtype": "f32"}
+      ],
+      "expected_stdout_regex": "(1(\\.0+)?[^\\d]+){4}"
+    },
+    {
+      "id": "F20_linalg_abs_elemwise",
+      "dialect": "linalg+memref",
+      "source_benchmark": "linalg_spec_30",
+      "source_id": "26_abs-elemwise",
+      "nl": "linalg.abs elementwise on a 1-D f32 memref",
+      "canonical_fn_name": "ab",
+      "canonical_signature": "(memref<?xf32>, memref<?xf32>) -> ()",
+      "memref_inputs": [
+        {"name": "x", "shape": [4], "dtype": "f32", "init": "fill", "fill_value": -2.5},
+        {"name": "y", "shape": [4], "dtype": "f32", "init": "alloc_only"}
+      ],
+      "memref_print": [
+        {"name": "y", "shape": [4], "dtype": "f32"}
+      ],
+      "expected_stdout_regex": "(2\\.5[^\\d]+){4}"
+    },
+
+    {
+      "id": "F21_stablehlo_add_1d_f32",
+      "dialect": "stablehlo",
+      "source_benchmark": "stablehlo_spec_30",
+      "source_id": "01_add-1d",
+      "nl": "Write a function that adds two 1-D f32 tensors of 16 elements using stablehlo.add.",
+      "canonical_fn_name": "a",
+      "canonical_signature": "(tensor<16xf32>, tensor<16xf32>) -> tensor<16xf32>",
+      "iree_inputs": ["16xf32=1.0", "16xf32=2.0"],
+      "expected_output_pattern": "16xf32=3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3"
+    },
+    {
+      "id": "F22_stablehlo_multiply_2d",
+      "dialect": "stablehlo",
+      "source_benchmark": "stablehlo_spec_30",
+      "source_id": "04_multiply-2d",
+      "nl": "Write a function that multiplies two 4x4 f32 tensors elementwise using stablehlo.multiply.",
+      "canonical_fn_name": "mul",
+      "canonical_signature": "(tensor<4x4xf32>, tensor<4x4xf32>) -> tensor<4x4xf32>",
+      "iree_inputs": ["4x4xf32=3.0", "4x4xf32=4.0"],
+      "expected_output_pattern": "4x4xf32=\\[12 12 12 12\\]\\[12 12 12 12\\]\\[12 12 12 12\\]\\[12 12 12 12\\]"
+    },
+    {
+      "id": "F23_stablehlo_subtract_1d_i32",
+      "dialect": "stablehlo",
+      "source_benchmark": "stablehlo_spec_30",
+      "source_id": "03_subtract-1d-i32",
+      "nl": "Write a function that subtracts two 1-D i32 tensors of 16 elements using stablehlo.subtract.",
+      "canonical_fn_name": "s",
+      "canonical_signature": "(tensor<16xi32>, tensor<16xi32>) -> tensor<16xi32>",
+      "iree_inputs": ["16xi32=10", "16xi32=4"],
+      "expected_output_pattern": "16xi32=6 6 6 6 6 6 6 6 6 6 6 6 6 6 6 6"
+    },
+    {
+      "id": "F24_stablehlo_abs_f32",
+      "dialect": "stablehlo",
+      "source_benchmark": "stablehlo_spec_30",
+      "source_id": "06_abs-f32",
+      "nl": "Write a function that computes the elementwise absolute value of a 1-D f32 tensor.",
+      "canonical_fn_name": "ab",
+      "canonical_signature": "(tensor<16xf32>) -> tensor<16xf32>",
+      "iree_inputs": ["16xf32=-2.5"],
+      "expected_output_pattern": "16xf32=2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5 2.5"
+    },
+    {
+      "id": "F25_stablehlo_exp_1d",
+      "dialect": "stablehlo",
+      "source_benchmark": "stablehlo_spec_30",
+      "source_id": "07_exp-1d",
+      "nl": "Write a function that computes the elementwise exponential of a 1-D f32 tensor.",
+      "canonical_fn_name": "ex",
+      "canonical_signature": "(tensor<16xf32>) -> tensor<16xf32>",
+      "iree_inputs": ["16xf32=0.0"],
+      "expected_output_pattern": "16xf32=1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1"
+    },
+    {
+      "id": "F26_stablehlo_transpose_2d",
+      "dialect": "stablehlo",
+      "source_benchmark": "stablehlo_spec_30",
+      "source_id": "09_transpose-2d",
+      "nl": "Write a function that transposes a 4x8 f32 tensor producing an 8x4 tensor.",
+      "canonical_fn_name": "t",
+      "canonical_signature": "(tensor<4x8xf32>) -> tensor<8x4xf32>",
+      "iree_inputs": ["4x8xf32=1.5"],
+      "expected_output_pattern": "8x4xf32="
+    },
+    {
+      "id": "F27_stablehlo_add_2d_dyn",
+      "dialect": "stablehlo",
+      "source_benchmark": "stablehlo_spec_30",
+      "source_id": "02_add-2d-dynamic",
+      "nl": "Write a function that adds two 2x4 f32 tensors using stablehlo.add.",
+      "canonical_fn_name": "a2",
+      "canonical_signature": "(tensor<2x4xf32>, tensor<2x4xf32>) -> tensor<2x4xf32>",
+      "iree_inputs": ["2x4xf32=2.0", "2x4xf32=2.5"],
+      "expected_output_pattern": "2x4xf32=\\[4.5 4.5 4.5 4.5\\]\\[4.5 4.5 4.5 4.5\\]"
+    },
+    {
+      "id": "F28_stablehlo_divide_f64",
+      "dialect": "stablehlo",
+      "source_benchmark": "stablehlo_spec_30",
+      "source_id": "05_divide-f64",
+      "nl": "Write a function that divides two 1-D f64 tensors of 8 elements using stablehlo.divide.",
+      "canonical_fn_name": "d",
+      "canonical_signature": "(tensor<8xf64>, tensor<8xf64>) -> tensor<8xf64>",
+      "iree_inputs": ["8xf64=12.0", "8xf64=4.0"],
+      "expected_output_pattern": "8xf64=3 3 3 3 3 3 3 3"
+    },
+    {
+      "id": "F29_stablehlo_dot_matmul",
+      "dialect": "stablehlo",
+      "source_benchmark": "stablehlo_spec_30",
+      "source_id": "17_dot_general-matmul",
+      "nl": "Write a function that performs a matmul of two f32 tensors via stablehlo.dot_general (lhs 4x8, rhs 8x4).",
+      "canonical_fn_name": "dm",
+      "canonical_signature": "(tensor<4x8xf32>, tensor<8x4xf32>) -> tensor<4x4xf32>",
+      "iree_inputs": ["4x8xf32=1.0", "8x4xf32=1.0"],
+      "expected_output_pattern": "4x4xf32=\\[8 8 8 8\\]\\[8 8 8 8\\]\\[8 8 8 8\\]\\[8 8 8 8\\]"
+    },
+    {
+      "id": "F30_stablehlo_transpose_3d",
+      "dialect": "stablehlo",
+      "source_benchmark": "stablehlo_spec_30",
+      "source_id": "10_transpose-3d",
+      "nl": "Write a function that transposes a 2x3x4 f32 tensor with permutation [2, 0, 1] producing a 4x2x3 tensor.",
+      "canonical_fn_name": "t3",
+      "canonical_signature": "(tensor<2x3x4xf32>) -> tensor<4x2x3xf32>",
+      "iree_inputs": ["2x3x4xf32=2.5"],
+      "expected_output_pattern": "4x2x3xf32="
+    }
+  ]
+}

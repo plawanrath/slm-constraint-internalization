@@ -1,0 +1,43 @@
+# Pinned LLVM + MLIR toolchain (mlir-opt, mlir-translate, mlir-cpu-runner, llvm-tblgen,
+# FileCheck, clang, opt, lli). Built once; accessed through a long-lived container and the
+# `docker exec` wrappers in scripts/env/bin/. One LLVM tag for the whole project.
+
+FROM ubuntu:22.04
+
+ARG LLVM_TAG=llvmorg-19.1.7
+ARG DEBIAN_FRONTEND=noninteractive
+# Peak RAM ≈ 3 GB per compile job plus link jobs; raise BUILD_JOBS only if the Docker VM
+# has memory to spare (≈ 4 GB per job is a safe rule).
+ARG BUILD_JOBS=6
+ARG LINK_JOBS=2
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        ca-certificates git cmake ninja-build build-essential python3 python3-pip \
+        zlib1g-dev libncurses5-dev libxml2-dev libedit-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /src
+RUN git clone --depth 1 --branch ${LLVM_TAG} https://github.com/llvm/llvm-project.git
+WORKDIR /src/llvm-project
+RUN mkdir build && cd build && \
+    cmake -G Ninja ../llvm \
+        -DLLVM_ENABLE_PROJECTS="mlir;clang" \
+        -DLLVM_TARGETS_TO_BUILD="host" \
+        -DCMAKE_BUILD_TYPE=Release \
+        -DLLVM_ENABLE_ASSERTIONS=OFF \
+        -DLLVM_PARALLEL_LINK_JOBS=${LINK_JOBS} \
+        -DLLVM_PARALLEL_COMPILE_JOBS=${BUILD_JOBS} \
+        -DLLVM_USE_SPLIT_DWARF=ON \
+        -DCMAKE_INSTALL_PREFIX=/opt/llvm \
+        -DLLVM_INSTALL_UTILS=ON \
+        -DMLIR_ENABLE_EXECUTION_ENGINE=ON \
+    && ninja -j${BUILD_JOBS} install \
+    && rm -rf /src/llvm-project/build
+
+RUN test -x /opt/llvm/bin/FileCheck && test -x /opt/llvm/bin/mlir-cpu-runner && \
+    test -x /opt/llvm/bin/llvm-tblgen && test -x /opt/llvm/bin/lli
+ENV PATH=/opt/llvm/bin:$PATH
+
+WORKDIR /work
+RUN mkdir -p /work /cache && printf '#!/bin/bash\ntail -f /dev/null\n' > /entrypoint.sh && chmod +x /entrypoint.sh
+CMD ["/entrypoint.sh"]
