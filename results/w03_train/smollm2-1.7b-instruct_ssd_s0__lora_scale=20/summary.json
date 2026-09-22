@@ -1,0 +1,56 @@
+{
+  "tag": "smollm2-1.7b-instruct_ssd_s0",
+  "config": {
+    "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+    "revision": "31b70e2e869a7173562077fd711b654946d38674",
+    "method": "ssd",
+    "seed": 0,
+    "lora": true,
+    "lora_rank": 32,
+    "lr": 0.0001,
+    "epochs": 2,
+    "batch_prompts": 32,
+    "group": 4,
+    "temp": 0.8,
+    "max_tokens": 300,
+    "lam": 1.0,
+    "train_pool": "data/pools/train_v1.jsonl",
+    "dev_pool": "data/pools/dev_v1.jsonl",
+    "n_train": 2000,
+    "n_dev": 100,
+    "eval_every": 25,
+    "out_dir": "results/w03_train",
+    "tag": "smollm2-1.7b-instruct_ssd_s0",
+    "micro_batch": 8,
+    "reward": "task",
+    "beta": 0.1,
+    "batched_loss": true,
+    "dev_batched": true,
+    "c3_mask": false,
+    "c3_weight": 1.0,
+    "task": "mlir"
+  },
+  "steps": 126,
+  "best": {
+    "dev_none": 0.5102,
+    "step": 75
+  },
+  "final_dev": {
+    "none": {
+      "verify": 0.68,
+      "reward": 0.4734,
+      "distinct": 97,
+      "mean_len": 88.7,
+      "unfinished": 1
+    },
+    "c1_c2": {
+      "verify": 0.69,
+      "reward": 0.4784,
+      "distinct": 97,
+      "mean_len": 86.8,
+      "unfinished": 0
+    }
+  },
+  "ckpt_dir": "models/ckpt/smollm2-1.7b-instruct_ssd_s0",
+  "elapsed_min": 220.1
+}

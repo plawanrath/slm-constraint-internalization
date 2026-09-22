@@ -1,0 +1,61 @@
+{
+  "tag": "smollm2-360m-instruct_ssd_s1__gold_in_group=1",
+  "config": {
+    "model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "revision": "a10cc1512eabd3dde888204e902eca88bddb4951",
+    "method": "ssd",
+    "seed": 1,
+    "lora": false,
+    "lora_rank": 32,
+    "lora_scale": 20.0,
+    "lr": 2e-05,
+    "epochs": 2,
+    "batch_prompts": 32,
+    "group": 4,
+    "temp": 0.8,
+    "max_tokens": 300,
+    "lam": 1.0,
+    "train_pool": "data/pools/train_v1.jsonl",
+    "dev_pool": "data/pools/dev_v1.jsonl",
+    "n_train": 2000,
+    "n_dev": 100,
+    "eval_every": 25,
+    "out_dir": "results/w14_ablations",
+    "tag": "smollm2-360m-instruct_ssd_s1__gold_in_group=1",
+    "micro_batch": 8,
+    "reward": "task",
+    "beta": 0.1,
+    "batched_loss": true,
+    "dev_batched": true,
+    "c3_mask": false,
+    "c3_weight": 1.0,
+    "task": "mlir",
+    "rft_scale_by_kept": true,
+    "gold_in_group": 1,
+    "init_ckpt": null,
+    "teacher_masked": true
+  },
+  "steps": 126,
+  "best": {
+    "dev_none": 0.7065,
+    "step": 126
+  },
+  "final_dev": {
+    "none": {
+      "verify": 0.91,
+      "reward": 0.7065,
+      "distinct": 100,
+      "mean_len": 87.7,
+      "unfinished": 0
+    },
+    "c1_c2": {
+      "verify": 0.91,
+      "reward": 0.7065,
+      "distinct": 100,
+      "mean_len": 87.8,
+      "unfinished": 0
+    }
+  },
+  "ckpt_dir": "models/ckpt/smollm2-360m-instruct_ssd_s1__gold_in_group=1",
+  "elapsed_min": 88.4
+}

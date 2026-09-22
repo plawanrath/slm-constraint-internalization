@@ -1,4 +1,4 @@
-"""Per-constraint-layer violation rates and residuals (ADR-0004).
+"""Per-constraint-layer violation rates and residuals.
 
 Given ladder rows for one (model, ckpt) on one pool:
   v1 = parse-invalid rate on free decoding

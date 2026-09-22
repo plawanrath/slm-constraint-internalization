@@ -1,0 +1,287 @@
+{
+  "scf.condition": {
+    "attributes": [],
+    "operand_arity": [
+      1,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "i1"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      0
+    ],
+    "result_types": [],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/SCF/IR/SCFOps.td"
+  },
+  "scf.execute_region": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      0
+    ],
+    "operand_types": [],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/SCF/IR/SCFOps.td"
+  },
+  "scf.for": {
+    "attributes": [],
+    "operand_arity": [
+      3,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/SCF/IR/SCFOps.td"
+  },
+  "scf.forall": {
+    "attributes": [
+      "DenseI64ArrayAttr",
+      "DenseI64ArrayAttr",
+      "DenseI64ArrayAttr",
+      "anonymous_425"
+    ],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "index"
+      ],
+      [
+        "index"
+      ],
+      [
+        "index"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/SCF/IR/SCFOps.td"
+  },
+  "scf.forall.in_parallel": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      0
+    ],
+    "operand_types": [],
+    "result_arity": [
+      0,
+      0
+    ],
+    "result_types": [],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/SCF/IR/SCFOps.td"
+  },
+  "scf.if": {
+    "attributes": [],
+    "operand_arity": [
+      1,
+      1
+    ],
+    "operand_types": [
+      [
+        "i1"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/SCF/IR/SCFOps.td"
+  },
+  "scf.index_switch": {
+    "attributes": [
+      "DenseI64ArrayAttr"
+    ],
+    "operand_arity": [
+      1,
+      1
+    ],
+    "operand_types": [
+      [
+        "index"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/SCF/IR/SCFOps.td"
+  },
+  "scf.parallel": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "index"
+      ],
+      [
+        "index"
+      ],
+      [
+        "index"
+      ],
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/SCF/IR/SCFOps.td"
+  },
+  "scf.reduce": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      0
+    ],
+    "result_types": [],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/SCF/IR/SCFOps.td"
+  },
+  "scf.reduce.return": {
+    "attributes": [],
+    "operand_arity": [
+      1,
+      1
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      0
+    ],
+    "result_types": [],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/SCF/IR/SCFOps.td"
+  },
+  "scf.while": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      1000000
+    ],
+    "result_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/SCF/IR/SCFOps.td"
+  },
+  "scf.yield": {
+    "attributes": [],
+    "operand_arity": [
+      0,
+      1000000
+    ],
+    "operand_types": [
+      [
+        "ANY"
+      ]
+    ],
+    "result_arity": [
+      0,
+      0
+    ],
+    "result_types": [],
+    "same_type_classes": [],
+    "source_file": "/opt/llvm/include/mlir/Dialect/SCF/IR/SCFOps.td"
+  }
+}

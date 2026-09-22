@@ -1,0 +1,242 @@
+{
+  "base:smollm2-360m-instruct": {
+    "none": {
+      "n": 100,
+      "verify": 0,
+      "match": 0,
+      "match_rate": 0.0,
+      "status": {
+        "not_verified": 100
+      }
+    },
+    "c1_c2": {
+      "n": 100,
+      "verify": 34,
+      "match": 6,
+      "match_rate": 0.06,
+      "status": {
+        "not_verified": 66,
+        "signature_mismatch": 4,
+        "mismatch": 20,
+        "match": 6,
+        "unsupported": 4
+      }
+    }
+  },
+  "smollm2-360m-instruct_ssd_s0": {
+    "none": {
+      "n": 100,
+      "verify": 76,
+      "match": 21,
+      "match_rate": 0.21,
+      "status": {
+        "match": 21,
+        "mismatch": 36,
+        "unsupported": 13,
+        "not_verified": 24,
+        "signature_mismatch": 6
+      }
+    },
+    "c1_c2": {
+      "n": 100,
+      "verify": 76,
+      "match": 21,
+      "match_rate": 0.21,
+      "status": {
+        "match": 21,
+        "mismatch": 36,
+        "unsupported": 13,
+        "not_verified": 24,
+        "signature_mismatch": 6
+      }
+    }
+  },
+  "smollm2-360m-instruct_ssd_s0__reward=functional": {
+    "none": {
+      "n": 100,
+      "verify": 76,
+      "match": 19,
+      "match_rate": 0.19,
+      "status": {
+        "match": 19,
+        "mismatch": 39,
+        "unsupported": 12,
+        "not_verified": 24,
+        "signature_mismatch": 6
+      }
+    },
+    "c1_c2": {
+      "n": 100,
+      "verify": 76,
+      "match": 19,
+      "match_rate": 0.19,
+      "status": {
+        "match": 19,
+        "mismatch": 39,
+        "unsupported": 12,
+        "not_verified": 24,
+        "signature_mismatch": 6
+      }
+    }
+  },
+  "smollm2-360m-instruct_sft_s0": {
+    "none": {
+      "n": 100,
+      "verify": 100,
+      "match": 72,
+      "match_rate": 0.72,
+      "status": {
+        "match": 72,
+        "unsupported": 18,
+        "mismatch": 10
+      }
+    },
+    "c1_c2": {
+      "n": 100,
+      "verify": 100,
+      "match": 72,
+      "match_rate": 0.72,
+      "status": {
+        "match": 72,
+        "unsupported": 18,
+        "mismatch": 10
+      }
+    }
+  },
+  "base:smollm2-1.7b-instruct": {
+    "none": {
+      "n": 100,
+      "verify": 18,
+      "match": 7,
+      "match_rate": 0.07,
+      "status": {
+        "not_verified": 82,
+        "signature_mismatch": 1,
+        "match": 7,
+        "mismatch": 6,
+        "unsupported": 4
+      }
+    },
+    "c1_c2": {
+      "n": 100,
+      "verify": 54,
+      "match": 26,
+      "match_rate": 0.26,
+      "status": {
+        "match": 26,
+        "signature_mismatch": 4,
+        "not_verified": 46,
+        "mismatch": 18,
+        "unsupported": 6
+      }
+    }
+  },
+  "smollm2-1.7b-instruct_ssd_s0": {
+    "none": {
+      "n": 100,
+      "verify": 94,
+      "match": 47,
+      "match_rate": 0.47,
+      "status": {
+        "match": 47,
+        "mismatch": 31,
+        "unsupported": 15,
+        "not_verified": 6,
+        "signature_mismatch": 1
+      }
+    },
+    "c1_c2": {
+      "n": 100,
+      "verify": 94,
+      "match": 47,
+      "match_rate": 0.47,
+      "status": {
+        "match": 47,
+        "mismatch": 31,
+        "unsupported": 15,
+        "not_verified": 6,
+        "signature_mismatch": 1
+      }
+    }
+  },
+  "smollm2-1.7b-instruct_ssd_s0__reward=functional": {
+    "none": {
+      "n": 100,
+      "verify": 90,
+      "match": 64,
+      "match_rate": 0.64,
+      "status": {
+        "match": 64,
+        "mismatch": 13,
+        "unsupported": 12,
+        "not_verified": 10,
+        "signature_mismatch": 1
+      }
+    },
+    "c1_c2": {
+      "n": 100,
+      "verify": 90,
+      "match": 64,
+      "match_rate": 0.64,
+      "status": {
+        "match": 64,
+        "mismatch": 13,
+        "unsupported": 12,
+        "not_verified": 10,
+        "signature_mismatch": 1
+      }
+    }
+  },
+  "smollm2-360m-instruct_ssd_s0__gold_in_group=1": {
+    "none": {
+      "n": 100,
+      "verify": 90,
+      "match": 41,
+      "match_rate": 0.41,
+      "status": {
+        "match": 41,
+        "mismatch": 35,
+        "unsupported": 14,
+        "not_verified": 10
+      }
+    },
+    "c1_c2": {
+      "n": 100,
+      "verify": 90,
+      "match": 41,
+      "match_rate": 0.41,
+      "status": {
+        "match": 41,
+        "mismatch": 35,
+        "unsupported": 14,
+        "not_verified": 10
+      }
+    }
+  },
+  "smollm2-360m-instruct_ssd_s0__init=sft_s0": {
+    "none": {
+      "n": 100,
+      "verify": 98,
+      "match": 45,
+      "match_rate": 0.45,
+      "status": {
+        "match": 45,
+        "mismatch": 35,
+        "unsupported": 18,
+        "not_verified": 2
+      }
+    },
+    "c1_c2": {
+      "n": 100,
+      "verify": 98,
+      "match": 45,
+      "match_rate": 0.45,
+      "status": {
+        "match": 45,
+        "mismatch": 35,
+        "unsupported": 18,
+        "not_verified": 2
+      }
+    }
+  }
+}

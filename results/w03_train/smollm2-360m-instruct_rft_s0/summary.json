@@ -1,0 +1,58 @@
+{
+  "tag": "smollm2-360m-instruct_rft_s0",
+  "config": {
+    "model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "revision": "a10cc1512eabd3dde888204e902eca88bddb4951",
+    "method": "rft",
+    "seed": 0,
+    "lora": false,
+    "lora_rank": 32,
+    "lora_scale": 20.0,
+    "lr": 2e-05,
+    "epochs": 2,
+    "batch_prompts": 32,
+    "group": 4,
+    "temp": 0.8,
+    "max_tokens": 300,
+    "lam": 1.0,
+    "train_pool": "data/pools/train_v1.jsonl",
+    "dev_pool": "data/pools/dev_v1.jsonl",
+    "n_train": 2000,
+    "n_dev": 100,
+    "eval_every": 25,
+    "out_dir": "results/w03_train",
+    "tag": "smollm2-360m-instruct_rft_s0",
+    "micro_batch": 8,
+    "reward": "task",
+    "beta": 0.1,
+    "batched_loss": true,
+    "dev_batched": true,
+    "c3_mask": false,
+    "c3_weight": 1.0,
+    "task": "mlir",
+    "rft_scale_by_kept": true
+  },
+  "steps": 126,
+  "best": {
+    "dev_none": 0.289,
+    "step": 126
+  },
+  "final_dev": {
+    "none": {
+      "verify": 0.85,
+      "reward": 0.289,
+      "distinct": 71,
+      "mean_len": 67.9,
+      "unfinished": 0
+    },
+    "c1_c2": {
+      "verify": 0.91,
+      "reward": 0.289,
+      "distinct": 70,
+      "mean_len": 68.2,
+      "unfinished": 0
+    }
+  },
+  "ckpt_dir": "models/ckpt/smollm2-360m-instruct_rft_s0",
+  "elapsed_min": 49.9
+}

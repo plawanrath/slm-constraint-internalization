@@ -1,0 +1,1398 @@
+{
+  "cells": {
+    "base1p7": {
+      "scf_spec_60": {
+        "c1": {
+          "n": 60,
+          "parse_rate": 0.8,
+          "verify_rate": 0.2167,
+          "verify_ci95": [
+            0.1167,
+            0.3167
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 2.063,
+          "unfinished": 12
+        },
+        "c1_c2": {
+          "n": 60,
+          "parse_rate": 0.8,
+          "verify_rate": 0.2667,
+          "verify_ci95": [
+            0.1667,
+            0.3833
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 2.067,
+          "unfinished": 12
+        },
+        "c1_c2_c3": {
+          "n": 60,
+          "parse_rate": 0.7,
+          "verify_rate": 0.3,
+          "verify_ci95": [
+            0.1833,
+            0.4167
+          ],
+          "mean_attempts": 2.45,
+          "mean_dt": 4.931,
+          "unfinished": 18
+        },
+        "none": {
+          "n": 60,
+          "parse_rate": 0.35,
+          "verify_rate": 0.1667,
+          "verify_ci95": [
+            0.0833,
+            0.2667
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 1.489,
+          "unfinished": 2
+        },
+        "paired_deltas": {
+          "c1-none": {
+            "pp": 5.0,
+            "ci95_pp": [
+              0.0,
+              11.7
+            ],
+            "p_one_sided": 0.0489,
+            "n_pairs": 60
+          },
+          "c1_c2-c1": {
+            "pp": 5.0,
+            "ci95_pp": [
+              0.0,
+              11.7
+            ],
+            "p_one_sided": 0.0452,
+            "n_pairs": 60
+          },
+          "c1_c2_c3-c1_c2": {
+            "pp": 3.3,
+            "ci95_pp": [
+              0.0,
+              8.3
+            ],
+            "p_one_sided": 0.1267,
+            "n_pairs": 60
+          },
+          "c1_c2_c3-none": {
+            "pp": 13.3,
+            "ci95_pp": [
+              5.0,
+              21.7
+            ],
+            "p_one_sided": 0.0003,
+            "n_pairs": 60
+          }
+        }
+      }
+    },
+    "base360": {
+      "scf_spec_60": {
+        "c1": {
+          "n": 60,
+          "parse_rate": 0.55,
+          "verify_rate": 0.0833,
+          "verify_ci95": [
+            0.0167,
+            0.15
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 1.398,
+          "unfinished": 27
+        },
+        "c1_c2": {
+          "n": 60,
+          "parse_rate": 0.5333,
+          "verify_rate": 0.1,
+          "verify_ci95": [
+            0.0333,
+            0.1833
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 1.404,
+          "unfinished": 28
+        },
+        "c1_c2_c3": {
+          "n": 60,
+          "parse_rate": 0.1667,
+          "verify_rate": 0.1,
+          "verify_ci95": [
+            0.0333,
+            0.1833
+          ],
+          "mean_attempts": 1.733,
+          "mean_dt": 2.553,
+          "unfinished": 50
+        },
+        "none": {
+          "n": 60,
+          "parse_rate": 0.0,
+          "verify_rate": 0.0,
+          "verify_ci95": [
+            0.0,
+            0.0
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 1.394,
+          "unfinished": 24
+        },
+        "paired_deltas": {
+          "c1-none": {
+            "pp": 8.3,
+            "ci95_pp": [
+              1.7,
+              15.0
+            ],
+            "p_one_sided": 0.0055,
+            "n_pairs": 60
+          },
+          "c1_c2-c1": {
+            "pp": 1.7,
+            "ci95_pp": [
+              0.0,
+              5.0
+            ],
+            "p_one_sided": 0.3712,
+            "n_pairs": 60
+          },
+          "c1_c2_c3-c1_c2": {
+            "pp": 0.0,
+            "ci95_pp": [
+              0.0,
+              0.0
+            ],
+            "p_one_sided": 1.0,
+            "n_pairs": 60
+          },
+          "c1_c2_c3-none": {
+            "pp": 10.0,
+            "ci95_pp": [
+              3.3,
+              18.3
+            ],
+            "p_one_sided": 0.0017,
+            "n_pairs": 60
+          }
+        }
+      }
+    },
+    "base3b": {
+      "scf_spec_60": {
+        "c1": {
+          "n": 60,
+          "parse_rate": 0.9167,
+          "verify_rate": 0.1833,
+          "verify_ci95": [
+            0.0833,
+            0.2833
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 3.182,
+          "unfinished": 5
+        },
+        "c1_c2": {
+          "n": 60,
+          "parse_rate": 0.8667,
+          "verify_rate": 0.2167,
+          "verify_ci95": [
+            0.1167,
+            0.3333
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 3.425,
+          "unfinished": 8
+        },
+        "c1_c2_c3": {
+          "n": 60,
+          "parse_rate": 0.7333,
+          "verify_rate": 0.3333,
+          "verify_ci95": [
+            0.2167,
+            0.45
+          ],
+          "mean_attempts": 2.617,
+          "mean_dt": 9.255,
+          "unfinished": 16
+        },
+        "none": {
+          "n": 60,
+          "parse_rate": 0.3167,
+          "verify_rate": 0.15,
+          "verify_ci95": [
+            0.0667,
+            0.25
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 2.252,
+          "unfinished": 0
+        },
+        "paired_deltas": {
+          "c1-none": {
+            "pp": 3.3,
+            "ci95_pp": [
+              0.0,
+              8.3
+            ],
+            "p_one_sided": 0.1267,
+            "n_pairs": 60
+          },
+          "c1_c2-c1": {
+            "pp": 3.3,
+            "ci95_pp": [
+              0.0,
+              8.3
+            ],
+            "p_one_sided": 0.1286,
+            "n_pairs": 60
+          },
+          "c1_c2_c3-c1_c2": {
+            "pp": 11.7,
+            "ci95_pp": [
+              3.3,
+              20.0
+            ],
+            "p_one_sided": 0.0009,
+            "n_pairs": 60
+          },
+          "c1_c2_c3-none": {
+            "pp": 18.3,
+            "ci95_pp": [
+              8.3,
+              28.3
+            ],
+            "p_one_sided": 0.0,
+            "n_pairs": 60
+          }
+        }
+      }
+    },
+    "baseg1b": {
+      "scf_spec_60": {
+        "c1": {
+          "n": 60,
+          "parse_rate": 0.8,
+          "verify_rate": 0.25,
+          "verify_ci95": [
+            0.15,
+            0.3667
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 1.861,
+          "unfinished": 12
+        },
+        "c1_c2": {
+          "n": 60,
+          "parse_rate": 0.8,
+          "verify_rate": 0.25,
+          "verify_ci95": [
+            0.15,
+            0.3667
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 1.928,
+          "unfinished": 12
+        },
+        "c1_c2_c3": {
+          "n": 60,
+          "parse_rate": 0.6333,
+          "verify_rate": 0.2667,
+          "verify_ci95": [
+            0.15,
+            0.3833
+          ],
+          "mean_attempts": 2.5,
+          "mean_dt": 4.476,
+          "unfinished": 22
+        },
+        "none": {
+          "n": 60,
+          "parse_rate": 0.2,
+          "verify_rate": 0.0667,
+          "verify_ci95": [
+            0.0167,
+            0.1333
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 1.338,
+          "unfinished": 1
+        },
+        "paired_deltas": {
+          "c1-none": {
+            "pp": 18.3,
+            "ci95_pp": [
+              8.3,
+              28.3
+            ],
+            "p_one_sided": 0.0,
+            "n_pairs": 60
+          },
+          "c1_c2-c1": {
+            "pp": 0.0,
+            "ci95_pp": [
+              0.0,
+              0.0
+            ],
+            "p_one_sided": 1.0,
+            "n_pairs": 60
+          },
+          "c1_c2_c3-c1_c2": {
+            "pp": 1.7,
+            "ci95_pp": [
+              0.0,
+              5.0
+            ],
+            "p_one_sided": 0.3654,
+            "n_pairs": 60
+          },
+          "c1_c2_c3-none": {
+            "pp": 20.0,
+            "ci95_pp": [
+              10.0,
+              30.0
+            ],
+            "p_one_sided": 0.0,
+            "n_pairs": 60
+          }
+        }
+      }
+    },
+    "ssd1p7": {
+      "scf_spec_60": {
+        "c1": {
+          "n": 60,
+          "parse_rate": 0.9833,
+          "verify_rate": 0.45,
+          "verify_ci95": [
+            0.3167,
+            0.5833
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 3.41,
+          "unfinished": 1
+        },
+        "c1_c2": {
+          "n": 60,
+          "parse_rate": 0.9833,
+          "verify_rate": 0.45,
+          "verify_ci95": [
+            0.3167,
+            0.5833
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 3.432,
+          "unfinished": 1
+        },
+        "c1_c2_c3": {
+          "n": 60,
+          "parse_rate": 0.9667,
+          "verify_rate": 0.55,
+          "verify_ci95": [
+            0.4167,
+            0.6667
+          ],
+          "mean_attempts": 2.467,
+          "mean_dt": 8.76,
+          "unfinished": 2
+        },
+        "none": {
+          "n": 60,
+          "parse_rate": 0.7333,
+          "verify_rate": 0.4,
+          "verify_ci95": [
+            0.2833,
+            0.5167
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 3.039,
+          "unfinished": 0
+        },
+        "paired_deltas": {
+          "c1-none": {
+            "pp": 5.0,
+            "ci95_pp": [
+              0.0,
+              11.7
+            ],
+            "p_one_sided": 0.0482,
+            "n_pairs": 60
+          },
+          "c1_c2-c1": {
+            "pp": 0.0,
+            "ci95_pp": [
+              0.0,
+              0.0
+            ],
+            "p_one_sided": 1.0,
+            "n_pairs": 60
+          },
+          "c1_c2_c3-c1_c2": {
+            "pp": 10.0,
+            "ci95_pp": [
+              3.3,
+              18.3
+            ],
+            "p_one_sided": 0.0017,
+            "n_pairs": 60
+          },
+          "c1_c2_c3-none": {
+            "pp": 15.0,
+            "ci95_pp": [
+              6.7,
+              25.0
+            ],
+            "p_one_sided": 0.0001,
+            "n_pairs": 60
+          }
+        }
+      }
+    },
+    "ssd360": {
+      "scf_spec_60": {
+        "c1": {
+          "n": 60,
+          "parse_rate": 0.9333,
+          "verify_rate": 0.2333,
+          "verify_ci95": [
+            0.1333,
+            0.35
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 0.739,
+          "unfinished": 4
+        },
+        "c1_c2": {
+          "n": 60,
+          "parse_rate": 0.9333,
+          "verify_rate": 0.25,
+          "verify_ci95": [
+            0.15,
+            0.3667
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 0.731,
+          "unfinished": 4
+        },
+        "c1_c2_c3": {
+          "n": 60,
+          "parse_rate": 0.7167,
+          "verify_rate": 0.3,
+          "verify_ci95": [
+            0.1833,
+            0.4167
+          ],
+          "mean_attempts": 3.1,
+          "mean_dt": 2.613,
+          "unfinished": 17
+        },
+        "none": {
+          "n": 60,
+          "parse_rate": 0.7,
+          "verify_rate": 0.2,
+          "verify_ci95": [
+            0.1,
+            0.3
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 0.555,
+          "unfinished": 0
+        },
+        "paired_deltas": {
+          "c1-none": {
+            "pp": 3.3,
+            "ci95_pp": [
+              0.0,
+              8.3
+            ],
+            "p_one_sided": 0.137,
+            "n_pairs": 60
+          },
+          "c1_c2-c1": {
+            "pp": 1.7,
+            "ci95_pp": [
+              0.0,
+              5.0
+            ],
+            "p_one_sided": 0.3712,
+            "n_pairs": 60
+          },
+          "c1_c2_c3-c1_c2": {
+            "pp": 5.0,
+            "ci95_pp": [
+              0.0,
+              11.7
+            ],
+            "p_one_sided": 0.0468,
+            "n_pairs": 60
+          },
+          "c1_c2_c3-none": {
+            "pp": 10.0,
+            "ci95_pp": [
+              3.3,
+              18.3
+            ],
+            "p_one_sided": 0.002,
+            "n_pairs": 60
+          }
+        }
+      }
+    },
+    "ssd3b": {
+      "scf_spec_60": {
+        "c1": {
+          "n": 60,
+          "parse_rate": 0.9667,
+          "verify_rate": 0.2333,
+          "verify_ci95": [
+            0.1333,
+            0.35
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 5.614,
+          "unfinished": 1
+        },
+        "c1_c2": {
+          "n": 60,
+          "parse_rate": 0.9833,
+          "verify_rate": 0.3167,
+          "verify_ci95": [
+            0.2,
+            0.4333
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 5.53,
+          "unfinished": 1
+        },
+        "c1_c2_c3": {
+          "n": 60,
+          "parse_rate": 0.9167,
+          "verify_rate": 0.4167,
+          "verify_ci95": [
+            0.2833,
+            0.5333
+          ],
+          "mean_attempts": 2.467,
+          "mean_dt": 14.916,
+          "unfinished": 5
+        },
+        "none": {
+          "n": 60,
+          "parse_rate": 0.8167,
+          "verify_rate": 0.2,
+          "verify_ci95": [
+            0.1,
+            0.3
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 4.766,
+          "unfinished": 0
+        },
+        "paired_deltas": {
+          "c1-none": {
+            "pp": 3.3,
+            "ci95_pp": [
+              0.0,
+              8.3
+            ],
+            "p_one_sided": 0.1287,
+            "n_pairs": 60
+          },
+          "c1_c2-c1": {
+            "pp": 8.3,
+            "ci95_pp": [
+              1.7,
+              16.7
+            ],
+            "p_one_sided": 0.0056,
+            "n_pairs": 60
+          },
+          "c1_c2_c3-c1_c2": {
+            "pp": 10.0,
+            "ci95_pp": [
+              3.3,
+              18.3
+            ],
+            "p_one_sided": 0.0022,
+            "n_pairs": 60
+          },
+          "c1_c2_c3-none": {
+            "pp": 21.7,
+            "ci95_pp": [
+              11.7,
+              33.3
+            ],
+            "p_one_sided": 0.0,
+            "n_pairs": 60
+          }
+        }
+      }
+    },
+    "ssdg1b": {
+      "scf_spec_60": {
+        "c1": {
+          "n": 60,
+          "parse_rate": 1.0,
+          "verify_rate": 0.6667,
+          "verify_ci95": [
+            0.55,
+            0.7833
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 2.751,
+          "unfinished": 0
+        },
+        "c1_c2": {
+          "n": 60,
+          "parse_rate": 1.0,
+          "verify_rate": 0.6667,
+          "verify_ci95": [
+            0.55,
+            0.7833
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 2.742,
+          "unfinished": 0
+        },
+        "c1_c2_c3": {
+          "n": 60,
+          "parse_rate": 1.0,
+          "verify_rate": 0.7167,
+          "verify_ci95": [
+            0.6,
+            0.8333
+          ],
+          "mean_attempts": 2.2,
+          "mean_dt": 5.936,
+          "unfinished": 0
+        },
+        "none": {
+          "n": 60,
+          "parse_rate": 0.9333,
+          "verify_rate": 0.6333,
+          "verify_ci95": [
+            0.5167,
+            0.75
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 2.588,
+          "unfinished": 0
+        },
+        "paired_deltas": {
+          "c1-none": {
+            "pp": 3.3,
+            "ci95_pp": [
+              0.0,
+              8.3
+            ],
+            "p_one_sided": 0.1281,
+            "n_pairs": 60
+          },
+          "c1_c2-c1": {
+            "pp": 0.0,
+            "ci95_pp": [
+              0.0,
+              0.0
+            ],
+            "p_one_sided": 1.0,
+            "n_pairs": 60
+          },
+          "c1_c2_c3-c1_c2": {
+            "pp": 5.0,
+            "ci95_pp": [
+              0.0,
+              11.7
+            ],
+            "p_one_sided": 0.0459,
+            "n_pairs": 60
+          },
+          "c1_c2_c3-none": {
+            "pp": 8.3,
+            "ci95_pp": [
+              1.7,
+              15.0
+            ],
+            "p_one_sided": 0.0053,
+            "n_pairs": 60
+          }
+        }
+      }
+    }
+  },
+  "residuals": {
+    "base1p7": {
+      "scf_spec_60": {
+        "n": {
+          "none": 60,
+          "c1": 60,
+          "c1_c2": 60,
+          "c1_c2_c3": 60
+        },
+        "rates": {
+          "none": {
+            "v1": 0.65,
+            "v2": 0.0333,
+            "v3": 0.0833,
+            "v4": 0.0,
+            "verify_valid": 0.1667
+          },
+          "c1": {
+            "v1": 0.2,
+            "v2": 0.05,
+            "v3": 0.3833,
+            "v4": 0.0167,
+            "verify_valid": 0.2167
+          },
+          "c1_c2": {
+            "v1": 0.2,
+            "v2": 0.0,
+            "v3": 0.4333,
+            "v4": 0.0,
+            "verify_valid": 0.2667
+          },
+          "c1_c2_c3": {
+            "v1": 0.3,
+            "v2": 0.0,
+            "v3": 0.2833,
+            "v4": 0.0,
+            "verify_valid": 0.3
+          }
+        },
+        "residual_pp": {
+          "v1": {
+            "vs": "c1",
+            "pp": 45.0,
+            "ci95": [
+              31.7,
+              58.3
+            ],
+            "n": 60
+          },
+          "v2": {
+            "vs": "c1_c2",
+            "pp": 3.3,
+            "ci95": [
+              0.0,
+              8.3
+            ],
+            "n": 60
+          },
+          "v3": {
+            "vs": "c1_c2_c3",
+            "pp": -20.0,
+            "ci95": [
+              -30.0,
+              -10.0
+            ],
+            "n": 60
+          },
+          "v4": {
+            "vs": "c1_c2_c3",
+            "pp": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n": 60
+          }
+        },
+        "functional_rate": {
+          "none": 0.1,
+          "c1": 0.1333,
+          "c1_c2": 0.1333,
+          "c1_c2_c3": 0.15
+        }
+      }
+    },
+    "base360": {
+      "scf_spec_60": {
+        "n": {
+          "none": 60,
+          "c1": 60,
+          "c1_c2": 60,
+          "c1_c2_c3": 60
+        },
+        "rates": {
+          "none": {
+            "v1": 1.0,
+            "v2": 0.0,
+            "v3": 0.0,
+            "v4": 0.0,
+            "verify_valid": 0.0
+          },
+          "c1": {
+            "v1": 0.45,
+            "v2": 0.0,
+            "v3": 0.3667,
+            "v4": 0.0,
+            "verify_valid": 0.0833
+          },
+          "c1_c2": {
+            "v1": 0.4667,
+            "v2": 0.0,
+            "v3": 0.4167,
+            "v4": 0.0,
+            "verify_valid": 0.1
+          },
+          "c1_c2_c3": {
+            "v1": 0.8333,
+            "v2": 0.0,
+            "v3": 0.05,
+            "v4": 0.0,
+            "verify_valid": 0.1
+          }
+        },
+        "residual_pp": {
+          "v1": {
+            "vs": "c1",
+            "pp": 55.0,
+            "ci95": [
+              41.7,
+              68.3
+            ],
+            "n": 60
+          },
+          "v2": {
+            "vs": "c1_c2",
+            "pp": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n": 60
+          },
+          "v3": {
+            "vs": "c1_c2_c3",
+            "pp": -5.0,
+            "ci95": [
+              -11.7,
+              0.0
+            ],
+            "n": 60
+          },
+          "v4": {
+            "vs": "c1_c2_c3",
+            "pp": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n": 60
+          }
+        },
+        "functional_rate": {
+          "none": 0.0,
+          "c1": 0.0333,
+          "c1_c2": 0.0333,
+          "c1_c2_c3": 0.0333
+        }
+      }
+    },
+    "base3b": {
+      "scf_spec_60": {
+        "n": {
+          "none": 60,
+          "c1": 60,
+          "c1_c2": 60,
+          "c1_c2_c3": 60
+        },
+        "rates": {
+          "none": {
+            "v1": 0.6833,
+            "v2": 0.0167,
+            "v3": 0.1333,
+            "v4": 0.0167,
+            "verify_valid": 0.15
+          },
+          "c1": {
+            "v1": 0.0833,
+            "v2": 0.0333,
+            "v3": 0.5833,
+            "v4": 0.0,
+            "verify_valid": 0.1833
+          },
+          "c1_c2": {
+            "v1": 0.1333,
+            "v2": 0.0,
+            "v3": 0.5667,
+            "v4": 0.0167,
+            "verify_valid": 0.2167
+          },
+          "c1_c2_c3": {
+            "v1": 0.2667,
+            "v2": 0.0,
+            "v3": 0.2,
+            "v4": 0.0,
+            "verify_valid": 0.3333
+          }
+        },
+        "residual_pp": {
+          "v1": {
+            "vs": "c1",
+            "pp": 60.0,
+            "ci95": [
+              46.7,
+              71.7
+            ],
+            "n": 60
+          },
+          "v2": {
+            "vs": "c1_c2",
+            "pp": 1.7,
+            "ci95": [
+              0.0,
+              5.0
+            ],
+            "n": 60
+          },
+          "v3": {
+            "vs": "c1_c2_c3",
+            "pp": -6.7,
+            "ci95": [
+              -20.0,
+              6.7
+            ],
+            "n": 60
+          },
+          "v4": {
+            "vs": "c1_c2_c3",
+            "pp": 1.7,
+            "ci95": [
+              0.0,
+              5.0
+            ],
+            "n": 60
+          }
+        },
+        "functional_rate": {
+          "none": 0.1333,
+          "c1": 0.15,
+          "c1_c2": 0.15,
+          "c1_c2_c3": 0.2
+        }
+      }
+    },
+    "baseg1b": {
+      "scf_spec_60": {
+        "n": {
+          "none": 60,
+          "c1": 60,
+          "c1_c2": 60,
+          "c1_c2_c3": 60
+        },
+        "rates": {
+          "none": {
+            "v1": 0.8,
+            "v2": 0.0167,
+            "v3": 0.1,
+            "v4": 0.0,
+            "verify_valid": 0.0667
+          },
+          "c1": {
+            "v1": 0.2,
+            "v2": 0.05,
+            "v3": 0.45,
+            "v4": 0.0333,
+            "verify_valid": 0.25
+          },
+          "c1_c2": {
+            "v1": 0.2,
+            "v2": 0.0,
+            "v3": 0.5,
+            "v4": 0.0167,
+            "verify_valid": 0.25
+          },
+          "c1_c2_c3": {
+            "v1": 0.3667,
+            "v2": 0.0,
+            "v3": 0.3167,
+            "v4": 0.0167,
+            "verify_valid": 0.2667
+          }
+        },
+        "residual_pp": {
+          "v1": {
+            "vs": "c1",
+            "pp": 60.0,
+            "ci95": [
+              45.0,
+              73.3
+            ],
+            "n": 60
+          },
+          "v2": {
+            "vs": "c1_c2",
+            "pp": 1.7,
+            "ci95": [
+              0.0,
+              5.0
+            ],
+            "n": 60
+          },
+          "v3": {
+            "vs": "c1_c2_c3",
+            "pp": -21.7,
+            "ci95": [
+              -33.3,
+              -10.0
+            ],
+            "n": 60
+          },
+          "v4": {
+            "vs": "c1_c2_c3",
+            "pp": -1.7,
+            "ci95": [
+              -5.0,
+              0.0
+            ],
+            "n": 60
+          }
+        },
+        "functional_rate": {
+          "none": 0.0167,
+          "c1": 0.1,
+          "c1_c2": 0.1,
+          "c1_c2_c3": 0.1
+        }
+      }
+    },
+    "ssd1p7": {
+      "scf_spec_60": {
+        "n": {
+          "none": 60,
+          "c1": 60,
+          "c1_c2": 60,
+          "c1_c2_c3": 60
+        },
+        "rates": {
+          "none": {
+            "v1": 0.2667,
+            "v2": 0.0333,
+            "v3": 0.25,
+            "v4": 0.0,
+            "verify_valid": 0.4
+          },
+          "c1": {
+            "v1": 0.0167,
+            "v2": 0.05,
+            "v3": 0.4333,
+            "v4": 0.0,
+            "verify_valid": 0.45
+          },
+          "c1_c2": {
+            "v1": 0.0167,
+            "v2": 0.0333,
+            "v3": 0.45,
+            "v4": 0.0,
+            "verify_valid": 0.45
+          },
+          "c1_c2_c3": {
+            "v1": 0.0333,
+            "v2": 0.0667,
+            "v3": 0.2667,
+            "v4": 0.0167,
+            "verify_valid": 0.55
+          }
+        },
+        "residual_pp": {
+          "v1": {
+            "vs": "c1",
+            "pp": 25.0,
+            "ci95": [
+              15.0,
+              36.7
+            ],
+            "n": 60
+          },
+          "v2": {
+            "vs": "c1_c2",
+            "pp": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n": 60
+          },
+          "v3": {
+            "vs": "c1_c2_c3",
+            "pp": -1.7,
+            "ci95": [
+              -15.0,
+              11.7
+            ],
+            "n": 60
+          },
+          "v4": {
+            "vs": "c1_c2_c3",
+            "pp": -1.7,
+            "ci95": [
+              -5.0,
+              0.0
+            ],
+            "n": 60
+          }
+        },
+        "functional_rate": {
+          "none": 0.15,
+          "c1": 0.15,
+          "c1_c2": 0.15,
+          "c1_c2_c3": 0.1833
+        }
+      }
+    },
+    "ssd360": {
+      "scf_spec_60": {
+        "n": {
+          "none": 60,
+          "c1": 60,
+          "c1_c2": 60,
+          "c1_c2_c3": 60
+        },
+        "rates": {
+          "none": {
+            "v1": 0.3,
+            "v2": 0.0,
+            "v3": 0.4,
+            "v4": 0.0,
+            "verify_valid": 0.2
+          },
+          "c1": {
+            "v1": 0.0667,
+            "v2": 0.0,
+            "v3": 0.5833,
+            "v4": 0.0,
+            "verify_valid": 0.2333
+          },
+          "c1_c2": {
+            "v1": 0.0667,
+            "v2": 0.0,
+            "v3": 0.65,
+            "v4": 0.0,
+            "verify_valid": 0.25
+          },
+          "c1_c2_c3": {
+            "v1": 0.2833,
+            "v2": 0.0,
+            "v3": 0.3167,
+            "v4": 0.0,
+            "verify_valid": 0.3
+          }
+        },
+        "residual_pp": {
+          "v1": {
+            "vs": "c1",
+            "pp": 23.3,
+            "ci95": [
+              11.7,
+              35.0
+            ],
+            "n": 60
+          },
+          "v2": {
+            "vs": "c1_c2",
+            "pp": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n": 60
+          },
+          "v3": {
+            "vs": "c1_c2_c3",
+            "pp": 8.3,
+            "ci95": [
+              -6.7,
+              23.3
+            ],
+            "n": 60
+          },
+          "v4": {
+            "vs": "c1_c2_c3",
+            "pp": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n": 60
+          }
+        },
+        "functional_rate": {
+          "none": 0.05,
+          "c1": 0.0667,
+          "c1_c2": 0.0833,
+          "c1_c2_c3": 0.0833
+        }
+      }
+    },
+    "ssd3b": {
+      "scf_spec_60": {
+        "n": {
+          "none": 60,
+          "c1": 60,
+          "c1_c2": 60,
+          "c1_c2_c3": 60
+        },
+        "rates": {
+          "none": {
+            "v1": 0.1833,
+            "v2": 0.0167,
+            "v3": 0.4833,
+            "v4": 0.0167,
+            "verify_valid": 0.2
+          },
+          "c1": {
+            "v1": 0.0333,
+            "v2": 0.0333,
+            "v3": 0.4833,
+            "v4": 0.0167,
+            "verify_valid": 0.2333
+          },
+          "c1_c2": {
+            "v1": 0.0167,
+            "v2": 0.0333,
+            "v3": 0.4833,
+            "v4": 0.0167,
+            "verify_valid": 0.3167
+          },
+          "c1_c2_c3": {
+            "v1": 0.0833,
+            "v2": 0.1333,
+            "v3": 0.15,
+            "v4": 0.0333,
+            "verify_valid": 0.4167
+          }
+        },
+        "residual_pp": {
+          "v1": {
+            "vs": "c1",
+            "pp": 15.0,
+            "ci95": [
+              5.0,
+              25.0
+            ],
+            "n": 60
+          },
+          "v2": {
+            "vs": "c1_c2",
+            "pp": -1.7,
+            "ci95": [
+              -6.7,
+              3.3
+            ],
+            "n": 60
+          },
+          "v3": {
+            "vs": "c1_c2_c3",
+            "pp": 33.3,
+            "ci95": [
+              21.7,
+              45.0
+            ],
+            "n": 60
+          },
+          "v4": {
+            "vs": "c1_c2_c3",
+            "pp": -1.7,
+            "ci95": [
+              -8.3,
+              3.3
+            ],
+            "n": 60
+          }
+        },
+        "functional_rate": {
+          "none": 0.15,
+          "c1": 0.15,
+          "c1_c2": 0.1833,
+          "c1_c2_c3": 0.2167
+        }
+      }
+    },
+    "ssdg1b": {
+      "scf_spec_60": {
+        "n": {
+          "none": 60,
+          "c1": 60,
+          "c1_c2": 60,
+          "c1_c2_c3": 60
+        },
+        "rates": {
+          "none": {
+            "v1": 0.0667,
+            "v2": 0.05,
+            "v3": 0.25,
+            "v4": 0.0,
+            "verify_valid": 0.6333
+          },
+          "c1": {
+            "v1": 0.0,
+            "v2": 0.05,
+            "v3": 0.2833,
+            "v4": 0.0,
+            "verify_valid": 0.6667
+          },
+          "c1_c2": {
+            "v1": 0.0,
+            "v2": 0.0,
+            "v3": 0.3167,
+            "v4": 0.0,
+            "verify_valid": 0.6667
+          },
+          "c1_c2_c3": {
+            "v1": 0.0,
+            "v2": 0.0,
+            "v3": 0.2667,
+            "v4": 0.0,
+            "verify_valid": 0.7167
+          }
+        },
+        "residual_pp": {
+          "v1": {
+            "vs": "c1",
+            "pp": 6.7,
+            "ci95": [
+              1.7,
+              13.3
+            ],
+            "n": 60
+          },
+          "v2": {
+            "vs": "c1_c2",
+            "pp": 5.0,
+            "ci95": [
+              0.0,
+              11.7
+            ],
+            "n": 60
+          },
+          "v3": {
+            "vs": "c1_c2_c3",
+            "pp": -1.7,
+            "ci95": [
+              -6.7,
+              3.3
+            ],
+            "n": 60
+          },
+          "v4": {
+            "vs": "c1_c2_c3",
+            "pp": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n": 60
+          }
+        },
+        "functional_rate": {
+          "none": 0.0833,
+          "c1": 0.0833,
+          "c1_c2": 0.0833,
+          "c1_c2_c3": 0.0833
+        }
+      }
+    }
+  }
+}

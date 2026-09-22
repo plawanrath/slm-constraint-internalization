@@ -1,0 +1,58 @@
+{
+  "k_trials": 5,
+  "float_rel": 0.0001,
+  "float_abs": 1e-05,
+  "candidates": "results/w04_functional/gemma-3-1b-it_rft_s0/c1_c2/candidates.jsonl",
+  "dialects": {
+    "arith": {
+      "n_gold": 150,
+      "gold_excluded": {
+        "no_observable_output": 4,
+        "unprintable_memref_dtype": 1
+      },
+      "gold_gate_fail": [
+        "045_alloc-load-dealloc",
+        "150_void-dealloc"
+      ],
+      "gold_gate_pass": 143,
+      "cand_status_counts": {
+        "scored": 12,
+        "signature_mismatch": 131
+      },
+      "n_scored": 12,
+      "n_scored_dim_relaxed": 0,
+      "n_functional_match": 1,
+      "match_rate_among_scored": 0.08333333333333333,
+      "match_ci95_among_scored": [
+        0.0,
+        0.25
+      ],
+      "match_rate_among_gate_passed": 0.006993006993006993,
+      "match_ci95_among_gate_passed": [
+        0.0,
+        0.02097902097902098
+      ]
+    },
+    "linalg": {
+      "n_gold": 30,
+      "gold_excluded": {},
+      "gold_gate_fail": [],
+      "gold_gate_pass": 30,
+      "cand_status_counts": {
+        "signature_mismatch": 27,
+        "not_verify_valid": 3
+      },
+      "n_scored": 0,
+      "n_scored_dim_relaxed": 0,
+      "n_functional_match": 0,
+      "match_rate_among_scored": null,
+      "match_ci95_among_scored": null,
+      "match_rate_among_gate_passed": 0.0,
+      "match_ci95_among_gate_passed": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "elapsed_min": 4.0
+}

@@ -49,7 +49,7 @@ def main() -> None:
                                          "internalized": internalized(r["residual_pp"][k]) if k in r["residual_pp"] else None} for k, _ in LAYERS}
     out = REPO / args.out; out.mkdir(parents=True, exist_ok=True)
     (out / "gate.json").write_text(json.dumps(gate, indent=2))
-    md = "# G2 framing gate\n\nInternalized := residual 95% CI contains 0 and point ≤ 2pp (ADR-0004). ✓ marks internalized cells.\n\n" + "\n".join(lines) + "\n"
+    md = "# G2 framing gate\n\nInternalized := residual 95% CI contains 0 and point ≤ 2pp. ✓ marks internalized cells.\n\n" + "\n".join(lines) + "\n"
     (out / "gate.md").write_text(md)
     print(md)
 

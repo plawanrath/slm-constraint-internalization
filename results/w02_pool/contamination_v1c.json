@@ -1,0 +1,296 @@
+{
+  "n_candidates": 21771,
+  "n_kept": 13333,
+  "dropped": {
+    "nl_8gram_overlap_vs_protected": 2424,
+    "exact_mlir_vs_protected": 2185,
+    "dup_nl_within_pool": 3829
+  },
+  "n_protected": 790,
+  "ngram": 8,
+  "unique_mlir_in_kept": 7739,
+  "unique_nl_in_kept": 13333,
+  "gates": {
+    "pass": 13333
+  },
+  "gates_per_family": {
+    "alloc_dealloc": {
+      "n": 442,
+      "pass": 442,
+      "pass_rate": 1.0
+    },
+    "binop": {
+      "n": 790,
+      "pass": 790,
+      "pass_rate": 1.0
+    },
+    "bitcast": {
+      "n": 125,
+      "pass": 125,
+      "pass_rate": 1.0
+    },
+    "cast": {
+      "n": 608,
+      "pass": 608,
+      "pass_rate": 1.0
+    },
+    "cast_chain": {
+      "n": 381,
+      "pass": 381,
+      "pass_rate": 1.0
+    },
+    "chain2": {
+      "n": 1206,
+      "pass": 1206,
+      "pass_rate": 1.0
+    },
+    "chain3": {
+      "n": 1211,
+      "pass": 1211,
+      "pass_rate": 1.0
+    },
+    "chain4": {
+      "n": 633,
+      "pass": 633,
+      "pass_rate": 1.0
+    },
+    "chain5": {
+      "n": 603,
+      "pass": 603,
+      "pass_rate": 1.0
+    },
+    "clamp": {
+      "n": 218,
+      "pass": 218,
+      "pass_rate": 1.0
+    },
+    "cmp": {
+      "n": 543,
+      "pass": 543,
+      "pass_rate": 1.0
+    },
+    "cmp_const": {
+      "n": 256,
+      "pass": 256,
+      "pass_rate": 1.0
+    },
+    "cmp_select": {
+      "n": 588,
+      "pass": 588,
+      "pass_rate": 1.0
+    },
+    "cond_select": {
+      "n": 204,
+      "pass": 204,
+      "pass_rate": 1.0
+    },
+    "const": {
+      "n": 63,
+      "pass": 63,
+      "pass_rate": 1.0
+    },
+    "const_op": {
+      "n": 696,
+      "pass": 696,
+      "pass_rate": 1.0
+    },
+    "const_op2": {
+      "n": 219,
+      "pass": 219,
+      "pass_rate": 1.0
+    },
+    "dim": {
+      "n": 76,
+      "pass": 76,
+      "pass_rate": 1.0
+    },
+    "dim_cast": {
+      "n": 219,
+      "pass": 219,
+      "pass_rate": 1.0
+    },
+    "fminmax": {
+      "n": 224,
+      "pass": 224,
+      "pass_rate": 1.0
+    },
+    "linalg_broadcast": {
+      "n": 160,
+      "pass": 160,
+      "pass_rate": 1.0
+    },
+    "linalg_copy": {
+      "n": 158,
+      "pass": 158,
+      "pass_rate": 1.0
+    },
+    "linalg_ew2": {
+      "n": 420,
+      "pass": 420,
+      "pass_rate": 1.0
+    },
+    "linalg_ewun": {
+      "n": 15,
+      "pass": 15,
+      "pass_rate": 1.0
+    },
+    "linalg_ewun2": {
+      "n": 138,
+      "pass": 138,
+      "pass_rate": 1.0
+    },
+    "linalg_fill": {
+      "n": 148,
+      "pass": 148,
+      "pass_rate": 1.0
+    },
+    "linalg_matmul": {
+      "n": 40,
+      "pass": 40,
+      "pass_rate": 1.0
+    },
+    "linalg_matvec": {
+      "n": 106,
+      "pass": 106,
+      "pass_rate": 1.0
+    },
+    "linalg_transpose": {
+      "n": 141,
+      "pass": 141,
+      "pass_rate": 1.0
+    },
+    "load": {
+      "n": 598,
+      "pass": 598,
+      "pass_rate": 1.0
+    },
+    "load_op": {
+      "n": 365,
+      "pass": 365,
+      "pass_rate": 1.0
+    },
+    "load_store": {
+      "n": 376,
+      "pass": 376,
+      "pass_rate": 1.0
+    },
+    "mem_elem": {
+      "n": 398,
+      "pass": 398,
+      "pass_rate": 1.0
+    },
+    "minmax3": {
+      "n": 273,
+      "pass": 273,
+      "pass_rate": 1.0
+    },
+    "negate": {
+      "n": 204,
+      "pass": 204,
+      "pass_rate": 1.0
+    },
+    "poly": {
+      "n": 196,
+      "pass": 196,
+      "pass_rate": 1.0
+    },
+    "store": {
+      "n": 292,
+      "pass": 292,
+      "pass_rate": 1.0
+    }
+  },
+  "gate_pass_rate": 1.0,
+  "train": {
+    "n": 7239,
+    "arith+func": 6000,
+    "linalg": 1239
+  },
+  "dev": {
+    "n": 500
+  },
+  "available_after_gates": {
+    "arith+func": 12007,
+    "linalg": 1326
+  },
+  "elapsed_min": 13.6,
+  "families_set": "v1c",
+  "train_families": {
+    "chain3": 623,
+    "chain2": 609,
+    "linalg_ew2": 403,
+    "binop": 395,
+    "const_op": 370,
+    "chain4": 345,
+    "cast": 319,
+    "chain5": 285,
+    "cmp_select": 283,
+    "load": 260,
+    "cmp": 258,
+    "alloc_dealloc": 213,
+    "load_op": 212,
+    "cast_chain": 191,
+    "mem_elem": 186,
+    "load_store": 181,
+    "linalg_broadcast": 151,
+    "linalg_copy": 145,
+    "minmax3": 140,
+    "linalg_fill": 135,
+    "linalg_transpose": 131,
+    "store": 130,
+    "linalg_ewun2": 123,
+    "dim_cast": 120,
+    "clamp": 116,
+    "cmp_const": 112,
+    "const_op2": 112,
+    "poly": 110,
+    "negate": 107,
+    "fminmax": 107,
+    "linalg_matvec": 97,
+    "cond_select": 92,
+    "bitcast": 53,
+    "dim": 41,
+    "linalg_matmul": 39,
+    "const": 30,
+    "linalg_ewun": 15
+  },
+  "dev_families": {
+    "chain3": 48,
+    "chain2": 36,
+    "load": 36,
+    "cmp_select": 26,
+    "binop": 23,
+    "chain5": 22,
+    "cmp": 19,
+    "alloc_dealloc": 19,
+    "linalg_ew2": 17,
+    "cast": 17,
+    "chain4": 16,
+    "linalg_ewun2": 15,
+    "const_op": 15,
+    "linalg_fill": 13,
+    "linalg_copy": 13,
+    "load_store": 13,
+    "load_op": 11,
+    "cmp_const": 11,
+    "clamp": 11,
+    "mem_elem": 11,
+    "negate": 10,
+    "fminmax": 10,
+    "linalg_transpose": 10,
+    "cast_chain": 9,
+    "bitcast": 9,
+    "linalg_broadcast": 9,
+    "linalg_matvec": 9,
+    "minmax3": 8,
+    "store": 7,
+    "dim_cast": 7,
+    "const_op2": 6,
+    "cond_select": 5,
+    "poly": 4,
+    "const": 2,
+    "dim": 2,
+    "linalg_matmul": 1
+  },
+  "train_new_family_share": 0.2825
+}

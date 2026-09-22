@@ -593,7 +593,7 @@ def main():
             # Rows without a seed column are taken as-is.
             if "seed" in r and r["seed"] != args.seed_filter:
                 continue
-            # For multi-seed jsonls (day39pm) require the c1_c3 SmolLM2 cell
+            # For multi-seed jsonls require the c1_c3 SmolLM2 cell
             # we want, not other co-located cells.
             if "constraint" in r and r["constraint"] not in ("c1_c3", "c1_c2_c3"):
                 continue

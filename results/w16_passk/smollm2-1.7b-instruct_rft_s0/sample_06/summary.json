@@ -1,0 +1,39 @@
+{
+  "k_trials": 5,
+  "float_rel": 0.0001,
+  "float_abs": 1e-05,
+  "candidates": "results/w16_passk/smollm2-1.7b-instruct_rft_s0/sample_06/candidates.jsonl",
+  "dialects": {
+    "arith": {
+      "n_gold": 150,
+      "gold_excluded": {
+        "no_observable_output": 4,
+        "unprintable_memref_dtype": 1
+      },
+      "gold_gate_fail": [
+        "045_alloc-load-dealloc",
+        "150_void-dealloc"
+      ],
+      "gold_gate_pass": 143,
+      "cand_status_counts": {
+        "scored": 62,
+        "not_verify_valid": 36,
+        "signature_mismatch": 45
+      },
+      "n_scored": 62,
+      "n_scored_dim_relaxed": 0,
+      "n_functional_match": 26,
+      "match_rate_among_scored": 0.41935483870967744,
+      "match_ci95_among_scored": [
+        0.3064516129032258,
+        0.5483870967741935
+      ],
+      "match_rate_among_gate_passed": 0.18181818181818182,
+      "match_ci95_among_gate_passed": [
+        0.11888111888111888,
+        0.24475524475524477
+      ]
+    }
+  },
+  "elapsed_min": 3.9
+}

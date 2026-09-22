@@ -1,0 +1,62 @@
+{
+ "smollm2-360m-instruct_ssd_s0": {
+  "model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+  "ckpt": "models/ckpt/smollm2-360m-instruct_ssd_s0/best",
+  "n_prompts": 100,
+  "kl_per_token": 0.4709,
+  "ci95": [
+   0.4213,
+   0.5276
+  ],
+  "mean_tokens": 76.8,
+  "elapsed_s": 20.6
+ },
+ "smollm2-1.7b-instruct_ssd_s0": {
+  "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+  "ckpt": "models/ckpt/smollm2-1.7b-instruct_ssd_s0/best",
+  "n_prompts": 100,
+  "kl_per_token": 0.2605,
+  "ci95": [
+   0.2192,
+   0.3073
+  ],
+  "mean_tokens": 80.5,
+  "elapsed_s": 74.6
+ },
+ "smollm2-1.7b-instruct_ssd_s0__full_ft": {
+  "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+  "ckpt": "models/ckpt/smollm2-1.7b-instruct_ssd_s0__full_ft/best",
+  "n_prompts": 100,
+  "kl_per_token": 0.2151,
+  "ci95": [
+   0.1821,
+   0.2522
+  ],
+  "mean_tokens": 77.4,
+  "elapsed_s": 65.3
+ },
+ "smollm2-1.7b-instruct_rft_s0": {
+  "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+  "ckpt": "models/ckpt/smollm2-1.7b-instruct_rft_s0/best",
+  "n_prompts": 100,
+  "kl_per_token": 0.8757,
+  "ci95": [
+   0.8357,
+   0.9203
+  ],
+  "mean_tokens": 68.7,
+  "elapsed_s": 67.9
+ },
+ "smollm2-1.7b-instruct_sft_s0": {
+  "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+  "ckpt": "models/ckpt/smollm2-1.7b-instruct_sft_s0/best",
+  "n_prompts": 100,
+  "kl_per_token": 0.3809,
+  "ci95": [
+   0.3461,
+   0.4164
+  ],
+  "mean_tokens": 85.0,
+  "elapsed_s": 75.7
+ }
+}

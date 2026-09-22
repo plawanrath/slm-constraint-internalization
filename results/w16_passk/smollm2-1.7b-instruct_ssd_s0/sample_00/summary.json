@@ -1,0 +1,39 @@
+{
+  "k_trials": 5,
+  "float_rel": 0.0001,
+  "float_abs": 1e-05,
+  "candidates": "results/w16_passk/smollm2-1.7b-instruct_ssd_s0/sample_00/candidates.jsonl",
+  "dialects": {
+    "arith": {
+      "n_gold": 150,
+      "gold_excluded": {
+        "no_observable_output": 4,
+        "unprintable_memref_dtype": 1
+      },
+      "gold_gate_fail": [
+        "045_alloc-load-dealloc",
+        "150_void-dealloc"
+      ],
+      "gold_gate_pass": 143,
+      "cand_status_counts": {
+        "scored": 75,
+        "not_verify_valid": 55,
+        "signature_mismatch": 13
+      },
+      "n_scored": 75,
+      "n_scored_dim_relaxed": 0,
+      "n_functional_match": 42,
+      "match_rate_among_scored": 0.56,
+      "match_ci95_among_scored": [
+        0.4533333333333333,
+        0.6666666666666666
+      ],
+      "match_rate_among_gate_passed": 0.2937062937062937,
+      "match_ci95_among_gate_passed": [
+        0.21678321678321677,
+        0.3706293706293706
+      ]
+    }
+  },
+  "elapsed_min": 4.1
+}

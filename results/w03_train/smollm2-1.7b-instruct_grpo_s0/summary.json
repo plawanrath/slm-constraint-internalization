@@ -1,0 +1,62 @@
+{
+  "tag": "smollm2-1.7b-instruct_grpo_s0",
+  "config": {
+    "model": "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+    "revision": "31b70e2e869a7173562077fd711b654946d38674",
+    "method": "grpo",
+    "seed": 0,
+    "lora": true,
+    "lora_rank": 32,
+    "lora_scale": 2.0,
+    "lr": 0.0001,
+    "epochs": 2,
+    "batch_prompts": 32,
+    "group": 4,
+    "temp": 0.8,
+    "max_tokens": 300,
+    "lam": 1.0,
+    "train_pool": "data/pools/train_v1.jsonl",
+    "dev_pool": "data/pools/dev_v1.jsonl",
+    "n_train": 2000,
+    "n_dev": 100,
+    "eval_every": 25,
+    "out_dir": "results/w03_train",
+    "tag": "smollm2-1.7b-instruct_grpo_s0",
+    "micro_batch": 8,
+    "reward": "task",
+    "beta": 0.1,
+    "batched_loss": true,
+    "dev_batched": true,
+    "c3_mask": false,
+    "c3_weight": 1.0,
+    "task": "mlir",
+    "rft_scale_by_kept": true,
+    "gold_in_group": 0,
+    "init_ckpt": null,
+    "save_steps": null,
+    "teacher_masked": true
+  },
+  "steps": 126,
+  "best": {
+    "dev_none": 0.4357,
+    "step": 50
+  },
+  "final_dev": {
+    "none": {
+      "verify": 0.6,
+      "reward": 0.4232,
+      "distinct": 98,
+      "mean_len": 79.3,
+      "unfinished": 0
+    },
+    "c1_c2": {
+      "verify": 0.74,
+      "reward": 0.4858,
+      "distinct": 98,
+      "mean_len": 86.3,
+      "unfinished": 1
+    }
+  },
+  "ckpt_dir": "models/ckpt/smollm2-1.7b-instruct_grpo_s0",
+  "elapsed_min": 207.8
+}

@@ -1,0 +1,178 @@
+// C1-only generation grammar for the scf transfer target: same skeleton as
+// `mlir_gen_scf.lark` (regions, nesting depth 2, capped bodies, explicit WS,
+// bounded identifiers) but NO type-domain splits: one constant / binop / cmp /
+// cast production each, and scf region result lists, iter_args and yields carry
+// arbitrary `type`s. Ablation for isolating C2's contribution on this target.
+//
+// Gen grammar ⊆ parse grammar: outputs parse under `mlir_scf.lark`.
+
+start: module_op
+
+module_op: "module" WS "{" WS func_def WS "}" WS?
+
+func_def: "func.func" WS SYM "(" params? ")" func_ret? WS "{" WS func_body WS "}"
+
+params: param (WS? "," WS param)*
+param: SSA WS? ":" WS type
+
+func_ret: WS "->" WS ret_types
+ret_types: type | "(" type (WS? "," WS type)* ")"
+
+// ---------- bodies (capped by alternation chains; llguidance has no ~N) -------
+
+func_body: op_return
+         | fseq12 WS op_return
+
+op_return: op_return_void | op_return_val
+op_return_void: "return"
+op_return_val:  "return" WS SSA WS ":" WS type
+
+// up to 12 `stmt0` separated by WS
+fseq12: stmt0 | stmt0 WS fseq11
+fseq11: stmt0 | stmt0 WS fseq10
+fseq10: stmt0 | stmt0 WS fseq9
+fseq9: stmt0 | stmt0 WS fseq8
+fseq8: stmt0 | stmt0 WS fseq7
+fseq7: stmt0 | stmt0 WS fseq6
+fseq6: stmt0 | stmt0 WS fseq5
+fseq5: stmt0 | stmt0 WS fseq4
+fseq4: stmt0 | stmt0 WS fseq3
+fseq3: stmt0 | stmt0 WS fseq2
+fseq2: stmt0 | stmt0 WS fseq1
+fseq1: stmt0
+
+// depth-0 statements: simple ops plus control flow whose regions are depth 1
+stmt0: simple_op | for0 | if0
+// depth-1 statements: simple ops plus control flow whose regions are depth 2
+stmt1: simple_op | for1 | if1
+// depth-2 statements: simple ops only
+stmt2: simple_op
+
+// up to 8 `stmt1` separated by WS
+rseq1_8: stmt1 | stmt1 WS rseq1_7
+rseq1_7: stmt1 | stmt1 WS rseq1_6
+rseq1_6: stmt1 | stmt1 WS rseq1_5
+rseq1_5: stmt1 | stmt1 WS rseq1_4
+rseq1_4: stmt1 | stmt1 WS rseq1_3
+rseq1_3: stmt1 | stmt1 WS rseq1_2
+rseq1_2: stmt1 | stmt1 WS rseq1_1
+rseq1_1: stmt1
+
+// up to 6 `stmt2` separated by WS
+rseq2_6: stmt2 | stmt2 WS rseq2_5
+rseq2_5: stmt2 | stmt2 WS rseq2_4
+rseq2_4: stmt2 | stmt2 WS rseq2_3
+rseq2_3: stmt2 | stmt2 WS rseq2_2
+rseq2_2: stmt2 | stmt2 WS rseq2_1
+rseq2_1: stmt2
+
+// region body without results: statements, optional bare terminator
+rbody1_void: rseq1_8 | rseq1_8 WS "scf.yield" | "scf.yield"
+rbody2_void: rseq2_6 | rseq2_6 WS "scf.yield" | "scf.yield"
+
+// region bodies with results: statements then the domain-matched yield
+rbody1_t: yield_t | rseq1_8 WS yield_t
+rbody2_t: yield_t | rseq2_6 WS yield_t
+
+// ---------- scf control flow --------------------------------------------------
+
+for0: for0_void | for0_t
+for1: for1_void | for1_t
+if0: if0_void | if0_t
+if1: if1_void | if1_t
+
+for_head: "scf.for" WS SSA WS "=" WS SSA WS "to" WS SSA WS "step" WS SSA
+
+for0_void: for_head WS "{" WS rbody1_void WS "}"
+for1_void: for_head WS "{" WS rbody2_void WS "}"
+
+if0_void: "scf.if" WS SSA WS "{" WS rbody1_void WS "}"
+        | "scf.if" WS SSA WS "{" WS rbody1_void WS "}" WS "else" WS "{" WS rbody1_void WS "}"
+if1_void: "scf.if" WS SSA WS "{" WS rbody2_void WS "}"
+        | "scf.if" WS SSA WS "{" WS rbody2_void WS "}" WS "else" WS "{" WS rbody2_void WS "}"
+
+for0_t: lhs_t WS "=" WS for_head WS "iter_args(" iters_t ")" WS "->" WS "(" rtypes_t ")" WS "{" WS rbody1_t WS "}"
+if0_t: lhs_t WS "=" WS "scf.if" WS SSA WS "->" WS "(" rtypes_t ")" WS "{" WS rbody1_t WS "}" WS "else" WS "{" WS rbody1_t WS "}"
+for1_t: lhs_t WS "=" WS for_head WS "iter_args(" iters_t ")" WS "->" WS "(" rtypes_t ")" WS "{" WS rbody2_t WS "}"
+if1_t: lhs_t WS "=" WS "scf.if" WS SSA WS "->" WS "(" rtypes_t ")" WS "{" WS rbody2_t WS "}" WS "else" WS "{" WS rbody2_t WS "}"
+
+// C1 only: result lists, iter_args and yields carry any type (1-2 values).
+lhs_t: SSA | SSA WS? "," WS SSA
+iters_t: SSA WS "=" WS SSA | SSA WS "=" WS SSA WS? "," WS SSA WS "=" WS SSA
+rtypes_t: type | type WS? "," WS type
+yield_t: "scf.yield" WS SSA WS ":" WS type
+       | "scf.yield" WS SSA WS? "," WS SSA WS ":" WS type WS? "," WS type
+
+// ---------- simple ops --------------------------------------------------------
+
+simple_op: op_const
+         | op_binop
+         | op_cmp
+         | op_select
+         | op_cast
+         | op_alloc
+         | op_load
+         | op_store
+         | op_dealloc
+         | op_dim
+
+// C1 only: single rule per family, any literal, any type.
+op_const:  SSA WS "=" WS "arith.constant" WS CONST_LIT WS ":" WS type
+op_binop:  SSA WS "=" WS ARITH_BIN WS SSA WS? "," WS SSA WS ":" WS type
+op_cmp:    SSA WS "=" WS ARITH_CMP WS CMP_PRED WS? "," WS SSA WS? "," WS SSA WS ":" WS type
+op_select: SSA WS "=" WS "arith.select" WS SSA WS? "," WS SSA WS? "," WS SSA WS ":" WS type
+op_cast:   SSA WS "=" WS ARITH_CAST WS SSA WS ":" WS type WS "to" WS type
+
+op_alloc:   SSA WS "=" WS "memref.alloc" "(" ")" WS ":" WS memref_type
+op_load:    SSA WS "=" WS "memref.load" WS SSA "[" idx_list? "]" WS ":" WS memref_type
+op_store:   "memref.store" WS SSA WS? "," WS SSA "[" idx_list? "]" WS ":" WS memref_type
+op_dealloc: "memref.dealloc" WS SSA WS ":" WS memref_type
+op_dim:     SSA WS "=" WS "memref.dim" WS SSA WS? "," WS SSA WS ":" WS memref_type
+
+ARITH_BIN: "arith.addi" | "arith.subi" | "arith.muli"
+         | "arith.addf" | "arith.subf" | "arith.mulf"
+         | "arith.divsi" | "arith.divui" | "arith.divf"
+         | "arith.remsi" | "arith.remui" | "arith.remf"
+         | "arith.andi" | "arith.ori" | "arith.xori"
+         | "arith.shli" | "arith.shrsi" | "arith.shrui"
+         | "arith.maxsi" | "arith.maxui" | "arith.minsi" | "arith.minui"
+         | "arith.maximumf" | "arith.minimumf"
+
+ARITH_CMP: "arith.cmpi" | "arith.cmpf"
+
+ARITH_CAST: "arith.extsi" | "arith.extui" | "arith.trunci"
+          | "arith.extf"  | "arith.truncf"
+          | "arith.sitofp" | "arith.uitofp"
+          | "arith.fptosi" | "arith.fptoui"
+          | "arith.index_cast" | "arith.index_castui"
+
+CMP_PRED: "eq" | "ne" | "slt" | "sle" | "sgt" | "sge"
+        | "ult" | "ule" | "ugt" | "uge"
+        | "oeq" | "one" | "olt" | "ole" | "ogt" | "oge"
+        | "ueq" | "une" | "ord" | "uno" | "false" | "true"
+
+
+idx_list: SSA (WS? "," WS SSA)*
+
+// -------- types --------
+
+type: INT_TYPE | FLOAT_TYPE | INDEX_KW | memref_type
+INT_TYPE:   "i1" | "i8" | "i16" | "i32" | "i64"
+FLOAT_TYPE: "f16" | "bf16" | "f32" | "f64"
+INDEX_KW:   "index"
+INT_OR_INDEX: INT_TYPE | INDEX_KW
+
+memref_type: "memref" "<" memref_shape? type ">"
+memref_shape: DIM "x" (DIM "x")*
+DIM: /[0-9]+/ | "?"
+
+// -------- literals / names / whitespace --------
+
+CONST_LIT: /-?[0-9]+(\.[0-9]+)?(e[+-]?[0-9]+)?/
+
+// SSA / SYM names bounded to prevent identifier-loop runaway under constraint.
+SSA: /%[a-zA-Z0-9_][a-zA-Z0-9_]{0,31}/
+SYM: /@[a-zA-Z_][a-zA-Z0-9_]{0,47}/
+
+// Bounded whitespace. 1-12 chars covers a newline plus depth-2 indentation.
+WS: /[ \t\n]{1,12}/

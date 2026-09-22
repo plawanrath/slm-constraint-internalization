@@ -15,3 +15,11 @@ logs/*.log
 results/**/*.sqlite
 data/processed/
 *.egg-info/
+# in-repo skills (private authoring workflow)
+.claude/skills/
+
+# Figures and the paper-build watcher exist only for the paper, like docs/: never tracked
+scripts/make_figures.py
+scripts/w33_paper_watch.sh
+tests/test_figures.py
+results/figures/

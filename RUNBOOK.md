@@ -1,8 +1,9 @@
 # RUNBOOK
 
-Everything runs from one Apple-silicon machine. Three environments only: the project venv,
-the pinned LLVM Docker container, and a host Ollama daemon (the single host-level exception,
-because Docker on macOS has no Metal access).
+Everything runs from one Apple-silicon machine. Two environments are needed for every result in the
+paper: the project venv and the pinned LLVM Docker container. A host Ollama daemon is required only by
+`scripts/w13_paraphrase_pool.py`, which no reported result depends on; it is a host-level exception because
+Docker on macOS has no Metal access.
 
 ## 0. One-time setup
 
@@ -42,3 +43,74 @@ the Hub; accept the terms once and run `hf auth login` before `pin_models.py`.
 One runner per experiment under `scripts/wNN_*.py`, writing `results/wNN_<exp>/` (summary JSON + per-row
 JSONL). Long runs: `caffeinate -dims .venv/bin/python scripts/... 2>&1 | tee logs/<name>.log`. macOS lowers
 the priority of long MLX jobs after ~20–30 min; `sudo renice -n -5 -p <pid>` restores it.
+
+## 4. Reproducing the paper
+
+Ordered, because later steps read earlier artifacts. Wall-clock is for one Apple-silicon workstation with 96 GB
+of unified memory; see `results/w03_train/*/` for the per-run wall-clock and step counts. Every step writes under
+`results/` and is idempotent: a runner skips a cell whose rows are already present in its `ladder.jsonl`, so an
+interrupted step can simply be rerun. To force a cell, delete its rows from that file first.
+
+```bash
+export PATH="$PWD/scripts/env/bin:$PATH"     # the LLVM wrappers must be on PATH for every step below
+PY=.venv/bin/python
+
+# 4.1 Frozen pools and the zero-training ladder (no GPU training; ~2 h)
+$PY scripts/w02_build_pool.py                # training pool + datasheet -> results/w02_pool
+$PY scripts/w02_table1.py                    # ladder for all six models -> results/w02_table1
+$PY scripts/w02_functional.py --ladder results/w02_table1/ladder.jsonl --out results/w02_functional
+
+# 4.2 Training (the long pole; the full ladder is a few days)
+$PY scripts/w03_train.py --model <repo> --revision <sha> --method {ssd,rft,grpo,sft} --seed 0
+# Above 360M add --lora --lora-rank 32 --lora-scale 2 --lr 1e-4; below it the run is a full fine-tune.
+# Ablations reuse the same runner: --gold-in-group 1, --group 16, --epochs 16 --save-steps 126,252,504,1008,
+# --batch-prompts, --micro-batch, --eval-every. `scripts/w03_train.py --help` lists the full set.
+
+# 4.3 Per-layer residuals and correctness for every checkpoint
+$PY scripts/w04_eval_ckpt.py --model <repo> --ckpt models/ckpt/<tag>/best --tag <tag> \
+      --method <method> --train-seed 0                                       # -> results/w04_residuals
+$PY scripts/w02_functional.py --ladder results/w04_residuals/ladder.jsonl --out results/w04_functional
+$PY scripts/w06_framing_gate.py              # pre-registered thresholds -> results/w06_gate/gate.json
+$PY scripts/w06_r3_conditional.py            # scope residual conditioned on parsing
+
+# 4.4 Mechanism and layer studies
+$PY scripts/w08_synth_law.py                 # synthetic SSA sweep over dependency distance
+$PY scripts/w09_c4_residual.py               # the unenforced shape layer
+$PY scripts/w09_probes.py && $PY scripts/w28_probe_surface.py   # scope probes + token-surface control
+
+# 4.5 Portability to unseen targets
+$PY scripts/w10_stablehlo.py --cell <tag> <repo> models/ckpt/<tag>/best --method <method>
+#   --cell takes TAG REPO CKPT_DIR as three separate words, not TAG=CKPT.
+$PY scripts/w11_scf.py                       # structured control flow
+$PY scripts/w22_llvm_pool.py && $PY scripts/w12_portability.py                  # LLVM IR pool, then transfer
+
+# 4.6 Sampling: pass@k, the support test, sampled correctness
+$PY scripts/w16_passk.py --model <repo> --ckpt <dir> --tag <tag> --k 256 --lock-dir <path>
+#   --lock-dir gives per-cell locking so a CPU scorer cannot starve the GPU lane; --gen-only and
+#   --score-only split generation from scoring when the two run in separate lanes.
+$PY scripts/w19_passk_analysis.py            # curves, subset test, sampled pass@1
+$PY scripts/w20_interface_given.py           # interface-given control
+
+```
+
+Steps 4.1 to 4.6 regenerate every number the paper reports, and all of them ship in this repository together
+with the artifacts they wrote, under `results/`. Everything that exists only to typeset the paper is deliberately
+untracked, including the LaTeX sources and the table generator under `docs/`. The numbers behind every reported
+result are in the `results/` paths listed below and can be read directly, so no claim in the paper depends on
+anything outside this repository.
+
+### Which artifact backs which table
+
+Every number in the paper comes from one of the artifacts below, all of which are in this repository:
+
+| table | artifact |
+| --- | --- |
+| zero-training ladder | `results/w02_table1/summary.json` |
+| per-layer residuals, seeds, ablations | `results/w04_residuals/residuals.json`, `results/w04_functional/functional_summary.json` |
+| pre-registered gate | `results/w06_gate/gate.json` |
+| functional correctness | `results/w02_functional`, `results/w04_functional` |
+| portability, LLVM IR | `results/w12_portability/summary.json`, `results/w11_scf/summary.json`, `results/w10_stablehlo` |
+| pass@k, support test, sampled correctness | `results/w16_passk`, `results/w19_passk_analysis` |
+| probes | `results/w09_probes` | 
+| synthetic scope sweep | `results/w08_synth_law` |
+| interface control | `results/w20_interface` |

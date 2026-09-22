@@ -1,0 +1,96 @@
+// Generation grammar for a minimal textual LLVM IR subset (C1: syntax only).
+//
+// Same shape as `llvm_gen_c1c2.lark` (one `define`, <= 6 labelled blocks,
+// <= 8 non-terminator instructions per block, every block ends in `br` or
+// `ret`) but with no type-domain awareness: any instruction accepts any
+// scalar type, any comparison predicate, and any literal kind. Type-domain
+// errors (`add float`, `icmp olt`, `fadd i32 1, 2`) are left to C2.
+//
+// Explicit WS productions, no %ignore, bounded identifiers, bodies capped by
+// explicit alternation (llguidance requirements).
+
+start: func_def
+
+func_def: "define" WS scalar_type WS SYM "(" params? ")" WS "{" WS blocks WS "}" WS?
+
+params: param (WS? "," WS param)*
+param: scalar_type WS SSA
+
+scalar_type: "i1" | "i32" | "i64" | "float" | "double"
+
+// ---------- blocks (<= 6) ----------
+
+blocks: block
+      | block WS block
+      | block WS block WS block
+      | block WS block WS block WS block
+      | block WS block WS block WS block WS block
+      | block WS block WS block WS block WS block WS block
+
+block: LABEL WS terminator
+     | LABEL WS instrs WS terminator
+
+instrs: instr
+      | instr WS instr
+      | instr WS instr WS instr
+      | instr WS instr WS instr WS instr
+      | instr WS instr WS instr WS instr WS instr
+      | instr WS instr WS instr WS instr WS instr WS instr
+      | instr WS instr WS instr WS instr WS instr WS instr WS instr
+      | instr WS instr WS instr WS instr WS instr WS instr WS instr WS instr
+
+instr: op_bin
+     | op_cmp
+     | op_select
+     | op_phi
+     | op_cast
+     | op_alloca
+     | op_load
+     | op_store
+
+terminator: op_ret | op_br_uncond | op_br_cond
+
+// ---------- untyped operand slot ----------
+
+operand: SSA | INT_LIT | FLOAT_LIT | BOOL_LIT
+
+// ---------- instructions ----------
+
+op_bin:    SSA WS "=" WS BIN_OP WS scalar_type WS operand WS? "," WS operand
+op_cmp:    SSA WS "=" WS CMP_OP WS PRED WS scalar_type WS operand WS? "," WS operand
+op_select: SSA WS "=" WS "select" WS scalar_type WS operand WS? "," WS scalar_type WS operand WS? "," WS scalar_type WS operand
+op_phi:    SSA WS "=" WS "phi" WS scalar_type WS phi_in WS? "," WS phi_in (WS? "," WS phi_in)?
+phi_in:    "[" WS? operand WS? "," WS? SSA WS? "]"
+op_cast:   SSA WS "=" WS CAST_OP WS scalar_type WS operand WS "to" WS scalar_type
+op_alloca: SSA WS "=" WS "alloca" WS scalar_type
+op_load:   SSA WS "=" WS "load" WS scalar_type WS? "," WS "ptr" WS SSA
+op_store:  "store" WS scalar_type WS operand WS? "," WS "ptr" WS SSA
+
+// ---------- terminators ----------
+
+op_ret:       "ret" WS scalar_type WS operand
+op_br_uncond: "br" WS "label" WS SSA
+op_br_cond:   "br" WS scalar_type WS operand WS? "," WS "label" WS SSA WS? "," WS "label" WS SSA
+
+// -------- keyword enums --------
+
+BIN_OP:  "add" | "sub" | "mul" | "sdiv" | "srem" | "and" | "or" | "xor"
+       | "fadd" | "fsub" | "fmul" | "fdiv"
+CMP_OP:  "icmp" | "fcmp"
+CAST_OP: "sext" | "zext" | "trunc" | "sitofp" | "fptosi" | "fpext" | "fptrunc"
+
+PRED: "eq" | "ne" | "slt" | "sle" | "sgt" | "sge" | "ult" | "ule" | "ugt" | "uge"
+    | "oeq" | "one" | "olt" | "ole" | "ogt" | "oge"
+    | "ueq" | "une" | "ord" | "uno"
+
+// -------- literals --------
+
+INT_LIT:   /-?[0-9]{1,12}/
+FLOAT_LIT: /-?[0-9]{1,9}\.[0-9]{1,9}(e[+-]?[0-9]{1,3})?/
+BOOL_LIT:  "true" | "false"
+
+SSA:   /%[a-zA-Z0-9_.][a-zA-Z0-9_.]{0,31}/
+SYM:   /@[a-zA-Z_][a-zA-Z0-9_]{0,47}/
+LABEL: /[a-zA-Z_.][a-zA-Z0-9_.]{0,31}:/
+
+WS: /[ \t\n]{1,8}/

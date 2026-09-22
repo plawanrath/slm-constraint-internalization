@@ -1,0 +1,56 @@
+{
+  "points": [
+    {
+      "model": "SmolLM2-135M-Instruct",
+      "D": 2,
+      "size": 135000000.0,
+      "residual": 0.32,
+      "n_seeds": 1
+    },
+    {
+      "model": "SmolLM2-135M-Instruct",
+      "D": 8,
+      "size": 135000000.0,
+      "residual": 0.005,
+      "n_seeds": 1
+    },
+    {
+      "model": "SmolLM2-135M-Instruct",
+      "D": 32,
+      "size": 135000000.0,
+      "residual": 0.375,
+      "n_seeds": 1
+    },
+    {
+      "model": "SmolLM2-360M-Instruct",
+      "D": 2,
+      "size": 360000000.0,
+      "residual": 0.0,
+      "n_seeds": 1
+    },
+    {
+      "model": "SmolLM2-360M-Instruct",
+      "D": 8,
+      "size": 360000000.0,
+      "residual": 0.065,
+      "n_seeds": 1
+    },
+    {
+      "model": "SmolLM2-360M-Instruct",
+      "D": 32,
+      "size": 360000000.0,
+      "residual": 0.19,
+      "n_seeds": 1
+    }
+  ],
+  "n_points": 6,
+  "fit": {
+    "a": 596333381.6793007,
+    "alpha": 0.9748342873533523,
+    "beta": 1.3197246378402645,
+    "r2": 0.32871024741462185,
+    "n": 6,
+    "n_clipped": 1,
+    "eps": 0.001
+  }
+}

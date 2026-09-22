@@ -2,7 +2,7 @@
   "k_trials": 5,
   "float_rel": 0.0001,
   "float_abs": 1e-05,
-  "candidates": "/Users/plawanrath/Documents/GitHub-public/slm-constraint-internalization/results/w04_functional/smollm2-360m-instruct_ssd_s0/none/candidates.jsonl",
+  "candidates": "results/w04_functional/smollm2-360m-instruct_ssd_s0/none/candidates.jsonl",
   "dialects": {
     "arith": {
       "n_gold": 150,

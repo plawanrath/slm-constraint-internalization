@@ -1,0 +1,39 @@
+{
+  "k_trials": 5,
+  "float_rel": 0.0001,
+  "float_abs": 1e-05,
+  "candidates": "results/w16_passk/smollm2-360m-instruct_ssd_s0/sample_12/candidates.jsonl",
+  "dialects": {
+    "arith": {
+      "n_gold": 150,
+      "gold_excluded": {
+        "no_observable_output": 4,
+        "unprintable_memref_dtype": 1
+      },
+      "gold_gate_fail": [
+        "045_alloc-load-dealloc",
+        "150_void-dealloc"
+      ],
+      "gold_gate_pass": 143,
+      "cand_status_counts": {
+        "scored": 49,
+        "signature_mismatch": 39,
+        "not_verify_valid": 55
+      },
+      "n_scored": 49,
+      "n_scored_dim_relaxed": 0,
+      "n_functional_match": 20,
+      "match_rate_among_scored": 0.40816326530612246,
+      "match_ci95_among_scored": [
+        0.2653061224489796,
+        0.5510204081632653
+      ],
+      "match_rate_among_gate_passed": 0.13986013986013987,
+      "match_ci95_among_gate_passed": [
+        0.08391608391608392,
+        0.1958041958041958
+      ]
+    }
+  },
+  "elapsed_min": 3.6
+}

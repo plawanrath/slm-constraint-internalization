@@ -1,6 +1,6 @@
 """Shared training spine: rollouts → offline mask replay → rewards → losses → step.
 
-Losses (see ADR-0003):
+Losses:
   legal_mass_loss : −mean_t log Σ_{v∈A_t} π_θ(v | x_<t) on masked rollouts (dense, C1/C2)
   grpo_loss       : −mean_t A(x) · log π_θ(x_t | x_<t) with group-normalized advantage from the
                     sequence reward r(x) ∈ {0,1} (parse ∧ scope ∧ mlir-opt), on-policy single step
@@ -22,6 +22,7 @@ from sci.constraints.parser import is_parse_valid
 from sci.constraints.scope import accept_or_reject
 from sci.eval.generate import Generator
 from sci.eval.verify import verify
+from sci.train.functional_reward import functional_match
 from sci.masks.llg import bitmask_to_bool, replay_allowed_sets
 
 
@@ -35,6 +36,7 @@ class Rollout:
     reward: float
     parts: dict = field(default_factory=dict)
     teacher_lp: np.ndarray | None = None  # log π_teacher(x_t | x_<t) per generated token (fixed teacher)
+    c3_rows: list | None = None  # offline C3 mask: [(generated position, allowed token ids)] (sci.masks.c3_offline)
 
 
 _SIG_RE = re.compile(r"func\.func\s+@[\w$.]+\s*\(([^)]*)\)\s*(?:->\s*([^{]+?))?\s*\{", re.S)
@@ -73,25 +75,38 @@ def op_jaccard(a: Counter, b: Counter) -> float:
 
 
 def reward_fn(text: str, gold: str | None = None, kind: str = "task") -> tuple[float, dict]:
-    """kind='verify': r = verify-valid (prompt-independent; collapses to a trivial program).
-    kind='task':   r = verify · signature_score(gen, gold) · Jaccard(op multiset, gold op multiset)."""
+    """kind='verify':     r = verify-valid (prompt-independent; collapses to a trivial program).
+    kind='task':       r = verify · signature_score(gen, gold) · Jaccard(op multiset, gold op multiset).
+    kind='functional': r = task reward + 1.0 · [one gold-differential trial matches]; the
+                       trial runs only for verify-valid programs (`sci.train.functional_reward`).
+    Any kind with the `_noc3` suffix removes the scope validator from the reward gate (ablation)."""
     pv = is_parse_valid(text)
     sc = bool(pv) and accept_or_reject(text)[0]
-    vv = bool(sc) and verify(text)["returncode"] == 0
+    gate = pv if kind.endswith("_noc3") else sc  # *_noc3: scope validator removed from the reward gate (ablation)
+    vv = bool(gate) and verify(text)["returncode"] == 0
     parts = {"parse": pv, "scope": sc, "verify": vv}
-    if kind == "verify" or gold is None:
+    if kind in ("verify", "verify_noc3") or gold is None:
         return float(vv), parts
     sig = signature_score(text, gold) if vv else 0.0
     jac = op_jaccard(op_multiset(text), op_multiset(gold)) if vv else 0.0
     parts.update({"sig": round(sig, 3), "op_jaccard": round(jac, 3)})
+    if kind in ("functional", "functional_noc3"):
+        fm = functional_match(text, gold) if vv else {"match": False, "status": "not_verified", "dt": 0.0}
+        parts["functional"] = {"match": bool(fm["match"]), "status": fm["status"], "dt": round(float(fm["dt"]), 3)}
+        return float(vv) * sig * jac + 1.0 * float(fm["match"]), parts
     return float(vv) * sig * jac, parts
 
 
-def rewards_parallel(texts: list[str], golds: list[str | None], kind: str = "task", workers: int = 6) -> list[tuple[float, dict]]:
-    """Rewards in parallel (mlir-opt runs as a subprocess, so threads suffice)."""
+def rewards_parallel(texts: list[str], golds: list[str | None], kind: str = "task", workers: int = 6,
+                     reward=reward_fn) -> list[tuple[float, dict]]:
+    """Rewards in parallel (mlir-opt runs as a subprocess, so threads suffice). Functional kinds run
+    sequentially: their gold-differential trials hold container subprocesses and sqlite cache connections,
+    and a 128-rollout group (group size 16) deadlocked the thread pool."""
     from concurrent.futures import ThreadPoolExecutor
+    if kind.startswith("functional"):
+        return [reward(t, g, kind) for t, g in zip(texts, golds)]
     with ThreadPoolExecutor(max_workers=workers) as ex:
-        return list(ex.map(lambda tg: reward_fn(tg[0], tg[1], kind), zip(texts, golds)))
+        return list(ex.map(lambda tg: reward(tg[0], tg[1], kind), zip(texts, golds)))
 
 
 def collect_rollouts(gen: Generator, prompts: list[tuple], group: int, constraint: str = "c1_c2",
@@ -181,11 +196,8 @@ def group_advantages(rollouts: list[Rollout]) -> dict[int, float]:
     return adv
 
 
-def grpo_loss(model: nn.Module, ro: Rollout, advantage: float, beta: float = 0.0, clip: float = 5.0) -> mx.array:
-    """−mean_t A_t · log π_θ(x_t), A_t = advantage − β·stopgrad(log π_θ(x_t) − log π_teacher(x_t)).
-    With β>0 and a fixed teacher this is on-policy distillation's implicit per-token reward added to the
-    group-relative task advantage."""
-    lp = seq_logprob_per_token(model, ro)
+def _grpo_from_lp(lp: mx.array, ro: Rollout, advantage: float, beta: float = 0.0, clip: float = 5.0) -> mx.array:
+    """GRPO / distillation term given the per-token log-probs `lp` (T,) of the rollout's tokens."""
     if beta > 0 and ro.teacher_lp is not None:
         ratio = mx.clip(mx.stop_gradient(lp) - mx.array(ro.teacher_lp), -clip, clip)
         adv = advantage - beta * ratio
@@ -194,6 +206,115 @@ def grpo_loss(model: nn.Module, ro: Rollout, advantage: float, beta: float = 0.0
             return mx.array(0.0)
         adv = mx.array(advantage)
     return -mx.mean(adv * lp)
+
+
+def grpo_loss(model: nn.Module, ro: Rollout, advantage: float, beta: float = 0.0, clip: float = 5.0) -> mx.array:
+    """−mean_t A_t · log π_θ(x_t), A_t = advantage − β·stopgrad(log π_θ(x_t) − log π_teacher(x_t)).
+    With β>0 and a fixed teacher this is on-policy distillation's implicit per-token reward added to the
+    group-relative task advantage."""
+    return _grpo_from_lp(seq_logprob_per_token(model, ro), ro, advantage, beta, clip)
+
+
+# ---------------------------------------------------------------------------------------------
+# Batched forward: one padded forward per micro-batch instead of one forward per rollout.
+# Sequences are right-padded; the model is causal, so logits at real positions are unchanged and
+# padded positions are never read. Only generated positions are gathered.
+# ---------------------------------------------------------------------------------------------
+
+def _forward_gathered(model: nn.Module, rollouts: list[Rollout]) -> mx.array:
+    """Log-softmax (float32) of the logits that predict each rollout's gen_ids, concatenated over the
+    rollouts in order: shape (Σ T_i, V)."""
+    seqs = [ro.prompt_ids + ro.gen_ids for ro in rollouts]
+    L = max(len(s) for s in seqs)
+    x = mx.array([s + [0] * (L - len(s)) for s in seqs])
+    logits = model(x)  # (B, L, V)
+    b_idx, p_idx = [], []
+    for b, ro in enumerate(rollouts):
+        P, T = len(ro.prompt_ids), len(ro.gen_ids)
+        b_idx.extend([b] * T); p_idx.extend(range(P - 1, P - 1 + T))
+    g = logits[mx.array(b_idx), mx.array(p_idx)].astype(mx.float32)
+    return _log_softmax(g)
+
+
+def _segments(rollouts: list[Rollout]) -> list[tuple[int, int]]:
+    out, o = [], 0
+    for ro in rollouts:
+        out.append((o, o + len(ro.gen_ids))); o += len(ro.gen_ids)
+    return out
+
+
+def _logz_allowed(lp: mx.array, bitmask: np.ndarray, vocab_size: int) -> mx.array:
+    allowed = mx.array(np.stack([bitmask_to_bool(r, vocab_size) for r in bitmask]))  # (T, V) bool
+    return mx.logsumexp(mx.where(allowed, lp, mx.array(-1e30, dtype=lp.dtype)), axis=-1)
+
+
+def c3_mass_loss(lp: mx.array, rows: list, vocab_size: int) -> mx.array:
+    """−mean over C3-constrained positions of log Σ_{v∈allowed} π(v): the dense scope signal.
+    `lp` is the (T, V) log-softmax of the rollout's generated positions."""
+    pos = mx.array([p for p, _ in rows])
+    allowed = np.zeros((len(rows), vocab_size), dtype=bool)
+    for k, (_, ids) in enumerate(rows):
+        allowed[k, ids] = True
+    sub = lp[pos]
+    logz = mx.logsumexp(mx.where(mx.array(allowed), sub, mx.array(-1e30, dtype=sub.dtype)), axis=-1)
+    return -mx.mean(logz)
+
+
+def micro_batch_loss(model: nn.Module, rollouts: list[Rollout], advantages: list[float], vocab_size: int,
+                     mode: str = "ssd", lam: float = 1.0, beta: float = 0.0, batched: bool = True,
+                     c3_weight: float = 0.0):
+    """Mean loss over `rollouts` (one micro-batch) and its (legal-mass, grpo, c3) parts. `advantages[i]` is the
+    (unscaled) group advantage of rollouts[i]. `batched=False` reproduces the per-rollout forward path
+    (kept for the equivalence test). `c3_weight > 0` adds the offline C3 mass loss on rollouts with `c3_rows`."""
+    total = mx.array(0.0); lm = mx.array(0.0); lg = mx.array(0.0); lc = mx.array(0.0)
+    if batched:
+        lp_all = _forward_gathered(model, rollouts)
+        tgt = mx.array([t for ro in rollouts for t in ro.gen_ids])
+        tok_lp_all = mx.take_along_axis(lp_all, tgt[:, None], axis=-1)[:, 0]
+        segs = _segments(rollouts)
+    for i, ro in enumerate(rollouts):
+        if batched:
+            a, b = segs[i]
+            tok_lp = tok_lp_all[a:b]
+            lp_full = lambda: lp_all[a:b]  # noqa: E731
+        else:
+            tok_lp = None
+        if mode == "ssd":
+            if ro.bitmask is not None:
+                l1 = -mx.mean(_logz_allowed(lp_full(), ro.bitmask, vocab_size)) if batched else legal_mass_loss(model, ro, vocab_size)
+                lm = lm + l1; total = total + l1
+            if lam > 0 or beta > 0:
+                l2 = _grpo_from_lp(tok_lp, ro, lam * advantages[i], beta) if batched else grpo_loss(model, ro, lam * advantages[i], beta)
+                lg = lg + l2; total = total + l2
+            if c3_weight > 0 and ro.c3_rows:
+                lp_ro = lp_full() if batched else _log_softmax(_gen_logits(model, ro.prompt_ids, ro.gen_ids))
+                l3 = c3_weight * c3_mass_loss(lp_ro, ro.c3_rows, vocab_size); lc = lc + l3; total = total + l3
+        elif mode == "grpo":
+            l2 = _grpo_from_lp(tok_lp, ro, advantages[i], beta) if batched else grpo_loss(model, ro, advantages[i], beta)
+            lg = lg + l2; total = total + l2
+        else:
+            total = total + (-mx.mean(tok_lp) if batched else sft_loss(model, ro))
+    n = len(rollouts)
+    return total / n, (lm / n, lg / n, lc / n)
+
+
+def teacher_logprobs_batched(ref_model: nn.Module, rollouts: list[Rollout], vocab_size: int, masked: bool = True,
+                             micro_batch: int = 8) -> None:
+    """Batched `teacher_logprobs`: fills `ro.teacher_lp` for every rollout, `micro_batch` rollouts per forward."""
+    for s in range(0, len(rollouts), micro_batch):
+        chunk = rollouts[s: s + micro_batch]
+        lp_all = _forward_gathered(ref_model, chunk)
+        tgt = mx.array([t for ro in chunk for t in ro.gen_ids])
+        tok_lp_all = mx.take_along_axis(lp_all, tgt[:, None], axis=-1)[:, 0]
+        outs = []
+        for (a, b), ro in zip(_segments(chunk), chunk):
+            tok_lp = tok_lp_all[a:b]
+            if masked and ro.bitmask is not None:
+                tok_lp = tok_lp - _logz_allowed(lp_all[a:b], ro.bitmask, vocab_size)
+            outs.append(tok_lp.astype(mx.float32))
+        mx.eval(outs)
+        for ro, o in zip(chunk, outs):
+            ro.teacher_lp = np.array(o)
 
 
 @dataclass
@@ -205,48 +326,45 @@ class StepStats:
     mean_reward: float
     mean_legal_mass: float  # exp(mean log Z) before the step
     dt: float
+    loss_c3: float = 0.0
 
 
 def ssd_step(model: nn.Module, optimizer, rollouts: list[Rollout], vocab_size: int, lam: float = 1.0,
-             mode: str = "ssd", micro_batch: int = 4, beta: float = 0.0) -> StepStats:
+             mode: str = "ssd", micro_batch: int = 4, beta: float = 0.0, batched: bool = True,
+             c3_weight: float = 0.0, rft_scale_by_kept: bool = True) -> StepStats:
     """One optimizer step over `rollouts`. mode ∈ {ssd, rft, grpo, sft}.
-    ssd: legal-mass + λ·GRPO; rft/sft: SFT on verifier-passing rollouts (rft) or all given (sft); grpo: reward only."""
+    ssd: legal-mass + λ·GRPO; rft/sft: SFT on verifier-passing rollouts (rft) or all given (sft); grpo: reward only.
+    `batched`: one right-padded forward per micro-batch (numerically equivalent to the per-rollout path)."""
     t0 = time.perf_counter()
     adv = group_advantages(rollouts) if mode in ("ssd", "grpo") else {}
+    n_total = len(rollouts)
     if mode == "rft":
         rollouts = [r for r in rollouts if r.reward > 0]
     if not rollouts:
         return StepStats(0.0, 0.0, 0.0, 0, 0.0, 0.0, time.perf_counter() - t0)
+    # RFT: the supervised loss is averaged over the kept rollouts, so a step with 4 kept sequences would move the
+    # weights as far as one with 128. Scale the gradient by the kept fraction so the estimator is a sum over the
+    # rollout batch divided by the batch size; steps with few verified rollouts then take small steps.
+    kept_scale = len(rollouts) / n_total if (mode == "rft" and rft_scale_by_kept) else 1.0
 
     def loss_fn(model, batch_idx):
-        total = mx.array(0.0); lm = mx.array(0.0); lg = mx.array(0.0)
-        for i in batch_idx:
-            ro = rollouts[i]
-            if mode == "ssd":
-                if ro.bitmask is not None:
-                    l1 = legal_mass_loss(model, ro, vocab_size); lm = lm + l1; total = total + l1
-                if lam > 0 or beta > 0:
-                    l2 = grpo_loss(model, ro, lam * adv.get(i, 0.0), beta); lg = lg + l2; total = total + l2
-            elif mode == "grpo":
-                l2 = grpo_loss(model, ro, adv.get(i, 0.0), beta); lg = lg + l2; total = total + l2
-            else:
-                total = total + sft_loss(model, ro)
-        return total / len(batch_idx), (lm / len(batch_idx), lg / len(batch_idx))
+        return micro_batch_loss(model, [rollouts[i] for i in batch_idx], [adv.get(i, 0.0) for i in batch_idx],
+                                vocab_size, mode=mode, lam=lam, beta=beta, batched=batched, c3_weight=c3_weight)
 
     vg = nn.value_and_grad(model, loss_fn)
-    n = len(rollouts); acc_grads = None; tot = lm_tot = lg_tot = 0.0; n_mb = 0
+    n = len(rollouts); acc_grads = None; tot = lm_tot = lg_tot = lc_tot = 0.0; n_mb = 0
     for s in range(0, n, micro_batch):
         idx = list(range(s, min(n, s + micro_batch)))
-        (loss, (lm, lg)), grads = vg(model, idx)
-        scale = len(idx) / n
+        (loss, (lm, lg, lc)), grads = vg(model, idx)
+        scale = len(idx) / n * kept_scale
         grads = mx.tree_map(lambda g: g * scale, grads) if hasattr(mx, "tree_map") else _tree_scale(grads, scale)
         acc_grads = grads if acc_grads is None else _tree_add(acc_grads, grads)
         mx.eval(acc_grads)
-        tot += float(loss) * scale; lm_tot += float(lm) * scale; lg_tot += float(lg) * scale; n_mb += 1
+        tot += float(loss) * scale; lm_tot += float(lm) * scale; lg_tot += float(lg) * scale; lc_tot += float(lc) * scale; n_mb += 1
     optimizer.update(model, acc_grads)
     mx.eval(model.parameters(), optimizer.state)
     return StepStats(tot, lm_tot, lg_tot, n, float(np.mean([r.reward for r in rollouts])),
-                     float(np.exp(-lm_tot)) if mode == "ssd" else float("nan"), time.perf_counter() - t0)
+                     float(np.exp(-lm_tot)) if mode == "ssd" else float("nan"), time.perf_counter() - t0, lc_tot)
 
 
 def _tree_scale(tree, s):
@@ -259,11 +377,14 @@ def _tree_add(a, b):
     return tree_map(lambda x, y: x + y, a, b)
 
 
-def make_lora(model: nn.Module, rank: int = 32, num_layers: int | None = None) -> nn.Module:
+def make_lora(model: nn.Module, rank: int = 32, num_layers: int | None = None, scale: float = 20.0) -> nn.Module:
+    """LoRA on every attention and MLP projection. `scale` is the adapter output multiplier (mlx_lm's default 20
+    corresponds to alpha = 20 r; the standard alpha = 2 r is scale 2). With Adam, the effective step in function
+    space grows with scale * lr, so scale and learning rate must be chosen together."""
     from mlx_lm.tuner.utils import linear_to_lora_layers
     n = num_layers or len(model.layers)
     model.freeze()
-    linear_to_lora_layers(model, n, {"rank": rank, "scale": 20.0, "dropout": 0.0,
+    linear_to_lora_layers(model, n, {"rank": rank, "scale": scale, "dropout": 0.0,
                                      "keys": ["self_attn.q_proj", "self_attn.k_proj", "self_attn.v_proj", "self_attn.o_proj",
                                               "mlp.gate_proj", "mlp.up_proj", "mlp.down_proj"]})
     return model
@@ -271,14 +392,15 @@ def make_lora(model: nn.Module, rank: int = 32, num_layers: int | None = None) -
 
 def collect_rollouts_batched(gen: Generator, prompts: list[tuple], group: int, constraint: str = "c1_c2",
                              temp: float = 0.8, max_tokens: int = 300, seed: int = 0, with_masks: bool = True,
-                             completion_batch_size: int = 64, reward_kind: str = "task") -> list[Rollout]:
+                             completion_batch_size: int = 64, reward_kind: str = "task", task=None) -> list[Rollout]:
     """Same contract as `collect_rollouts` but uses mlx_lm's continuous-batching generator with one
-    grammar processor per sequence. Sequences whose grammar has accepted are removed early."""
+    grammar processor per sequence. Sequences whose grammar has accepted are removed early.
+    `task` (see `sci.synth.task`) selects the C1+C2 grammar and the reward; None → the MLIR task."""
     from mlx_lm.generate import BatchGenerator
     from mlx_lm.sample_utils import make_sampler
     from sci.masks.llg import GrammarLogitsProcessor
 
-    grammar = gen.grammar("mlir_gen_c1c2")
+    grammar = gen.grammar(task.grammar_name if task is not None else "mlir_gen_c1c2")
     mx.random.seed(seed)
     bg = BatchGenerator(gen.model, max_tokens=max_tokens, stop_tokens=[[t] for t in gen.eos_ids],
                         sampler=make_sampler(temp=temp), completion_batch_size=completion_batch_size, prefill_batch_size=8)
@@ -334,5 +456,6 @@ def collect_rollouts_batched(gen: Generator, prompts: list[tuple], group: int, c
             except ValueError:
                 bm = None
         pending.append((pid, ids, gen_ids, text, bm, gold))
-    rewards = rewards_parallel([p[3] for p in pending], [p[5] for p in pending], reward_kind)
+    rewards = rewards_parallel([p[3] for p in pending], [p[5] for p in pending], reward_kind,
+                               reward=(task.reward if task is not None else reward_fn))
     return [Rollout(pid, ids, gen_ids, text, bm, rw, parts) for (pid, ids, gen_ids, text, bm, gold), (rw, parts) in zip(pending, rewards)]

@@ -1,0 +1,38 @@
+// Parse-grammar extension for the scf transfer target.
+//
+// `mlir.lark` (the arith + func + memref + linalg parse grammar) has no
+// region-bearing control flow. This file is appended to its text at load time
+// (see `sci.transfer.scf.grammar.parse_grammar_text`) and extends the `op_inner`
+// alternation with scf.for / scf.if / scf.yield (plus scf.execute_region and
+// scf.index_switch for permissiveness). Parsing is permissive: typed loop
+// bounds, multi-result `%r:2 =` forms, attribute dicts and `loc(...)` suffixes
+// are accepted; the generation grammar emits a strict subset.
+
+%extend op_inner: scf_op
+
+scf_op: scf_for
+      | scf_if
+      | scf_yield
+      | scf_execute_region
+      | scf_index_switch
+
+// scf.for %iv = %lb to %ub step %step [iter_args(%a = %x, ...)] [-> (types)] [: type] { ... }
+scf_for: (ssa_list "=")? "scf.for" SSA_VAL "=" SSA_VAL "to" SSA_VAL "step" SSA_VAL scf_iter_args? scf_result_types? (":" type)? region attr_dict?
+
+scf_iter_args: "iter_args" "(" (scf_iter_arg ("," scf_iter_arg)*)? ")"
+scf_iter_arg: SSA_VAL "=" SSA_VAL
+
+scf_result_types: "->" ("(" type_list? ")" | type)
+
+// scf.if %cond [-> (types)] { ... } [else { ... }]
+scf_if: (ssa_list "=")? "scf.if" SSA_VAL scf_result_types? region ("else" region)? attr_dict?
+
+// scf.yield [%a, %b : T1, T2]
+scf_yield: "scf.yield" (ssa_list ":" type_list)? attr_dict?
+
+scf_execute_region: (ssa_list "=")? "scf.execute_region" scf_result_types? region attr_dict?
+
+scf_index_switch: (ssa_list "=")? "scf.index_switch" SSA_VAL scf_result_types? ("case" SIGNED_INT region)* "default" region attr_dict?
+
+// A region is a brace-delimited block body (implicit entry block, or labeled blocks).
+region: "{" block_body "}"

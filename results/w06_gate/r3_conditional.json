@@ -1,0 +1,142 @@
+{
+  "smollm2-135m-instruct_ssd_s0|arith_func_200": {
+    "n_parse_free": 196,
+    "v3_free": 0.1173,
+    "v3_full": 0.0255,
+    "r3_pp": 9.2,
+    "ci95": [
+      5.6,
+      13.3
+    ]
+  },
+  "smollm2-135m-instruct_ssd_s0|linalg_125": {
+    "n_parse_free": 72,
+    "v3_free": 0.2639,
+    "v3_full": 0.0278,
+    "r3_pp": 23.6,
+    "ci95": [
+      13.9,
+      34.7
+    ]
+  },
+  "smollm2-360m-instruct_ssd_s0|arith_func_200": {
+    "n_parse_free": 169,
+    "v3_free": 0.1598,
+    "v3_full": 0.0828,
+    "r3_pp": 7.7,
+    "ci95": [
+      3.0,
+      12.4
+    ]
+  },
+  "smollm2-360m-instruct_ssd_s0|linalg_125": {
+    "n_parse_free": 68,
+    "v3_free": 0.1176,
+    "v3_full": 0.0294,
+    "r3_pp": 8.8,
+    "ci95": [
+      1.5,
+      17.6
+    ]
+  },
+  "smollm2-1.7b-instruct_ssd_s0|arith_func_200": {
+    "n_parse_free": 158,
+    "v3_free": 0.1962,
+    "v3_full": 0.1646,
+    "r3_pp": 3.2,
+    "ci95": [
+      -0.6,
+      7.6
+    ]
+  },
+  "smollm2-1.7b-instruct_ssd_s0|linalg_125": {
+    "n_parse_free": 61,
+    "v3_free": 0.0328,
+    "v3_full": 0.0328,
+    "r3_pp": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  "smollm3-3b_ssd_s0|arith_func_200": {
+    "n_parse_free": 137,
+    "v3_free": 0.2701,
+    "v3_full": 0.2555,
+    "r3_pp": 1.5,
+    "ci95": [
+      -3.6,
+      6.6
+    ]
+  },
+  "smollm3-3b_ssd_s0|linalg_125": {
+    "n_parse_free": 24,
+    "v3_free": 0.1667,
+    "v3_full": 0.1667,
+    "r3_pp": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  "gemma-3-1b-it_ssd_s0|arith_func_200": {
+    "n_parse_free": 171,
+    "v3_free": 0.3509,
+    "v3_full": 0.2749,
+    "r3_pp": 7.6,
+    "ci95": [
+      4.1,
+      11.7
+    ]
+  },
+  "gemma-3-1b-it_ssd_s0|linalg_125": {
+    "n_parse_free": 40,
+    "v3_free": 0.05,
+    "v3_full": 0.025,
+    "r3_pp": 2.5,
+    "ci95": [
+      0.0,
+      7.5
+    ]
+  },
+  "smollm2-360m-instruct_ssd_s0__c3_mask=1|arith_func_200": {
+    "n_parse_free": 173,
+    "v3_free": 0.0925,
+    "v3_full": 0.052,
+    "r3_pp": 4.0,
+    "ci95": [
+      0.0,
+      8.1
+    ]
+  },
+  "smollm2-360m-instruct_ssd_s0__c3_mask=1|linalg_125": {
+    "n_parse_free": 79,
+    "v3_free": 0.0633,
+    "v3_full": 0.0127,
+    "r3_pp": 5.1,
+    "ci95": [
+      1.3,
+      10.1
+    ]
+  },
+  "smollm2-360m-instruct_sft_s0|arith_func_200": {
+    "n_parse_free": 76,
+    "v3_free": 0.1053,
+    "v3_full": 0.0526,
+    "r3_pp": 5.3,
+    "ci95": [
+      0.0,
+      11.8
+    ]
+  },
+  "smollm2-360m-instruct_sft_s0|linalg_125": {
+    "n_parse_free": 52,
+    "v3_free": 0.0769,
+    "v3_full": 0.0577,
+    "r3_pp": 1.9,
+    "ci95": [
+      0.0,
+      5.8
+    ]
+  }
+}

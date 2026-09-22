@@ -31,9 +31,11 @@ def main() -> None:
     ap.add_argument("--train-seed", type=int, default=None)
     ap.add_argument("--pools", default="arith_func_200,linalg_125")
     ap.add_argument("--limit", type=int, default=None)
+    ap.add_argument("--constraints", default=None, help="comma list of stacks to decode (default all four); a partial stack yields rates for the stacks decoded and residuals only for the layers whose stack is present")
     args = ap.parse_args()
     OUT.mkdir(parents=True, exist_ok=True)
-    run_model(args.model, revision_for(args.model), args.tag, args.pools.split(","), CONSTRAINTS, OUT / "ladder.jsonl",
+    stacks = tuple(args.constraints.split(",")) if args.constraints else CONSTRAINTS
+    run_model(args.model, revision_for(args.model), args.tag, args.pools.split(","), stacks, OUT / "ladder.jsonl",
               method=args.method, ckpt=args.ckpt or "base", ckpt_dir=Path(args.ckpt) if args.ckpt else None, limit=args.limit)
     summarize(OUT / "ladder.jsonl", OUT / "summary.json")
     res = {pool: residuals_from_jsonl(OUT / "ladder.jsonl", args.tag, pool) for pool in args.pools.split(",")}

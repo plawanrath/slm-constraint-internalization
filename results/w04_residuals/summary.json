@@ -1,4 +1,4454 @@
 {
+  "gemma-3-1b-it_rft_s0": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 1.0,
+        "verify_ci95": [
+          1.0,
+          1.0
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.113,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 1.0,
+        "verify_ci95": [
+          1.0,
+          1.0
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.114,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 1.0,
+        "verify_ci95": [
+          1.0,
+          1.0
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.113,
+        "unfinished": 0
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.15,
+        "verify_rate": 0.15,
+        "verify_ci95": [
+          0.105,
+          0.2
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.085,
+        "unfinished": 0
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 85.0,
+          "ci95_pp": [
+            80.0,
+            89.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 85.0,
+          "ci95_pp": [
+            80.0,
+            89.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.896,
+        "verify_ci95": [
+          0.84,
+          0.944
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.095,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.872,
+        "verify_ci95": [
+          0.816,
+          0.928
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.108,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.936,
+        "verify_ci95": [
+          0.888,
+          0.976
+        ],
+        "mean_attempts": 1.32,
+        "mean_dt": 1.476,
+        "unfinished": 0
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.896,
+        "verify_ci95": [
+          0.84,
+          0.944
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.058,
+        "unfinished": 0
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": -2.4,
+          "ci95_pp": [
+            -5.6,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 6.4,
+          "ci95_pp": [
+            2.4,
+            11.2
+          ],
+          "p_one_sided": 0.0002,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 4.0,
+          "ci95_pp": [
+            -0.8,
+            8.8
+          ],
+          "p_one_sided": 0.0851,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "gemma-3-1b-it_ssd_s0": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 0.94,
+        "verify_rate": 0.495,
+        "verify_ci95": [
+          0.425,
+          0.565
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.635,
+        "unfinished": 12
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 0.94,
+        "verify_rate": 0.495,
+        "verify_ci95": [
+          0.425,
+          0.565
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.635,
+        "unfinished": 12
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 0.935,
+        "verify_rate": 0.55,
+        "verify_ci95": [
+          0.48,
+          0.62
+        ],
+        "mean_attempts": 2.085,
+        "mean_dt": 3.001,
+        "unfinished": 13
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.855,
+        "verify_rate": 0.465,
+        "verify_ci95": [
+          0.395,
+          0.535
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.662,
+        "unfinished": 16
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 3.0,
+          "ci95_pp": [
+            1.0,
+            5.5
+          ],
+          "p_one_sided": 0.0027,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 5.5,
+          "ci95_pp": [
+            2.5,
+            9.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 8.5,
+          "ci95_pp": [
+            5.0,
+            12.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 0.96,
+        "verify_rate": 0.728,
+        "verify_ci95": [
+          0.648,
+          0.808
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.807,
+        "unfinished": 5
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.96,
+        "verify_rate": 0.792,
+        "verify_ci95": [
+          0.72,
+          0.864
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.816,
+        "unfinished": 5
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.944,
+        "verify_rate": 0.8,
+        "verify_ci95": [
+          0.728,
+          0.872
+        ],
+        "mean_attempts": 1.152,
+        "mean_dt": 2.126,
+        "unfinished": 7
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.32,
+        "verify_rate": 0.256,
+        "verify_ci95": [
+          0.184,
+          0.336
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.611,
+        "unfinished": 4
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 47.2,
+          "ci95_pp": [
+            38.4,
+            56.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 6.4,
+          "ci95_pp": [
+            2.4,
+            11.2
+          ],
+          "p_one_sided": 0.0002,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 0.8,
+          "ci95_pp": [
+            -1.6,
+            3.2
+          ],
+          "p_one_sided": 0.3956,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 54.4,
+          "ci95_pp": [
+            45.6,
+            63.2
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-1.7b-instruct_grpo_s0": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 0.99,
+        "verify_rate": 0.605,
+        "verify_ci95": [
+          0.54,
+          0.67
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.495,
+        "unfinished": 2
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 0.99,
+        "verify_rate": 0.62,
+        "verify_ci95": [
+          0.555,
+          0.685
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.501,
+        "unfinished": 2
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 0.985,
+        "verify_rate": 0.675,
+        "verify_ci95": [
+          0.61,
+          0.74
+        ],
+        "mean_attempts": 1.97,
+        "mean_dt": 2.97,
+        "unfinished": 2
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.395,
+        "verify_rate": 0.325,
+        "verify_ci95": [
+          0.26,
+          0.39
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.39,
+        "unfinished": 3
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 28.0,
+          "ci95_pp": [
+            21.5,
+            35.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 1.5,
+          "ci95_pp": [
+            0.0,
+            3.5
+          ],
+          "p_one_sided": 0.052,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 5.5,
+          "ci95_pp": [
+            1.0,
+            10.0
+          ],
+          "p_one_sided": 0.0107,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 35.0,
+          "ci95_pp": [
+            28.5,
+            42.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 0.984,
+        "verify_rate": 0.544,
+        "verify_ci95": [
+          0.456,
+          0.632
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.822,
+        "unfinished": 2
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.936,
+        "verify_rate": 0.784,
+        "verify_ci95": [
+          0.712,
+          0.856
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 2.378,
+        "unfinished": 8
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.928,
+        "verify_rate": 0.8,
+        "verify_ci95": [
+          0.728,
+          0.872
+        ],
+        "mean_attempts": 1.168,
+        "mean_dt": 2.759,
+        "unfinished": 9
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.448,
+        "verify_rate": 0.352,
+        "verify_ci95": [
+          0.272,
+          0.44
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.587,
+        "unfinished": 0
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 19.2,
+          "ci95_pp": [
+            12.8,
+            26.4
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 24.0,
+          "ci95_pp": [
+            16.8,
+            32.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 1.6,
+          "ci95_pp": [
+            -1.6,
+            4.8
+          ],
+          "p_one_sided": 0.2279,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 44.8,
+          "ci95_pp": [
+            36.8,
+            53.6
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-1.7b-instruct_rft_s0": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.8,
+        "verify_ci95": [
+          0.745,
+          0.855
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.13,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.8,
+        "verify_ci95": [
+          0.745,
+          0.855
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.132,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.825,
+        "verify_ci95": [
+          0.77,
+          0.875
+        ],
+        "mean_attempts": 1.85,
+        "mean_dt": 2.163,
+        "unfinished": 0
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.695,
+        "verify_rate": 0.615,
+        "verify_ci95": [
+          0.55,
+          0.68
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.058,
+        "unfinished": 0
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 18.5,
+          "ci95_pp": [
+            13.0,
+            24.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 2.5,
+          "ci95_pp": [
+            -1.0,
+            6.0
+          ],
+          "p_one_sided": 0.1015,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 21.0,
+          "ci95_pp": [
+            15.0,
+            27.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 0.984,
+        "verify_rate": 0.448,
+        "verify_ci95": [
+          0.36,
+          0.536
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.466,
+        "unfinished": 2
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.984,
+        "verify_rate": 0.496,
+        "verify_ci95": [
+          0.408,
+          0.584
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.506,
+        "unfinished": 2
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.92,
+        "verify_rate": 0.632,
+        "verify_ci95": [
+          0.544,
+          0.712
+        ],
+        "mean_attempts": 1.632,
+        "mean_dt": 2.866,
+        "unfinished": 10
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.472,
+        "verify_rate": 0.328,
+        "verify_ci95": [
+          0.248,
+          0.408
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.361,
+        "unfinished": 2
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 12.0,
+          "ci95_pp": [
+            6.4,
+            18.4
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 4.8,
+          "ci95_pp": [
+            1.6,
+            8.8
+          ],
+          "p_one_sided": 0.001,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 13.6,
+          "ci95_pp": [
+            8.0,
+            20.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 30.4,
+          "ci95_pp": [
+            22.4,
+            38.4
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-1.7b-instruct_rft_s0__rft_unscaled": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.69,
+        "verify_ci95": [
+          0.625,
+          0.755
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.065,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.695,
+        "verify_ci95": [
+          0.63,
+          0.76
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.065,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 0.99,
+        "verify_rate": 0.745,
+        "verify_ci95": [
+          0.685,
+          0.805
+        ],
+        "mean_attempts": 1.93,
+        "mean_dt": 2.187,
+        "unfinished": 2
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.71,
+        "verify_rate": 0.56,
+        "verify_ci95": [
+          0.49,
+          0.63
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.017,
+        "unfinished": 0
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 13.0,
+          "ci95_pp": [
+            8.0,
+            18.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.5,
+          "ci95_pp": [
+            0.0,
+            1.5
+          ],
+          "p_one_sided": 0.3633,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 5.0,
+          "ci95_pp": [
+            2.0,
+            8.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 18.5,
+          "ci95_pp": [
+            12.5,
+            24.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.648,
+        "verify_ci95": [
+          0.568,
+          0.728
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.649,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.856,
+        "verify_ci95": [
+          0.792,
+          0.912
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.744,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.888,
+        "verify_ci95": [
+          0.832,
+          0.944
+        ],
+        "mean_attempts": 1.192,
+        "mean_dt": 2.035,
+        "unfinished": 0
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.432,
+        "verify_rate": 0.368,
+        "verify_ci95": [
+          0.288,
+          0.456
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.605,
+        "unfinished": 0
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 28.0,
+          "ci95_pp": [
+            20.8,
+            36.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 20.8,
+          "ci95_pp": [
+            13.6,
+            28.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 3.2,
+          "ci95_pp": [
+            0.8,
+            6.4
+          ],
+          "p_one_sided": 0.0201,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 52.0,
+          "ci95_pp": [
+            43.2,
+            60.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-1.7b-instruct_sft_s0": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 0.99,
+        "verify_rate": 0.525,
+        "verify_ci95": [
+          0.455,
+          0.595
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.578,
+        "unfinished": 2
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 0.99,
+        "verify_rate": 0.525,
+        "verify_ci95": [
+          0.455,
+          0.595
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.581,
+        "unfinished": 2
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 0.975,
+        "verify_rate": 0.575,
+        "verify_ci95": [
+          0.505,
+          0.645
+        ],
+        "mean_attempts": 2.3,
+        "mean_dt": 3.814,
+        "unfinished": 5
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.545,
+        "verify_rate": 0.485,
+        "verify_ci95": [
+          0.415,
+          0.555
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.359,
+        "unfinished": 2
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 4.0,
+          "ci95_pp": [
+            -0.5,
+            8.5
+          ],
+          "p_one_sided": 0.0519,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 5.0,
+          "ci95_pp": [
+            2.0,
+            8.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 9.0,
+          "ci95_pp": [
+            3.5,
+            14.5
+          ],
+          "p_one_sided": 0.0005,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 0.968,
+        "verify_rate": 0.288,
+        "verify_ci95": [
+          0.208,
+          0.368
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.832,
+        "unfinished": 4
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.968,
+        "verify_rate": 0.496,
+        "verify_ci95": [
+          0.408,
+          0.584
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.908,
+        "unfinished": 4
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.968,
+        "verify_rate": 0.696,
+        "verify_ci95": [
+          0.616,
+          0.776
+        ],
+        "mean_attempts": 1.496,
+        "mean_dt": 2.718,
+        "unfinished": 4
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.368,
+        "verify_rate": 0.136,
+        "verify_ci95": [
+          0.08,
+          0.2
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.4,
+        "unfinished": 0
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 15.2,
+          "ci95_pp": [
+            9.6,
+            21.6
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 20.8,
+          "ci95_pp": [
+            13.6,
+            28.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 20.0,
+          "ci95_pp": [
+            13.6,
+            27.2
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 56.0,
+          "ci95_pp": [
+            47.2,
+            64.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-1.7b-instruct_ssd_s0": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 0.995,
+        "verify_rate": 0.615,
+        "verify_ci95": [
+          0.55,
+          0.685
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.417,
+        "unfinished": 1
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 0.995,
+        "verify_rate": 0.615,
+        "verify_ci95": [
+          0.55,
+          0.685
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.416,
+        "unfinished": 1
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 0.995,
+        "verify_rate": 0.68,
+        "verify_ci95": [
+          0.615,
+          0.745
+        ],
+        "mean_attempts": 1.93,
+        "mean_dt": 2.741,
+        "unfinished": 1
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.79,
+        "verify_rate": 0.575,
+        "verify_ci95": [
+          0.505,
+          0.645
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.261,
+        "unfinished": 0
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 4.0,
+          "ci95_pp": [
+            0.5,
+            7.5
+          ],
+          "p_one_sided": 0.0166,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 6.5,
+          "ci95_pp": [
+            3.5,
+            10.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 10.5,
+          "ci95_pp": [
+            6.0,
+            15.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.456,
+        "verify_ci95": [
+          0.368,
+          0.544
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.833,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.768,
+        "verify_ci95": [
+          0.696,
+          0.84
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.703,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.808,
+        "verify_ci95": [
+          0.736,
+          0.88
+        ],
+        "mean_attempts": 1.208,
+        "mean_dt": 2.004,
+        "unfinished": 0
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.488,
+        "verify_rate": 0.312,
+        "verify_ci95": [
+          0.232,
+          0.392
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.65,
+        "unfinished": 0
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 14.4,
+          "ci95_pp": [
+            8.8,
+            20.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 31.2,
+          "ci95_pp": [
+            23.2,
+            40.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 4.0,
+          "ci95_pp": [
+            0.8,
+            8.0
+          ],
+          "p_one_sided": 0.0056,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 49.6,
+          "ci95_pp": [
+            40.8,
+            58.4
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-1.7b-instruct_ssd_s0__full_ft": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 0.975,
+        "verify_rate": 0.69,
+        "verify_ci95": [
+          0.625,
+          0.755
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.644,
+        "unfinished": 5
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 0.975,
+        "verify_rate": 0.69,
+        "verify_ci95": [
+          0.625,
+          0.755
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.644,
+        "unfinished": 5
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 0.975,
+        "verify_rate": 0.735,
+        "verify_ci95": [
+          0.67,
+          0.795
+        ],
+        "mean_attempts": 1.745,
+        "mean_dt": 1.045,
+        "unfinished": 5
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.835,
+        "verify_rate": 0.635,
+        "verify_ci95": [
+          0.565,
+          0.7
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.573,
+        "unfinished": 4
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 5.5,
+          "ci95_pp": [
+            1.5,
+            9.5
+          ],
+          "p_one_sided": 0.0036,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 4.5,
+          "ci95_pp": [
+            1.0,
+            8.0
+          ],
+          "p_one_sided": 0.0053,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 10.0,
+          "ci95_pp": [
+            5.5,
+            15.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 0.992,
+        "verify_rate": 0.608,
+        "verify_ci95": [
+          0.528,
+          0.696
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.756,
+        "unfinished": 1
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.992,
+        "verify_rate": 0.792,
+        "verify_ci95": [
+          0.72,
+          0.864
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.764,
+        "unfinished": 1
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.992,
+        "verify_rate": 0.832,
+        "verify_ci95": [
+          0.768,
+          0.896
+        ],
+        "mean_attempts": 1.12,
+        "mean_dt": 0.849,
+        "unfinished": 1
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.6,
+        "verify_rate": 0.52,
+        "verify_ci95": [
+          0.432,
+          0.608
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.62,
+        "unfinished": 0
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 8.8,
+          "ci95_pp": [
+            4.0,
+            14.4
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 18.4,
+          "ci95_pp": [
+            12.0,
+            25.6
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 4.0,
+          "ci95_pp": [
+            0.8,
+            8.0
+          ],
+          "p_one_sided": 0.0055,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 31.2,
+          "ci95_pp": [
+            23.2,
+            39.2
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-1.7b-instruct_ssd_s0__gold_in_group=1": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 0.99,
+        "verify_rate": 0.595,
+        "verify_ci95": [
+          0.525,
+          0.66
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.455,
+        "unfinished": 1
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 0.99,
+        "verify_rate": 0.595,
+        "verify_ci95": [
+          0.525,
+          0.66
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.458,
+        "unfinished": 1
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 0.83,
+        "verify_rate": 0.63,
+        "verify_ci95": [
+          0.565,
+          0.695
+        ],
+        "mean_attempts": 1.58,
+        "mean_dt": 3.749,
+        "unfinished": 30
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.66,
+        "verify_rate": 0.555,
+        "verify_ci95": [
+          0.49,
+          0.625
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.563,
+        "unfinished": 9
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 4.0,
+          "ci95_pp": [
+            0.5,
+            8.0
+          ],
+          "p_one_sided": 0.0187,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 3.5,
+          "ci95_pp": [
+            1.0,
+            6.0
+          ],
+          "p_one_sided": 0.0004,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 7.5,
+          "ci95_pp": [
+            3.5,
+            12.0
+          ],
+          "p_one_sided": 0.0004,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 0.992,
+        "verify_rate": 0.448,
+        "verify_ci95": [
+          0.36,
+          0.536
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.771,
+        "unfinished": 1
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.984,
+        "verify_rate": 0.616,
+        "verify_ci95": [
+          0.528,
+          0.704
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.928,
+        "unfinished": 2
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.904,
+        "verify_rate": 0.624,
+        "verify_ci95": [
+          0.536,
+          0.712
+        ],
+        "mean_attempts": 1.288,
+        "mean_dt": 3.263,
+        "unfinished": 12
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.52,
+        "verify_rate": 0.344,
+        "verify_ci95": [
+          0.264,
+          0.424
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.763,
+        "unfinished": 4
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 10.4,
+          "ci95_pp": [
+            5.6,
+            16.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 16.8,
+          "ci95_pp": [
+            10.4,
+            24.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 0.8,
+          "ci95_pp": [
+            0.0,
+            2.4
+          ],
+          "p_one_sided": 0.3656,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 28.0,
+          "ci95_pp": [
+            20.8,
+            36.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-1.7b-instruct_ssd_s0__kl_base=1.0": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.445,
+        "verify_ci95": [
+          0.38,
+          0.515
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.655,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.46,
+        "verify_ci95": [
+          0.39,
+          0.53
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.662,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 0.99,
+        "verify_rate": 0.55,
+        "verify_ci95": [
+          0.48,
+          0.62
+        ],
+        "mean_attempts": 2.165,
+        "mean_dt": 4.114,
+        "unfinished": 1
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.295,
+        "verify_rate": 0.25,
+        "verify_ci95": [
+          0.19,
+          0.31
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 2.099,
+        "unfinished": 20
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 19.5,
+          "ci95_pp": [
+            13.0,
+            26.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 1.5,
+          "ci95_pp": [
+            0.0,
+            3.5
+          ],
+          "p_one_sided": 0.0473,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 9.0,
+          "ci95_pp": [
+            4.0,
+            14.0
+          ],
+          "p_one_sided": 0.0001,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 30.0,
+          "ci95_pp": [
+            22.5,
+            37.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 0.992,
+        "verify_rate": 0.728,
+        "verify_ci95": [
+          0.648,
+          0.8
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.852,
+        "unfinished": 1
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.872,
+        "verify_rate": 0.792,
+        "verify_ci95": [
+          0.72,
+          0.864
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 2.851,
+        "unfinished": 16
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.864,
+        "verify_rate": 0.784,
+        "verify_ci95": [
+          0.712,
+          0.856
+        ],
+        "mean_attempts": 1.128,
+        "mean_dt": 3.141,
+        "unfinished": 17
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.632,
+        "verify_rate": 0.56,
+        "verify_ci95": [
+          0.472,
+          0.648
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.756,
+        "unfinished": 1
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 16.8,
+          "ci95_pp": [
+            10.4,
+            23.2
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 6.4,
+          "ci95_pp": [
+            2.4,
+            11.2
+          ],
+          "p_one_sided": 0.0004,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": -0.8,
+          "ci95_pp": [
+            -2.4,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 22.4,
+          "ci95_pp": [
+            15.2,
+            29.6
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-1.7b-instruct_ssd_s0__lora_scale=20": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 0.985,
+        "verify_rate": 0.495,
+        "verify_ci95": [
+          0.425,
+          0.565
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.579,
+        "unfinished": 3
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 0.985,
+        "verify_rate": 0.495,
+        "verify_ci95": [
+          0.425,
+          0.565
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.578,
+        "unfinished": 3
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 0.975,
+        "verify_rate": 0.54,
+        "verify_ci95": [
+          0.475,
+          0.61
+        ],
+        "mean_attempts": 2.59,
+        "mean_dt": 4.032,
+        "unfinished": 4
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.76,
+        "verify_rate": 0.46,
+        "verify_ci95": [
+          0.39,
+          0.53
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.535,
+        "unfinished": 6
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 3.5,
+          "ci95_pp": [
+            1.0,
+            6.5
+          ],
+          "p_one_sided": 0.0074,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 4.5,
+          "ci95_pp": [
+            1.5,
+            8.0
+          ],
+          "p_one_sided": 0.002,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 8.0,
+          "ci95_pp": [
+            4.0,
+            12.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.192,
+        "verify_ci95": [
+          0.128,
+          0.264
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.317,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.488,
+        "verify_ci95": [
+          0.4,
+          0.576
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.41,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.992,
+        "verify_rate": 0.704,
+        "verify_ci95": [
+          0.624,
+          0.784
+        ],
+        "mean_attempts": 2.224,
+        "mean_dt": 3.24,
+        "unfinished": 1
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.456,
+        "verify_rate": 0.112,
+        "verify_ci95": [
+          0.064,
+          0.168
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.778,
+        "unfinished": 8
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 8.0,
+          "ci95_pp": [
+            3.2,
+            12.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 29.6,
+          "ci95_pp": [
+            21.6,
+            38.4
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 21.6,
+          "ci95_pp": [
+            14.4,
+            28.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 59.2,
+          "ci95_pp": [
+            50.4,
+            68.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-1.7b-instruct_ssd_s0__lora_scale=20_final": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 0.985,
+        "verify_rate": 0.425,
+        "verify_ci95": [
+          0.355,
+          0.495
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 3.303,
+        "unfinished": 3
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 0.985,
+        "verify_rate": 0.425,
+        "verify_ci95": [
+          0.355,
+          0.495
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 2.624,
+        "unfinished": 3
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 0.98,
+        "verify_rate": 0.49,
+        "verify_ci95": [
+          0.42,
+          0.56
+        ],
+        "mean_attempts": 2.46,
+        "mean_dt": 6.321,
+        "unfinished": 3
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.76,
+        "verify_rate": 0.39,
+        "verify_ci95": [
+          0.32,
+          0.46
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 3.453,
+        "unfinished": 3
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 3.5,
+          "ci95_pp": [
+            0.5,
+            7.0
+          ],
+          "p_one_sided": 0.0196,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 6.5,
+          "ci95_pp": [
+            3.0,
+            10.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 10.0,
+          "ci95_pp": [
+            5.5,
+            14.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.128,
+        "verify_ci95": [
+          0.072,
+          0.192
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 2.482,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.312,
+        "verify_ci95": [
+          0.232,
+          0.392
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 2.62,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.992,
+        "verify_rate": 0.512,
+        "verify_ci95": [
+          0.424,
+          0.6
+        ],
+        "mean_attempts": 1.696,
+        "mean_dt": 4.31,
+        "unfinished": 1
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.472,
+        "verify_rate": 0.096,
+        "verify_ci95": [
+          0.048,
+          0.152
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 2.019,
+        "unfinished": 0
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 3.2,
+          "ci95_pp": [
+            0.8,
+            6.4
+          ],
+          "p_one_sided": 0.0182,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 18.4,
+          "ci95_pp": [
+            12.0,
+            25.6
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 20.0,
+          "ci95_pp": [
+            13.6,
+            27.2
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 41.6,
+          "ci95_pp": [
+            32.8,
+            50.4
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-1.7b-instruct_ssd_s0__reward=functional": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 0.99,
+        "verify_rate": 0.555,
+        "verify_ci95": [
+          0.485,
+          0.625
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.548,
+        "unfinished": 2
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 0.99,
+        "verify_rate": 0.555,
+        "verify_ci95": [
+          0.485,
+          0.625
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.549,
+        "unfinished": 2
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 0.985,
+        "verify_rate": 0.655,
+        "verify_ci95": [
+          0.59,
+          0.72
+        ],
+        "mean_attempts": 2.205,
+        "mean_dt": 3.471,
+        "unfinished": 3
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.835,
+        "verify_rate": 0.545,
+        "verify_ci95": [
+          0.475,
+          0.615
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.63,
+        "unfinished": 7
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 1.0,
+          "ci95_pp": [
+            -1.5,
+            4.0
+          ],
+          "p_one_sided": 0.2916,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 10.0,
+          "ci95_pp": [
+            6.0,
+            14.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 11.0,
+          "ci95_pp": [
+            6.0,
+            16.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.248,
+        "verify_ci95": [
+          0.176,
+          0.328
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 2.051,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.44,
+        "verify_ci95": [
+          0.36,
+          0.528
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 2.111,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.496,
+        "verify_ci95": [
+          0.408,
+          0.584
+        ],
+        "mean_attempts": 1.56,
+        "mean_dt": 3.08,
+        "unfinished": 0
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.384,
+        "verify_rate": 0.16,
+        "verify_ci95": [
+          0.096,
+          0.224
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 2.206,
+        "unfinished": 11
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 8.8,
+          "ci95_pp": [
+            4.0,
+            13.6
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 19.2,
+          "ci95_pp": [
+            12.8,
+            26.4
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 5.6,
+          "ci95_pp": [
+            1.6,
+            9.6
+          ],
+          "p_one_sided": 0.0005,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 33.6,
+          "ci95_pp": [
+            25.6,
+            41.6
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-1.7b-instruct_ssd_s1": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 0.995,
+        "verify_rate": 0.635,
+        "verify_ci95": [
+          0.57,
+          0.7
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.402,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 0.995,
+        "verify_rate": 0.64,
+        "verify_ci95": [
+          0.575,
+          0.705
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.404,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.715,
+        "verify_ci95": [
+          0.65,
+          0.775
+        ],
+        "mean_attempts": 1.815,
+        "mean_dt": 2.533,
+        "unfinished": 0
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.805,
+        "verify_rate": 0.57,
+        "verify_ci95": [
+          0.5,
+          0.64
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.297,
+        "unfinished": 0
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 6.5,
+          "ci95_pp": [
+            2.0,
+            11.0
+          ],
+          "p_one_sided": 0.0032,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.5,
+          "ci95_pp": [
+            0.0,
+            1.5
+          ],
+          "p_one_sided": 0.3673,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 7.5,
+          "ci95_pp": [
+            4.0,
+            11.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 14.5,
+          "ci95_pp": [
+            9.0,
+            20.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.632,
+        "verify_ci95": [
+          0.552,
+          0.72
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.909,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.88,
+        "verify_ci95": [
+          0.824,
+          0.936
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 2.052,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.92,
+        "verify_ci95": [
+          0.872,
+          0.968
+        ],
+        "mean_attempts": 1.136,
+        "mean_dt": 2.272,
+        "unfinished": 0
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.4,
+        "verify_rate": 0.328,
+        "verify_ci95": [
+          0.248,
+          0.408
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 2.405,
+        "unfinished": 12
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 30.4,
+          "ci95_pp": [
+            22.4,
+            38.4
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 24.8,
+          "ci95_pp": [
+            17.6,
+            32.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 4.0,
+          "ci95_pp": [
+            0.8,
+            8.0
+          ],
+          "p_one_sided": 0.0053,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 59.2,
+          "ci95_pp": [
+            50.4,
+            68.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-1.7b-instruct_ssd_s1__gold_in_group=1": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 0.94,
+        "verify_rate": 0.45,
+        "verify_ci95": [
+          0.385,
+          0.52
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 2.41,
+        "unfinished": 12
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 0.94,
+        "verify_rate": 0.45,
+        "verify_ci95": [
+          0.385,
+          0.52
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 2.42,
+        "unfinished": 12
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 0.685,
+        "verify_rate": 0.48,
+        "verify_ci95": [
+          0.41,
+          0.55
+        ],
+        "mean_attempts": 1.49,
+        "mean_dt": 5.562,
+        "unfinished": 62
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.51,
+        "verify_rate": 0.44,
+        "verify_ci95": [
+          0.375,
+          0.51
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 3.51,
+        "unfinished": 55
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 1.0,
+          "ci95_pp": [
+            -2.5,
+            4.5
+          ],
+          "p_one_sided": 0.3366,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 3.0,
+          "ci95_pp": [
+            1.0,
+            5.5
+          ],
+          "p_one_sided": 0.0021,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 4.0,
+          "ci95_pp": [
+            -0.5,
+            8.5
+          ],
+          "p_one_sided": 0.0431,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 0.992,
+        "verify_rate": 0.568,
+        "verify_ci95": [
+          0.48,
+          0.656
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 2.044,
+        "unfinished": 1
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.984,
+        "verify_rate": 0.672,
+        "verify_ci95": [
+          0.592,
+          0.752
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 2.429,
+        "unfinished": 2
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.92,
+        "verify_rate": 0.704,
+        "verify_ci95": [
+          0.624,
+          0.784
+        ],
+        "mean_attempts": 1.376,
+        "mean_dt": 4.527,
+        "unfinished": 10
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.376,
+        "verify_rate": 0.312,
+        "verify_ci95": [
+          0.232,
+          0.392
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.981,
+        "unfinished": 7
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 25.6,
+          "ci95_pp": [
+            18.4,
+            33.6
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 10.4,
+          "ci95_pp": [
+            5.6,
+            16.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 3.2,
+          "ci95_pp": [
+            0.8,
+            6.4
+          ],
+          "p_one_sided": 0.0152,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 39.2,
+          "ci95_pp": [
+            31.2,
+            48.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-135m-instruct_rft_s0": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 0.97,
+        "verify_rate": 0.79,
+        "verify_ci95": [
+          0.735,
+          0.845
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.283,
+        "unfinished": 6
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 0.97,
+        "verify_rate": 0.79,
+        "verify_ci95": [
+          0.735,
+          0.845
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.297,
+        "unfinished": 6
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 0.97,
+        "verify_rate": 0.825,
+        "verify_ci95": [
+          0.77,
+          0.875
+        ],
+        "mean_attempts": 1.275,
+        "mean_dt": 0.369,
+        "unfinished": 6
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.56,
+        "verify_rate": 0.54,
+        "verify_ci95": [
+          0.47,
+          0.61
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.159,
+        "unfinished": 0
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 25.0,
+          "ci95_pp": [
+            18.5,
+            31.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 3.5,
+          "ci95_pp": [
+            0.5,
+            6.5
+          ],
+          "p_one_sided": 0.0078,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 28.5,
+          "ci95_pp": [
+            22.0,
+            35.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 0.992,
+        "verify_rate": 0.208,
+        "verify_ci95": [
+          0.144,
+          0.28
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.255,
+        "unfinished": 1
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.968,
+        "verify_rate": 0.72,
+        "verify_ci95": [
+          0.64,
+          0.8
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.318,
+        "unfinished": 4
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.968,
+        "verify_rate": 0.784,
+        "verify_ci95": [
+          0.712,
+          0.856
+        ],
+        "mean_attempts": 1.36,
+        "mean_dt": 0.414,
+        "unfinished": 4
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.552,
+        "verify_rate": 0.096,
+        "verify_ci95": [
+          0.048,
+          0.152
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.178,
+        "unfinished": 0
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 11.2,
+          "ci95_pp": [
+            5.6,
+            16.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 51.2,
+          "ci95_pp": [
+            42.4,
+            60.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 6.4,
+          "ci95_pp": [
+            2.4,
+            11.2
+          ],
+          "p_one_sided": 0.0003,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 68.8,
+          "ci95_pp": [
+            60.8,
+            76.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-135m-instruct_ssd_s0": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.86,
+        "verify_ci95": [
+          0.81,
+          0.905
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.2,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.86,
+        "verify_ci95": [
+          0.81,
+          0.905
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.198,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.955,
+        "verify_ci95": [
+          0.925,
+          0.98
+        ],
+        "mean_attempts": 1.31,
+        "mean_dt": 0.26,
+        "unfinished": 0
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.98,
+        "verify_rate": 0.84,
+        "verify_ci95": [
+          0.785,
+          0.89
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.18,
+        "unfinished": 3
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 2.0,
+          "ci95_pp": [
+            0.5,
+            4.0
+          ],
+          "p_one_sided": 0.0191,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 9.5,
+          "ci95_pp": [
+            5.5,
+            14.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 11.5,
+          "ci95_pp": [
+            7.5,
+            16.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.56,
+        "verify_ci95": [
+          0.472,
+          0.648
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.24,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.992,
+        "verify_rate": 0.56,
+        "verify_ci95": [
+          0.472,
+          0.648
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.267,
+        "unfinished": 1
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.992,
+        "verify_rate": 0.752,
+        "verify_ci95": [
+          0.672,
+          0.824
+        ],
+        "mean_attempts": 1.512,
+        "mean_dt": 0.396,
+        "unfinished": 1
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.576,
+        "verify_rate": 0.28,
+        "verify_ci95": [
+          0.2,
+          0.36
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.237,
+        "unfinished": 5
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 28.0,
+          "ci95_pp": [
+            20.8,
+            36.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            -3.2,
+            3.2
+          ],
+          "p_one_sided": 0.6071,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 19.2,
+          "ci95_pp": [
+            12.8,
+            26.4
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 47.2,
+          "ci95_pp": [
+            38.4,
+            56.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-360m-instruct_grpo_s0": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 0.99,
+        "verify_rate": 0.385,
+        "verify_ci95": [
+          0.32,
+          0.455
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.3,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 0.99,
+        "verify_rate": 0.395,
+        "verify_ci95": [
+          0.33,
+          0.465
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.294,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 0.98,
+        "verify_rate": 0.575,
+        "verify_ci95": [
+          0.505,
+          0.645
+        ],
+        "mean_attempts": 2.06,
+        "mean_dt": 0.622,
+        "unfinished": 1
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.0,
+        "verify_rate": 0.0,
+        "verify_ci95": [
+          0.0,
+          0.0
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.793,
+        "unfinished": 25
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 38.5,
+          "ci95_pp": [
+            32.0,
+            45.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 1.0,
+          "ci95_pp": [
+            0.0,
+            2.5
+          ],
+          "p_one_sided": 0.1307,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 18.0,
+          "ci95_pp": [
+            13.0,
+            23.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 57.5,
+          "ci95_pp": [
+            50.5,
+            64.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 0.968,
+        "verify_rate": 0.144,
+        "verify_ci95": [
+          0.088,
+          0.208
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.357,
+        "unfinished": 4
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.928,
+        "verify_rate": 0.544,
+        "verify_ci95": [
+          0.456,
+          0.632
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.485,
+        "unfinished": 9
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.928,
+        "verify_rate": 0.768,
+        "verify_ci95": [
+          0.688,
+          0.84
+        ],
+        "mean_attempts": 1.68,
+        "mean_dt": 0.735,
+        "unfinished": 9
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.0,
+        "verify_rate": 0.0,
+        "verify_ci95": [
+          0.0,
+          0.0
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.981,
+        "unfinished": 3
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 14.4,
+          "ci95_pp": [
+            8.8,
+            20.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 40.0,
+          "ci95_pp": [
+            31.2,
+            48.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 22.4,
+          "ci95_pp": [
+            15.2,
+            29.6
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 76.8,
+          "ci95_pp": [
+            68.8,
+            84.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-360m-instruct_rft_s0": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.845,
+        "verify_ci95": [
+          0.795,
+          0.895
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.24,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.845,
+        "verify_ci95": [
+          0.795,
+          0.895
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.24,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.865,
+        "verify_ci95": [
+          0.815,
+          0.91
+        ],
+        "mean_attempts": 1.33,
+        "mean_dt": 0.324,
+        "unfinished": 0
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.77,
+        "verify_rate": 0.745,
+        "verify_ci95": [
+          0.685,
+          0.805
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.217,
+        "unfinished": 1
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 10.0,
+          "ci95_pp": [
+            5.5,
+            15.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 2.0,
+          "ci95_pp": [
+            0.0,
+            4.5
+          ],
+          "p_one_sided": 0.0595,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 12.0,
+          "ci95_pp": [
+            7.0,
+            17.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.592,
+        "verify_ci95": [
+          0.504,
+          0.68
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.301,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.672,
+        "verify_ci95": [
+          0.592,
+          0.752
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.303,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.776,
+        "verify_ci95": [
+          0.704,
+          0.848
+        ],
+        "mean_attempts": 1.32,
+        "mean_dt": 0.391,
+        "unfinished": 0
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.576,
+        "verify_rate": 0.376,
+        "verify_ci95": [
+          0.296,
+          0.464
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.244,
+        "unfinished": 0
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 21.6,
+          "ci95_pp": [
+            14.4,
+            28.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 8.0,
+          "ci95_pp": [
+            3.2,
+            12.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 10.4,
+          "ci95_pp": [
+            5.6,
+            16.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 40.0,
+          "ci95_pp": [
+            31.2,
+            48.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-360m-instruct_rft_s0__rft_unscaled": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 0.98,
+        "verify_rate": 0.81,
+        "verify_ci95": [
+          0.755,
+          0.865
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.27,
+        "unfinished": 4
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 0.98,
+        "verify_rate": 0.81,
+        "verify_ci95": [
+          0.755,
+          0.865
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.27,
+        "unfinished": 4
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 0.98,
+        "verify_rate": 0.825,
+        "verify_ci95": [
+          0.77,
+          0.8751
+        ],
+        "mean_attempts": 1.495,
+        "mean_dt": 0.392,
+        "unfinished": 4
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.71,
+        "verify_rate": 0.675,
+        "verify_ci95": [
+          0.61,
+          0.74
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.236,
+        "unfinished": 4
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 13.5,
+          "ci95_pp": [
+            8.5,
+            19.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 1.5,
+          "ci95_pp": [
+            -1.5,
+            5.0
+          ],
+          "p_one_sided": 0.2253,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 15.0,
+          "ci95_pp": [
+            10.0,
+            20.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.52,
+        "verify_ci95": [
+          0.432,
+          0.608
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.271,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.392,
+        "verify_ci95": [
+          0.304,
+          0.48
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.293,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.536,
+        "verify_ci95": [
+          0.448,
+          0.624
+        ],
+        "mean_attempts": 2.144,
+        "mean_dt": 0.641,
+        "unfinished": 0
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.296,
+        "verify_rate": 0.208,
+        "verify_ci95": [
+          0.144,
+          0.28
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.233,
+        "unfinished": 0
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 31.2,
+          "ci95_pp": [
+            23.2,
+            39.2
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": -12.8,
+          "ci95_pp": [
+            -20.0,
+            -5.6
+          ],
+          "p_one_sided": 0.9998,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 14.4,
+          "ci95_pp": [
+            8.8,
+            20.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 32.8,
+          "ci95_pp": [
+            24.0,
+            41.6
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-360m-instruct_rft_s1": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.78,
+        "verify_ci95": [
+          0.72,
+          0.835
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.235,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.78,
+        "verify_ci95": [
+          0.72,
+          0.835
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.24,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.8,
+        "verify_ci95": [
+          0.745,
+          0.855
+        ],
+        "mean_attempts": 1.53,
+        "mean_dt": 0.377,
+        "unfinished": 0
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.575,
+        "verify_rate": 0.555,
+        "verify_ci95": [
+          0.485,
+          0.625
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.22,
+        "unfinished": 2
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 22.5,
+          "ci95_pp": [
+            16.5,
+            29.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 2.0,
+          "ci95_pp": [
+            0.5,
+            4.0
+          ],
+          "p_one_sided": 0.0169,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 24.5,
+          "ci95_pp": [
+            18.0,
+            31.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 0.992,
+        "verify_rate": 0.512,
+        "verify_ci95": [
+          0.424,
+          0.6
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.328,
+        "unfinished": 1
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.992,
+        "verify_rate": 0.696,
+        "verify_ci95": [
+          0.616,
+          0.776
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.345,
+        "unfinished": 1
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.992,
+        "verify_rate": 0.704,
+        "verify_ci95": [
+          0.624,
+          0.784
+        ],
+        "mean_attempts": 1.112,
+        "mean_dt": 0.379,
+        "unfinished": 1
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.28,
+        "verify_rate": 0.168,
+        "verify_ci95": [
+          0.104,
+          0.232
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.262,
+        "unfinished": 0
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 34.4,
+          "ci95_pp": [
+            26.4,
+            43.2
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 18.4,
+          "ci95_pp": [
+            12.0,
+            25.6
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 0.8,
+          "ci95_pp": [
+            0.0,
+            2.4
+          ],
+          "p_one_sided": 0.3746,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 53.6,
+          "ci95_pp": [
+            44.8,
+            62.4
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-360m-instruct_rft_s2": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.8,
+        "verify_ci95": [
+          0.745,
+          0.855
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.235,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.81,
+        "verify_ci95": [
+          0.755,
+          0.865
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.235,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.835,
+        "verify_ci95": [
+          0.78,
+          0.885
+        ],
+        "mean_attempts": 1.565,
+        "mean_dt": 0.373,
+        "unfinished": 0
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.7,
+        "verify_rate": 0.67,
+        "verify_ci95": [
+          0.605,
+          0.735
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.223,
+        "unfinished": 3
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 13.0,
+          "ci95_pp": [
+            8.0,
+            18.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 1.0,
+          "ci95_pp": [
+            0.0,
+            2.5
+          ],
+          "p_one_sided": 0.1423,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 2.5,
+          "ci95_pp": [
+            -0.5,
+            5.5
+          ],
+          "p_one_sided": 0.0592,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 16.5,
+          "ci95_pp": [
+            11.0,
+            22.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.4,
+        "verify_ci95": [
+          0.312,
+          0.488
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.3,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.52,
+        "verify_ci95": [
+          0.432,
+          0.608
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.309,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.616,
+        "verify_ci95": [
+          0.528,
+          0.696
+        ],
+        "mean_attempts": 1.624,
+        "mean_dt": 0.489,
+        "unfinished": 0
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.28,
+        "verify_rate": 0.176,
+        "verify_ci95": [
+          0.112,
+          0.24
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.244,
+        "unfinished": 0
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 22.4,
+          "ci95_pp": [
+            15.2,
+            29.6
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 12.0,
+          "ci95_pp": [
+            3.2,
+            20.8
+          ],
+          "p_one_sided": 0.0037,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 9.6,
+          "ci95_pp": [
+            4.8,
+            15.2
+          ],
+          "p_one_sided": 0.0001,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 44.0,
+          "ci95_pp": [
+            35.2,
+            52.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-360m-instruct_sft_s0": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 0.98,
+        "verify_rate": 0.445,
+        "verify_ci95": [
+          0.375,
+          0.515
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.334,
+        "unfinished": 2
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 0.98,
+        "verify_rate": 0.445,
+        "verify_ci95": [
+          0.375,
+          0.515
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.336,
+        "unfinished": 2
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 0.97,
+        "verify_rate": 0.555,
+        "verify_ci95": [
+          0.485,
+          0.62
+        ],
+        "mean_attempts": 2.31,
+        "mean_dt": 0.808,
+        "unfinished": 3
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.38,
+        "verify_rate": 0.315,
+        "verify_ci95": [
+          0.25,
+          0.38
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.347,
+        "unfinished": 15
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 13.0,
+          "ci95_pp": [
+            8.0,
+            18.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 11.0,
+          "ci95_pp": [
+            7.0,
+            15.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 24.0,
+          "ci95_pp": [
+            17.5,
+            30.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 0.976,
+        "verify_rate": 0.328,
+        "verify_ci95": [
+          0.248,
+          0.408
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.353,
+        "unfinished": 3
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.968,
+        "verify_rate": 0.472,
+        "verify_ci95": [
+          0.384,
+          0.56
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.516,
+        "unfinished": 4
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.896,
+        "verify_rate": 0.624,
+        "verify_ci95": [
+          0.536,
+          0.712
+        ],
+        "mean_attempts": 1.552,
+        "mean_dt": 0.841,
+        "unfinished": 13
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.416,
+        "verify_rate": 0.176,
+        "verify_ci95": [
+          0.112,
+          0.248
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.263,
+        "unfinished": 0
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 15.2,
+          "ci95_pp": [
+            8.8,
+            21.6
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 14.4,
+          "ci95_pp": [
+            8.8,
+            20.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 15.2,
+          "ci95_pp": [
+            9.6,
+            21.6
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 44.8,
+          "ci95_pp": [
+            36.0,
+            53.6
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-360m-instruct_sft_s1": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 0.995,
+        "verify_rate": 0.415,
+        "verify_ci95": [
+          0.345,
+          0.485
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.317,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 0.995,
+        "verify_rate": 0.415,
+        "verify_ci95": [
+          0.345,
+          0.485
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.312,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 0.96,
+        "verify_rate": 0.555,
+        "verify_ci95": [
+          0.485,
+          0.625
+        ],
+        "mean_attempts": 2.29,
+        "mean_dt": 0.799,
+        "unfinished": 5
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.375,
+        "verify_rate": 0.31,
+        "verify_ci95": [
+          0.245,
+          0.375
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.356,
+        "unfinished": 16
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 10.5,
+          "ci95_pp": [
+            5.5,
+            16.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 14.0,
+          "ci95_pp": [
+            9.5,
+            19.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 24.5,
+          "ci95_pp": [
+            18.0,
+            31.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 0.968,
+        "verify_rate": 0.512,
+        "verify_ci95": [
+          0.424,
+          0.6
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.392,
+        "unfinished": 4
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.936,
+        "verify_rate": 0.592,
+        "verify_ci95": [
+          0.504,
+          0.68
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.572,
+        "unfinished": 8
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.928,
+        "verify_rate": 0.616,
+        "verify_ci95": [
+          0.528,
+          0.704
+        ],
+        "mean_attempts": 1.472,
+        "mean_dt": 0.804,
+        "unfinished": 9
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.408,
+        "verify_rate": 0.296,
+        "verify_ci95": [
+          0.216,
+          0.376
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.297,
+        "unfinished": 1
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 21.6,
+          "ci95_pp": [
+            14.4,
+            28.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 8.0,
+          "ci95_pp": [
+            3.2,
+            13.6
+          ],
+          "p_one_sided": 0.001,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 2.4,
+          "ci95_pp": [
+            0.0,
+            5.6
+          ],
+          "p_one_sided": 0.0502,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 32.0,
+          "ci95_pp": [
+            24.0,
+            40.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-360m-instruct_sft_s2": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 0.99,
+        "verify_rate": 0.46,
+        "verify_ci95": [
+          0.395,
+          0.53
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.319,
+        "unfinished": 1
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 0.99,
+        "verify_rate": 0.465,
+        "verify_ci95": [
+          0.4,
+          0.535
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.316,
+        "unfinished": 1
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 0.97,
+        "verify_rate": 0.555,
+        "verify_ci95": [
+          0.485,
+          0.625
+        ],
+        "mean_attempts": 2.42,
+        "mean_dt": 0.87,
+        "unfinished": 5
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.385,
+        "verify_rate": 0.31,
+        "verify_ci95": [
+          0.245,
+          0.375
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.314,
+        "unfinished": 10
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 15.0,
+          "ci95_pp": [
+            10.0,
+            21.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.5,
+          "ci95_pp": [
+            0.0,
+            1.5
+          ],
+          "p_one_sided": 0.372,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 9.0,
+          "ci95_pp": [
+            5.0,
+            13.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 24.5,
+          "ci95_pp": [
+            18.5,
+            31.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 1.0,
+        "verify_rate": 0.416,
+        "verify_ci95": [
+          0.328,
+          0.504
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.322,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.992,
+        "verify_rate": 0.528,
+        "verify_ci95": [
+          0.44,
+          0.616
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.466,
+        "unfinished": 1
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.976,
+        "verify_rate": 0.648,
+        "verify_ci95": [
+          0.56,
+          0.728
+        ],
+        "mean_attempts": 1.496,
+        "mean_dt": 0.646,
+        "unfinished": 3
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.416,
+        "verify_rate": 0.2,
+        "verify_ci95": [
+          0.128,
+          0.272
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.294,
+        "unfinished": 2
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 21.6,
+          "ci95_pp": [
+            14.4,
+            28.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 11.2,
+          "ci95_pp": [
+            5.6,
+            16.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 12.0,
+          "ci95_pp": [
+            6.4,
+            18.4
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 44.8,
+          "ci95_pp": [
+            36.0,
+            53.6
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
   "smollm2-360m-instruct_ssd_s0": {
     "arith_func_200": {
       "c1": {
@@ -170,6 +4620,2714 @@
           "ci95_pp": [
             29.6,
             47.2
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-360m-instruct_ssd_s0__c3_mask=1": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.815,
+        "verify_ci95": [
+          0.76,
+          0.865
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.227,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.815,
+        "verify_ci95": [
+          0.76,
+          0.865
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.227,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.845,
+        "verify_ci95": [
+          0.795,
+          0.895
+        ],
+        "mean_attempts": 1.375,
+        "mean_dt": 0.315,
+        "unfinished": 0
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.865,
+        "verify_rate": 0.775,
+        "verify_ci95": [
+          0.715,
+          0.83
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.223,
+        "unfinished": 3
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 4.0,
+          "ci95_pp": [
+            0.5,
+            8.0
+          ],
+          "p_one_sided": 0.0182,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 3.0,
+          "ci95_pp": [
+            1.0,
+            5.5
+          ],
+          "p_one_sided": 0.0022,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 7.0,
+          "ci95_pp": [
+            3.0,
+            11.5
+          ],
+          "p_one_sided": 0.0002,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 0.976,
+        "verify_rate": 0.64,
+        "verify_ci95": [
+          0.552,
+          0.728
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.348,
+        "unfinished": 3
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.976,
+        "verify_rate": 0.776,
+        "verify_ci95": [
+          0.704,
+          0.848
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.361,
+        "unfinished": 3
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.968,
+        "verify_rate": 0.8,
+        "verify_ci95": [
+          0.728,
+          0.864
+        ],
+        "mean_attempts": 1.256,
+        "mean_dt": 0.452,
+        "unfinished": 4
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.632,
+        "verify_rate": 0.504,
+        "verify_ci95": [
+          0.416,
+          0.592
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.28,
+        "unfinished": 1
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 13.6,
+          "ci95_pp": [
+            8.0,
+            20.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 13.6,
+          "ci95_pp": [
+            8.0,
+            20.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 2.4,
+          "ci95_pp": [
+            -0.8,
+            5.6
+          ],
+          "p_one_sided": 0.1227,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 29.6,
+          "ci95_pp": [
+            21.6,
+            38.4
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-360m-instruct_ssd_s0__epochs=16__step=1008": {
+    "arith_func_200": {
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.825,
+        "verify_ci95": [
+          0.77,
+          0.875
+        ],
+        "mean_attempts": 1.765,
+        "mean_dt": 0.417,
+        "unfinished": 0
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.915,
+        "verify_rate": 0.745,
+        "verify_ci95": [
+          0.685,
+          0.805
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.198,
+        "unfinished": 0
+      },
+      "paired_deltas": {
+        "c1_c2_c3-none": {
+          "pp": 8.0,
+          "ci95_pp": [
+            3.0,
+            13.0
+          ],
+          "p_one_sided": 0.0013,
+          "n_pairs": 200
+        }
+      }
+    }
+  },
+  "smollm2-360m-instruct_ssd_s0__epochs=16__step=126": {
+    "arith_func_200": {
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.84,
+        "verify_ci95": [
+          0.79,
+          0.89
+        ],
+        "mean_attempts": 1.485,
+        "mean_dt": 0.337,
+        "unfinished": 0
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.89,
+        "verify_rate": 0.755,
+        "verify_ci95": [
+          0.695,
+          0.815
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.205,
+        "unfinished": 1
+      },
+      "paired_deltas": {
+        "c1_c2_c3-none": {
+          "pp": 8.5,
+          "ci95_pp": [
+            4.5,
+            13.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    }
+  },
+  "smollm2-360m-instruct_ssd_s0__epochs=16__step=252": {
+    "arith_func_200": {
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.805,
+        "verify_ci95": [
+          0.75,
+          0.86
+        ],
+        "mean_attempts": 1.63,
+        "mean_dt": 0.389,
+        "unfinished": 0
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.885,
+        "verify_rate": 0.74,
+        "verify_ci95": [
+          0.68,
+          0.8
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.214,
+        "unfinished": 2
+      },
+      "paired_deltas": {
+        "c1_c2_c3-none": {
+          "pp": 6.5,
+          "ci95_pp": [
+            2.0,
+            11.0
+          ],
+          "p_one_sided": 0.0032,
+          "n_pairs": 200
+        }
+      }
+    }
+  },
+  "smollm2-360m-instruct_ssd_s0__epochs=16__step=504": {
+    "arith_func_200": {
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.805,
+        "verify_ci95": [
+          0.75,
+          0.86
+        ],
+        "mean_attempts": 1.725,
+        "mean_dt": 0.413,
+        "unfinished": 0
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.915,
+        "verify_rate": 0.75,
+        "verify_ci95": [
+          0.69,
+          0.81
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.207,
+        "unfinished": 1
+      },
+      "paired_deltas": {
+        "c1_c2_c3-none": {
+          "pp": 5.5,
+          "ci95_pp": [
+            1.0,
+            10.0
+          ],
+          "p_one_sided": 0.0117,
+          "n_pairs": 200
+        }
+      }
+    }
+  },
+  "smollm2-360m-instruct_ssd_s0__gold_in_group=1": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 0.98,
+        "verify_rate": 0.39,
+        "verify_ci95": [
+          0.325,
+          0.455
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.32,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 0.98,
+        "verify_rate": 0.39,
+        "verify_ci95": [
+          0.325,
+          0.455
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.32,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 0.99,
+        "verify_rate": 0.51,
+        "verify_ci95": [
+          0.44,
+          0.58
+        ],
+        "mean_attempts": 2.265,
+        "mean_dt": 0.829,
+        "unfinished": 2
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.495,
+        "verify_rate": 0.35,
+        "verify_ci95": [
+          0.285,
+          0.415
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.414,
+        "unfinished": 22
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 4.0,
+          "ci95_pp": [
+            0.0,
+            8.5
+          ],
+          "p_one_sided": 0.036,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 12.0,
+          "ci95_pp": [
+            7.5,
+            16.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 16.0,
+          "ci95_pp": [
+            10.5,
+            21.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 0.992,
+        "verify_rate": 0.552,
+        "verify_ci95": [
+          0.464,
+          0.64
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.331,
+        "unfinished": 1
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.992,
+        "verify_rate": 0.688,
+        "verify_ci95": [
+          0.608,
+          0.768
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.471,
+        "unfinished": 1
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.976,
+        "verify_rate": 0.728,
+        "verify_ci95": [
+          0.648,
+          0.808
+        ],
+        "mean_attempts": 1.232,
+        "mean_dt": 0.583,
+        "unfinished": 3
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.424,
+        "verify_rate": 0.328,
+        "verify_ci95": [
+          0.248,
+          0.416
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.296,
+        "unfinished": 2
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 22.4,
+          "ci95_pp": [
+            15.2,
+            29.6
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 13.6,
+          "ci95_pp": [
+            8.0,
+            20.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 4.0,
+          "ci95_pp": [
+            0.8,
+            8.0
+          ],
+          "p_one_sided": 0.0049,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 40.0,
+          "ci95_pp": [
+            31.2,
+            48.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-360m-instruct_ssd_s0__gold_in_group=1__lora": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 0.98,
+        "verify_rate": 0.485,
+        "verify_ci95": [
+          0.415,
+          0.555
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.084,
+        "unfinished": 1
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 0.72,
+        "verify_rate": 0.52,
+        "verify_ci95": [
+          0.45,
+          0.59
+        ],
+        "mean_attempts": 1.69,
+        "mean_dt": 3.389,
+        "unfinished": 54
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.59,
+        "verify_rate": 0.44,
+        "verify_ci95": [
+          0.37,
+          0.51
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 1.43,
+        "unfinished": 29
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 4.5,
+          "ci95_pp": [
+            1.0,
+            8.5
+          ],
+          "p_one_sided": 0.008,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 8.0,
+          "ci95_pp": [
+            4.0,
+            12.5
+          ],
+          "p_one_sided": 0.0001,
+          "n_pairs": 200
+        }
+      }
+    }
+  },
+  "smollm2-360m-instruct_ssd_s0__group=16": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.77,
+        "verify_ci95": [
+          0.71,
+          0.825
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.24,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.77,
+        "verify_ci95": [
+          0.71,
+          0.825
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.241,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.83,
+        "verify_ci95": [
+          0.78,
+          0.88
+        ],
+        "mean_attempts": 1.51,
+        "mean_dt": 0.366,
+        "unfinished": 0
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.85,
+        "verify_rate": 0.7,
+        "verify_ci95": [
+          0.635,
+          0.765
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.223,
+        "unfinished": 2
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 7.0,
+          "ci95_pp": [
+            3.0,
+            11.5
+          ],
+          "p_one_sided": 0.0003,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 6.0,
+          "ci95_pp": [
+            3.0,
+            9.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 13.0,
+          "ci95_pp": [
+            8.0,
+            18.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 0.968,
+        "verify_rate": 0.608,
+        "verify_ci95": [
+          0.52,
+          0.696
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.373,
+        "unfinished": 4
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.968,
+        "verify_rate": 0.544,
+        "verify_ci95": [
+          0.456,
+          0.632
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.383,
+        "unfinished": 4
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.968,
+        "verify_rate": 0.792,
+        "verify_ci95": [
+          0.72,
+          0.864
+        ],
+        "mean_attempts": 1.84,
+        "mean_dt": 0.648,
+        "unfinished": 4
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.576,
+        "verify_rate": 0.488,
+        "verify_ci95": [
+          0.4,
+          0.576
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.287,
+        "unfinished": 2
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 12.0,
+          "ci95_pp": [
+            6.4,
+            17.6
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": -6.4,
+          "ci95_pp": [
+            -12.0,
+            -0.8
+          ],
+          "p_one_sided": 0.9916,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 24.8,
+          "ci95_pp": [
+            17.6,
+            32.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 30.4,
+          "ci95_pp": [
+            22.4,
+            38.4
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-360m-instruct_ssd_s0__init=sft_s0": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 0.99,
+        "verify_rate": 0.565,
+        "verify_ci95": [
+          0.495,
+          0.635
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.307,
+        "unfinished": 1
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 0.99,
+        "verify_rate": 0.565,
+        "verify_ci95": [
+          0.495,
+          0.635
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.306,
+        "unfinished": 1
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 0.985,
+        "verify_rate": 0.62,
+        "verify_ci95": [
+          0.555,
+          0.69
+        ],
+        "mean_attempts": 2.12,
+        "mean_dt": 0.685,
+        "unfinished": 2
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.565,
+        "verify_rate": 0.435,
+        "verify_ci95": [
+          0.365,
+          0.505
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.304,
+        "unfinished": 9
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 13.0,
+          "ci95_pp": [
+            7.5,
+            19.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 5.5,
+          "ci95_pp": [
+            2.5,
+            9.0
+          ],
+          "p_one_sided": 0.0001,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 18.5,
+          "ci95_pp": [
+            12.5,
+            24.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 0.952,
+        "verify_rate": 0.416,
+        "verify_ci95": [
+          0.328,
+          0.504
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.363,
+        "unfinished": 6
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.896,
+        "verify_rate": 0.456,
+        "verify_ci95": [
+          0.368,
+          0.544
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.501,
+        "unfinished": 13
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.872,
+        "verify_rate": 0.576,
+        "verify_ci95": [
+          0.488,
+          0.664
+        ],
+        "mean_attempts": 1.312,
+        "mean_dt": 0.667,
+        "unfinished": 16
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.424,
+        "verify_rate": 0.264,
+        "verify_ci95": [
+          0.192,
+          0.344
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.257,
+        "unfinished": 1
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 15.2,
+          "ci95_pp": [
+            8.8,
+            21.6
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 4.0,
+          "ci95_pp": [
+            -3.2,
+            11.2
+          ],
+          "p_one_sided": 0.1776,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 12.0,
+          "ci95_pp": [
+            6.4,
+            18.4
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 31.2,
+          "ci95_pp": [
+            23.2,
+            39.2
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-360m-instruct_ssd_s0__pool=v1c": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.84,
+        "verify_ci95": [
+          0.79,
+          0.89
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.227,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.84,
+        "verify_ci95": [
+          0.79,
+          0.89
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.227,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.88,
+        "verify_ci95": [
+          0.835,
+          0.925
+        ],
+        "mean_attempts": 1.365,
+        "mean_dt": 0.317,
+        "unfinished": 0
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.94,
+        "verify_rate": 0.82,
+        "verify_ci95": [
+          0.765,
+          0.875
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.223,
+        "unfinished": 3
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 2.0,
+          "ci95_pp": [
+            -1.0,
+            5.0
+          ],
+          "p_one_sided": 0.1248,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 4.0,
+          "ci95_pp": [
+            1.0,
+            7.5
+          ],
+          "p_one_sided": 0.0115,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 6.0,
+          "ci95_pp": [
+            2.0,
+            10.5
+          ],
+          "p_one_sided": 0.0034,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 0.968,
+        "verify_rate": 0.72,
+        "verify_ci95": [
+          0.64,
+          0.8
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.352,
+        "unfinished": 4
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.968,
+        "verify_rate": 0.728,
+        "verify_ci95": [
+          0.648,
+          0.808
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.399,
+        "unfinished": 4
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.96,
+        "verify_rate": 0.808,
+        "verify_ci95": [
+          0.736,
+          0.872
+        ],
+        "mean_attempts": 1.304,
+        "mean_dt": 0.506,
+        "unfinished": 5
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.544,
+        "verify_rate": 0.44,
+        "verify_ci95": [
+          0.352,
+          0.528
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.266,
+        "unfinished": 1
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 28.0,
+          "ci95_pp": [
+            20.0,
+            36.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 0.8,
+          "ci95_pp": [
+            -4.0,
+            5.6
+          ],
+          "p_one_sided": 0.4395,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 8.0,
+          "ci95_pp": [
+            3.2,
+            13.6
+          ],
+          "p_one_sided": 0.0014,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 36.8,
+          "ci95_pp": [
+            28.0,
+            45.6
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-360m-instruct_ssd_s0__reward=functional": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.78,
+        "verify_ci95": [
+          0.72,
+          0.835
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.229,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.78,
+        "verify_ci95": [
+          0.72,
+          0.835
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.229,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.83,
+        "verify_ci95": [
+          0.78,
+          0.88
+        ],
+        "mean_attempts": 1.495,
+        "mean_dt": 0.344,
+        "unfinished": 0
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.9,
+        "verify_rate": 0.755,
+        "verify_ci95": [
+          0.695,
+          0.815
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.215,
+        "unfinished": 2
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 2.5,
+          "ci95_pp": [
+            -0.5,
+            5.5
+          ],
+          "p_one_sided": 0.0602,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 5.0,
+          "ci95_pp": [
+            1.5,
+            8.5
+          ],
+          "p_one_sided": 0.0027,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 7.5,
+          "ci95_pp": [
+            3.5,
+            12.0
+          ],
+          "p_one_sided": 0.0002,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 0.976,
+        "verify_rate": 0.536,
+        "verify_ci95": [
+          0.448,
+          0.624
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.324,
+        "unfinished": 3
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.976,
+        "verify_rate": 0.616,
+        "verify_ci95": [
+          0.528,
+          0.704
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.341,
+        "unfinished": 3
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.968,
+        "verify_rate": 0.752,
+        "verify_ci95": [
+          0.672,
+          0.824
+        ],
+        "mean_attempts": 1.4,
+        "mean_dt": 0.478,
+        "unfinished": 4
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.496,
+        "verify_rate": 0.4,
+        "verify_ci95": [
+          0.312,
+          0.488
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.283,
+        "unfinished": 3
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 13.6,
+          "ci95_pp": [
+            8.0,
+            20.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 8.0,
+          "ci95_pp": [
+            1.6,
+            14.4
+          ],
+          "p_one_sided": 0.009,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 13.6,
+          "ci95_pp": [
+            8.0,
+            20.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 35.2,
+          "ci95_pp": [
+            27.2,
+            44.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-360m-instruct_ssd_s1": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 0.995,
+        "verify_rate": 0.745,
+        "verify_ci95": [
+          0.685,
+          0.805
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.249,
+        "unfinished": 1
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 0.995,
+        "verify_rate": 0.745,
+        "verify_ci95": [
+          0.685,
+          0.805
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.25,
+        "unfinished": 1
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 0.995,
+        "verify_rate": 0.805,
+        "verify_ci95": [
+          0.75,
+          0.86
+        ],
+        "mean_attempts": 1.565,
+        "mean_dt": 0.384,
+        "unfinished": 1
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.88,
+        "verify_rate": 0.71,
+        "verify_ci95": [
+          0.65,
+          0.775
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.254,
+        "unfinished": 6
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 3.5,
+          "ci95_pp": [
+            0.5,
+            7.0
+          ],
+          "p_one_sided": 0.0178,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 6.0,
+          "ci95_pp": [
+            3.0,
+            9.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 9.5,
+          "ci95_pp": [
+            5.0,
+            14.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 0.976,
+        "verify_rate": 0.384,
+        "verify_ci95": [
+          0.296,
+          0.472
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.346,
+        "unfinished": 3
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.976,
+        "verify_rate": 0.464,
+        "verify_ci95": [
+          0.376,
+          0.552
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.372,
+        "unfinished": 3
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.968,
+        "verify_rate": 0.712,
+        "verify_ci95": [
+          0.632,
+          0.792
+        ],
+        "mean_attempts": 2.088,
+        "mean_dt": 0.698,
+        "unfinished": 4
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.392,
+        "verify_rate": 0.272,
+        "verify_ci95": [
+          0.2,
+          0.352
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.269,
+        "unfinished": 1
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 11.2,
+          "ci95_pp": [
+            6.4,
+            16.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 8.0,
+          "ci95_pp": [
+            0.0,
+            16.8
+          ],
+          "p_one_sided": 0.0297,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 24.8,
+          "ci95_pp": [
+            17.6,
+            32.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 44.0,
+          "ci95_pp": [
+            35.2,
+            52.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-360m-instruct_ssd_s1__gold_in_group=1": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 0.985,
+        "verify_rate": 0.41,
+        "verify_ci95": [
+          0.345,
+          0.48
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.323,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 0.985,
+        "verify_rate": 0.41,
+        "verify_ci95": [
+          0.345,
+          0.48
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.325,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 0.975,
+        "verify_rate": 0.485,
+        "verify_ci95": [
+          0.415,
+          0.555
+        ],
+        "mean_attempts": 2.095,
+        "mean_dt": 0.747,
+        "unfinished": 2
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.475,
+        "verify_rate": 0.36,
+        "verify_ci95": [
+          0.295,
+          0.425
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.462,
+        "unfinished": 29
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 5.0,
+          "ci95_pp": [
+            0.5,
+            9.5
+          ],
+          "p_one_sided": 0.0146,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 7.5,
+          "ci95_pp": [
+            4.0,
+            11.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 12.5,
+          "ci95_pp": [
+            7.5,
+            18.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 0.984,
+        "verify_rate": 0.496,
+        "verify_ci95": [
+          0.408,
+          0.584
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.325,
+        "unfinished": 2
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.984,
+        "verify_rate": 0.696,
+        "verify_ci95": [
+          0.616,
+          0.776
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.473,
+        "unfinished": 2
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.984,
+        "verify_rate": 0.736,
+        "verify_ci95": [
+          0.656,
+          0.808
+        ],
+        "mean_attempts": 1.216,
+        "mean_dt": 0.56,
+        "unfinished": 2
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.424,
+        "verify_rate": 0.336,
+        "verify_ci95": [
+          0.256,
+          0.424
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.272,
+        "unfinished": 1
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 16.0,
+          "ci95_pp": [
+            9.6,
+            22.4
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 20.0,
+          "ci95_pp": [
+            13.6,
+            27.2
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 4.0,
+          "ci95_pp": [
+            0.8,
+            8.0
+          ],
+          "p_one_sided": 0.0049,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 40.0,
+          "ci95_pp": [
+            31.2,
+            48.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-360m-instruct_ssd_s1__pool=v1c": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.81,
+        "verify_ci95": [
+          0.755,
+          0.865
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.224,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.81,
+        "verify_ci95": [
+          0.755,
+          0.865
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.225,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.865,
+        "verify_ci95": [
+          0.815,
+          0.91
+        ],
+        "mean_attempts": 1.365,
+        "mean_dt": 0.31,
+        "unfinished": 0
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.93,
+        "verify_rate": 0.79,
+        "verify_ci95": [
+          0.735,
+          0.845
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.204,
+        "unfinished": 1
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 2.0,
+          "ci95_pp": [
+            -1.0,
+            5.0
+          ],
+          "p_one_sided": 0.127,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 5.5,
+          "ci95_pp": [
+            2.5,
+            9.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 7.5,
+          "ci95_pp": [
+            3.5,
+            12.0
+          ],
+          "p_one_sided": 0.0004,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 0.992,
+        "verify_rate": 0.696,
+        "verify_ci95": [
+          0.616,
+          0.776
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.316,
+        "unfinished": 1
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.992,
+        "verify_rate": 0.704,
+        "verify_ci95": [
+          0.624,
+          0.784
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.313,
+        "unfinished": 1
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.968,
+        "verify_rate": 0.784,
+        "verify_ci95": [
+          0.712,
+          0.856
+        ],
+        "mean_attempts": 1.32,
+        "mean_dt": 0.457,
+        "unfinished": 4
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.544,
+        "verify_rate": 0.448,
+        "verify_ci95": [
+          0.36,
+          0.536
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.245,
+        "unfinished": 0
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 24.8,
+          "ci95_pp": [
+            17.6,
+            32.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 0.8,
+          "ci95_pp": [
+            -5.6,
+            7.2
+          ],
+          "p_one_sided": 0.4508,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 8.0,
+          "ci95_pp": [
+            3.2,
+            13.6
+          ],
+          "p_one_sided": 0.0013,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 33.6,
+          "ci95_pp": [
+            24.8,
+            42.4
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-360m-instruct_ssd_s2": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.735,
+        "verify_ci95": [
+          0.675,
+          0.795
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.244,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.735,
+        "verify_ci95": [
+          0.675,
+          0.795
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.244,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.805,
+        "verify_ci95": [
+          0.75,
+          0.86
+        ],
+        "mean_attempts": 1.52,
+        "mean_dt": 0.37,
+        "unfinished": 0
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.86,
+        "verify_rate": 0.705,
+        "verify_ci95": [
+          0.64,
+          0.77
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.264,
+        "unfinished": 7
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 3.0,
+          "ci95_pp": [
+            0.0,
+            6.5
+          ],
+          "p_one_sided": 0.0449,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 7.0,
+          "ci95_pp": [
+            3.5,
+            10.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 10.0,
+          "ci95_pp": [
+            5.5,
+            14.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 0.992,
+        "verify_rate": 0.48,
+        "verify_ci95": [
+          0.392,
+          0.568
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.305,
+        "unfinished": 1
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.992,
+        "verify_rate": 0.616,
+        "verify_ci95": [
+          0.528,
+          0.704
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.321,
+        "unfinished": 1
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.976,
+        "verify_rate": 0.76,
+        "verify_ci95": [
+          0.68,
+          0.832
+        ],
+        "mean_attempts": 1.416,
+        "mean_dt": 0.478,
+        "unfinished": 3
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.496,
+        "verify_rate": 0.32,
+        "verify_ci95": [
+          0.24,
+          0.4
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.279,
+        "unfinished": 2
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 16.0,
+          "ci95_pp": [
+            9.6,
+            22.4
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 13.6,
+          "ci95_pp": [
+            5.6,
+            21.6
+          ],
+          "p_one_sided": 0.0004,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 14.4,
+          "ci95_pp": [
+            8.8,
+            20.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 44.0,
+          "ci95_pp": [
+            35.2,
+            52.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-360m-instruct_ssd_s2__gold_in_group=1": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 0.985,
+        "verify_rate": 0.435,
+        "verify_ci95": [
+          0.37,
+          0.505
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.328,
+        "unfinished": 1
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 0.985,
+        "verify_rate": 0.435,
+        "verify_ci95": [
+          0.37,
+          0.505
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.328,
+        "unfinished": 1
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 0.995,
+        "verify_rate": 0.51,
+        "verify_ci95": [
+          0.44,
+          0.58
+        ],
+        "mean_attempts": 2.135,
+        "mean_dt": 0.75,
+        "unfinished": 1
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.47,
+        "verify_rate": 0.355,
+        "verify_ci95": [
+          0.29,
+          0.42
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.445,
+        "unfinished": 26
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 8.0,
+          "ci95_pp": [
+            3.5,
+            13.0
+          ],
+          "p_one_sided": 0.0001,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 7.5,
+          "ci95_pp": [
+            4.0,
+            11.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 15.5,
+          "ci95_pp": [
+            10.0,
+            21.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 0.992,
+        "verify_rate": 0.504,
+        "verify_ci95": [
+          0.416,
+          0.592
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.321,
+        "unfinished": 1
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.992,
+        "verify_rate": 0.616,
+        "verify_ci95": [
+          0.528,
+          0.704
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.444,
+        "unfinished": 1
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.992,
+        "verify_rate": 0.696,
+        "verify_ci95": [
+          0.616,
+          0.776
+        ],
+        "mean_attempts": 1.32,
+        "mean_dt": 0.544,
+        "unfinished": 1
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.408,
+        "verify_rate": 0.32,
+        "verify_ci95": [
+          0.24,
+          0.408
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.275,
+        "unfinished": 1
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 18.4,
+          "ci95_pp": [
+            12.0,
+            25.6
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 11.2,
+          "ci95_pp": [
+            4.0,
+            18.4
+          ],
+          "p_one_sided": 0.0005,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 8.0,
+          "ci95_pp": [
+            4.0,
+            12.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 37.6,
+          "ci95_pp": [
+            28.8,
+            46.4
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm2-360m-instruct_ssd_s2__pool=v1c": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.81,
+        "verify_ci95": [
+          0.755,
+          0.865
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.227,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.81,
+        "verify_ci95": [
+          0.755,
+          0.865
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.227,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.87,
+        "verify_ci95": [
+          0.82,
+          0.915
+        ],
+        "mean_attempts": 1.375,
+        "mean_dt": 0.312,
+        "unfinished": 0
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.915,
+        "verify_rate": 0.785,
+        "verify_ci95": [
+          0.725,
+          0.84
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.214,
+        "unfinished": 2
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 2.5,
+          "ci95_pp": [
+            -0.5,
+            5.5
+          ],
+          "p_one_sided": 0.0579,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 6.0,
+          "ci95_pp": [
+            3.0,
+            9.5
+          ],
+          "p_one_sided": 0.0001,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 8.5,
+          "ci95_pp": [
+            4.5,
+            13.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 0.984,
+        "verify_rate": 0.648,
+        "verify_ci95": [
+          0.568,
+          0.728
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.311,
+        "unfinished": 2
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.976,
+        "verify_rate": 0.568,
+        "verify_ci95": [
+          0.48,
+          0.656
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.342,
+        "unfinished": 3
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.952,
+        "verify_rate": 0.816,
+        "verify_ci95": [
+          0.744,
+          0.88
+        ],
+        "mean_attempts": 1.648,
+        "mean_dt": 0.578,
+        "unfinished": 6
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.624,
+        "verify_rate": 0.52,
+        "verify_ci95": [
+          0.432,
+          0.608
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 0.298,
+        "unfinished": 4
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 12.8,
+          "ci95_pp": [
+            7.2,
+            19.2
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": -8.0,
+          "ci95_pp": [
+            -15.2,
+            -1.6
+          ],
+          "p_one_sided": 0.9935,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 24.8,
+          "ci95_pp": [
+            16.8,
+            32.8
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 29.6,
+          "ci95_pp": [
+            21.6,
+            38.4
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm3-3b_rft_s0": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 0.915,
+        "verify_rate": 0.52,
+        "verify_ci95": [
+          0.45,
+          0.585
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 4.112,
+        "unfinished": 17
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 0.915,
+        "verify_rate": 0.52,
+        "verify_ci95": [
+          0.45,
+          0.585
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 4.1,
+        "unfinished": 17
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 0.895,
+        "verify_rate": 0.565,
+        "verify_ci95": [
+          0.495,
+          0.6301
+        ],
+        "mean_attempts": 2.135,
+        "mean_dt": 7.559,
+        "unfinished": 21
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.57,
+        "verify_rate": 0.4,
+        "verify_ci95": [
+          0.335,
+          0.47
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 3.136,
+        "unfinished": 7
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 12.0,
+          "ci95_pp": [
+            7.0,
+            17.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 4.5,
+          "ci95_pp": [
+            1.0,
+            8.5
+          ],
+          "p_one_sided": 0.0094,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 16.5,
+          "ci95_pp": [
+            11.0,
+            22.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 0.992,
+        "verify_rate": 0.616,
+        "verify_ci95": [
+          0.536,
+          0.704
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 2.725,
+        "unfinished": 1
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.992,
+        "verify_rate": 0.776,
+        "verify_ci95": [
+          0.704,
+          0.848
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 2.858,
+        "unfinished": 1
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.992,
+        "verify_rate": 0.784,
+        "verify_ci95": [
+          0.712,
+          0.856
+        ],
+        "mean_attempts": 1.16,
+        "mean_dt": 3.233,
+        "unfinished": 1
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.344,
+        "verify_rate": 0.272,
+        "verify_ci95": [
+          0.192,
+          0.352
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 2.626,
+        "unfinished": 1
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 34.4,
+          "ci95_pp": [
+            26.4,
+            42.4
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 16.0,
+          "ci95_pp": [
+            9.6,
+            22.4
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 0.8,
+          "ci95_pp": [
+            0.0,
+            2.4
+          ],
+          "p_one_sided": 0.3687,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 51.2,
+          "ci95_pp": [
+            42.4,
+            60.0
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        }
+      }
+    }
+  },
+  "smollm3-3b_ssd_s0": {
+    "arith_func_200": {
+      "c1": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.545,
+        "verify_ci95": [
+          0.475,
+          0.615
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 2.575,
+        "unfinished": 0
+      },
+      "c1_c2": {
+        "n": 200,
+        "parse_rate": 1.0,
+        "verify_rate": 0.545,
+        "verify_ci95": [
+          0.475,
+          0.615
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 2.591,
+        "unfinished": 0
+      },
+      "c1_c2_c3": {
+        "n": 200,
+        "parse_rate": 0.995,
+        "verify_rate": 0.645,
+        "verify_ci95": [
+          0.58,
+          0.71
+        ],
+        "mean_attempts": 2.2,
+        "mean_dt": 6.202,
+        "unfinished": 0
+      },
+      "none": {
+        "n": 200,
+        "parse_rate": 0.685,
+        "verify_rate": 0.485,
+        "verify_ci95": [
+          0.415,
+          0.555
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 2.316,
+        "unfinished": 1
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 6.0,
+          "ci95_pp": [
+            1.5,
+            11.0
+          ],
+          "p_one_sided": 0.0075,
+          "n_pairs": 200
+        },
+        "c1_c2-c1": {
+          "pp": 0.0,
+          "ci95_pp": [
+            0.0,
+            0.0
+          ],
+          "p_one_sided": 1.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 10.0,
+          "ci95_pp": [
+            6.0,
+            14.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        },
+        "c1_c2_c3-none": {
+          "pp": 16.0,
+          "ci95_pp": [
+            10.0,
+            22.5
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 200
+        }
+      }
+    },
+    "linalg_125": {
+      "c1": {
+        "n": 125,
+        "parse_rate": 0.976,
+        "verify_rate": 0.32,
+        "verify_ci95": [
+          0.24,
+          0.408
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 2.736,
+        "unfinished": 3
+      },
+      "c1_c2": {
+        "n": 125,
+        "parse_rate": 0.976,
+        "verify_rate": 0.328,
+        "verify_ci95": [
+          0.248,
+          0.416
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 2.926,
+        "unfinished": 3
+      },
+      "c1_c2_c3": {
+        "n": 125,
+        "parse_rate": 0.968,
+        "verify_rate": 0.376,
+        "verify_ci95": [
+          0.296,
+          0.464
+        ],
+        "mean_attempts": 1.536,
+        "mean_dt": 4.598,
+        "unfinished": 4
+      },
+      "none": {
+        "n": 125,
+        "parse_rate": 0.192,
+        "verify_rate": 0.12,
+        "verify_ci95": [
+          0.064,
+          0.176
+        ],
+        "mean_attempts": 1.0,
+        "mean_dt": 2.955,
+        "unfinished": 8
+      },
+      "paired_deltas": {
+        "c1-none": {
+          "pp": 20.0,
+          "ci95_pp": [
+            12.8,
+            27.2
+          ],
+          "p_one_sided": 0.0,
+          "n_pairs": 125
+        },
+        "c1_c2-c1": {
+          "pp": 0.8,
+          "ci95_pp": [
+            0.0,
+            2.4
+          ],
+          "p_one_sided": 0.3602,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-c1_c2": {
+          "pp": 4.8,
+          "ci95_pp": [
+            1.6,
+            8.8
+          ],
+          "p_one_sided": 0.003,
+          "n_pairs": 125
+        },
+        "c1_c2_c3-none": {
+          "pp": 25.6,
+          "ci95_pp": [
+            18.4,
+            33.6
           ],
           "p_one_sided": 0.0,
           "n_pairs": 125

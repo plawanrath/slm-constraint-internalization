@@ -46,6 +46,6 @@
       "unfinished": 0
     }
   },
-  "ckpt_dir": "/Users/plawanrath/Documents/GitHub-public/slm-constraint-internalization/models/ckpt/smollm2-360m-instruct_ssd_s0",
+  "ckpt_dir": "models/ckpt/smollm2-360m-instruct_ssd_s0",
   "elapsed_min": 156.7
 }

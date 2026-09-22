@@ -36,6 +36,7 @@ def main() -> None:
     ap.add_argument("--batch-prompts", type=int, default=8)
     ap.add_argument("--eval-every", type=int, default=50)
     ap.add_argument("--lr", type=float, default=None)
+    ap.add_argument("--lora-scale", type=float, default=2.0, help="LoRA output scale (alpha = scale * rank); 20 collapsed at 1.7B")
     ap.add_argument("--out-dir", default="results/w03_train")
     ap.add_argument("--no-eval", action="store_true")
     args = ap.parse_args()
@@ -51,7 +52,7 @@ def main() -> None:
                            "--epochs", str(args.epochs), "--group", str(args.group), "--batch-prompts", str(args.batch_prompts),
                            "--eval-every", str(args.eval_every), "--lr", str(lr), "--out-dir", args.out_dir, "--tag", tag]
                     if lora:
-                        cmd.append("--lora")
+                        cmd += ["--lora", "--lora-scale", str(args.lora_scale)]
                     if args.n_train:
                         cmd += ["--n-train", str(args.n_train)]
                     print("[campaign] train", tag, file=sys.stderr)

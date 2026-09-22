@@ -1,0 +1,20 @@
+{
+  "train": {
+    "scanned": 6449,
+    "kept": 2000,
+    "reasons": {
+      "kept": 2000,
+      "grammar": 2424,
+      "lower_fail": 2025
+    }
+  },
+  "dev": {
+    "scanned": 348,
+    "kept": 100,
+    "reasons": {
+      "lower_fail": 131,
+      "kept": 100,
+      "grammar": 117
+    }
+  }
+}

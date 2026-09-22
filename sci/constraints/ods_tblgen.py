@@ -23,7 +23,7 @@ from pathlib import Path
 
 from .ods_parse import ODSArgument, ODSOp, ODSResult
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
+REPO_ROOT = Path(__file__).resolve().parents[2]
 TBLGEN = REPO_ROOT / "scripts" / "env" / "bin" / "llvm-tblgen"
 
 

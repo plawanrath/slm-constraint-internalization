@@ -1,0 +1,2 @@
+{"step": 0, "event": "eval", "dev": {"none": {"verify": 0.0, "reward": 0.0, "distinct": 96, "mean_len": 210.5, "unfinished": 26}, "c1_c2": {"verify": 0.32, "reward": 0.1755, "distinct": 93, "mean_len": 90.0, "unfinished": 1}}, "t": 37}
+{"step": 1, "epoch": 0, "loss": 0.7838626857846975, "loss_mask": 0.5553856175392866, "loss_grpo": 0.22847709711641073, "loss_c3": 0.0, "n_rollouts": 128, "mean_reward": 0.061165364583333326, "legal_mass": 0.573850931540742, "dt": 11.5, "t": 76}

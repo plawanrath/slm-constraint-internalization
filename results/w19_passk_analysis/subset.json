@@ -1,0 +1,242 @@
+{
+  "smollm2-360m-instruct": {
+    "label": "base, greedy full stack",
+    "n_correct": 26,
+    "inside_base16": 25,
+    "outside_base16": 1,
+    "outside_ids": [
+      5
+    ],
+    "inside_base4": 21
+  },
+  "smollm2-360m-instruct_ssd_s0": {
+    "label": "SSD",
+    "n_correct": 20,
+    "inside_base16": 19,
+    "outside_base16": 1,
+    "outside_ids": [
+      104
+    ],
+    "inside_base4": 18
+  },
+  "smollm2-360m-instruct_ssd_s1": {
+    "label": "SSD s1",
+    "n_correct": 20,
+    "inside_base16": 19,
+    "outside_base16": 1,
+    "outside_ids": [
+      107
+    ],
+    "inside_base4": 18
+  },
+  "smollm2-360m-instruct_ssd_s2": {
+    "label": "SSD s2",
+    "n_correct": 20,
+    "inside_base16": 20,
+    "outside_base16": 0,
+    "outside_ids": [],
+    "inside_base4": 18
+  },
+  "smollm2-360m-instruct_rft_s0": {
+    "label": "RFT",
+    "n_correct": 18,
+    "inside_base16": 18,
+    "outside_base16": 0,
+    "outside_ids": [],
+    "inside_base4": 16
+  },
+  "smollm2-360m-instruct_rft_s1": {
+    "label": "RFT s1",
+    "n_correct": 18,
+    "inside_base16": 18,
+    "outside_base16": 0,
+    "outside_ids": [],
+    "inside_base4": 16
+  },
+  "smollm2-360m-instruct_rft_s2": {
+    "label": "RFT s2",
+    "n_correct": 18,
+    "inside_base16": 18,
+    "outside_base16": 0,
+    "outside_ids": [],
+    "inside_base4": 16
+  },
+  "smollm2-360m-instruct_ssd_s0__reward=functional": {
+    "label": "SSD + functional reward",
+    "n_correct": 19,
+    "inside_base16": 19,
+    "outside_base16": 0,
+    "outside_ids": [],
+    "inside_base4": 18
+  },
+  "smollm2-360m-instruct_ssd_s0__pool=v1c": {
+    "label": "SSD + coverage pool",
+    "n_correct": 22,
+    "inside_base16": 20,
+    "outside_base16": 2,
+    "outside_ids": [
+      45,
+      104
+    ],
+    "inside_base4": 18
+  },
+  "smollm2-360m-instruct_ssd_s0__c3_mask=1": {
+    "label": "SSD + dense scope mask",
+    "n_correct": 23,
+    "inside_base16": 22,
+    "outside_base16": 1,
+    "outside_ids": [
+      104
+    ],
+    "inside_base4": 20
+  },
+  "smollm2-360m-instruct_ssd_s0__gold_in_group=1": {
+    "label": "SSD + one gold per group",
+    "n_correct": 42,
+    "inside_base16": 24,
+    "outside_base16": 18,
+    "outside_ids": [
+      10,
+      12,
+      24,
+      25,
+      26,
+      27,
+      29,
+      30,
+      45,
+      48,
+      49,
+      67,
+      95,
+      100,
+      107,
+      115,
+      122,
+      136
+    ],
+    "inside_base4": 18
+  },
+  "smollm2-360m-instruct_ssd_s0__init=sft_s0": {
+    "label": "SFT-gold then SSD",
+    "n_correct": 37,
+    "inside_base16": 22,
+    "outside_base16": 15,
+    "outside_ids": [
+      5,
+      10,
+      12,
+      24,
+      25,
+      26,
+      28,
+      29,
+      45,
+      48,
+      95,
+      100,
+      107,
+      113,
+      122
+    ],
+    "inside_base4": 19
+  },
+  "smollm2-360m-instruct_sft_s0": {
+    "label": "SFT-gold",
+    "n_correct": 39,
+    "inside_base16": 18,
+    "outside_base16": 21,
+    "outside_ids": [
+      5,
+      7,
+      10,
+      12,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      45,
+      48,
+      60,
+      66,
+      78,
+      95,
+      97,
+      100,
+      105,
+      107
+    ],
+    "inside_base4": 13
+  },
+  "smollm2-360m-instruct_sft_s1": {
+    "label": "SFT-gold s1",
+    "n_correct": 45,
+    "inside_base16": 19,
+    "outside_base16": 26,
+    "outside_ids": [
+      5,
+      7,
+      10,
+      12,
+      23,
+      24,
+      25,
+      27,
+      28,
+      29,
+      45,
+      48,
+      53,
+      60,
+      63,
+      66,
+      78,
+      87,
+      95,
+      97,
+      100,
+      103,
+      107,
+      113,
+      122,
+      136
+    ],
+    "inside_base4": 14
+  },
+  "smollm2-360m-instruct_sft_s2": {
+    "label": "SFT-gold s2",
+    "n_correct": 44,
+    "inside_base16": 20,
+    "outside_base16": 24,
+    "outside_ids": [
+      5,
+      7,
+      10,
+      12,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      45,
+      48,
+      53,
+      60,
+      66,
+      78,
+      95,
+      99,
+      100,
+      105,
+      107,
+      113,
+      122
+    ],
+    "inside_base4": 15
+  }
+}

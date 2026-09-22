@@ -16,7 +16,10 @@ def main() -> None:
     for f in fields(RunConfig):
         name = f"--{f.name.replace('_', '-')}"
         if f.type == "bool":
-            ap.add_argument(name, action="store_true", default=f.default)
+            if f.default is True:
+                ap.add_argument(f"--no-{f.name.replace('_', '-')}", dest=f.name, action="store_false", default=True)
+            else:
+                ap.add_argument(name, action="store_true", default=f.default)
         elif f.default is MISSING:
             ap.add_argument(name, type=_TYPES[f.type], required=(f.name != "revision"), default=None)
         else:

@@ -1,0 +1,63 @@
+{
+  "k_trials": 5,
+  "float_rel": 0.0001,
+  "float_abs": 1e-05,
+  "candidates": "results/w04_functional/smollm2-360m-instruct_ssd_s1__gold_in_group=1/none/candidates.jsonl",
+  "dialects": {
+    "arith": {
+      "n_gold": 150,
+      "gold_excluded": {
+        "no_observable_output": 4,
+        "unprintable_memref_dtype": 1
+      },
+      "gold_gate_fail": [
+        "045_alloc-load-dealloc",
+        "150_void-dealloc"
+      ],
+      "gold_gate_pass": 143,
+      "cand_status_counts": {
+        "scored": 56,
+        "not_verify_valid": 83,
+        "signature_mismatch": 4
+      },
+      "n_scored": 56,
+      "n_scored_dim_relaxed": 1,
+      "n_functional_match": 36,
+      "match_rate_among_scored": 0.6428571428571429,
+      "match_ci95_among_scored": [
+        0.5178571428571429,
+        0.7678571428571429
+      ],
+      "match_rate_among_gate_passed": 0.2517482517482518,
+      "match_ci95_among_gate_passed": [
+        0.18181818181818182,
+        0.32167832167832167
+      ]
+    },
+    "linalg": {
+      "n_gold": 30,
+      "gold_excluded": {},
+      "gold_gate_fail": [],
+      "gold_gate_pass": 30,
+      "cand_status_counts": {
+        "scored": 8,
+        "not_verify_valid": 15,
+        "signature_mismatch": 7
+      },
+      "n_scored": 8,
+      "n_scored_dim_relaxed": 2,
+      "n_functional_match": 7,
+      "match_rate_among_scored": 0.875,
+      "match_ci95_among_scored": [
+        0.625,
+        1.0
+      ],
+      "match_rate_among_gate_passed": 0.23333333333333334,
+      "match_ci95_among_gate_passed": [
+        0.1,
+        0.4
+      ]
+    }
+  },
+  "elapsed_min": 4.4
+}

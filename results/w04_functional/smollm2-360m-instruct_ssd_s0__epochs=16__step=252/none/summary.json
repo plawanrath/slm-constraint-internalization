@@ -1,0 +1,58 @@
+{
+  "k_trials": 5,
+  "float_rel": 0.0001,
+  "float_abs": 1e-05,
+  "candidates": "results/w04_functional/smollm2-360m-instruct_ssd_s0__epochs=16__step=252/none/candidates.jsonl",
+  "dialects": {
+    "arith": {
+      "n_gold": 150,
+      "gold_excluded": {
+        "no_observable_output": 4,
+        "unprintable_memref_dtype": 1
+      },
+      "gold_gate_fail": [
+        "045_alloc-load-dealloc",
+        "150_void-dealloc"
+      ],
+      "gold_gate_pass": 143,
+      "cand_status_counts": {
+        "scored": 53,
+        "signature_mismatch": 43,
+        "not_verify_valid": 47
+      },
+      "n_scored": 53,
+      "n_scored_dim_relaxed": 0,
+      "n_functional_match": 22,
+      "match_rate_among_scored": 0.41509433962264153,
+      "match_ci95_among_scored": [
+        0.2830188679245283,
+        0.5471698113207547
+      ],
+      "match_rate_among_gate_passed": 0.15384615384615385,
+      "match_ci95_among_gate_passed": [
+        0.0979020979020979,
+        0.21678321678321677
+      ]
+    },
+    "linalg": {
+      "n_gold": 30,
+      "gold_excluded": {},
+      "gold_gate_fail": [],
+      "gold_gate_pass": 30,
+      "cand_status_counts": {
+        "no_candidate_row": 30
+      },
+      "n_scored": 0,
+      "n_scored_dim_relaxed": 0,
+      "n_functional_match": 0,
+      "match_rate_among_scored": null,
+      "match_ci95_among_scored": null,
+      "match_rate_among_gate_passed": 0.0,
+      "match_ci95_among_gate_passed": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "elapsed_min": 4.5
+}

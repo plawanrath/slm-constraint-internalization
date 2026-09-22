@@ -1,0 +1,39 @@
+{
+  "k_trials": 5,
+  "float_rel": 0.0001,
+  "float_abs": 1e-05,
+  "candidates": "results/w16_passk/smollm3-3b/sample_04/candidates.jsonl",
+  "dialects": {
+    "arith": {
+      "n_gold": 150,
+      "gold_excluded": {
+        "no_observable_output": 4,
+        "unprintable_memref_dtype": 1
+      },
+      "gold_gate_fail": [
+        "045_alloc-load-dealloc",
+        "150_void-dealloc"
+      ],
+      "gold_gate_pass": 143,
+      "cand_status_counts": {
+        "scored": 46,
+        "not_verify_valid": 94,
+        "signature_mismatch": 3
+      },
+      "n_scored": 46,
+      "n_scored_dim_relaxed": 0,
+      "n_functional_match": 38,
+      "match_rate_among_scored": 0.8260869565217391,
+      "match_ci95_among_scored": [
+        0.717391304347826,
+        0.9347826086956522
+      ],
+      "match_rate_among_gate_passed": 0.26573426573426573,
+      "match_ci95_among_gate_passed": [
+        0.1958041958041958,
+        0.34265734265734266
+      ]
+    }
+  },
+  "elapsed_min": 3.7
+}

@@ -1,115 +1,133 @@
-{"step": 0, "event": "eval", "dev": {"none": {"verify": 0.0, "reward": 0.0, "distinct": 97, "mean_len": 209.2, "unfinished": 24}, "c1_c2": {"verify": 0.34, "reward": 0.178, "distinct": 93, "mean_len": 91.7, "unfinished": 2}}, "t": 206}
-{"step": 1, "epoch": 0, "loss": 0.5202235689288691, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 19, "mean_reward": 0.42, "legal_mass": NaN, "dt": 4.4, "t": 249}
-{"step": 2, "epoch": 0, "loss": 0.1980905518645332, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 42, "mean_reward": 0.4937698412698412, "legal_mass": NaN, "dt": 10.3, "t": 294}
-{"step": 3, "epoch": 0, "loss": 0.10290998015172627, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 49, "mean_reward": 0.5433673469387754, "legal_mass": NaN, "dt": 12.4, "t": 344}
-{"step": 4, "epoch": 0, "loss": 0.10341624977687992, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 48, "mean_reward": 0.5965277777777778, "legal_mass": NaN, "dt": 13.0, "t": 392}
-{"step": 5, "epoch": 0, "loss": 0.06420887800962176, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 67, "mean_reward": 0.5238805970149253, "legal_mass": NaN, "dt": 17.7, "t": 442}
-{"step": 6, "epoch": 0, "loss": 0.06976074915040623, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 55, "mean_reward": 0.5081818181818181, "legal_mass": NaN, "dt": 14.0, "t": 491}
-{"step": 7, "epoch": 0, "loss": 0.035666602146294385, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 81, "mean_reward": 0.43666666666666665, "legal_mass": NaN, "dt": 20.1, "t": 541}
-{"step": 8, "epoch": 0, "loss": 0.046787420642517855, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 84, "mean_reward": 0.476388888888889, "legal_mass": NaN, "dt": 21.4, "t": 592}
-{"step": 9, "epoch": 0, "loss": 0.039723816288945585, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 96, "mean_reward": 0.3885416666666666, "legal_mass": NaN, "dt": 25.0, "t": 647}
-{"step": 10, "epoch": 0, "loss": 0.025011885944487784, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 84, "mean_reward": 0.3655753968253968, "legal_mass": NaN, "dt": 20.6, "t": 694}
-{"step": 11, "epoch": 0, "loss": 0.014056179592282407, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 90, "mean_reward": 0.48333333333333334, "legal_mass": NaN, "dt": 23.4, "t": 743}
-{"step": 12, "epoch": 0, "loss": 0.027925816466308477, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 103, "mean_reward": 0.35601941747572824, "legal_mass": NaN, "dt": 26.6, "t": 797}
-{"step": 13, "epoch": 0, "loss": 0.03849170879054236, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 71, "mean_reward": 0.4305164319248826, "legal_mass": NaN, "dt": 18.1, "t": 845}
-{"step": 14, "epoch": 0, "loss": 0.028379817645406667, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 101, "mean_reward": 0.4516501650165017, "legal_mass": NaN, "dt": 25.5, "t": 897}
-{"step": 15, "epoch": 0, "loss": 0.008125228589907395, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 68, "mean_reward": 0.3480392156862745, "legal_mass": NaN, "dt": 16.4, "t": 939}
-{"step": 16, "epoch": 0, "loss": 0.02830611368448569, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 87, "mean_reward": 0.5249042145593871, "legal_mass": NaN, "dt": 22.7, "t": 988}
-{"step": 17, "epoch": 0, "loss": 0.01847632620626186, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 98, "mean_reward": 0.3838435374149659, "legal_mass": NaN, "dt": 24.1, "t": 1036}
-{"step": 18, "epoch": 0, "loss": 0.03379211186620523, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 96, "mean_reward": 0.4473958333333334, "legal_mass": NaN, "dt": 25.5, "t": 1090}
-{"step": 19, "epoch": 0, "loss": 0.024407870050054042, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 100, "mean_reward": 0.42233333333333334, "legal_mass": NaN, "dt": 25.6, "t": 1142}
-{"step": 20, "epoch": 0, "loss": 0.014497476545100177, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 99, "mean_reward": 0.4196969696969697, "legal_mass": NaN, "dt": 24.7, "t": 1194}
-{"step": 21, "epoch": 0, "loss": 0.014203078064989919, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 84, "mean_reward": 0.5654761904761905, "legal_mass": NaN, "dt": 20.7, "t": 1241}
-{"step": 22, "epoch": 0, "loss": 0.01399395161874215, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 79, "mean_reward": 0.39202531645569605, "legal_mass": NaN, "dt": 20.0, "t": 1288}
-{"step": 23, "epoch": 0, "loss": 0.03795885738238508, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 86, "mean_reward": 0.46763565891472864, "legal_mass": NaN, "dt": 22.2, "t": 1342}
-{"step": 24, "epoch": 0, "loss": 0.00907971637868534, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 88, "mean_reward": 0.3668560606060607, "legal_mass": NaN, "dt": 19.4, "t": 1390}
-{"step": 25, "epoch": 0, "loss": 0.005445209037016837, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 93, "mean_reward": 0.4202508960573476, "legal_mass": NaN, "dt": 17.3, "t": 1430}
-{"step": 25, "event": "eval", "dev": {"none": {"verify": 0.74, "reward": 0.2532, "distinct": 86, "mean_len": 67.4, "unfinished": 0}, "c1_c2": {"verify": 0.87, "reward": 0.2798, "distinct": 83, "mean_len": 68.0, "unfinished": 0}}, "t": 1517}
-{"step": 26, "epoch": 0, "loss": 0.017329408076314372, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 94, "mean_reward": 0.47836879432624113, "legal_mass": NaN, "dt": 18.0, "t": 1557}
-{"step": 27, "epoch": 0, "loss": 0.014691796544373522, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 107, "mean_reward": 0.44299065420560746, "legal_mass": NaN, "dt": 19.5, "t": 1597}
-{"step": 28, "epoch": 0, "loss": 0.024543935162063435, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 87, "mean_reward": 0.44942528735632176, "legal_mass": NaN, "dt": 16.1, "t": 1636}
-{"step": 29, "epoch": 0, "loss": 0.011413228807071516, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 102, "mean_reward": 0.4070261437908498, "legal_mass": NaN, "dt": 18.6, "t": 1677}
-{"step": 30, "epoch": 0, "loss": 0.027299729281331012, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 101, "mean_reward": 0.42425742574257436, "legal_mass": NaN, "dt": 18.9, "t": 1720}
-{"step": 31, "epoch": 0, "loss": 0.007342317541210483, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 104, "mean_reward": 0.48525641025641025, "legal_mass": NaN, "dt": 19.5, "t": 1764}
-{"step": 32, "epoch": 0, "loss": 0.006462149150181741, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 105, "mean_reward": 0.47920634920634925, "legal_mass": NaN, "dt": 20.0, "t": 1807}
-{"step": 33, "epoch": 0, "loss": 0.005386124575743451, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 100, "mean_reward": 0.42933333333333334, "legal_mass": NaN, "dt": 18.3, "t": 1847}
-{"step": 34, "epoch": 0, "loss": 0.007664436794584617, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 102, "mean_reward": 0.41307189542483674, "legal_mass": NaN, "dt": 19.4, "t": 1890}
-{"step": 35, "epoch": 0, "loss": 0.0073670289340144425, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 90, "mean_reward": 0.447962962962963, "legal_mass": NaN, "dt": 16.4, "t": 1929}
-{"step": 36, "epoch": 0, "loss": 0.008368054859045728, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 85, "mean_reward": 0.39372549019607855, "legal_mass": NaN, "dt": 15.8, "t": 1970}
-{"step": 37, "epoch": 0, "loss": 0.017201785374630203, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 92, "mean_reward": 0.45108695652173914, "legal_mass": NaN, "dt": 17.5, "t": 2010}
-{"step": 38, "epoch": 0, "loss": 0.006420843344350376, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 87, "mean_reward": 0.4376847290640395, "legal_mass": NaN, "dt": 16.3, "t": 2052}
-{"step": 39, "epoch": 0, "loss": 0.010789227179323443, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 94, "mean_reward": 0.41843971631205684, "legal_mass": NaN, "dt": 18.0, "t": 2093}
-{"step": 40, "epoch": 0, "loss": 0.01286258941621307, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 92, "mean_reward": 0.49221014492753623, "legal_mass": NaN, "dt": 17.4, "t": 2133}
-{"step": 41, "epoch": 0, "loss": 0.0009762269980675573, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 87, "mean_reward": 0.2997126436781609, "legal_mass": NaN, "dt": 15.7, "t": 2172}
-{"step": 42, "epoch": 0, "loss": 0.005767225755966808, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 95, "mean_reward": 0.46543859649122826, "legal_mass": NaN, "dt": 17.7, "t": 2212}
-{"step": 43, "epoch": 0, "loss": 0.005436426565229902, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 97, "mean_reward": 0.4676975945017182, "legal_mass": NaN, "dt": 18.0, "t": 2253}
-{"step": 44, "epoch": 0, "loss": 0.00836020020436817, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 84, "mean_reward": 0.4636904761904763, "legal_mass": NaN, "dt": 15.9, "t": 2292}
-{"step": 45, "epoch": 0, "loss": 0.006442305352768592, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 95, "mean_reward": 0.48982456140350883, "legal_mass": NaN, "dt": 17.5, "t": 2333}
-{"step": 46, "epoch": 0, "loss": 0.002367700291979856, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 83, "mean_reward": 0.3642570281124498, "legal_mass": NaN, "dt": 15.3, "t": 2371}
-{"step": 47, "epoch": 0, "loss": 0.009882556604502674, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 77, "mean_reward": 0.5110389610389611, "legal_mass": NaN, "dt": 14.5, "t": 2408}
-{"step": 48, "epoch": 0, "loss": 0.005900037785024671, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 84, "mean_reward": 0.3265873015873015, "legal_mass": NaN, "dt": 15.8, "t": 2447}
-{"step": 49, "epoch": 0, "loss": 0.007222360411625621, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 84, "mean_reward": 0.4277777777777778, "legal_mass": NaN, "dt": 15.7, "t": 2485}
-{"step": 50, "epoch": 0, "loss": 0.0034636553797853836, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 82, "mean_reward": 0.5646341463414634, "legal_mass": NaN, "dt": 14.7, "t": 2521}
-{"step": 50, "event": "eval", "dev": {"none": {"verify": 0.78, "reward": 0.2682, "distinct": 78, "mean_len": 69.4, "unfinished": 1}, "c1_c2": {"verify": 0.91, "reward": 0.2832, "distinct": 75, "mean_len": 67.6, "unfinished": 0}}, "t": 2609}
-{"step": 51, "epoch": 0, "loss": 0.003830186583674008, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 83, "mean_reward": 0.36787148594377506, "legal_mass": NaN, "dt": 15.5, "t": 2645}
-{"step": 52, "epoch": 0, "loss": 0.004129726913280464, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 81, "mean_reward": 0.557201646090535, "legal_mass": NaN, "dt": 14.9, "t": 2681}
-{"step": 53, "epoch": 0, "loss": 0.00406894173912323, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 88, "mean_reward": 0.34090909090909094, "legal_mass": NaN, "dt": 16.2, "t": 2719}
-{"step": 54, "epoch": 0, "loss": 0.0015943075659379244, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 96, "mean_reward": 0.4604166666666667, "legal_mass": NaN, "dt": 17.5, "t": 2758}
-{"step": 55, "epoch": 0, "loss": 0.002927479701190207, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 95, "mean_reward": 0.39771929824561414, "legal_mass": NaN, "dt": 17.6, "t": 2797}
-{"step": 56, "epoch": 0, "loss": 0.0023117924353452204, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 96, "mean_reward": 0.40208333333333335, "legal_mass": NaN, "dt": 17.5, "t": 2837}
-{"step": 57, "epoch": 0, "loss": 0.003930303407287283, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 96, "mean_reward": 0.4288194444444445, "legal_mass": NaN, "dt": 18.4, "t": 2876}
-{"step": 58, "epoch": 0, "loss": 0.005311705112893283, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 106, "mean_reward": 0.579559748427673, "legal_mass": NaN, "dt": 19.7, "t": 2918}
-{"step": 59, "epoch": 0, "loss": 0.0035143176971178035, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 100, "mean_reward": 0.4846666666666667, "legal_mass": NaN, "dt": 18.5, "t": 2959}
-{"step": 60, "epoch": 0, "loss": 0.0015624801027400402, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 99, "mean_reward": 0.403030303030303, "legal_mass": NaN, "dt": 18.2, "t": 2999}
-{"step": 61, "epoch": 0, "loss": 0.0031206182293598683, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 97, "mean_reward": 0.4310996563573883, "legal_mass": NaN, "dt": 17.7, "t": 3040}
-{"step": 62, "epoch": 0, "loss": 0.003690481240166422, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 92, "mean_reward": 0.5041666666666665, "legal_mass": NaN, "dt": 17.0, "t": 3079}
-{"step": 63, "epoch": 0, "loss": 0.0014832111224677648, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 40, "mean_reward": 0.38375, "legal_mass": NaN, "dt": 7.0, "t": 3094}
-{"step": 64, "epoch": 1, "loss": 0.0025430473652135175, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 107, "mean_reward": 0.3957943925233645, "legal_mass": NaN, "dt": 19.9, "t": 3134}
-{"step": 65, "epoch": 1, "loss": 0.0022937034879325206, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 92, "mean_reward": 0.3503623188405797, "legal_mass": NaN, "dt": 17.6, "t": 3175}
-{"step": 66, "epoch": 1, "loss": 0.001625089059456039, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 92, "mean_reward": 0.4757246376811596, "legal_mass": NaN, "dt": 17.2, "t": 3214}
-{"step": 67, "epoch": 1, "loss": 0.0017552781537233384, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 120, "mean_reward": 0.37638888888888894, "legal_mass": NaN, "dt": 22.6, "t": 3258}
-{"step": 68, "epoch": 1, "loss": 0.003536617168929193, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 87, "mean_reward": 0.453831417624521, "legal_mass": NaN, "dt": 16.1, "t": 3296}
-{"step": 69, "epoch": 1, "loss": 0.002352967534203675, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 88, "mean_reward": 0.3952651515151515, "legal_mass": NaN, "dt": 16.9, "t": 3335}
-{"step": 70, "epoch": 1, "loss": 0.0021984160435861164, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 98, "mean_reward": 0.4704081632653062, "legal_mass": NaN, "dt": 18.2, "t": 3374}
-{"step": 71, "epoch": 1, "loss": 0.004126246168670136, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 79, "mean_reward": 0.5048523206751054, "legal_mass": NaN, "dt": 15.3, "t": 3413}
-{"step": 72, "epoch": 1, "loss": 0.001965446546627821, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 76, "mean_reward": 0.31491228070175437, "legal_mass": NaN, "dt": 13.9, "t": 3449}
-{"step": 73, "epoch": 1, "loss": 0.005304130097515142, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 88, "mean_reward": 0.48731060606060606, "legal_mass": NaN, "dt": 17.2, "t": 3489}
-{"step": 74, "epoch": 1, "loss": 0.0030079330516365687, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 104, "mean_reward": 0.4689102564102564, "legal_mass": NaN, "dt": 19.5, "t": 3531}
-{"step": 75, "epoch": 1, "loss": 0.002163142261363851, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 124, "mean_reward": 0.4037634408602151, "legal_mass": NaN, "dt": 22.9, "t": 3574}
-{"step": 75, "event": "eval", "dev": {"none": {"verify": 0.79, "reward": 0.2782, "distinct": 77, "mean_len": 67.8, "unfinished": 0}, "c1_c2": {"verify": 0.9, "reward": 0.2832, "distinct": 75, "mean_len": 68.1, "unfinished": 0}}, "t": 3661}
-{"step": 76, "epoch": 1, "loss": 0.0023286177830803873, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 84, "mean_reward": 0.4714285714285714, "legal_mass": NaN, "dt": 15.7, "t": 3698}
-{"step": 77, "epoch": 1, "loss": 0.003514459814586518, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 94, "mean_reward": 0.5273049645390071, "legal_mass": NaN, "dt": 17.8, "t": 3739}
-{"step": 78, "epoch": 1, "loss": 0.004052689156114039, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 88, "mean_reward": 0.418560606060606, "legal_mass": NaN, "dt": 16.8, "t": 3780}
-{"step": 79, "epoch": 1, "loss": 0.002445118756440934, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 96, "mean_reward": 0.5215277777777777, "legal_mass": NaN, "dt": 18.1, "t": 3820}
-{"step": 80, "epoch": 1, "loss": 0.0017699429527392905, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 108, "mean_reward": 0.38132716049382726, "legal_mass": NaN, "dt": 20.0, "t": 3861}
-{"step": 81, "epoch": 1, "loss": 0.0018994339713502156, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 104, "mean_reward": 0.43012820512820515, "legal_mass": NaN, "dt": 19.3, "t": 3902}
-{"step": 82, "epoch": 1, "loss": 0.003486227070593654, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 81, "mean_reward": 0.35967078189300417, "legal_mass": NaN, "dt": 15.5, "t": 3941}
-{"step": 83, "epoch": 1, "loss": 0.0023198111671081283, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 100, "mean_reward": 0.4053333333333333, "legal_mass": NaN, "dt": 18.5, "t": 3980}
-{"step": 84, "epoch": 1, "loss": 0.0018414461767278724, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 89, "mean_reward": 0.4299625468164794, "legal_mass": NaN, "dt": 16.7, "t": 4020}
-{"step": 85, "epoch": 1, "loss": 0.0020781462415470743, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 80, "mean_reward": 0.37333333333333335, "legal_mass": NaN, "dt": 14.4, "t": 4056}
-{"step": 86, "epoch": 1, "loss": 0.0013763936376199127, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 100, "mean_reward": 0.35100000000000003, "legal_mass": NaN, "dt": 19.5, "t": 4098}
-{"step": 87, "epoch": 1, "loss": 0.0021894093772198667, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 93, "mean_reward": 0.3903225806451614, "legal_mass": NaN, "dt": 17.4, "t": 4137}
-{"step": 88, "epoch": 1, "loss": 0.004346640608002986, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 99, "mean_reward": 0.4678451178451178, "legal_mass": NaN, "dt": 19.9, "t": 4182}
-{"step": 89, "epoch": 1, "loss": 0.0027629910489647756, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 108, "mean_reward": 0.44382716049382714, "legal_mass": NaN, "dt": 19.9, "t": 4223}
-{"step": 90, "epoch": 1, "loss": 0.010971778871183117, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 87, "mean_reward": 0.41628352490421466, "legal_mass": NaN, "dt": 16.0, "t": 4263}
-{"step": 91, "epoch": 1, "loss": 0.0017768588698924184, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 99, "mean_reward": 0.42861952861952873, "legal_mass": NaN, "dt": 18.2, "t": 4303}
-{"step": 92, "epoch": 1, "loss": 0.0018981826909078303, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 108, "mean_reward": 0.4594135802469136, "legal_mass": NaN, "dt": 20.2, "t": 4344}
-{"step": 93, "epoch": 1, "loss": 0.002383838461246342, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 100, "mean_reward": 0.3630000000000001, "legal_mass": NaN, "dt": 18.8, "t": 4385}
-{"step": 94, "epoch": 1, "loss": 0.0017339098447502524, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 88, "mean_reward": 0.5340909090909091, "legal_mass": NaN, "dt": 16.0, "t": 4423}
-{"step": 95, "epoch": 1, "loss": 0.0038546839452024096, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 99, "mean_reward": 0.5574074074074075, "legal_mass": NaN, "dt": 19.8, "t": 4466}
-{"step": 96, "epoch": 1, "loss": 0.003907330938091036, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 96, "mean_reward": 0.45850694444444445, "legal_mass": NaN, "dt": 18.0, "t": 4507}
-{"step": 97, "epoch": 1, "loss": 0.0014631057189514027, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 95, "mean_reward": 0.3985964912280703, "legal_mass": NaN, "dt": 17.9, "t": 4548}
-{"step": 98, "epoch": 1, "loss": 0.004325189601513556, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 110, "mean_reward": 0.5031818181818183, "legal_mass": NaN, "dt": 20.6, "t": 4591}
-{"step": 99, "epoch": 1, "loss": 0.0016371594236527637, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 82, "mean_reward": 0.38048780487804884, "legal_mass": NaN, "dt": 16.1, "t": 4629}
-{"step": 100, "epoch": 1, "loss": 0.0020627370759029873, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 104, "mean_reward": 0.5282051282051282, "legal_mass": NaN, "dt": 19.8, "t": 4671}
-{"step": 100, "event": "eval", "dev": {"none": {"verify": 0.79, "reward": 0.2807, "distinct": 76, "mean_len": 67.6, "unfinished": 0}, "c1_c2": {"verify": 0.9, "reward": 0.2857, "distinct": 74, "mean_len": 67.8, "unfinished": 0}}, "t": 4760}
-{"step": 101, "epoch": 1, "loss": 0.00047687902731269376, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 103, "mean_reward": 0.4082524271844661, "legal_mass": NaN, "dt": 19.4, "t": 4800}
-{"step": 102, "epoch": 1, "loss": 0.00031790379448053005, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 88, "mean_reward": 0.3359848484848485, "legal_mass": NaN, "dt": 9.1, "t": 4823}
-{"step": 103, "epoch": 1, "loss": 0.002760074181004222, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 104, "mean_reward": 0.43910256410256415, "legal_mass": NaN, "dt": 10.9, "t": 4848}
-{"step": 104, "epoch": 1, "loss": 0.0021602802786825728, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 96, "mean_reward": 0.3753472222222223, "legal_mass": NaN, "dt": 10.2, "t": 4873}
-{"step": 105, "epoch": 1, "loss": 0.005506119142506926, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 94, "mean_reward": 0.4312056737588652, "legal_mass": NaN, "dt": 9.8, "t": 4896}
-{"step": 106, "epoch": 1, "loss": 0.004435884953293852, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 69, "mean_reward": 0.43526570048309177, "legal_mass": NaN, "dt": 7.5, "t": 4917}
-{"step": 107, "epoch": 1, "loss": 0.002909285724454093, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 100, "mean_reward": 0.40299999999999997, "legal_mass": NaN, "dt": 11.9, "t": 4943}
-{"step": 108, "epoch": 1, "loss": 0.0024943684701510295, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 99, "mean_reward": 0.41481481481481486, "legal_mass": NaN, "dt": 12.8, "t": 4972}
-{"step": 109, "epoch": 1, "loss": 0.002905314593438865, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 96, "mean_reward": 0.4588541666666666, "legal_mass": NaN, "dt": 11.9, "t": 5000}
-{"step": 110, "epoch": 1, "loss": 0.003465457665879513, "loss_mask": 0.0, "loss_grpo": 0.0, "n_rollouts": 100, "mean_reward": 0.48033333333333333, "legal_mass": NaN, "dt": 11.9, "t": 5027}
+{"step": 0, "event": "eval", "dev": {"none": {"verify": 0.0, "reward": 0.0, "distinct": 96, "mean_len": 210.5, "unfinished": 26}, "c1_c2": {"verify": 0.32, "reward": 0.1755, "distinct": 93, "mean_len": 90.0, "unfinished": 1}}, "t": 34}
+{"step": 1, "epoch": 0, "loss": 0.07733760424889624, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 19, "mean_reward": 0.42, "legal_mass": NaN, "dt": 1.7, "t": 60}
+{"step": 2, "epoch": 0, "loss": 0.06669001746922731, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 40, "mean_reward": 0.5197083333333333, "legal_mass": NaN, "dt": 3.3, "t": 87}
+{"step": 3, "epoch": 0, "loss": 0.05392594402655959, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 52, "mean_reward": 0.5679945054945054, "legal_mass": NaN, "dt": 4.1, "t": 112}
+{"step": 4, "epoch": 0, "loss": 0.03532750252634287, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 43, "mean_reward": 0.6589147286821705, "legal_mass": NaN, "dt": 3.8, "t": 137}
+{"step": 5, "epoch": 0, "loss": 0.0490441401489079, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 71, "mean_reward": 0.5307511737089202, "legal_mass": NaN, "dt": 5.7, "t": 162}
+{"step": 6, "epoch": 0, "loss": 0.03267069655703381, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 60, "mean_reward": 0.5209722222222222, "legal_mass": NaN, "dt": 4.9, "t": 186}
+{"step": 7, "epoch": 0, "loss": 0.021815476968185976, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 97, "mean_reward": 0.4292955326460481, "legal_mass": NaN, "dt": 6.8, "t": 212}
+{"step": 8, "epoch": 0, "loss": 0.021951719681965187, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 81, "mean_reward": 0.47798353909465024, "legal_mass": NaN, "dt": 6.3, "t": 235}
+{"step": 9, "epoch": 0, "loss": 0.015969720378052443, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 93, "mean_reward": 0.39659498207885313, "legal_mass": NaN, "dt": 7.0, "t": 260}
+{"step": 10, "epoch": 0, "loss": 0.014442671723372769, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 85, "mean_reward": 0.3780392156862745, "legal_mass": NaN, "dt": 6.1, "t": 284}
+{"step": 11, "epoch": 0, "loss": 0.009098754207570892, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 97, "mean_reward": 0.479725085910653, "legal_mass": NaN, "dt": 7.1, "t": 307}
+{"step": 12, "epoch": 0, "loss": 0.005250872411124874, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 101, "mean_reward": 0.36386138613861385, "legal_mass": NaN, "dt": 7.5, "t": 331}
+{"step": 13, "epoch": 0, "loss": 0.005385003132687416, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 70, "mean_reward": 0.39190476190476187, "legal_mass": NaN, "dt": 5.0, "t": 353}
+{"step": 14, "epoch": 0, "loss": 0.011162657207023585, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 95, "mean_reward": 0.42315789473684223, "legal_mass": NaN, "dt": 6.6, "t": 376}
+{"step": 15, "epoch": 0, "loss": 0.002550592111219885, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 67, "mean_reward": 0.3582089552238805, "legal_mass": NaN, "dt": 4.7, "t": 397}
+{"step": 16, "epoch": 0, "loss": 0.004274778446415439, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 84, "mean_reward": 0.47817460317460325, "legal_mass": NaN, "dt": 6.3, "t": 419}
+{"step": 17, "epoch": 0, "loss": 0.001979034495889209, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 94, "mean_reward": 0.3585106382978724, "legal_mass": NaN, "dt": 6.2, "t": 441}
+{"step": 18, "epoch": 0, "loss": 0.009682235892796598, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 94, "mean_reward": 0.4333333333333333, "legal_mass": NaN, "dt": 7.0, "t": 465}
+{"step": 19, "epoch": 0, "loss": 0.0022177840564836515, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 96, "mean_reward": 0.4000000000000001, "legal_mass": NaN, "dt": 6.7, "t": 487}
+{"step": 20, "epoch": 0, "loss": 0.005114777914059231, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 103, "mean_reward": 0.4106796116504854, "legal_mass": NaN, "dt": 7.2, "t": 511}
+{"step": 21, "epoch": 0, "loss": 0.0020246252940978593, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 84, "mean_reward": 0.5436507936507936, "legal_mass": NaN, "dt": 5.8, "t": 533}
+{"step": 22, "epoch": 0, "loss": 0.0009063985326065449, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 75, "mean_reward": 0.38511111111111107, "legal_mass": NaN, "dt": 5.3, "t": 555}
+{"step": 23, "epoch": 0, "loss": 0.003548251741221975, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 77, "mean_reward": 0.42164502164502166, "legal_mass": NaN, "dt": 5.5, "t": 577}
+{"step": 24, "epoch": 0, "loss": 0.0036131655924691586, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 85, "mean_reward": 0.36333333333333334, "legal_mass": NaN, "dt": 6.3, "t": 601}
+{"step": 25, "epoch": 0, "loss": 0.0019207967397960601, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 95, "mean_reward": 0.4273684210526316, "legal_mass": NaN, "dt": 6.9, "t": 624}
+{"step": 25, "event": "eval", "dev": {"none": {"verify": 0.75, "reward": 0.2586, "distinct": 87, "mean_len": 67.2, "unfinished": 0}, "c1_c2": {"verify": 0.84, "reward": 0.2636, "distinct": 83, "mean_len": 68.2, "unfinished": 0}}, "t": 650}
+{"step": 26, "epoch": 0, "loss": 0.002756908863375429, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 88, "mean_reward": 0.4768939393939394, "legal_mass": NaN, "dt": 6.3, "t": 671}
+{"step": 27, "epoch": 0, "loss": 0.010548065157308883, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 104, "mean_reward": 0.4269230769230769, "legal_mass": NaN, "dt": 7.4, "t": 694}
+{"step": 28, "epoch": 0, "loss": 0.0016954129032455967, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 80, "mean_reward": 0.38145833333333334, "legal_mass": NaN, "dt": 5.5, "t": 716}
+{"step": 29, "epoch": 0, "loss": 0.005723623953599599, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 100, "mean_reward": 0.39533333333333337, "legal_mass": NaN, "dt": 6.8, "t": 738}
+{"step": 30, "epoch": 0, "loss": 0.01585766924517884, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 95, "mean_reward": 0.40982456140350887, "legal_mass": NaN, "dt": 7.3, "t": 763}
+{"step": 31, "epoch": 0, "loss": 0.003161226767815606, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 100, "mean_reward": 0.45966666666666667, "legal_mass": NaN, "dt": 7.3, "t": 787}
+{"step": 32, "epoch": 0, "loss": 0.006281653106270824, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 106, "mean_reward": 0.45031446540880504, "legal_mass": NaN, "dt": 8.0, "t": 812}
+{"step": 33, "epoch": 0, "loss": 0.0045975227794770035, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 99, "mean_reward": 0.4228956228956229, "legal_mass": NaN, "dt": 7.2, "t": 835}
+{"step": 34, "epoch": 0, "loss": 0.0025520757890262757, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 99, "mean_reward": 0.4205387205387206, "legal_mass": NaN, "dt": 7.8, "t": 859}
+{"step": 35, "epoch": 0, "loss": 0.00326469659353279, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 92, "mean_reward": 0.45000000000000007, "legal_mass": NaN, "dt": 6.4, "t": 882}
+{"step": 36, "epoch": 0, "loss": 0.0044681147933260945, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 85, "mean_reward": 0.37117647058823533, "legal_mass": NaN, "dt": 6.4, "t": 907}
+{"step": 37, "epoch": 0, "loss": 0.004400487231578154, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 84, "mean_reward": 0.3928571428571428, "legal_mass": NaN, "dt": 6.2, "t": 929}
+{"step": 38, "epoch": 0, "loss": 0.0060371052377377055, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 93, "mean_reward": 0.4283154121863801, "legal_mass": NaN, "dt": 6.9, "t": 952}
+{"step": 39, "epoch": 0, "loss": 0.004069282914088035, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 93, "mean_reward": 0.41577060931899645, "legal_mass": NaN, "dt": 7.1, "t": 976}
+{"step": 40, "epoch": 0, "loss": 0.007150566434120265, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 100, "mean_reward": 0.47200000000000003, "legal_mass": NaN, "dt": 7.2, "t": 1000}
+{"step": 41, "epoch": 0, "loss": 0.005209269586885057, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 102, "mean_reward": 0.3140522875816994, "legal_mass": NaN, "dt": 7.4, "t": 1022}
+{"step": 42, "epoch": 0, "loss": 0.0013806743123154774, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 95, "mean_reward": 0.4645614035087722, "legal_mass": NaN, "dt": 6.9, "t": 1045}
+{"step": 43, "epoch": 0, "loss": 0.004145876444226815, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 102, "mean_reward": 0.4611111111111111, "legal_mass": NaN, "dt": 7.3, "t": 1068}
+{"step": 44, "epoch": 0, "loss": 0.005294329370826745, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 86, "mean_reward": 0.41472868217054276, "legal_mass": NaN, "dt": 6.5, "t": 1090}
+{"step": 45, "epoch": 0, "loss": 0.0022393728925180767, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 104, "mean_reward": 0.455448717948718, "legal_mass": NaN, "dt": 7.4, "t": 1114}
+{"step": 46, "epoch": 0, "loss": 0.003175474175350246, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 85, "mean_reward": 0.3674509803921569, "legal_mass": NaN, "dt": 6.0, "t": 1135}
+{"step": 47, "epoch": 0, "loss": 0.003991558355210145, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 87, "mean_reward": 0.46704980842911886, "legal_mass": NaN, "dt": 6.8, "t": 1157}
+{"step": 48, "epoch": 0, "loss": 0.0008604160543654871, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 86, "mean_reward": 0.32054263565891467, "legal_mass": NaN, "dt": 6.3, "t": 1179}
+{"step": 49, "epoch": 0, "loss": 0.002110547812662844, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 92, "mean_reward": 0.4195652173913044, "legal_mass": NaN, "dt": 6.6, "t": 1201}
+{"step": 50, "epoch": 0, "loss": 0.0018345111668622849, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 87, "mean_reward": 0.5455938697318008, "legal_mass": NaN, "dt": 6.0, "t": 1222}
+{"step": 50, "event": "eval", "dev": {"none": {"verify": 0.85, "reward": 0.2873, "distinct": 81, "mean_len": 67.5, "unfinished": 0}, "c1_c2": {"verify": 0.93, "reward": 0.2923, "distinct": 80, "mean_len": 67.9, "unfinished": 0}}, "t": 1247}
+{"step": 51, "epoch": 0, "loss": 0.0004602432063620654, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 84, "mean_reward": 0.35555555555555557, "legal_mass": NaN, "dt": 6.1, "t": 1267}
+{"step": 52, "epoch": 0, "loss": 0.001533024688342266, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 84, "mean_reward": 0.5531746031746031, "legal_mass": NaN, "dt": 6.1, "t": 1289}
+{"step": 53, "epoch": 0, "loss": 0.002431379662539257, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 90, "mean_reward": 0.3407407407407408, "legal_mass": NaN, "dt": 6.5, "t": 1310}
+{"step": 54, "epoch": 0, "loss": 0.0015012443677733245, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 104, "mean_reward": 0.4506410256410256, "legal_mass": NaN, "dt": 7.3, "t": 1333}
+{"step": 55, "epoch": 0, "loss": 0.0012771890587828238, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 92, "mean_reward": 0.39492753623188415, "legal_mass": NaN, "dt": 6.8, "t": 1354}
+{"step": 56, "epoch": 0, "loss": 0.0009676537540599384, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 92, "mean_reward": 0.3960144927536232, "legal_mass": NaN, "dt": 6.3, "t": 1375}
+{"step": 57, "epoch": 0, "loss": 0.0012713651030935578, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 98, "mean_reward": 0.41836734693877553, "legal_mass": NaN, "dt": 7.2, "t": 1397}
+{"step": 58, "epoch": 0, "loss": 0.001628230209917092, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 108, "mean_reward": 0.5348765432098765, "legal_mass": NaN, "dt": 7.8, "t": 1420}
+{"step": 59, "epoch": 0, "loss": 0.0027062266726716184, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 98, "mean_reward": 0.48095238095238096, "legal_mass": NaN, "dt": 7.1, "t": 1441}
+{"step": 60, "epoch": 0, "loss": 0.001631422422462947, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 101, "mean_reward": 0.38844884488448844, "legal_mass": NaN, "dt": 7.2, "t": 1463}
+{"step": 61, "epoch": 0, "loss": 0.001231363948818398, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 104, "mean_reward": 0.4125, "legal_mass": NaN, "dt": 7.4, "t": 1485}
+{"step": 62, "epoch": 0, "loss": 0.0015035535018341761, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 96, "mean_reward": 0.47361111111111115, "legal_mass": NaN, "dt": 6.9, "t": 1507}
+{"step": 63, "epoch": 0, "loss": 0.0009035734356075409, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 40, "mean_reward": 0.33999999999999997, "legal_mass": NaN, "dt": 2.8, "t": 1516}
+{"step": 64, "epoch": 1, "loss": 0.0007308352569452836, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 108, "mean_reward": 0.4037037037037038, "legal_mass": NaN, "dt": 7.7, "t": 1537}
+{"step": 65, "epoch": 1, "loss": 0.0013287842618865398, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 92, "mean_reward": 0.3358695652173913, "legal_mass": NaN, "dt": 6.8, "t": 1559}
+{"step": 66, "epoch": 1, "loss": 0.0009310534303494933, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 96, "mean_reward": 0.46631944444444445, "legal_mass": NaN, "dt": 6.8, "t": 1581}
+{"step": 67, "epoch": 1, "loss": 0.0012227996994624846, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 120, "mean_reward": 0.37638888888888894, "legal_mass": NaN, "dt": 8.6, "t": 1606}
+{"step": 68, "epoch": 1, "loss": 0.0008532336009920982, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 91, "mean_reward": 0.43113553113553105, "legal_mass": NaN, "dt": 6.6, "t": 1627}
+{"step": 69, "epoch": 1, "loss": 0.0004066377027811541, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 88, "mean_reward": 0.36780303030303024, "legal_mass": NaN, "dt": 6.4, "t": 1649}
+{"step": 70, "epoch": 1, "loss": 0.0014107951299138222, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 104, "mean_reward": 0.4608974358974359, "legal_mass": NaN, "dt": 7.6, "t": 1672}
+{"step": 71, "epoch": 1, "loss": 0.0018094753863806545, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 96, "mean_reward": 0.4354166666666666, "legal_mass": NaN, "dt": 7.5, "t": 1695}
+{"step": 72, "epoch": 1, "loss": 0.0006622089924803731, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 80, "mean_reward": 0.3158333333333333, "legal_mass": NaN, "dt": 5.7, "t": 1716}
+{"step": 73, "epoch": 1, "loss": 0.0030455187660436422, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 100, "mean_reward": 0.4500833333333334, "legal_mass": NaN, "dt": 7.7, "t": 1738}
+{"step": 74, "epoch": 1, "loss": 0.0004746082333895174, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 104, "mean_reward": 0.416025641025641, "legal_mass": NaN, "dt": 7.5, "t": 1760}
+{"step": 75, "epoch": 1, "loss": 0.001274683783663022, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 124, "mean_reward": 0.40913978494623654, "legal_mass": NaN, "dt": 8.6, "t": 1783}
+{"step": 75, "event": "eval", "dev": {"none": {"verify": 0.82, "reward": 0.2865, "distinct": 77, "mean_len": 67.3, "unfinished": 0}, "c1_c2": {"verify": 0.9, "reward": 0.289, "distinct": 76, "mean_len": 67.8, "unfinished": 0}}, "t": 1806}
+{"step": 76, "epoch": 1, "loss": 0.00042905297618744953, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 84, "mean_reward": 0.4476190476190475, "legal_mass": NaN, "dt": 5.9, "t": 1827}
+{"step": 77, "epoch": 1, "loss": 0.0021279504393305615, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 100, "mean_reward": 0.494, "legal_mass": NaN, "dt": 7.4, "t": 1849}
+{"step": 78, "epoch": 1, "loss": 0.0023300135019326262, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 92, "mean_reward": 0.39356884057971026, "legal_mass": NaN, "dt": 6.8, "t": 1871}
+{"step": 79, "epoch": 1, "loss": 0.00039116131097216567, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 96, "mean_reward": 0.5215277777777777, "legal_mass": NaN, "dt": 7.1, "t": 1892}
+{"step": 80, "epoch": 1, "loss": 0.000654747848216175, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 112, "mean_reward": 0.3982142857142857, "legal_mass": NaN, "dt": 7.8, "t": 1915}
+{"step": 81, "epoch": 1, "loss": 0.000595844452845995, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 112, "mean_reward": 0.4023809523809524, "legal_mass": NaN, "dt": 8.1, "t": 1938}
+{"step": 82, "epoch": 1, "loss": 0.0007683730639200803, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 92, "mean_reward": 0.32753623188405795, "legal_mass": NaN, "dt": 6.9, "t": 1960}
+{"step": 83, "epoch": 1, "loss": 0.0012861091699960525, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 104, "mean_reward": 0.38733974358974355, "legal_mass": NaN, "dt": 7.3, "t": 1981}
+{"step": 84, "epoch": 1, "loss": 0.003796687028170709, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 96, "mean_reward": 0.40902777777777777, "legal_mass": NaN, "dt": 7.0, "t": 2004}
+{"step": 85, "epoch": 1, "loss": 0.0004079324549479679, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 84, "mean_reward": 0.3714285714285714, "legal_mass": NaN, "dt": 5.8, "t": 2025}
+{"step": 86, "epoch": 1, "loss": 0.0019497792570746242, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 100, "mean_reward": 0.35100000000000003, "legal_mass": NaN, "dt": 7.2, "t": 2047}
+{"step": 87, "epoch": 1, "loss": 0.001379424093045145, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 98, "mean_reward": 0.38061224489795925, "legal_mass": NaN, "dt": 7.5, "t": 2071}
+{"step": 88, "epoch": 1, "loss": 0.0026923779018943605, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 105, "mean_reward": 0.4546031746031746, "legal_mass": NaN, "dt": 7.8, "t": 2094}
+{"step": 89, "epoch": 1, "loss": 0.0012879834148407099, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 112, "mean_reward": 0.4309523809523809, "legal_mass": NaN, "dt": 7.9, "t": 2117}
+{"step": 90, "epoch": 1, "loss": 0.003726008113773105, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 91, "mean_reward": 0.3956043956043956, "legal_mass": NaN, "dt": 6.7, "t": 2138}
+{"step": 91, "epoch": 1, "loss": 0.0019551763311937975, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 103, "mean_reward": 0.4495145631067962, "legal_mass": NaN, "dt": 7.6, "t": 2160}
+{"step": 92, "epoch": 1, "loss": 0.0018127463722521497, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 112, "mean_reward": 0.4345238095238096, "legal_mass": NaN, "dt": 8.0, "t": 2184}
+{"step": 93, "epoch": 1, "loss": 0.0013861625681101941, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 100, "mean_reward": 0.3630000000000001, "legal_mass": NaN, "dt": 7.4, "t": 2207}
+{"step": 94, "epoch": 1, "loss": 0.000819020032906792, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 92, "mean_reward": 0.49637681159420277, "legal_mass": NaN, "dt": 6.4, "t": 2229}
+{"step": 95, "epoch": 1, "loss": 0.0016183480486233748, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 104, "mean_reward": 0.5009615384615385, "legal_mass": NaN, "dt": 8.2, "t": 2252}
+{"step": 96, "epoch": 1, "loss": 0.0007037433922505443, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 100, "mean_reward": 0.4026666666666665, "legal_mass": NaN, "dt": 7.3, "t": 2275}
+{"step": 97, "epoch": 1, "loss": 0.0007487519575306578, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 100, "mean_reward": 0.3953333333333335, "legal_mass": NaN, "dt": 7.3, "t": 2297}
+{"step": 98, "epoch": 1, "loss": 0.0016909569243352962, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 116, "mean_reward": 0.4867816091954024, "legal_mass": NaN, "dt": 8.5, "t": 2321}
+{"step": 99, "epoch": 1, "loss": 0.0004547249263850972, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 84, "mean_reward": 0.3674603174603175, "legal_mass": NaN, "dt": 6.1, "t": 2344}
+{"step": 100, "epoch": 1, "loss": 0.0010362377900037245, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 104, "mean_reward": 0.4769230769230769, "legal_mass": NaN, "dt": 7.4, "t": 2366}
+{"step": 100, "event": "eval", "dev": {"none": {"verify": 0.85, "reward": 0.2865, "distinct": 75, "mean_len": 68.0, "unfinished": 0}, "c1_c2": {"verify": 0.92, "reward": 0.289, "distinct": 74, "mean_len": 68.1, "unfinished": 0}}, "t": 2390}
+{"step": 101, "epoch": 1, "loss": 0.0008457597929236726, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 108, "mean_reward": 0.4163580246913579, "legal_mass": NaN, "dt": 7.7, "t": 2413}
+{"step": 102, "epoch": 1, "loss": 0.0006541849104451103, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 104, "mean_reward": 0.34519230769230774, "legal_mass": NaN, "dt": 7.7, "t": 2434}
+{"step": 103, "epoch": 1, "loss": 0.0008174152319497807, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 104, "mean_reward": 0.4391025641025641, "legal_mass": NaN, "dt": 7.4, "t": 2456}
+{"step": 104, "epoch": 1, "loss": 0.00021270768536396645, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 104, "mean_reward": 0.3721153846153846, "legal_mass": NaN, "dt": 7.6, "t": 2479}
+{"step": 105, "epoch": 1, "loss": 0.0011612849035600448, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 96, "mean_reward": 0.4083333333333334, "legal_mass": NaN, "dt": 7.1, "t": 2500}
+{"step": 106, "epoch": 1, "loss": 0.0003428112513574888, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 68, "mean_reward": 0.42696078431372547, "legal_mass": NaN, "dt": 4.6, "t": 2519}
+{"step": 107, "epoch": 1, "loss": 0.0007977404649182063, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 108, "mean_reward": 0.3854938271604938, "legal_mass": NaN, "dt": 7.9, "t": 2541}
+{"step": 108, "epoch": 1, "loss": 0.0008464478476071235, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 100, "mean_reward": 0.4006666666666666, "legal_mass": NaN, "dt": 7.4, "t": 2564}
+{"step": 109, "epoch": 1, "loss": 0.0004962261962191405, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 96, "mean_reward": 0.42673611111111115, "legal_mass": NaN, "dt": 7.0, "t": 2587}
+{"step": 110, "epoch": 1, "loss": 0.0017997897458599255, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 108, "mean_reward": 0.4246913580246914, "legal_mass": NaN, "dt": 8.1, "t": 2608}
+{"step": 111, "epoch": 1, "loss": 0.0008203579491237178, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 72, "mean_reward": 0.38240740740740736, "legal_mass": NaN, "dt": 5.3, "t": 2629}
+{"step": 112, "epoch": 1, "loss": 0.001612730864394507, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 108, "mean_reward": 0.4160493827160493, "legal_mass": NaN, "dt": 8.2, "t": 2652}
+{"step": 113, "epoch": 1, "loss": 0.00020798290029233613, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 96, "mean_reward": 0.41701388888888896, "legal_mass": NaN, "dt": 6.9, "t": 2673}
+{"step": 114, "epoch": 1, "loss": 0.0014393875719633797, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 92, "mean_reward": 0.4579710144927535, "legal_mass": NaN, "dt": 6.7, "t": 2695}
+{"step": 115, "epoch": 1, "loss": 0.0002564022338447103, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 100, "mean_reward": 0.4383333333333333, "legal_mass": NaN, "dt": 6.9, "t": 2717}
+{"step": 116, "epoch": 1, "loss": 0.0010011202481337023, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 106, "mean_reward": 0.3861635220125786, "legal_mass": NaN, "dt": 7.6, "t": 2738}
+{"step": 117, "epoch": 1, "loss": 0.0010661297242222645, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 104, "mean_reward": 0.3923076923076923, "legal_mass": NaN, "dt": 7.9, "t": 2762}
+{"step": 118, "epoch": 1, "loss": 0.0011898280645255, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 92, "mean_reward": 0.4429347826086957, "legal_mass": NaN, "dt": 6.9, "t": 2784}
+{"step": 119, "epoch": 1, "loss": 0.0004303645681602575, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 100, "mean_reward": 0.4426666666666668, "legal_mass": NaN, "dt": 7.1, "t": 2805}
+{"step": 120, "epoch": 1, "loss": 0.00030981943996266637, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 100, "mean_reward": 0.462, "legal_mass": NaN, "dt": 7.2, "t": 2828}
+{"step": 121, "epoch": 1, "loss": 0.0009824436527878788, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 88, "mean_reward": 0.4113636363636363, "legal_mass": NaN, "dt": 6.5, "t": 2849}
+{"step": 122, "epoch": 1, "loss": 0.0005640344461426139, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 92, "mean_reward": 0.5210144927536231, "legal_mass": NaN, "dt": 7.1, "t": 2871}
+{"step": 123, "epoch": 1, "loss": 0.0001014138566119982, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 100, "mean_reward": 0.35533333333333345, "legal_mass": NaN, "dt": 7.1, "t": 2893}
+{"step": 124, "epoch": 1, "loss": 0.00020861453509724015, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 100, "mean_reward": 0.42666666666666664, "legal_mass": NaN, "dt": 7.0, "t": 2916}
+{"step": 125, "epoch": 1, "loss": 9.633515446694219e-05, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 84, "mean_reward": 0.4841269841269841, "legal_mass": NaN, "dt": 5.6, "t": 2936}
+{"step": 125, "event": "eval", "dev": {"none": {"verify": 0.85, "reward": 0.289, "distinct": 72, "mean_len": 67.9, "unfinished": 0}, "c1_c2": {"verify": 0.91, "reward": 0.289, "distinct": 71, "mean_len": 68.2, "unfinished": 0}}, "t": 2960}
+{"step": 126, "epoch": 1, "loss": 0.0002780182421702193, "loss_mask": 0.0, "loss_grpo": 0.0, "loss_c3": 0.0, "n_rollouts": 32, "mean_reward": 0.47291666666666665, "legal_mass": NaN, "dt": 2.5, "t": 2969}
+{"step": 126, "event": "eval_final", "dev": {"none": {"verify": 0.85, "reward": 0.289, "distinct": 71, "mean_len": 67.9, "unfinished": 0}, "c1_c2": {"verify": 0.91, "reward": 0.289, "distinct": 70, "mean_len": 68.2, "unfinished": 0}}, "t": 2992}

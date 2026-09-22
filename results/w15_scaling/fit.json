@@ -1,0 +1,2987 @@
+{
+  "params": {
+    "smollm2-135m-instruct": 134515008,
+    "smollm2-360m-instruct": 361821120,
+    "smollm2-1.7b-instruct": 1711376384,
+    "smollm3-3b": 3075098624,
+    "gemma-3-270m-it": 268098176,
+    "gemma-3-1b-it": 999885952
+  },
+  "family": {
+    "smollm2-135m-instruct": "smollm",
+    "smollm2-360m-instruct": "smollm",
+    "smollm2-1.7b-instruct": "smollm",
+    "smollm3-3b": "smollm",
+    "gemma-3-270m-it": "gemma",
+    "gemma-3-1b-it": "gemma"
+  },
+  "layers": [
+    "v1",
+    "v2",
+    "v3",
+    "v4"
+  ],
+  "fits": {
+    "base": {
+      "smollm": {
+        "arith_func_200": {
+          "v1": {
+            "n_points": 4,
+            "n_prompts": 200,
+            "a": 4.786957669563076,
+            "beta": 0.08256640202922619,
+            "beta_ci95": [
+              0.06123723499658231,
+              0.10678681011498854
+            ],
+            "r2": 0.8545337573178015,
+            "n_clipped": 0,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "smollm2-135m-instruct",
+                "size": 134515008,
+                "residual": 1.0,
+                "residual_pp": 100.0,
+                "ci95_pp": [
+                  100.0,
+                  100.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  1.0
+                ]
+              },
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": 0.985,
+                "residual_pp": 98.5,
+                "ci95_pp": [
+                  96.5,
+                  100.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.985
+                ]
+              },
+              {
+                "model": "smollm2-1.7b-instruct",
+                "size": 1711376384,
+                "residual": 0.78,
+                "residual_pp": 78.0,
+                "ci95_pp": [
+                  72.0,
+                  83.5
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.78
+                ]
+              },
+              {
+                "model": "smollm3-3b",
+                "size": 3075098624,
+                "residual": 0.815,
+                "residual_pp": 81.5,
+                "ci95_pp": [
+                  76.0,
+                  87.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.815
+                ]
+              }
+            ],
+            "degenerate": false
+          },
+          "v2": {
+            "n_points": 4,
+            "n_prompts": 200,
+            "a": 3.829260672416683e-09,
+            "beta": -0.645145978468212,
+            "beta_ci95": [
+              -0.9740894666637495,
+              -4.3574997158679594e-17
+            ],
+            "r2": 0.46498231405098867,
+            "n_clipped": 3,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "smollm2-135m-instruct",
+                "size": 134515008,
+                "residual": -0.005,
+                "residual_pp": -0.5,
+                "ci95_pp": [
+                  -1.5,
+                  0.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.005
+                ]
+              },
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": -0.02,
+                "residual_pp": -2.0,
+                "ci95_pp": [
+                  -4.0,
+                  -0.5
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.02
+                ]
+              },
+              {
+                "model": "smollm2-1.7b-instruct",
+                "size": 1711376384,
+                "residual": -0.01,
+                "residual_pp": -1.0,
+                "ci95_pp": [
+                  -3.0,
+                  1.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.01
+                ]
+              },
+              {
+                "model": "smollm3-3b",
+                "size": 3075098624,
+                "residual": 0.015,
+                "residual_pp": 1.5,
+                "ci95_pp": [
+                  0.0,
+                  3.5
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.015
+                ]
+              }
+            ],
+            "degenerate": true
+          },
+          "v3": {
+            "n_points": 4,
+            "n_prompts": 200,
+            "a": 0.0009999999999999976,
+            "beta": -4.3574997158679594e-17,
+            "beta_ci95": [
+              -4.3574997158679594e-17,
+              -4.3574997158679594e-17
+            ],
+            "r2": 1.0,
+            "n_clipped": 4,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "smollm2-135m-instruct",
+                "size": 134515008,
+                "residual": -0.13,
+                "residual_pp": -13.0,
+                "ci95_pp": [
+                  -18.0,
+                  -8.5
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.13
+                ]
+              },
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": -0.14,
+                "residual_pp": -14.0,
+                "ci95_pp": [
+                  -19.0,
+                  -9.5
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.14
+                ]
+              },
+              {
+                "model": "smollm2-1.7b-instruct",
+                "size": 1711376384,
+                "residual": -0.22,
+                "residual_pp": -22.0,
+                "ci95_pp": [
+                  -28.0,
+                  -16.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.22
+                ]
+              },
+              {
+                "model": "smollm3-3b",
+                "size": 3075098624,
+                "residual": -0.26,
+                "residual_pp": -26.0,
+                "ci95_pp": [
+                  -32.5,
+                  -20.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.26
+                ]
+              }
+            ],
+            "degenerate": true
+          },
+          "v4": {
+            "n_points": 4,
+            "n_prompts": 200,
+            "a": 0.0009999999999999976,
+            "beta": -4.3574997158679594e-17,
+            "beta_ci95": [
+              -4.3574997158679594e-17,
+              -4.3574997158679594e-17
+            ],
+            "r2": 1.0,
+            "n_clipped": 4,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "smollm2-135m-instruct",
+                "size": 134515008,
+                "residual": -0.01,
+                "residual_pp": -1.0,
+                "ci95_pp": [
+                  -2.5,
+                  0.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.01
+                ]
+              },
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": -0.075,
+                "residual_pp": -7.5,
+                "ci95_pp": [
+                  -11.5,
+                  -4.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.075
+                ]
+              },
+              {
+                "model": "smollm2-1.7b-instruct",
+                "size": 1711376384,
+                "residual": -0.1,
+                "residual_pp": -10.0,
+                "ci95_pp": [
+                  -14.5,
+                  -6.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.1
+                ]
+              },
+              {
+                "model": "smollm3-3b",
+                "size": 3075098624,
+                "residual": -0.08,
+                "residual_pp": -8.0,
+                "ci95_pp": [
+                  -11.51,
+                  -4.5
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.08
+                ]
+              }
+            ],
+            "degenerate": true
+          }
+        },
+        "linalg_125": {
+          "v1": {
+            "n_points": 4,
+            "n_prompts": 125,
+            "a": 77.67881820155992,
+            "beta": 0.2307028785214837,
+            "beta_ci95": [
+              0.18505902058668605,
+              0.28302678537014336
+            ],
+            "r2": 0.5492650172958421,
+            "n_clipped": 0,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "smollm2-135m-instruct",
+                "size": 134515008,
+                "residual": 1.0,
+                "residual_pp": 100.0,
+                "ci95_pp": [
+                  100.0,
+                  100.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  1.0
+                ]
+              },
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": 0.968,
+                "residual_pp": 96.8,
+                "ci95_pp": [
+                  93.6,
+                  99.2
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.968
+                ]
+              },
+              {
+                "model": "smollm2-1.7b-instruct",
+                "size": 1711376384,
+                "residual": 0.384,
+                "residual_pp": 38.4,
+                "ci95_pp": [
+                  29.6,
+                  47.2
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.384
+                ]
+              },
+              {
+                "model": "smollm3-3b",
+                "size": 3075098624,
+                "residual": 0.664,
+                "residual_pp": 66.4,
+                "ci95_pp": [
+                  57.6,
+                  74.4
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.664
+                ]
+              }
+            ],
+            "degenerate": false
+          },
+          "v2": {
+            "n_points": 4,
+            "n_prompts": 125,
+            "a": 0.0009999999999999976,
+            "beta": -4.3574997158679594e-17,
+            "beta_ci95": [
+              -4.3574997158679594e-17,
+              -4.3574997158679594e-17
+            ],
+            "r2": 1.0,
+            "n_clipped": 4,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "smollm2-135m-instruct",
+                "size": 134515008,
+                "residual": 0.0,
+                "residual_pp": 0.0,
+                "ci95_pp": [
+                  0.0,
+                  0.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.0
+                ]
+              },
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": 0.0,
+                "residual_pp": 0.0,
+                "ci95_pp": [
+                  0.0,
+                  0.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.0
+                ]
+              },
+              {
+                "model": "smollm2-1.7b-instruct",
+                "size": 1711376384,
+                "residual": 0.0,
+                "residual_pp": 0.0,
+                "ci95_pp": [
+                  0.0,
+                  0.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.0
+                ]
+              },
+              {
+                "model": "smollm3-3b",
+                "size": 3075098624,
+                "residual": 0.0,
+                "residual_pp": 0.0,
+                "ci95_pp": [
+                  0.0,
+                  0.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.0
+                ]
+              }
+            ],
+            "degenerate": true
+          },
+          "v3": {
+            "n_points": 4,
+            "n_prompts": 125,
+            "a": 0.0009999999999999976,
+            "beta": -4.3574997158679594e-17,
+            "beta_ci95": [
+              -0.49539087108815805,
+              -4.3574997158679594e-17
+            ],
+            "r2": 1.0,
+            "n_clipped": 4,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "smollm2-135m-instruct",
+                "size": 134515008,
+                "residual": -0.152,
+                "residual_pp": -15.2,
+                "ci95_pp": [
+                  -21.6,
+                  -9.6
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.152
+                ]
+              },
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": -0.048,
+                "residual_pp": -4.8,
+                "ci95_pp": [
+                  -9.6,
+                  -1.6
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.048
+                ]
+              },
+              {
+                "model": "smollm2-1.7b-instruct",
+                "size": 1711376384,
+                "residual": -0.024,
+                "residual_pp": -2.4,
+                "ci95_pp": [
+                  -5.6,
+                  0.8
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.024
+                ]
+              },
+              {
+                "model": "smollm3-3b",
+                "size": 3075098624,
+                "residual": -0.024,
+                "residual_pp": -2.4,
+                "ci95_pp": [
+                  -6.4,
+                  0.8
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.024
+                ]
+              }
+            ],
+            "degenerate": true
+          },
+          "v4": {
+            "n_points": 4,
+            "n_prompts": 125,
+            "a": 0.0009999999999999976,
+            "beta": -4.3574997158679594e-17,
+            "beta_ci95": [
+              -4.3574997158679594e-17,
+              -4.3574997158679594e-17
+            ],
+            "r2": 1.0,
+            "n_clipped": 4,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "smollm2-135m-instruct",
+                "size": 134515008,
+                "residual": -0.016,
+                "residual_pp": -1.6,
+                "ci95_pp": [
+                  -4.0,
+                  0.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.016
+                ]
+              },
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": -0.088,
+                "residual_pp": -8.8,
+                "ci95_pp": [
+                  -13.6,
+                  -4.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.088
+                ]
+              },
+              {
+                "model": "smollm2-1.7b-instruct",
+                "size": 1711376384,
+                "residual": -0.032,
+                "residual_pp": -3.2,
+                "ci95_pp": [
+                  -6.4,
+                  -0.8
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.032
+                ]
+              },
+              {
+                "model": "smollm3-3b",
+                "size": 3075098624,
+                "residual": -0.176,
+                "residual_pp": -17.6,
+                "ci95_pp": [
+                  -24.8,
+                  -10.4
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.176
+                ]
+              }
+            ],
+            "degenerate": true
+          }
+        },
+        "all": {
+          "v1": {
+            "n_points": 4,
+            "n_prompts": 325,
+            "a": 11.799488973752018,
+            "beta": 0.13048037892640965,
+            "beta_ci95": [
+              0.10849825826553001,
+              0.15397236251290491
+            ],
+            "r2": 0.705720927466361,
+            "n_clipped": 0,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "smollm2-135m-instruct",
+                "size": 134515008,
+                "residual": 1.0,
+                "residual_pp": 100.0,
+                "ci95_pp": [
+                  100.0,
+                  100.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  1.0
+                ]
+              },
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": 0.9784615384615385,
+                "residual_pp": 97.85,
+                "ci95_pp": [
+                  96.0,
+                  99.38
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.9785
+                ]
+              },
+              {
+                "model": "smollm2-1.7b-instruct",
+                "size": 1711376384,
+                "residual": 0.6276923076923077,
+                "residual_pp": 62.77,
+                "ci95_pp": [
+                  57.23,
+                  68.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.6277
+                ]
+              },
+              {
+                "model": "smollm3-3b",
+                "size": 3075098624,
+                "residual": 0.7569230769230769,
+                "residual_pp": 75.69,
+                "ci95_pp": [
+                  70.77,
+                  80.31
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.7569
+                ]
+              }
+            ],
+            "degenerate": false
+          },
+          "v2": {
+            "n_points": 4,
+            "n_prompts": 325,
+            "a": 3.5832015761655965e-08,
+            "beta": -0.5294821644299926,
+            "beta_ci95": [
+              -0.8118544843798037,
+              -4.3574997158679594e-17
+            ],
+            "r2": 0.46498231405098855,
+            "n_clipped": 3,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "smollm2-135m-instruct",
+                "size": 134515008,
+                "residual": -0.003076923076923077,
+                "residual_pp": -0.31,
+                "ci95_pp": [
+                  -0.92,
+                  0.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.0031
+                ]
+              },
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": -0.012307692307692308,
+                "residual_pp": -1.23,
+                "ci95_pp": [
+                  -2.46,
+                  -0.31
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.0123
+                ]
+              },
+              {
+                "model": "smollm2-1.7b-instruct",
+                "size": 1711376384,
+                "residual": -0.006153846153846154,
+                "residual_pp": -0.62,
+                "ci95_pp": [
+                  -1.85,
+                  0.62
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.0062
+                ]
+              },
+              {
+                "model": "smollm3-3b",
+                "size": 3075098624,
+                "residual": 0.009230769230769232,
+                "residual_pp": 0.92,
+                "ci95_pp": [
+                  0.0,
+                  2.15
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.0092
+                ]
+              }
+            ],
+            "degenerate": true
+          },
+          "v3": {
+            "n_points": 4,
+            "n_prompts": 325,
+            "a": 0.0009999999999999976,
+            "beta": -4.3574997158679594e-17,
+            "beta_ci95": [
+              -4.3574997158679594e-17,
+              -4.3574997158679594e-17
+            ],
+            "r2": 1.0,
+            "n_clipped": 4,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "smollm2-135m-instruct",
+                "size": 134515008,
+                "residual": -0.13846153846153847,
+                "residual_pp": -13.85,
+                "ci95_pp": [
+                  -17.54,
+                  -10.15
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.1385
+                ]
+              },
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": -0.10461538461538461,
+                "residual_pp": -10.46,
+                "ci95_pp": [
+                  -13.85,
+                  -7.38
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.1046
+                ]
+              },
+              {
+                "model": "smollm2-1.7b-instruct",
+                "size": 1711376384,
+                "residual": -0.14461538461538462,
+                "residual_pp": -14.46,
+                "ci95_pp": [
+                  -19.08,
+                  -10.45
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.1446
+                ]
+              },
+              {
+                "model": "smollm3-3b",
+                "size": 3075098624,
+                "residual": -0.16923076923076924,
+                "residual_pp": -16.92,
+                "ci95_pp": [
+                  -21.54,
+                  -12.62
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.1692
+                ]
+              }
+            ],
+            "degenerate": true
+          },
+          "v4": {
+            "n_points": 4,
+            "n_prompts": 325,
+            "a": 0.0009999999999999976,
+            "beta": -4.3574997158679594e-17,
+            "beta_ci95": [
+              -4.3574997158679594e-17,
+              -4.3574997158679594e-17
+            ],
+            "r2": 1.0,
+            "n_clipped": 4,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "smollm2-135m-instruct",
+                "size": 134515008,
+                "residual": -0.012307692307692308,
+                "residual_pp": -1.23,
+                "ci95_pp": [
+                  -2.46,
+                  -0.31
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.0123
+                ]
+              },
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": -0.08,
+                "residual_pp": -8.0,
+                "ci95_pp": [
+                  -10.77,
+                  -5.23
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.08
+                ]
+              },
+              {
+                "model": "smollm2-1.7b-instruct",
+                "size": 1711376384,
+                "residual": -0.07384615384615385,
+                "residual_pp": -7.38,
+                "ci95_pp": [
+                  -10.15,
+                  -4.62
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.0738
+                ]
+              },
+              {
+                "model": "smollm3-3b",
+                "size": 3075098624,
+                "residual": -0.11692307692307692,
+                "residual_pp": -11.69,
+                "ci95_pp": [
+                  -15.38,
+                  -8.31
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.1169
+                ]
+              }
+            ],
+            "degenerate": true
+          }
+        }
+      },
+      "gemma": {
+        "arith_func_200": {
+          "v1": {
+            "n_points": 2,
+            "n_prompts": 200,
+            "a": 0.0004580652142801367,
+            "beta": -0.3599397383519817,
+            "beta_ci95": [
+              -0.4775758703796665,
+              -0.25562205311131425
+            ],
+            "r2": 1.0,
+            "n_clipped": 0,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "gemma-3-270m-it",
+                "size": 268098176,
+                "residual": 0.495,
+                "residual_pp": 49.5,
+                "ci95_pp": [
+                  42.5,
+                  56.5
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.495
+                ]
+              },
+              {
+                "model": "gemma-3-1b-it",
+                "size": 999885952,
+                "residual": 0.795,
+                "residual_pp": 79.5,
+                "ci95_pp": [
+                  73.5,
+                  85.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.795
+                ]
+              }
+            ],
+            "degenerate": false
+          },
+          "v2": {
+            "n_points": 2,
+            "n_prompts": 200,
+            "a": 101000973.37626347,
+            "beta": 1.222709569332874,
+            "beta_ci95": [
+              -1.749301918176557,
+              2.0573386954167847
+            ],
+            "r2": 1.0,
+            "n_clipped": 1,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "gemma-3-270m-it",
+                "size": 268098176,
+                "residual": 0.005,
+                "residual_pp": 0.5,
+                "ci95_pp": [
+                  0.0,
+                  1.5
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.005
+                ]
+              },
+              {
+                "model": "gemma-3-1b-it",
+                "size": 999885952,
+                "residual": 0.0,
+                "residual_pp": 0.0,
+                "ci95_pp": [
+                  -1.5,
+                  1.5
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.0
+                ]
+              }
+            ],
+            "degenerate": true
+          },
+          "v3": {
+            "n_points": 2,
+            "n_prompts": 200,
+            "a": 0.0010000000000000206,
+            "beta": 8.138029020629926e-16,
+            "beta_ci95": [
+              8.138029020629926e-16,
+              8.138029020629926e-16
+            ],
+            "r2": 1.0,
+            "n_clipped": 2,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "gemma-3-270m-it",
+                "size": 268098176,
+                "residual": -0.09,
+                "residual_pp": -9.0,
+                "ci95_pp": [
+                  -13.0,
+                  -5.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.09
+                ]
+              },
+              {
+                "model": "gemma-3-1b-it",
+                "size": 999885952,
+                "residual": -0.335,
+                "residual_pp": -33.5,
+                "ci95_pp": [
+                  -40.0,
+                  -26.5
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.335
+                ]
+              }
+            ],
+            "degenerate": true
+          },
+          "v4": {
+            "n_points": 2,
+            "n_prompts": 200,
+            "a": 0.0010000000000000206,
+            "beta": 8.138029020629926e-16,
+            "beta_ci95": [
+              8.138029020629926e-16,
+              8.138029020629926e-16
+            ],
+            "r2": 1.0,
+            "n_clipped": 2,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "gemma-3-270m-it",
+                "size": 268098176,
+                "residual": 0.0,
+                "residual_pp": 0.0,
+                "ci95_pp": [
+                  0.0,
+                  0.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.0
+                ]
+              },
+              {
+                "model": "gemma-3-1b-it",
+                "size": 999885952,
+                "residual": 0.0,
+                "residual_pp": 0.0,
+                "ci95_pp": [
+                  0.0,
+                  0.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.0
+                ]
+              }
+            ],
+            "degenerate": true
+          }
+        },
+        "linalg_125": {
+          "v1": {
+            "n_points": 2,
+            "n_prompts": 125,
+            "a": 1.1381537071292334,
+            "beta": 0.01420064093720525,
+            "beta_ci95": [
+              -0.06192540076540772,
+              0.09032115862573975
+            ],
+            "r2": 1.0,
+            "n_clipped": 0,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "gemma-3-270m-it",
+                "size": 268098176,
+                "residual": 0.864,
+                "residual_pp": 86.4,
+                "ci95_pp": [
+                  80.0,
+                  92.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.864
+                ]
+              },
+              {
+                "model": "gemma-3-1b-it",
+                "size": 999885952,
+                "residual": 0.848,
+                "residual_pp": 84.8,
+                "ci95_pp": [
+                  77.6,
+                  90.4
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.848
+                ]
+              }
+            ],
+            "degenerate": false
+          },
+          "v2": {
+            "n_points": 2,
+            "n_prompts": 125,
+            "a": 0.0010000000000000206,
+            "beta": 8.138029020629926e-16,
+            "beta_ci95": [
+              8.138029020629926e-16,
+              8.138029020629926e-16
+            ],
+            "r2": 1.0,
+            "n_clipped": 2,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "gemma-3-270m-it",
+                "size": 268098176,
+                "residual": 0.0,
+                "residual_pp": 0.0,
+                "ci95_pp": [
+                  0.0,
+                  0.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.0
+                ]
+              },
+              {
+                "model": "gemma-3-1b-it",
+                "size": 999885952,
+                "residual": 0.0,
+                "residual_pp": 0.0,
+                "ci95_pp": [
+                  0.0,
+                  0.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.0
+                ]
+              }
+            ],
+            "degenerate": true
+          },
+          "v3": {
+            "n_points": 2,
+            "n_prompts": 125,
+            "a": 0.0010000000000000206,
+            "beta": 8.138029020629926e-16,
+            "beta_ci95": [
+              8.138029020629926e-16,
+              8.138029020629926e-16
+            ],
+            "r2": 1.0,
+            "n_clipped": 2,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "gemma-3-270m-it",
+                "size": 268098176,
+                "residual": -0.048,
+                "residual_pp": -4.8,
+                "ci95_pp": [
+                  -8.8,
+                  -1.6
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.048
+                ]
+              },
+              {
+                "model": "gemma-3-1b-it",
+                "size": 999885952,
+                "residual": -0.024,
+                "residual_pp": -2.4,
+                "ci95_pp": [
+                  -5.6,
+                  0.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.024
+                ]
+              }
+            ],
+            "degenerate": true
+          },
+          "v4": {
+            "n_points": 2,
+            "n_prompts": 125,
+            "a": 0.0010000000000000206,
+            "beta": 8.138029020629926e-16,
+            "beta_ci95": [
+              8.138029020629926e-16,
+              8.138029020629926e-16
+            ],
+            "r2": 1.0,
+            "n_clipped": 2,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "gemma-3-270m-it",
+                "size": 268098176,
+                "residual": -0.16,
+                "residual_pp": -16.0,
+                "ci95_pp": [
+                  -22.4,
+                  -9.6
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.16
+                ]
+              },
+              {
+                "model": "gemma-3-1b-it",
+                "size": 999885952,
+                "residual": -0.128,
+                "residual_pp": -12.8,
+                "ci95_pp": [
+                  -19.2,
+                  -7.2
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.128
+                ]
+              }
+            ],
+            "degenerate": true
+          }
+        },
+        "all": {
+          "v1": {
+            "n_points": 2,
+            "n_prompts": 325,
+            "a": 0.01668999545997853,
+            "beta": -0.18765728774327559,
+            "beta_ci95": [
+              -0.25620092981180037,
+              -0.1196758406834513
+            ],
+            "r2": 1.0,
+            "n_clipped": 0,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "gemma-3-270m-it",
+                "size": 268098176,
+                "residual": 0.6369230769230769,
+                "residual_pp": 63.69,
+                "ci95_pp": [
+                  58.46,
+                  68.92
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.6369
+                ]
+              },
+              {
+                "model": "gemma-3-1b-it",
+                "size": 999885952,
+                "residual": 0.8153846153846154,
+                "residual_pp": 81.54,
+                "ci95_pp": [
+                  77.53,
+                  85.54
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.8154
+                ]
+              }
+            ],
+            "degenerate": false
+          },
+          "v2": {
+            "n_points": 2,
+            "n_prompts": 325,
+            "a": 48386.92926806957,
+            "beta": 0.8538633729335501,
+            "beta_ci95": [
+              -1.3804557217772315,
+              1.688492499017461
+            ],
+            "r2": 1.0,
+            "n_clipped": 1,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "gemma-3-270m-it",
+                "size": 268098176,
+                "residual": 0.003076923076923077,
+                "residual_pp": 0.31,
+                "ci95_pp": [
+                  0.0,
+                  0.92
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.0031
+                ]
+              },
+              {
+                "model": "gemma-3-1b-it",
+                "size": 999885952,
+                "residual": 0.0,
+                "residual_pp": 0.0,
+                "ci95_pp": [
+                  -0.92,
+                  0.92
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.0
+                ]
+              }
+            ],
+            "degenerate": true
+          },
+          "v3": {
+            "n_points": 2,
+            "n_prompts": 325,
+            "a": 0.0010000000000000206,
+            "beta": 8.138029020629926e-16,
+            "beta_ci95": [
+              8.138029020629926e-16,
+              8.138029020629926e-16
+            ],
+            "r2": 1.0,
+            "n_clipped": 2,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "gemma-3-270m-it",
+                "size": 268098176,
+                "residual": -0.07384615384615385,
+                "residual_pp": -7.38,
+                "ci95_pp": [
+                  -10.16,
+                  -4.62
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.0738
+                ]
+              },
+              {
+                "model": "gemma-3-1b-it",
+                "size": 999885952,
+                "residual": -0.2153846153846154,
+                "residual_pp": -21.54,
+                "ci95_pp": [
+                  -26.15,
+                  -17.23
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.2154
+                ]
+              }
+            ],
+            "degenerate": true
+          },
+          "v4": {
+            "n_points": 2,
+            "n_prompts": 325,
+            "a": 0.0010000000000000206,
+            "beta": 8.138029020629926e-16,
+            "beta_ci95": [
+              8.138029020629926e-16,
+              8.138029020629926e-16
+            ],
+            "r2": 1.0,
+            "n_clipped": 2,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "gemma-3-270m-it",
+                "size": 268098176,
+                "residual": -0.06153846153846154,
+                "residual_pp": -6.15,
+                "ci95_pp": [
+                  -8.92,
+                  -3.69
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.0615
+                ]
+              },
+              {
+                "model": "gemma-3-1b-it",
+                "size": 999885952,
+                "residual": -0.04923076923076923,
+                "residual_pp": -4.92,
+                "ci95_pp": [
+                  -7.38,
+                  -2.77
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.0492
+                ]
+              }
+            ],
+            "degenerate": true
+          }
+        }
+      },
+      "all": {
+        "arith_func_200": {
+          "v1": {
+            "n_points": 6,
+            "n_prompts": 200,
+            "a": 0.9061690868521373,
+            "beta": 0.006654363262340123,
+            "beta_ci95": [
+              -0.017775418730296862,
+              0.032256975075858826
+            ],
+            "r2": 0.000976846538203402,
+            "n_clipped": 0,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "smollm2-135m-instruct",
+                "size": 134515008,
+                "residual": 1.0,
+                "residual_pp": 100.0,
+                "ci95_pp": [
+                  100.0,
+                  100.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  1.0
+                ]
+              },
+              {
+                "model": "gemma-3-270m-it",
+                "size": 268098176,
+                "residual": 0.495,
+                "residual_pp": 49.5,
+                "ci95_pp": [
+                  42.0,
+                  56.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.495
+                ]
+              },
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": 0.985,
+                "residual_pp": 98.5,
+                "ci95_pp": [
+                  96.5,
+                  100.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.985
+                ]
+              },
+              {
+                "model": "gemma-3-1b-it",
+                "size": 999885952,
+                "residual": 0.795,
+                "residual_pp": 79.5,
+                "ci95_pp": [
+                  74.0,
+                  85.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.795
+                ]
+              },
+              {
+                "model": "smollm2-1.7b-instruct",
+                "size": 1711376384,
+                "residual": 0.78,
+                "residual_pp": 78.0,
+                "ci95_pp": [
+                  72.0,
+                  83.5
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.78
+                ]
+              },
+              {
+                "model": "smollm3-3b",
+                "size": 3075098624,
+                "residual": 0.815,
+                "residual_pp": 81.5,
+                "ci95_pp": [
+                  76.0,
+                  86.5
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.815
+                ]
+              }
+            ],
+            "degenerate": false
+          },
+          "v2": {
+            "n_points": 6,
+            "n_prompts": 200,
+            "a": 6.297458775625481e-07,
+            "beta": -0.3989663217450714,
+            "beta_ci95": [
+              -0.8683638505283129,
+              0.11182834703019426
+            ],
+            "r2": 0.16684447387189894,
+            "n_clipped": 4,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "smollm2-135m-instruct",
+                "size": 134515008,
+                "residual": -0.005,
+                "residual_pp": -0.5,
+                "ci95_pp": [
+                  -1.5,
+                  0.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.005
+                ]
+              },
+              {
+                "model": "gemma-3-270m-it",
+                "size": 268098176,
+                "residual": 0.005,
+                "residual_pp": 0.5,
+                "ci95_pp": [
+                  0.0,
+                  1.5
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.005
+                ]
+              },
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": -0.02,
+                "residual_pp": -2.0,
+                "ci95_pp": [
+                  -4.0,
+                  -0.5
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.02
+                ]
+              },
+              {
+                "model": "gemma-3-1b-it",
+                "size": 999885952,
+                "residual": 0.0,
+                "residual_pp": 0.0,
+                "ci95_pp": [
+                  -1.5,
+                  1.5
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.0
+                ]
+              },
+              {
+                "model": "smollm2-1.7b-instruct",
+                "size": 1711376384,
+                "residual": -0.01,
+                "residual_pp": -1.0,
+                "ci95_pp": [
+                  -3.0,
+                  1.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.01
+                ]
+              },
+              {
+                "model": "smollm3-3b",
+                "size": 3075098624,
+                "residual": 0.015,
+                "residual_pp": 1.5,
+                "ci95_pp": [
+                  0.0,
+                  3.5
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.015
+                ]
+              }
+            ],
+            "degenerate": false
+          },
+          "v3": {
+            "n_points": 6,
+            "n_prompts": 200,
+            "a": 0.0009999999999999833,
+            "beta": -4.2917616851627595e-16,
+            "beta_ci95": [
+              -4.2917616851627595e-16,
+              -4.2917616851627595e-16
+            ],
+            "r2": 1.0,
+            "n_clipped": 6,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "smollm2-135m-instruct",
+                "size": 134515008,
+                "residual": -0.13,
+                "residual_pp": -13.0,
+                "ci95_pp": [
+                  -18.0,
+                  -8.5
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.13
+                ]
+              },
+              {
+                "model": "gemma-3-270m-it",
+                "size": 268098176,
+                "residual": -0.09,
+                "residual_pp": -9.0,
+                "ci95_pp": [
+                  -13.0,
+                  -5.5
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.09
+                ]
+              },
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": -0.14,
+                "residual_pp": -14.0,
+                "ci95_pp": [
+                  -19.0,
+                  -9.5
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.14
+                ]
+              },
+              {
+                "model": "gemma-3-1b-it",
+                "size": 999885952,
+                "residual": -0.335,
+                "residual_pp": -33.5,
+                "ci95_pp": [
+                  -40.0,
+                  -27.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.335
+                ]
+              },
+              {
+                "model": "smollm2-1.7b-instruct",
+                "size": 1711376384,
+                "residual": -0.22,
+                "residual_pp": -22.0,
+                "ci95_pp": [
+                  -28.5,
+                  -16.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.22
+                ]
+              },
+              {
+                "model": "smollm3-3b",
+                "size": 3075098624,
+                "residual": -0.26,
+                "residual_pp": -26.0,
+                "ci95_pp": [
+                  -32.5,
+                  -19.5
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.26
+                ]
+              }
+            ],
+            "degenerate": true
+          },
+          "v4": {
+            "n_points": 6,
+            "n_prompts": 200,
+            "a": 0.0009999999999999833,
+            "beta": -4.2917616851627595e-16,
+            "beta_ci95": [
+              -4.2917616851627595e-16,
+              -4.2917616851627595e-16
+            ],
+            "r2": 1.0,
+            "n_clipped": 6,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "smollm2-135m-instruct",
+                "size": 134515008,
+                "residual": -0.01,
+                "residual_pp": -1.0,
+                "ci95_pp": [
+                  -2.5,
+                  0.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.01
+                ]
+              },
+              {
+                "model": "gemma-3-270m-it",
+                "size": 268098176,
+                "residual": 0.0,
+                "residual_pp": 0.0,
+                "ci95_pp": [
+                  0.0,
+                  0.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.0
+                ]
+              },
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": -0.075,
+                "residual_pp": -7.5,
+                "ci95_pp": [
+                  -11.5,
+                  -4.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.075
+                ]
+              },
+              {
+                "model": "gemma-3-1b-it",
+                "size": 999885952,
+                "residual": 0.0,
+                "residual_pp": 0.0,
+                "ci95_pp": [
+                  0.0,
+                  0.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.0
+                ]
+              },
+              {
+                "model": "smollm2-1.7b-instruct",
+                "size": 1711376384,
+                "residual": -0.1,
+                "residual_pp": -10.0,
+                "ci95_pp": [
+                  -14.01,
+                  -6.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.1
+                ]
+              },
+              {
+                "model": "smollm3-3b",
+                "size": 3075098624,
+                "residual": -0.08,
+                "residual_pp": -8.0,
+                "ci95_pp": [
+                  -12.0,
+                  -4.5
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.08
+                ]
+              }
+            ],
+            "degenerate": true
+          }
+        },
+        "linalg_125": {
+          "v1": {
+            "n_points": 6,
+            "n_prompts": 125,
+            "a": 54.930479830934864,
+            "beta": 0.21162550329083377,
+            "beta_ci95": [
+              0.16833441497929716,
+              0.2604784941925201
+            ],
+            "r2": 0.49545787504053496,
+            "n_clipped": 0,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "smollm2-135m-instruct",
+                "size": 134515008,
+                "residual": 1.0,
+                "residual_pp": 100.0,
+                "ci95_pp": [
+                  100.0,
+                  100.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  1.0
+                ]
+              },
+              {
+                "model": "gemma-3-270m-it",
+                "size": 268098176,
+                "residual": 0.864,
+                "residual_pp": 86.4,
+                "ci95_pp": [
+                  80.0,
+                  92.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.864
+                ]
+              },
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": 0.968,
+                "residual_pp": 96.8,
+                "ci95_pp": [
+                  93.6,
+                  99.2
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.968
+                ]
+              },
+              {
+                "model": "gemma-3-1b-it",
+                "size": 999885952,
+                "residual": 0.848,
+                "residual_pp": 84.8,
+                "ci95_pp": [
+                  78.4,
+                  90.4
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.848
+                ]
+              },
+              {
+                "model": "smollm2-1.7b-instruct",
+                "size": 1711376384,
+                "residual": 0.384,
+                "residual_pp": 38.4,
+                "ci95_pp": [
+                  29.6,
+                  47.2
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.384
+                ]
+              },
+              {
+                "model": "smollm3-3b",
+                "size": 3075098624,
+                "residual": 0.664,
+                "residual_pp": 66.4,
+                "ci95_pp": [
+                  58.4,
+                  74.4
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.664
+                ]
+              }
+            ],
+            "degenerate": false
+          },
+          "v2": {
+            "n_points": 6,
+            "n_prompts": 125,
+            "a": 0.0009999999999999833,
+            "beta": -4.2917616851627595e-16,
+            "beta_ci95": [
+              -4.2917616851627595e-16,
+              -4.2917616851627595e-16
+            ],
+            "r2": 1.0,
+            "n_clipped": 6,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "smollm2-135m-instruct",
+                "size": 134515008,
+                "residual": 0.0,
+                "residual_pp": 0.0,
+                "ci95_pp": [
+                  0.0,
+                  0.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.0
+                ]
+              },
+              {
+                "model": "gemma-3-270m-it",
+                "size": 268098176,
+                "residual": 0.0,
+                "residual_pp": 0.0,
+                "ci95_pp": [
+                  0.0,
+                  0.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.0
+                ]
+              },
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": 0.0,
+                "residual_pp": 0.0,
+                "ci95_pp": [
+                  0.0,
+                  0.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.0
+                ]
+              },
+              {
+                "model": "gemma-3-1b-it",
+                "size": 999885952,
+                "residual": 0.0,
+                "residual_pp": 0.0,
+                "ci95_pp": [
+                  0.0,
+                  0.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.0
+                ]
+              },
+              {
+                "model": "smollm2-1.7b-instruct",
+                "size": 1711376384,
+                "residual": 0.0,
+                "residual_pp": 0.0,
+                "ci95_pp": [
+                  0.0,
+                  0.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.0
+                ]
+              },
+              {
+                "model": "smollm3-3b",
+                "size": 3075098624,
+                "residual": 0.0,
+                "residual_pp": 0.0,
+                "ci95_pp": [
+                  0.0,
+                  0.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.0
+                ]
+              }
+            ],
+            "degenerate": true
+          },
+          "v3": {
+            "n_points": 6,
+            "n_prompts": 125,
+            "a": 0.0009999999999999833,
+            "beta": -4.2917616851627595e-16,
+            "beta_ci95": [
+              -0.45682084507832027,
+              -4.2917616851627595e-16
+            ],
+            "r2": 1.0,
+            "n_clipped": 6,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "smollm2-135m-instruct",
+                "size": 134515008,
+                "residual": -0.152,
+                "residual_pp": -15.2,
+                "ci95_pp": [
+                  -21.6,
+                  -9.6
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.152
+                ]
+              },
+              {
+                "model": "gemma-3-270m-it",
+                "size": 268098176,
+                "residual": -0.048,
+                "residual_pp": -4.8,
+                "ci95_pp": [
+                  -8.8,
+                  -1.6
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.048
+                ]
+              },
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": -0.048,
+                "residual_pp": -4.8,
+                "ci95_pp": [
+                  -8.8,
+                  -1.6
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.048
+                ]
+              },
+              {
+                "model": "gemma-3-1b-it",
+                "size": 999885952,
+                "residual": -0.024,
+                "residual_pp": -2.4,
+                "ci95_pp": [
+                  -5.6,
+                  0.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.024
+                ]
+              },
+              {
+                "model": "smollm2-1.7b-instruct",
+                "size": 1711376384,
+                "residual": -0.024,
+                "residual_pp": -2.4,
+                "ci95_pp": [
+                  -6.4,
+                  0.8
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.024
+                ]
+              },
+              {
+                "model": "smollm3-3b",
+                "size": 3075098624,
+                "residual": -0.024,
+                "residual_pp": -2.4,
+                "ci95_pp": [
+                  -6.4,
+                  0.8
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.024
+                ]
+              }
+            ],
+            "degenerate": true
+          },
+          "v4": {
+            "n_points": 6,
+            "n_prompts": 125,
+            "a": 0.0009999999999999833,
+            "beta": -4.2917616851627595e-16,
+            "beta_ci95": [
+              -4.2917616851627595e-16,
+              -4.2917616851627595e-16
+            ],
+            "r2": 1.0,
+            "n_clipped": 6,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "smollm2-135m-instruct",
+                "size": 134515008,
+                "residual": -0.016,
+                "residual_pp": -1.6,
+                "ci95_pp": [
+                  -4.0,
+                  0.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.016
+                ]
+              },
+              {
+                "model": "gemma-3-270m-it",
+                "size": 268098176,
+                "residual": -0.16,
+                "residual_pp": -16.0,
+                "ci95_pp": [
+                  -22.4,
+                  -10.4
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.16
+                ]
+              },
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": -0.088,
+                "residual_pp": -8.8,
+                "ci95_pp": [
+                  -13.62,
+                  -4.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.088
+                ]
+              },
+              {
+                "model": "gemma-3-1b-it",
+                "size": 999885952,
+                "residual": -0.128,
+                "residual_pp": -12.8,
+                "ci95_pp": [
+                  -19.2,
+                  -7.2
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.128
+                ]
+              },
+              {
+                "model": "smollm2-1.7b-instruct",
+                "size": 1711376384,
+                "residual": -0.032,
+                "residual_pp": -3.2,
+                "ci95_pp": [
+                  -6.4,
+                  -0.8
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.032
+                ]
+              },
+              {
+                "model": "smollm3-3b",
+                "size": 3075098624,
+                "residual": -0.176,
+                "residual_pp": -17.6,
+                "ci95_pp": [
+                  -24.8,
+                  -10.4
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.176
+                ]
+              }
+            ],
+            "degenerate": true
+          }
+        },
+        "all": {
+          "v1": {
+            "n_points": 6,
+            "n_prompts": 325,
+            "a": 4.109541454942588,
+            "beta": 0.0813822074713267,
+            "beta_ci95": [
+              0.05766482308598938,
+              0.10594404847861201
+            ],
+            "r2": 0.23262210932844196,
+            "n_clipped": 0,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "smollm2-135m-instruct",
+                "size": 134515008,
+                "residual": 1.0,
+                "residual_pp": 100.0,
+                "ci95_pp": [
+                  100.0,
+                  100.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  1.0
+                ]
+              },
+              {
+                "model": "gemma-3-270m-it",
+                "size": 268098176,
+                "residual": 0.6369230769230769,
+                "residual_pp": 63.69,
+                "ci95_pp": [
+                  58.77,
+                  68.62
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.6369
+                ]
+              },
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": 0.9784615384615385,
+                "residual_pp": 97.85,
+                "ci95_pp": [
+                  96.31,
+                  99.38
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.9785
+                ]
+              },
+              {
+                "model": "gemma-3-1b-it",
+                "size": 999885952,
+                "residual": 0.8153846153846154,
+                "residual_pp": 81.54,
+                "ci95_pp": [
+                  77.23,
+                  85.54
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.8154
+                ]
+              },
+              {
+                "model": "smollm2-1.7b-instruct",
+                "size": 1711376384,
+                "residual": 0.6276923076923077,
+                "residual_pp": 62.77,
+                "ci95_pp": [
+                  57.54,
+                  68.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.6277
+                ]
+              },
+              {
+                "model": "smollm3-3b",
+                "size": 3075098624,
+                "residual": 0.7569230769230769,
+                "residual_pp": 75.69,
+                "ci95_pp": [
+                  71.08,
+                  80.31
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.7569
+                ]
+              }
+            ],
+            "degenerate": false
+          },
+          "v2": {
+            "n_points": 6,
+            "n_prompts": 325,
+            "a": 1.4047235785369804e-06,
+            "beta": -0.3514187020115055,
+            "beta_ci95": [
+              -0.7327150956721422,
+              0.13683916450409161
+            ],
+            "r2": 0.20349435264231786,
+            "n_clipped": 4,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "smollm2-135m-instruct",
+                "size": 134515008,
+                "residual": -0.003076923076923077,
+                "residual_pp": -0.31,
+                "ci95_pp": [
+                  -0.92,
+                  0.0
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.0031
+                ]
+              },
+              {
+                "model": "gemma-3-270m-it",
+                "size": 268098176,
+                "residual": 0.003076923076923077,
+                "residual_pp": 0.31,
+                "ci95_pp": [
+                  0.0,
+                  0.92
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.0031
+                ]
+              },
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": -0.012307692307692308,
+                "residual_pp": -1.23,
+                "ci95_pp": [
+                  -2.46,
+                  -0.31
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.0123
+                ]
+              },
+              {
+                "model": "gemma-3-1b-it",
+                "size": 999885952,
+                "residual": 0.0,
+                "residual_pp": 0.0,
+                "ci95_pp": [
+                  -0.92,
+                  0.92
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.0
+                ]
+              },
+              {
+                "model": "smollm2-1.7b-instruct",
+                "size": 1711376384,
+                "residual": -0.006153846153846154,
+                "residual_pp": -0.62,
+                "ci95_pp": [
+                  -1.85,
+                  0.62
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.0062
+                ]
+              },
+              {
+                "model": "smollm3-3b",
+                "size": 3075098624,
+                "residual": 0.009230769230769232,
+                "residual_pp": 0.92,
+                "ci95_pp": [
+                  0.0,
+                  2.15
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  0.0092
+                ]
+              }
+            ],
+            "degenerate": false
+          },
+          "v3": {
+            "n_points": 6,
+            "n_prompts": 325,
+            "a": 0.0009999999999999833,
+            "beta": -4.2917616851627595e-16,
+            "beta_ci95": [
+              -4.2917616851627595e-16,
+              -4.2917616851627595e-16
+            ],
+            "r2": 1.0,
+            "n_clipped": 6,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "smollm2-135m-instruct",
+                "size": 134515008,
+                "residual": -0.13846153846153847,
+                "residual_pp": -13.85,
+                "ci95_pp": [
+                  -17.54,
+                  -10.15
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.1385
+                ]
+              },
+              {
+                "model": "gemma-3-270m-it",
+                "size": 268098176,
+                "residual": -0.07384615384615385,
+                "residual_pp": -7.38,
+                "ci95_pp": [
+                  -10.46,
+                  -4.62
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.0738
+                ]
+              },
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": -0.10461538461538461,
+                "residual_pp": -10.46,
+                "ci95_pp": [
+                  -13.54,
+                  -7.38
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.1046
+                ]
+              },
+              {
+                "model": "gemma-3-1b-it",
+                "size": 999885952,
+                "residual": -0.2153846153846154,
+                "residual_pp": -21.54,
+                "ci95_pp": [
+                  -26.15,
+                  -16.92
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.2154
+                ]
+              },
+              {
+                "model": "smollm2-1.7b-instruct",
+                "size": 1711376384,
+                "residual": -0.14461538461538462,
+                "residual_pp": -14.46,
+                "ci95_pp": [
+                  -18.77,
+                  -10.46
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.1446
+                ]
+              },
+              {
+                "model": "smollm3-3b",
+                "size": 3075098624,
+                "residual": -0.16923076923076924,
+                "residual_pp": -16.92,
+                "ci95_pp": [
+                  -21.54,
+                  -12.61
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.1692
+                ]
+              }
+            ],
+            "degenerate": true
+          },
+          "v4": {
+            "n_points": 6,
+            "n_prompts": 325,
+            "a": 0.0009999999999999833,
+            "beta": -4.2917616851627595e-16,
+            "beta_ci95": [
+              -4.2917616851627595e-16,
+              -4.2917616851627595e-16
+            ],
+            "r2": 1.0,
+            "n_clipped": 6,
+            "eps": 0.001,
+            "n_boot": 2000,
+            "points": [
+              {
+                "model": "smollm2-135m-instruct",
+                "size": 134515008,
+                "residual": -0.012307692307692308,
+                "residual_pp": -1.23,
+                "ci95_pp": [
+                  -2.46,
+                  -0.31
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.0123
+                ]
+              },
+              {
+                "model": "gemma-3-270m-it",
+                "size": 268098176,
+                "residual": -0.06153846153846154,
+                "residual_pp": -6.15,
+                "ci95_pp": [
+                  -8.92,
+                  -3.69
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.0615
+                ]
+              },
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": -0.08,
+                "residual_pp": -8.0,
+                "ci95_pp": [
+                  -11.38,
+                  -5.23
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.08
+                ]
+              },
+              {
+                "model": "gemma-3-1b-it",
+                "size": 999885952,
+                "residual": -0.04923076923076923,
+                "residual_pp": -4.92,
+                "ci95_pp": [
+                  -7.38,
+                  -2.77
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.0492
+                ]
+              },
+              {
+                "model": "smollm2-1.7b-instruct",
+                "size": 1711376384,
+                "residual": -0.07384615384615385,
+                "residual_pp": -7.38,
+                "ci95_pp": [
+                  -10.15,
+                  -4.62
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.0738
+                ]
+              },
+              {
+                "model": "smollm3-3b",
+                "size": 3075098624,
+                "residual": -0.11692307692307692,
+                "residual_pp": -11.69,
+                "ci95_pp": [
+                  -15.38,
+                  -8.31
+                ],
+                "n_seeds": 1,
+                "per_seed": [
+                  -0.1169
+                ]
+              }
+            ],
+            "degenerate": true
+          }
+        }
+      }
+    },
+    "trained:ssd": {
+      "smollm": {
+        "arith_func_200": {
+          "v1": {
+            "n_points": 1,
+            "note": "need \u2265 2 scales",
+            "points": [
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": 0.15,
+                "residual_pp": 15.0
+              }
+            ]
+          },
+          "v2": {
+            "n_points": 1,
+            "note": "need \u2265 2 scales",
+            "points": [
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": 0.01,
+                "residual_pp": 1.0
+              }
+            ]
+          },
+          "v3": {
+            "n_points": 1,
+            "note": "need \u2265 2 scales",
+            "points": [
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": 0.045,
+                "residual_pp": 4.5
+              }
+            ]
+          },
+          "v4": {
+            "n_points": 1,
+            "note": "need \u2265 2 scales",
+            "points": [
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": -0.015,
+                "residual_pp": -1.5
+              }
+            ]
+          }
+        },
+        "linalg_125": {
+          "v1": {
+            "n_points": 1,
+            "note": "need \u2265 2 scales",
+            "points": [
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": 0.432,
+                "residual_pp": 43.2
+              }
+            ]
+          },
+          "v2": {
+            "n_points": 1,
+            "note": "need \u2265 2 scales",
+            "points": [
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": 0.0,
+                "residual_pp": 0.0
+              }
+            ]
+          },
+          "v3": {
+            "n_points": 1,
+            "note": "need \u2265 2 scales",
+            "points": [
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": 0.008,
+                "residual_pp": 0.8
+              }
+            ]
+          },
+          "v4": {
+            "n_points": 1,
+            "note": "need \u2265 2 scales",
+            "points": [
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": -0.096,
+                "residual_pp": -9.6
+              }
+            ]
+          }
+        },
+        "all": {
+          "v1": {
+            "n_points": 1,
+            "note": "need \u2265 2 scales",
+            "points": [
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": 0.25846153846153846,
+                "residual_pp": 25.85
+              }
+            ]
+          },
+          "v2": {
+            "n_points": 1,
+            "note": "need \u2265 2 scales",
+            "points": [
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": 0.006153846153846154,
+                "residual_pp": 0.62
+              }
+            ]
+          },
+          "v3": {
+            "n_points": 1,
+            "note": "need \u2265 2 scales",
+            "points": [
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": 0.03076923076923077,
+                "residual_pp": 3.08
+              }
+            ]
+          },
+          "v4": {
+            "n_points": 1,
+            "note": "need \u2265 2 scales",
+            "points": [
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": -0.046153846153846156,
+                "residual_pp": -4.62
+              }
+            ]
+          }
+        }
+      },
+      "all": {
+        "arith_func_200": {
+          "v1": {
+            "n_points": 1,
+            "note": "need \u2265 2 scales",
+            "points": [
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": 0.15,
+                "residual_pp": 15.0
+              }
+            ]
+          },
+          "v2": {
+            "n_points": 1,
+            "note": "need \u2265 2 scales",
+            "points": [
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": 0.01,
+                "residual_pp": 1.0
+              }
+            ]
+          },
+          "v3": {
+            "n_points": 1,
+            "note": "need \u2265 2 scales",
+            "points": [
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": 0.045,
+                "residual_pp": 4.5
+              }
+            ]
+          },
+          "v4": {
+            "n_points": 1,
+            "note": "need \u2265 2 scales",
+            "points": [
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": -0.015,
+                "residual_pp": -1.5
+              }
+            ]
+          }
+        },
+        "linalg_125": {
+          "v1": {
+            "n_points": 1,
+            "note": "need \u2265 2 scales",
+            "points": [
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": 0.432,
+                "residual_pp": 43.2
+              }
+            ]
+          },
+          "v2": {
+            "n_points": 1,
+            "note": "need \u2265 2 scales",
+            "points": [
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": 0.0,
+                "residual_pp": 0.0
+              }
+            ]
+          },
+          "v3": {
+            "n_points": 1,
+            "note": "need \u2265 2 scales",
+            "points": [
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": 0.008,
+                "residual_pp": 0.8
+              }
+            ]
+          },
+          "v4": {
+            "n_points": 1,
+            "note": "need \u2265 2 scales",
+            "points": [
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": -0.096,
+                "residual_pp": -9.6
+              }
+            ]
+          }
+        },
+        "all": {
+          "v1": {
+            "n_points": 1,
+            "note": "need \u2265 2 scales",
+            "points": [
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": 0.25846153846153846,
+                "residual_pp": 25.85
+              }
+            ]
+          },
+          "v2": {
+            "n_points": 1,
+            "note": "need \u2265 2 scales",
+            "points": [
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": 0.006153846153846154,
+                "residual_pp": 0.62
+              }
+            ]
+          },
+          "v3": {
+            "n_points": 1,
+            "note": "need \u2265 2 scales",
+            "points": [
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": 0.03076923076923077,
+                "residual_pp": 3.08
+              }
+            ]
+          },
+          "v4": {
+            "n_points": 1,
+            "note": "need \u2265 2 scales",
+            "points": [
+              {
+                "model": "smollm2-360m-instruct",
+                "size": 361821120,
+                "residual": -0.046153846153846156,
+                "residual_pp": -4.62
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "n_dropped_rows": 0
+}

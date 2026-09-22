@@ -1,0 +1,180 @@
+{"dialect": "arith", "id": "001_add-two-ints", "idx": 0, "gate": "pass", "reason": null, "sig": {"name": "add", "arg_types": ["i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "002_subtract-two-ints", "idx": 1, "gate": "pass", "reason": null, "sig": {"name": "sub", "arg_types": ["i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "003_multiply-ints", "idx": 2, "gate": "pass", "reason": null, "sig": {"name": "mul", "arg_types": ["i64", "i64"], "ret": "i64"}}
+{"dialect": "arith", "id": "004_add-floats", "idx": 3, "gate": "pass", "reason": null, "sig": {"name": "addf", "arg_types": ["f32", "f32"], "ret": "f32"}}
+{"dialect": "arith", "id": "005_integer-constant", "idx": 4, "gate": "pass", "reason": null, "sig": {"name": "const42", "arg_types": [], "ret": "i32"}}
+{"dialect": "arith", "id": "006_compare-ints-slt", "idx": 5, "gate": "pass", "reason": null, "sig": {"name": "lt", "arg_types": ["i32", "i32"], "ret": "i1"}}
+{"dialect": "arith", "id": "007_select-by-predicate", "idx": 6, "gate": "pass", "reason": null, "sig": {"name": "pick", "arg_types": ["i1", "f32", "f32"], "ret": "f32"}}
+{"dialect": "arith", "id": "008_chain-add-then-multiply", "idx": 7, "gate": "pass", "reason": null, "sig": {"name": "fma_like", "arg_types": ["i32", "i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "009_alloc-dealloc-memref", "idx": 8, "gate": "excluded", "reason": "no_observable_output", "detail": null}
+{"dialect": "arith", "id": "010_load-from-memref", "idx": 9, "gate": "pass", "reason": null, "sig": {"name": "load", "arg_types": ["memref<?xf32>", "index"], "ret": "f32"}}
+{"dialect": "arith", "id": "011_store-to-memref", "idx": 10, "gate": "pass", "reason": null, "sig": {"name": "store", "arg_types": ["memref<32xf32>", "index", "f32"], "ret": ""}}
+{"dialect": "arith", "id": "012_swap-via-memref", "idx": 11, "gate": "pass", "reason": null, "sig": {"name": "swap", "arg_types": ["memref<2xi32>"], "ret": ""}}
+{"dialect": "arith", "id": "013_index-cast", "idx": 12, "gate": "pass", "reason": null, "sig": {"name": "idx_to_i32", "arg_types": ["index"], "ret": "i32"}}
+{"dialect": "arith", "id": "014_float-constant", "idx": 13, "gate": "pass", "reason": null, "sig": {"name": "pi", "arg_types": [], "ret": "f32"}}
+{"dialect": "arith", "id": "015_neg-float", "idx": 14, "gate": "pass", "reason": null, "sig": {"name": "neg", "arg_types": ["f32"], "ret": "f32"}}
+{"dialect": "arith", "id": "016_bitwise-and", "idx": 15, "gate": "pass", "reason": null, "sig": {"name": "band", "arg_types": ["i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "017_bitwise-or", "idx": 16, "gate": "pass", "reason": null, "sig": {"name": "bor", "arg_types": ["i64", "i64"], "ret": "i64"}}
+{"dialect": "arith", "id": "018_bitwise-xor", "idx": 17, "gate": "pass", "reason": null, "sig": {"name": "bxor", "arg_types": ["i16", "i16"], "ret": "i16"}}
+{"dialect": "arith", "id": "019_shift-left", "idx": 18, "gate": "pass", "reason": null, "sig": {"name": "shl", "arg_types": ["i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "020_shift-right-signed", "idx": 19, "gate": "pass", "reason": null, "sig": {"name": "shr", "arg_types": ["i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "021_divide-signed", "idx": 20, "gate": "pass", "reason": null, "sig": {"name": "divs", "arg_types": ["i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "022_divide-float", "idx": 21, "gate": "pass", "reason": null, "sig": {"name": "divf", "arg_types": ["f64", "f64"], "ret": "f64"}}
+{"dialect": "arith", "id": "023_compare-ints-eq", "idx": 22, "gate": "pass", "reason": null, "sig": {"name": "eq", "arg_types": ["i64", "i64"], "ret": "i1"}}
+{"dialect": "arith", "id": "024_compare-floats-olt", "idx": 23, "gate": "pass", "reason": null, "sig": {"name": "flt", "arg_types": ["f32", "f32"], "ret": "i1"}}
+{"dialect": "arith", "id": "025_extend-int", "idx": 24, "gate": "pass", "reason": null, "sig": {"name": "sext", "arg_types": ["i16"], "ret": "i32"}}
+{"dialect": "arith", "id": "026_truncate-int", "idx": 25, "gate": "pass", "reason": null, "sig": {"name": "trunc", "arg_types": ["i64"], "ret": "i8"}}
+{"dialect": "arith", "id": "027_int-to-float", "idx": 26, "gate": "pass", "reason": null, "sig": {"name": "i2f", "arg_types": ["i32"], "ret": "f32"}}
+{"dialect": "arith", "id": "028_float-to-int", "idx": 27, "gate": "pass", "reason": null, "sig": {"name": "f2i", "arg_types": ["f64"], "ret": "i64"}}
+{"dialect": "arith", "id": "029_extend-float", "idx": 28, "gate": "pass", "reason": null, "sig": {"name": "fext", "arg_types": ["f32"], "ret": "f64"}}
+{"dialect": "arith", "id": "030_truncate-float", "idx": 29, "gate": "pass", "reason": null, "sig": {"name": "ftrunc", "arg_types": ["f64"], "ret": "f32"}}
+{"dialect": "arith", "id": "031_index-constant", "idx": 30, "gate": "pass", "reason": null, "sig": {"name": "zero", "arg_types": [], "ret": "index"}}
+{"dialect": "arith", "id": "032_min-max-ints", "idx": 31, "gate": "pass", "reason": null, "sig": {"name": "min_i", "arg_types": ["i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "033_increment-by-one", "idx": 32, "gate": "pass", "reason": null, "sig": {"name": "inc", "arg_types": ["i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "034_double-value", "idx": 33, "gate": "pass", "reason": null, "sig": {"name": "dbl", "arg_types": ["f32"], "ret": "f32"}}
+{"dialect": "arith", "id": "035_is-positive", "idx": 34, "gate": "pass", "reason": null, "sig": {"name": "is_pos", "arg_types": ["i32"], "ret": "i1"}}
+{"dialect": "arith", "id": "036_abs-value", "idx": 35, "gate": "pass", "reason": null, "sig": {"name": "abs", "arg_types": ["i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "037_memref-load-store-copy", "idx": 36, "gate": "pass", "reason": null, "sig": {"name": "copy_first", "arg_types": ["memref<4xi32>", "memref<4xi32>"], "ret": ""}}
+{"dialect": "arith", "id": "038_memref-sum-two", "idx": 37, "gate": "pass", "reason": null, "sig": {"name": "sum2", "arg_types": ["memref<2xi32>"], "ret": "i32"}}
+{"dialect": "arith", "id": "039_linear-combination", "idx": 38, "gate": "pass", "reason": null, "sig": {"name": "linear", "arg_types": ["f32", "f32", "f32", "f32", "f32"], "ret": "f32"}}
+{"dialect": "arith", "id": "040_square", "idx": 39, "gate": "pass", "reason": null, "sig": {"name": "square", "arg_types": ["i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "041_cube", "idx": 40, "gate": "pass", "reason": null, "sig": {"name": "cube", "arg_types": ["f32"], "ret": "f32"}}
+{"dialect": "arith", "id": "042_boolean-and", "idx": 41, "gate": "pass", "reason": null, "sig": {"name": "land", "arg_types": ["i1", "i1"], "ret": "i1"}}
+{"dialect": "arith", "id": "043_clamp-to-zero", "idx": 42, "gate": "pass", "reason": null, "sig": {"name": "clamp_pos", "arg_types": ["i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "044_memref-write-const", "idx": 43, "gate": "pass", "reason": null, "sig": {"name": "write7", "arg_types": ["memref<4xi32>"], "ret": ""}}
+{"dialect": "arith", "id": "045_alloc-load-dealloc", "idx": 44, "gate": "fail", "reason": "trial0:nondeterministic", "sig": {"name": "alloc_read", "arg_types": [], "ret": "f32"}}
+{"dialect": "arith", "id": "046_bitcast-i32-f32", "idx": 45, "gate": "pass", "reason": null, "sig": {"name": "bc", "arg_types": ["i32"], "ret": "f32"}}
+{"dialect": "arith", "id": "047_not-float-cmp", "idx": 46, "gate": "pass", "reason": null, "sig": {"name": "fne", "arg_types": ["f32", "f32"], "ret": "i1"}}
+{"dialect": "arith", "id": "048_remainder", "idx": 47, "gate": "pass", "reason": null, "sig": {"name": "rem", "arg_types": ["i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "049_memref-2d", "idx": 48, "gate": "pass", "reason": null, "sig": {"name": "load2d", "arg_types": ["memref<4x8xf32>", "index", "index"], "ret": "f32"}}
+{"dialect": "arith", "id": "050_square-root-via-mul", "idx": 49, "gate": "pass", "reason": null, "sig": {"name": "fn", "arg_types": ["f64"], "ret": "f64"}}
+{"dialect": "arith", "id": "051_mean-of-three-ints", "idx": 50, "gate": "pass", "reason": null, "sig": {"name": "mean3", "arg_types": ["i32", "i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "052_abs-diff-ints", "idx": 51, "gate": "pass", "reason": null, "sig": {"name": "absdiff", "arg_types": ["i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "053_polynomial-2x-plus-1", "idx": 52, "gate": "pass", "reason": null, "sig": {"name": "lin", "arg_types": ["i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "054_quadratic-x-squared-plus-x", "idx": 53, "gate": "pass", "reason": null, "sig": {"name": "quad", "arg_types": ["i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "055_dot-product-2d-floats", "idx": 54, "gate": "pass", "reason": null, "sig": {"name": "dot2", "arg_types": ["f32", "f32", "f32", "f32"], "ret": "f32"}}
+{"dialect": "arith", "id": "056_memref-3d-load", "idx": 55, "gate": "pass", "reason": null, "sig": {"name": "load3d", "arg_types": ["memref<?x?x?xf32>", "index", "index", "index"], "ret": "f32"}}
+{"dialect": "arith", "id": "057_memref-store-computed", "idx": 56, "gate": "pass", "reason": null, "sig": {"name": "sinc", "arg_types": ["memref<?xi32>", "index", "i32"], "ret": ""}}
+{"dialect": "arith", "id": "058_memref-copy-element", "idx": 57, "gate": "pass", "reason": null, "sig": {"name": "cp", "arg_types": ["memref<?xf32>", "memref<?xf32>", "index", "index"], "ret": ""}}
+{"dialect": "arith", "id": "059_memref-2d-store", "idx": 58, "gate": "pass", "reason": null, "sig": {"name": "st2d", "arg_types": ["memref<?x?xi32>", "index", "index", "i32"], "ret": ""}}
+{"dialect": "arith", "id": "060_memref-static-shape", "idx": 59, "gate": "excluded", "reason": "no_observable_output", "detail": null}
+{"dialect": "arith", "id": "061_min-of-three", "idx": 60, "gate": "pass", "reason": null, "sig": {"name": "min3", "arg_types": ["i32", "i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "062_median-of-three", "idx": 61, "gate": "pass", "reason": null, "sig": {"name": "med3", "arg_types": ["i32", "i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "063_sign-int", "idx": 62, "gate": "pass", "reason": null, "sig": {"name": "sign", "arg_types": ["i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "064_clamp-range", "idx": 63, "gate": "pass", "reason": null, "sig": {"name": "clamp", "arg_types": ["i32", "i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "065_conditional-negate", "idx": 64, "gate": "pass", "reason": null, "sig": {"name": "cneg", "arg_types": ["i1", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "066_cast-chain-i8-to-i64", "idx": 65, "gate": "pass", "reason": null, "sig": {"name": "w", "arg_types": ["i8"], "ret": "i64"}}
+{"dialect": "arith", "id": "067_cast-roundtrip-i32-f32-i32", "idx": 66, "gate": "pass", "reason": null, "sig": {"name": "rt", "arg_types": ["i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "068_float-widen-f16-to-f64", "idx": 67, "gate": "pass", "reason": null, "sig": {"name": "wf", "arg_types": ["f16"], "ret": "f64"}}
+{"dialect": "arith", "id": "069_index-arith-chain", "idx": 68, "gate": "pass", "reason": null, "sig": {"name": "ij", "arg_types": ["index", "index"], "ret": "index"}}
+{"dialect": "arith", "id": "070_negate-float", "idx": 69, "gate": "pass", "reason": null, "sig": {"name": "neg64", "arg_types": ["f64"], "ret": "f64"}}
+{"dialect": "arith", "id": "071_add-two-i64", "idx": 70, "gate": "pass", "reason": null, "sig": {"name": "add64", "arg_types": ["i64", "i64"], "ret": "i64"}}
+{"dialect": "arith", "id": "072_sub-two-f64", "idx": 71, "gate": "pass", "reason": null, "sig": {"name": "sub64", "arg_types": ["f64", "f64"], "ret": "f64"}}
+{"dialect": "arith", "id": "073_boolean-or", "idx": 72, "gate": "pass", "reason": null, "sig": {"name": "bor", "arg_types": ["i1", "i1"], "ret": "i1"}}
+{"dialect": "arith", "id": "074_unsigned-compare", "idx": 73, "gate": "pass", "reason": null, "sig": {"name": "ult", "arg_types": ["i32", "i32"], "ret": "i1"}}
+{"dialect": "arith", "id": "075_memref-dim-query", "idx": 74, "gate": "pass", "reason": null, "sig": {"name": "dim0", "arg_types": ["memref<?x?xf32>"], "ret": "index"}}
+{"dialect": "arith", "id": "076_abs-int-via-select", "idx": 75, "gate": "pass", "reason": null, "sig": {"name": "abs", "arg_types": ["i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "077_sum-three-floats", "idx": 76, "gate": "pass", "reason": null, "sig": {"name": "sum3", "arg_types": ["f32", "f32", "f32"], "ret": "f32"}}
+{"dialect": "arith", "id": "078_product-four-ints", "idx": 77, "gate": "pass", "reason": null, "sig": {"name": "prod4", "arg_types": ["i32", "i32", "i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "079_linear-map-y-mx-plus-b", "idx": 78, "gate": "pass", "reason": null, "sig": {"name": "lm", "arg_types": ["i32", "i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "080_quad-a-squared-plus-b-squared", "idx": 79, "gate": "pass", "reason": null, "sig": {"name": "sumsq", "arg_types": ["i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "081_is-zero", "idx": 80, "gate": "pass", "reason": null, "sig": {"name": "iz", "arg_types": ["i32"], "ret": "i1"}}
+{"dialect": "arith", "id": "082_is-negative", "idx": 81, "gate": "pass", "reason": null, "sig": {"name": "isn", "arg_types": ["i32"], "ret": "i1"}}
+{"dialect": "arith", "id": "083_distance-sq-1d", "idx": 82, "gate": "pass", "reason": null, "sig": {"name": "d1", "arg_types": ["i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "084_max-three-floats", "idx": 83, "gate": "pass", "reason": null, "sig": {"name": "max3", "arg_types": ["f32", "f32", "f32"], "ret": "f32"}}
+{"dialect": "arith", "id": "085_compare-against-const", "idx": 84, "gate": "pass", "reason": null, "sig": {"name": "gt100", "arg_types": ["i32"], "ret": "i1"}}
+{"dialect": "arith", "id": "086_memref-copy-loop-unrolled", "idx": 85, "gate": "pass", "reason": null, "sig": {"name": "cp3", "arg_types": ["memref<?xi32>", "memref<?xi32>"], "ret": ""}}
+{"dialect": "arith", "id": "087_memref-increment-slot", "idx": 86, "gate": "pass", "reason": null, "sig": {"name": "inc", "arg_types": ["memref<?xi32>", "index"], "ret": ""}}
+{"dialect": "arith", "id": "088_memref-sum-two-positions", "idx": 87, "gate": "pass", "reason": null, "sig": {"name": "s2", "arg_types": ["memref<?xi32>", "index", "index"], "ret": "i32"}}
+{"dialect": "arith", "id": "089_memref-2d-load-3x3", "idx": 88, "gate": "pass", "reason": null, "sig": {"name": "c", "arg_types": ["memref<3x3xf32>"], "ret": "f32"}}
+{"dialect": "arith", "id": "090_memref-scale-store", "idx": 89, "gate": "pass", "reason": null, "sig": {"name": "sc", "arg_types": ["memref<?xf32>", "index"], "ret": ""}}
+{"dialect": "arith", "id": "091_memref-write-two-values", "idx": 90, "gate": "pass", "reason": null, "sig": {"name": "w2", "arg_types": ["memref<?xi32>", "index", "index", "i32", "i32"], "ret": ""}}
+{"dialect": "arith", "id": "092_memref-2d-alloc", "idx": 91, "gate": "excluded", "reason": "no_observable_output", "detail": null}
+{"dialect": "arith", "id": "093_memref-sum-at-two-indices", "idx": 92, "gate": "pass", "reason": null, "sig": {"name": "s22", "arg_types": ["memref<2x2xf32>"], "ret": "f32"}}
+{"dialect": "arith", "id": "094_memref-dim-1", "idx": 93, "gate": "pass", "reason": null, "sig": {"name": "d1", "arg_types": ["memref<?x?xi32>"], "ret": "index"}}
+{"dialect": "arith", "id": "095_memref-load-at-last", "idx": 94, "gate": "pass", "reason": null, "sig": {"name": "last", "arg_types": ["memref<?xf32>"], "ret": "f32"}}
+{"dialect": "arith", "id": "096_sign-extend-then-add", "idx": 95, "gate": "pass", "reason": null, "sig": {"name": "sxa", "arg_types": ["i16", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "097_float-sum-then-cast", "idx": 96, "gate": "pass", "reason": null, "sig": {"name": "fti", "arg_types": ["f32", "f32"], "ret": "i32"}}
+{"dialect": "arith", "id": "098_double-cast-i8-f64", "idx": 97, "gate": "pass", "reason": null, "sig": {"name": "if", "arg_types": ["i8"], "ret": "f64"}}
+{"dialect": "arith", "id": "099_index-cast-and-use", "idx": 98, "gate": "pass", "reason": null, "sig": {"name": "ic", "arg_types": ["memref<?xf32>", "i32"], "ret": "f32"}}
+{"dialect": "arith", "id": "100_cast-roundtrip-f32-i64", "idx": 99, "gate": "pass", "reason": null, "sig": {"name": "fi64", "arg_types": ["f32"], "ret": "i64"}}
+{"dialect": "arith", "id": "101_truncate-i64-to-i16", "idx": 100, "gate": "pass", "reason": null, "sig": {"name": "t16", "arg_types": ["i64"], "ret": "i16"}}
+{"dialect": "arith", "id": "102_compare-eq-const", "idx": 101, "gate": "pass", "reason": null, "sig": {"name": "e42", "arg_types": ["i32"], "ret": "i1"}}
+{"dialect": "arith", "id": "103_select-clamp-zero-one", "idx": 102, "gate": "pass", "reason": null, "sig": {"name": "c01", "arg_types": ["i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "104_shift-left-by-const", "idx": 103, "gate": "pass", "reason": null, "sig": {"name": "sl4", "arg_types": ["i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "105_mask-low-byte", "idx": 104, "gate": "pass", "reason": null, "sig": {"name": "mb", "arg_types": ["i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "106_abs-value-float", "idx": 105, "gate": "pass", "reason": null, "sig": {"name": "absf", "arg_types": ["f32"], "ret": "f32"}}
+{"dialect": "arith", "id": "107_sum-memref-two", "idx": 106, "gate": "pass", "reason": null, "sig": {"name": "s012", "arg_types": ["memref<?xi32>"], "ret": ""}}
+{"dialect": "arith", "id": "108_div-then-mul", "idx": 107, "gate": "pass", "reason": null, "sig": {"name": "dm", "arg_types": ["i32", "i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "109_double-add-then-cmp", "idx": 108, "gate": "pass", "reason": null, "sig": {"name": "sb", "arg_types": ["i32", "i32", "i32", "i32"], "ret": "i1"}}
+{"dialect": "arith", "id": "110_memref-alloc-static-float", "idx": 109, "gate": "excluded", "reason": "no_observable_output", "detail": null}
+{"dialect": "arith", "id": "111_const-index-arith", "idx": 110, "gate": "pass", "reason": null, "sig": {"name": "i7", "arg_types": [], "ret": "index"}}
+{"dialect": "arith", "id": "112_double-negate", "idx": 111, "gate": "pass", "reason": null, "sig": {"name": "nn", "arg_types": ["f32"], "ret": "f32"}}
+{"dialect": "arith", "id": "113_xor-two-i64", "idx": 112, "gate": "pass", "reason": null, "sig": {"name": "xo", "arg_types": ["i64", "i64"], "ret": "i64"}}
+{"dialect": "arith", "id": "114_float-div-by-two", "idx": 113, "gate": "pass", "reason": null, "sig": {"name": "h", "arg_types": ["f32"], "ret": "f32"}}
+{"dialect": "arith", "id": "115_remu-two-ints", "idx": 114, "gate": "pass", "reason": null, "sig": {"name": "ur", "arg_types": ["i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "116_swap-two-floats", "idx": 115, "gate": "pass", "reason": null, "sig": {"name": "sw", "arg_types": ["memref<?xf32>", "index", "index"], "ret": ""}}
+{"dialect": "arith", "id": "117_chained-float-ops", "idx": 116, "gate": "pass", "reason": null, "sig": {"name": "ce", "arg_types": ["f32", "f32", "f32", "f32", "f32"], "ret": "f32"}}
+{"dialect": "arith", "id": "118_is-even", "idx": 117, "gate": "pass", "reason": null, "sig": {"name": "ie", "arg_types": ["i32"], "ret": "i1"}}
+{"dialect": "arith", "id": "119_memref-copy-with-scale", "idx": 118, "gate": "pass", "reason": null, "sig": {"name": "sx", "arg_types": ["memref<?xf32>", "memref<?xf32>", "index"], "ret": ""}}
+{"dialect": "arith", "id": "120_return-i1-true", "idx": 119, "gate": "pass", "reason": null, "sig": {"name": "t", "arg_types": [], "ret": "i1"}}
+{"dialect": "arith", "id": "121_larger-of-two-f64", "idx": 120, "gate": "pass", "reason": null, "sig": {"name": "m", "arg_types": ["f64", "f64"], "ret": "f64"}}
+{"dialect": "arith", "id": "122_memref-load-and-cast", "idx": 121, "gate": "pass", "reason": null, "sig": {"name": "lc", "arg_types": ["memref<?xi32>", "index"], "ret": "i64"}}
+{"dialect": "arith", "id": "123_memref-load-subtract", "idx": 122, "gate": "pass", "reason": null, "sig": {"name": "ls", "arg_types": ["memref<?xi32>", "index", "index"], "ret": "i32"}}
+{"dialect": "arith", "id": "124_memref-store-zero", "idx": 123, "gate": "pass", "reason": null, "sig": {"name": "z", "arg_types": ["memref<?xi32>", "index"], "ret": ""}}
+{"dialect": "arith", "id": "125_memref-copy-both", "idx": 124, "gate": "pass", "reason": null, "sig": {"name": "c2", "arg_types": ["memref<?xi32>", "memref<?xi32>"], "ret": ""}}
+{"dialect": "arith", "id": "126_add-i64-with-const", "idx": 125, "gate": "pass", "reason": null, "sig": {"name": "b", "arg_types": ["i64"], "ret": "i64"}}
+{"dialect": "arith", "id": "127_conditional-add", "idx": 126, "gate": "pass", "reason": null, "sig": {"name": "ca", "arg_types": ["i1", "i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "128_shift-right-by-two", "idx": 127, "gate": "pass", "reason": null, "sig": {"name": "sr", "arg_types": ["i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "129_float-ceil-like", "idx": 128, "gate": "pass", "reason": null, "sig": {"name": "cl", "arg_types": ["f32"], "ret": "i32"}}
+{"dialect": "arith", "id": "130_memref-2d-sum-diag", "idx": 129, "gate": "pass", "reason": null, "sig": {"name": "d", "arg_types": ["memref<2x2xi32>"], "ret": "i32"}}
+{"dialect": "arith", "id": "131_weighted-sum-of-three", "idx": 130, "gate": "pass", "reason": null, "sig": {"name": "ws", "arg_types": ["i32", "i32", "i32", "i32", "i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "132_quadratic-ax2-plus-bx-plus-c", "idx": 131, "gate": "pass", "reason": null, "sig": {"name": "q", "arg_types": ["i32", "i32", "i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "133_clamp-and-scale", "idx": 132, "gate": "pass", "reason": null, "sig": {"name": "cs", "arg_types": ["i32", "i32", "i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "134_lerp-floats", "idx": 133, "gate": "pass", "reason": null, "sig": {"name": "lr", "arg_types": ["f32", "f32", "f32"], "ret": "f32"}}
+{"dialect": "arith", "id": "135_running-sum-3-slots", "idx": 134, "gate": "pass", "reason": null, "sig": {"name": "rs", "arg_types": ["memref<?xi32>"], "ret": ""}}
+{"dialect": "arith", "id": "136_pairwise-max-then-sum", "idx": 135, "gate": "pass", "reason": null, "sig": {"name": "pms", "arg_types": ["i32", "i32", "i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "137_memref-scale-and-accumulate", "idx": 136, "gate": "pass", "reason": null, "sig": {"name": "ma", "arg_types": ["memref<?xf32>", "index", "f32", "f32"], "ret": "f32"}}
+{"dialect": "arith", "id": "138_float-hypot-sq", "idx": 137, "gate": "pass", "reason": null, "sig": {"name": "hs", "arg_types": ["f32", "f32"], "ret": "f32"}}
+{"dialect": "arith", "id": "139_min-of-four", "idx": 138, "gate": "pass", "reason": null, "sig": {"name": "m4", "arg_types": ["i32", "i32", "i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "140_memref-cond-store", "idx": 139, "gate": "pass", "reason": null, "sig": {"name": "cs2", "arg_types": ["memref<?xi32>", "index", "i32", "i1"], "ret": ""}}
+{"dialect": "arith", "id": "141_ctz-like-trailing-zero", "idx": 140, "gate": "pass", "reason": null, "sig": {"name": "cz", "arg_types": ["i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "142_cmp-or-zero", "idx": 141, "gate": "pass", "reason": null, "sig": {"name": "pz", "arg_types": ["i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "143_f32-relu", "idx": 142, "gate": "pass", "reason": null, "sig": {"name": "r", "arg_types": ["f32"], "ret": "f32"}}
+{"dialect": "arith", "id": "144_cast-and-cmp", "idx": 143, "gate": "pass", "reason": null, "sig": {"name": "cc", "arg_types": ["i32"], "ret": "i1"}}
+{"dialect": "arith", "id": "145_memref-f64-load-double", "idx": 144, "gate": "pass", "reason": null, "sig": {"name": "ld", "arg_types": ["memref<?xf64>", "index"], "ret": "f64"}}
+{"dialect": "arith", "id": "146_memref-store-f16", "idx": 145, "gate": "excluded", "reason": "unprintable_memref_dtype", "detail": "memref<?xf16>"}
+{"dialect": "arith", "id": "147_select-cascade", "idx": 146, "gate": "pass", "reason": null, "sig": {"name": "sc", "arg_types": ["i1", "i1", "i32", "i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "148_return-zero-i32", "idx": 147, "gate": "pass", "reason": null, "sig": {"name": "z", "arg_types": [], "ret": "i32"}}
+{"dialect": "arith", "id": "149_identity-float", "idx": 148, "gate": "pass", "reason": null, "sig": {"name": "id", "arg_types": ["f64"], "ret": "f64"}}
+{"dialect": "arith", "id": "150_void-dealloc", "idx": 149, "gate": "fail", "reason": "trial0:exec:PLEASE submit a bug report to https://github.com/llvm/llvm-project/issues/ and include the crash backtrace.\nStack dump:\n0.\tProgram arguments: mlir-cpu-runner -e main -entry-point-result=i32 --shared-l", "sig": {"name": "d", "arg_types": ["memref<?xi32>"], "ret": ""}}
+{"dialect": "linalg", "id": "01_matmul-dynamic", "idx": 0, "gate": "pass", "reason": null, "sig": {"name": "mm", "arg_types": ["memref<?x?xf32>", "memref<?x?xf32>", "memref<?x?xf32>"], "ret": ""}}
+{"dialect": "linalg", "id": "02_matmul-static-2x2", "idx": 1, "gate": "pass", "reason": null, "sig": {"name": "mm22", "arg_types": ["memref<2x2xf32>", "memref<2x2xf32>", "memref<2x2xf32>"], "ret": ""}}
+{"dialect": "linalg", "id": "03_matmul-rectangular", "idx": 2, "gate": "pass", "reason": null, "sig": {"name": "mm482", "arg_types": ["memref<4x8xf32>", "memref<8x2xf32>", "memref<4x2xf32>"], "ret": ""}}
+{"dialect": "linalg", "id": "04_matmul-f64", "idx": 3, "gate": "pass", "reason": null, "sig": {"name": "mmf64", "arg_types": ["memref<?x?xf64>", "memref<?x?xf64>", "memref<?x?xf64>"], "ret": ""}}
+{"dialect": "linalg", "id": "05_fill-matmul-chain", "idx": 4, "gate": "pass", "reason": null, "sig": {"name": "fm", "arg_types": ["memref<?x?xf32>", "memref<?x?xf32>", "memref<?x?xf32>"], "ret": ""}}
+{"dialect": "linalg", "id": "06_fill-zero-1d", "idx": 5, "gate": "pass", "reason": null, "sig": {"name": "f0", "arg_types": ["memref<?xf32>"], "ret": ""}}
+{"dialect": "linalg", "id": "07_fill-value-param", "idx": 6, "gate": "pass", "reason": null, "sig": {"name": "fp", "arg_types": ["f32", "memref<?x?xf32>"], "ret": ""}}
+{"dialect": "linalg", "id": "08_fill-i32", "idx": 7, "gate": "pass", "reason": null, "sig": {"name": "f7", "arg_types": ["memref<?xi32>"], "ret": ""}}
+{"dialect": "linalg", "id": "09_copy-1d", "idx": 8, "gate": "pass", "reason": null, "sig": {"name": "c1", "arg_types": ["memref<?xf32>", "memref<?xf32>"], "ret": ""}}
+{"dialect": "linalg", "id": "10_copy-2d-static", "idx": 9, "gate": "pass", "reason": null, "sig": {"name": "c2", "arg_types": ["memref<4x4xf32>", "memref<4x4xf32>"], "ret": ""}}
+{"dialect": "linalg", "id": "11_copy-i32", "idx": 10, "gate": "pass", "reason": null, "sig": {"name": "ci", "arg_types": ["memref<?xi32>", "memref<?xi32>"], "ret": ""}}
+{"dialect": "linalg", "id": "12_transpose-2d", "idx": 11, "gate": "pass", "reason": null, "sig": {"name": "t2", "arg_types": ["memref<?x?xf32>", "memref<?x?xf32>"], "ret": ""}}
+{"dialect": "linalg", "id": "13_transpose-3d", "idx": 12, "gate": "pass", "reason": null, "sig": {"name": "t3", "arg_types": ["memref<?x?x?xf32>", "memref<?x?x?xf32>"], "ret": ""}}
+{"dialect": "linalg", "id": "14_transpose-static", "idx": 13, "gate": "pass", "reason": null, "sig": {"name": "ts", "arg_types": ["memref<3x5xf32>", "memref<5x3xf32>"], "ret": ""}}
+{"dialect": "linalg", "id": "15_broadcast-1d-to-2d", "idx": 14, "gate": "pass", "reason": null, "sig": {"name": "b1", "arg_types": ["memref<?xf32>", "memref<?x?xf32>"], "ret": ""}}
+{"dialect": "linalg", "id": "16_broadcast-dim1", "idx": 15, "gate": "pass", "reason": null, "sig": {"name": "b2", "arg_types": ["memref<?xf32>", "memref<?x?xf32>"], "ret": ""}}
+{"dialect": "linalg", "id": "17_matvec", "idx": 16, "gate": "pass", "reason": null, "sig": {"name": "mv", "arg_types": ["memref<?x?xf32>", "memref<?xf32>", "memref<?xf32>"], "ret": ""}}
+{"dialect": "linalg", "id": "18_matvec-static", "idx": 17, "gate": "pass", "reason": null, "sig": {"name": "mvs", "arg_types": ["memref<4x8xf32>", "memref<8xf32>", "memref<4xf32>"], "ret": ""}}
+{"dialect": "linalg", "id": "19_matvec-f64", "idx": 18, "gate": "pass", "reason": null, "sig": {"name": "mvd", "arg_types": ["memref<?x?xf64>", "memref<?xf64>", "memref<?xf64>"], "ret": ""}}
+{"dialect": "linalg", "id": "20_add-elemwise", "idx": 19, "gate": "pass", "reason": null, "sig": {"name": "ae", "arg_types": ["memref<?xf32>", "memref<?xf32>", "memref<?xf32>"], "ret": ""}}
+{"dialect": "linalg", "id": "21_sub-elemwise", "idx": 20, "gate": "pass", "reason": null, "sig": {"name": "se", "arg_types": ["memref<?xf32>", "memref<?xf32>", "memref<?xf32>"], "ret": ""}}
+{"dialect": "linalg", "id": "22_mul-elemwise-2d", "idx": 21, "gate": "pass", "reason": null, "sig": {"name": "me", "arg_types": ["memref<?x?xf32>", "memref<?x?xf32>", "memref<?x?xf32>"], "ret": ""}}
+{"dialect": "linalg", "id": "23_div-elemwise", "idx": 22, "gate": "pass", "reason": null, "sig": {"name": "de", "arg_types": ["memref<?xf32>", "memref<?xf32>", "memref<?xf32>"], "ret": ""}}
+{"dialect": "linalg", "id": "24_exp-elemwise", "idx": 23, "gate": "pass", "reason": null, "sig": {"name": "ee", "arg_types": ["memref<?xf32>", "memref<?xf32>"], "ret": ""}}
+{"dialect": "linalg", "id": "25_exp-2d", "idx": 24, "gate": "pass", "reason": null, "sig": {"name": "e2", "arg_types": ["memref<?x?xf32>", "memref<?x?xf32>"], "ret": ""}}
+{"dialect": "linalg", "id": "26_abs-elemwise", "idx": 25, "gate": "pass", "reason": null, "sig": {"name": "ae", "arg_types": ["memref<?xf32>", "memref<?xf32>"], "ret": ""}}
+{"dialect": "linalg", "id": "27_abs-2d", "idx": 26, "gate": "pass", "reason": null, "sig": {"name": "a2", "arg_types": ["memref<?x?xf32>", "memref<?x?xf32>"], "ret": ""}}
+{"dialect": "linalg", "id": "28_fill-then-copy", "idx": 27, "gate": "pass", "reason": null, "sig": {"name": "fc", "arg_types": ["memref<?xf32>", "memref<?xf32>"], "ret": ""}}
+{"dialect": "linalg", "id": "29_add-then-exp", "idx": 28, "gate": "pass", "reason": null, "sig": {"name": "ax", "arg_types": ["memref<?xf32>", "memref<?xf32>", "memref<?xf32>", "memref<?xf32>"], "ret": ""}}
+{"dialect": "linalg", "id": "30_transpose-then-matmul", "idx": 29, "gate": "pass", "reason": null, "sig": {"name": "tm", "arg_types": ["memref<?x?xf32>", "memref<?x?xf32>", "memref<?x?xf32>", "memref<?x?xf32>"], "ret": ""}}

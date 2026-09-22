@@ -11,6 +11,9 @@ include = ["sci*"]
 
 [tool.setuptools.package-data]
 "sci.constraints" = ["grammars/*.lark", "lattices/*.json"]
+"sci.synth" = ["grammars/*.lark"]
+"sci.transfer.llvmir" = ["grammars/*.lark"]
+"sci.transfer.scf" = ["grammars/*.lark", "lattices/*.json"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

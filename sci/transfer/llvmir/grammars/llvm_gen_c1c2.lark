@@ -1,0 +1,160 @@
+// Generation grammar for a minimal textual LLVM IR subset (C1 + C2).
+//
+// C2-aware: instruction families are split by type domain so the grammar
+// enforces
+//   - add/sub/mul/sdiv/srem/and/or/xor take integer types; fadd/fsub/fmul/fdiv
+//     take float types
+//   - icmp uses integer predicates on integer types; fcmp uses float
+//     predicates on float types; both produce i1
+//   - constants are typed: integer literals only in integer slots, decimal
+//     float literals only in float slots, true/false only in i1 slots
+//   - select / phi / ret / store / load carry one type that all their value
+//     slots share
+//   - casts respect source -> target domains (sext/zext/trunc int->int,
+//     sitofp int->float, fptosi float->int, fpext/fptrunc float->float)
+//
+// Shape: one `define <ty> @name(<params>) { ... }` with labelled basic blocks
+// (<= 6 blocks, <= 8 non-terminator instructions per block, each block ends
+// in `br` or `ret`). Explicit WS productions, no %ignore, bounded identifiers,
+// bodies capped by explicit alternation (llguidance requirements).
+
+start: func_def
+
+func_def: "define" WS ret_type WS SYM "(" params? ")" WS "{" WS blocks WS "}" WS?
+
+params: param (WS? "," WS param)*
+param: scalar_type WS SSA
+
+ret_type: scalar_type
+scalar_type: INT_TYPE | FLOAT_TYPE
+
+// ---------- blocks (<= 6) ----------
+
+blocks: block
+      | block WS block
+      | block WS block WS block
+      | block WS block WS block WS block
+      | block WS block WS block WS block WS block
+      | block WS block WS block WS block WS block WS block
+
+block: LABEL WS terminator
+     | LABEL WS instrs WS terminator
+
+// <= 8 non-terminator instructions per block
+instrs: instr
+      | instr WS instr
+      | instr WS instr WS instr
+      | instr WS instr WS instr WS instr
+      | instr WS instr WS instr WS instr WS instr
+      | instr WS instr WS instr WS instr WS instr WS instr
+      | instr WS instr WS instr WS instr WS instr WS instr WS instr
+      | instr WS instr WS instr WS instr WS instr WS instr WS instr WS instr
+
+instr: op_bin_int
+     | op_bin_float
+     | op_icmp
+     | op_fcmp
+     | op_select
+     | op_phi
+     | op_cast_int
+     | op_cast_i2f
+     | op_cast_f2i
+     | op_cast_float
+     | op_alloca
+     | op_load
+     | op_store
+
+terminator: op_ret | op_br_uncond | op_br_cond
+
+// ---------- typed operand slots ----------
+
+// integer slots: either an SSA name or an integer literal, per width
+i1_args:  "i1" WS boperand WS? "," WS boperand
+int_args: WIDE_INT WS ioperand WS? "," WS ioperand
+flt_args: FLOAT_TYPE WS foperand WS? "," WS foperand
+
+ioperand: SSA | INT_LIT
+boperand: SSA | BOOL_LIT
+foperand: SSA | FLOAT_LIT
+
+// ---------- arithmetic ----------
+
+op_bin_int:   SSA WS "=" WS BIN_INT WS (i1_args | int_args)
+op_bin_float: SSA WS "=" WS BIN_FLOAT WS flt_args
+
+// ---------- comparisons (result i1) ----------
+
+op_icmp: SSA WS "=" WS "icmp" WS ICMP_PRED WS (i1_args | int_args)
+op_fcmp: SSA WS "=" WS "fcmp" WS FCMP_PRED WS flt_args
+
+// ---------- select: `select i1 %c, T %a, T %b` ----------
+
+op_select: SSA WS "=" WS "select" WS "i1" WS boperand WS? "," WS sel_pair
+sel_pair: "i1" WS boperand WS? "," WS "i1" WS boperand
+        | "i32" WS ioperand WS? "," WS "i32" WS ioperand
+        | "i64" WS ioperand WS? "," WS "i64" WS ioperand
+        | "float" WS foperand WS? "," WS "float" WS foperand
+        | "double" WS foperand WS? "," WS "double" WS foperand
+
+// ---------- phi: `phi T [ v, %bb ], [ v, %bb ]` (2 or 3 incoming) ----------
+
+op_phi: SSA WS "=" WS "phi" WS (phi_i1 | phi_int | phi_float)
+phi_i1:    "i1" WS phi_in_b WS? "," WS phi_in_b (WS? "," WS phi_in_b)?
+phi_int:   WIDE_INT WS phi_in_i WS? "," WS phi_in_i (WS? "," WS phi_in_i)?
+phi_float: FLOAT_TYPE WS phi_in_f WS? "," WS phi_in_f (WS? "," WS phi_in_f)?
+phi_in_b: "[" WS? boperand WS? "," WS? SSA WS? "]"
+phi_in_i: "[" WS? ioperand WS? "," WS? SSA WS? "]"
+phi_in_f: "[" WS? foperand WS? "," WS? SSA WS? "]"
+
+// ---------- casts ----------
+
+op_cast_int:   SSA WS "=" WS INT_CAST WS INT_TYPE WS ioperand WS "to" WS INT_TYPE
+op_cast_i2f:   SSA WS "=" WS "sitofp" WS INT_TYPE WS ioperand WS "to" WS FLOAT_TYPE
+op_cast_f2i:   SSA WS "=" WS "fptosi" WS FLOAT_TYPE WS foperand WS "to" WS INT_TYPE
+op_cast_float: SSA WS "=" WS FLOAT_CAST WS FLOAT_TYPE WS foperand WS "to" WS FLOAT_TYPE
+
+// ---------- memory: stack slots only ----------
+
+op_alloca: SSA WS "=" WS "alloca" WS scalar_type
+op_load:   SSA WS "=" WS "load" WS scalar_type WS? "," WS "ptr" WS SSA
+op_store:  "store" WS store_val WS? "," WS "ptr" WS SSA
+store_val: "i1" WS boperand | WIDE_INT WS ioperand | FLOAT_TYPE WS foperand
+
+// ---------- terminators ----------
+
+op_ret: "ret" WS ret_val
+ret_val: "i1" WS boperand | WIDE_INT WS ioperand | FLOAT_TYPE WS foperand
+op_br_uncond: "br" WS "label" WS SSA
+op_br_cond:   "br" WS "i1" WS boperand WS? "," WS "label" WS SSA WS? "," WS "label" WS SSA
+
+// -------- keyword enums --------
+
+BIN_INT:   "add" | "sub" | "mul" | "sdiv" | "srem" | "and" | "or" | "xor"
+BIN_FLOAT: "fadd" | "fsub" | "fmul" | "fdiv"
+INT_CAST:  "sext" | "zext" | "trunc"
+FLOAT_CAST: "fpext" | "fptrunc"
+
+ICMP_PRED: "eq" | "ne" | "slt" | "sle" | "sgt" | "sge" | "ult" | "ule" | "ugt" | "uge"
+FCMP_PRED: "oeq" | "one" | "olt" | "ole" | "ogt" | "oge"
+         | "ueq" | "une" | "ult" | "ule" | "ugt" | "uge" | "ord" | "uno"
+
+// -------- types --------
+
+INT_TYPE:   "i1" | "i32" | "i64"
+WIDE_INT:   "i32" | "i64"
+FLOAT_TYPE: "float" | "double"
+
+// -------- literals --------
+
+INT_LIT:   /-?[0-9]{1,12}/
+FLOAT_LIT: /-?[0-9]{1,9}\.[0-9]{1,9}(e[+-]?[0-9]{1,3})?/
+BOOL_LIT:  "true" | "false"
+
+// Bounded identifiers: values and block references `%name`, block labels
+// `name:` (a leading digit is allowed for LLVM's numbered temporaries).
+SSA:   /%[a-zA-Z0-9_.][a-zA-Z0-9_.]{0,31}/
+SYM:   /@[a-zA-Z_][a-zA-Z0-9_]{0,47}/
+LABEL: /[a-zA-Z_.][a-zA-Z0-9_.]{0,31}:/
+
+// Bounded whitespace; 1-8 chars covers a newline plus typical indentation.
+WS: /[ \t\n]{1,8}/

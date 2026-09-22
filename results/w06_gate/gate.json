@@ -1,0 +1,1838 @@
+{
+  "gemma-3-1b-it_base|arith_func_200": {
+    "v1": {
+      "free": 0.795,
+      "residual": {
+        "vs": "c1",
+        "pp": 79.5,
+        "ci95": [
+          73.5,
+          85.0
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.005,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": 0.0,
+        "ci95": [
+          -1.5,
+          1.5
+        ],
+        "n": 200
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.03,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -33.5,
+        "ci95": [
+          -40.0,
+          -27.0
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v4": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 200
+      },
+      "internalized": true
+    }
+  },
+  "gemma-3-1b-it_base|linalg_125": {
+    "v1": {
+      "free": 0.872,
+      "residual": {
+        "vs": "c1",
+        "pp": 84.8,
+        "ci95": [
+          78.4,
+          91.2
+        ],
+        "n": 125
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 125
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.008,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -2.4,
+        "ci95": [
+          -5.6,
+          0.0
+        ],
+        "n": 125
+      },
+      "internalized": true
+    },
+    "v4": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -12.8,
+        "ci95": [
+          -19.2,
+          -7.2
+        ],
+        "n": 125
+      },
+      "internalized": false
+    }
+  },
+  "gemma-3-1b-it_rft_s0|arith_func_200": {
+    "v1": {
+      "free": 0.85,
+      "residual": {
+        "vs": "c1",
+        "pp": 85.0,
+        "ci95": [
+          80.0,
+          89.5
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 200
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 200
+      },
+      "internalized": true
+    },
+    "v4": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 200
+      },
+      "internalized": true
+    }
+  },
+  "gemma-3-1b-it_rft_s0|linalg_125": {
+    "v1": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1",
+        "pp": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 125
+      },
+      "internalized": true
+    },
+    "v2": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 125
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.056,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -0.8,
+        "ci95": [
+          -4.8,
+          3.2
+        ],
+        "n": 125
+      },
+      "internalized": true
+    },
+    "v4": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 125
+      },
+      "internalized": true
+    }
+  },
+  "gemma-3-1b-it_ssd_s0|arith_func_200": {
+    "v1": {
+      "free": 0.145,
+      "residual": {
+        "vs": "c1",
+        "pp": 8.5,
+        "ci95": [
+          5.0,
+          12.5
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 200
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.3,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": 6.0,
+        "ci95": [
+          2.5,
+          9.5
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v4": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 200
+      },
+      "internalized": true
+    }
+  },
+  "gemma-3-1b-it_ssd_s0|linalg_125": {
+    "v1": {
+      "free": 0.68,
+      "residual": {
+        "vs": "c1",
+        "pp": 64.0,
+        "ci95": [
+          55.2,
+          72.0
+        ],
+        "n": 125
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 125
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.016,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": 0.0,
+        "ci95": [
+          -2.4,
+          2.4
+        ],
+        "n": 125
+      },
+      "internalized": true
+    },
+    "v4": {
+      "free": 0.024,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -10.4,
+        "ci95": [
+          -16.0,
+          -5.6
+        ],
+        "n": 125
+      },
+      "internalized": false
+    }
+  },
+  "gemma-3-270m-it_base|arith_func_200": {
+    "v1": {
+      "free": 0.495,
+      "residual": {
+        "vs": "c1",
+        "pp": 49.5,
+        "ci95": [
+          42.5,
+          56.5
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.005,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": 0.5,
+        "ci95": [
+          0.0,
+          1.5
+        ],
+        "n": 200
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.015,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -9.0,
+        "ci95": [
+          -13.0,
+          -5.5
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v4": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 200
+      },
+      "internalized": true
+    }
+  },
+  "gemma-3-270m-it_base|linalg_125": {
+    "v1": {
+      "free": 0.864,
+      "residual": {
+        "vs": "c1",
+        "pp": 86.4,
+        "ci95": [
+          80.0,
+          92.0
+        ],
+        "n": 125
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 125
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.008,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -4.8,
+        "ci95": [
+          -8.8,
+          -1.6
+        ],
+        "n": 125
+      },
+      "internalized": false
+    },
+    "v4": {
+      "free": 0.016,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -16.0,
+        "ci95": [
+          -22.4,
+          -9.6
+        ],
+        "n": 125
+      },
+      "internalized": false
+    }
+  },
+  "smollm2-1.7b-instruct_base|arith_func_200": {
+    "v1": {
+      "free": 0.79,
+      "residual": {
+        "vs": "c1",
+        "pp": 78.0,
+        "ci95": [
+          72.0,
+          83.5
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.005,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": -1.0,
+        "ci95": [
+          -3.0,
+          1.0
+        ],
+        "n": 200
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.015,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -22.0,
+        "ci95": [
+          -28.5,
+          -16.0
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v4": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -10.0,
+        "ci95": [
+          -14.5,
+          -6.0
+        ],
+        "n": 200
+      },
+      "internalized": false
+    }
+  },
+  "smollm2-1.7b-instruct_base|linalg_125": {
+    "v1": {
+      "free": 0.4,
+      "residual": {
+        "vs": "c1",
+        "pp": 38.4,
+        "ci95": [
+          29.6,
+          47.2
+        ],
+        "n": 125
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 125
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.008,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -2.4,
+        "ci95": [
+          -6.4,
+          0.8
+        ],
+        "n": 125
+      },
+      "internalized": true
+    },
+    "v4": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -3.2,
+        "ci95": [
+          -6.4,
+          -0.8
+        ],
+        "n": 125
+      },
+      "internalized": false
+    }
+  },
+  "smollm2-1.7b-instruct_rft_s0|arith_func_200": {
+    "v1": {
+      "free": 0.29,
+      "residual": {
+        "vs": "c1",
+        "pp": 29.0,
+        "ci95": [
+          23.0,
+          35.5
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.045,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": 0.0,
+        "ci95": [
+          -1.5,
+          1.5
+        ],
+        "n": 200
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.1,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -9.0,
+        "ci95": [
+          -13.5,
+          -4.5
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v4": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -1.5,
+        "ci95": [
+          -3.5,
+          0.0
+        ],
+        "n": 200
+      },
+      "internalized": true
+    }
+  },
+  "smollm2-1.7b-instruct_rft_s0|linalg_125": {
+    "v1": {
+      "free": 0.568,
+      "residual": {
+        "vs": "c1",
+        "pp": 56.8,
+        "ci95": [
+          48.0,
+          65.6
+        ],
+        "n": 125
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 125
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.024,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -1.6,
+        "ci95": [
+          -5.6,
+          1.6
+        ],
+        "n": 125
+      },
+      "internalized": true
+    },
+    "v4": {
+      "free": 0.032,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -4.0,
+        "ci95": [
+          -8.0,
+          -0.8
+        ],
+        "n": 125
+      },
+      "internalized": false
+    }
+  },
+  "smollm2-1.7b-instruct_ssd_s0|arith_func_200": {
+    "v1": {
+      "free": 0.21,
+      "residual": {
+        "vs": "c1",
+        "pp": 20.5,
+        "ci95": [
+          15.0,
+          26.0
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.045,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": -2.5,
+        "ci95": [
+          -5.0,
+          -0.5
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v3": {
+      "free": 0.155,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -3.5,
+        "ci95": [
+          -8.0,
+          1.0
+        ],
+        "n": 200
+      },
+      "internalized": true
+    },
+    "v4": {
+      "free": 0.01,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -1.0,
+        "ci95": [
+          -2.5,
+          0.0
+        ],
+        "n": 200
+      },
+      "internalized": true
+    }
+  },
+  "smollm2-1.7b-instruct_ssd_s0|linalg_125": {
+    "v1": {
+      "free": 0.512,
+      "residual": {
+        "vs": "c1",
+        "pp": 51.2,
+        "ci95": [
+          42.4,
+          60.0
+        ],
+        "n": 125
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 125
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.016,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -1.6,
+        "ci95": [
+          -4.0,
+          0.0
+        ],
+        "n": 125
+      },
+      "internalized": true
+    },
+    "v4": {
+      "free": 0.032,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -11.2,
+        "ci95": [
+          -17.6,
+          -5.6
+        ],
+        "n": 125
+      },
+      "internalized": false
+    }
+  },
+  "smollm2-1.7b-instruct_ssd_s0__lora_scale=20|arith_func_200": {
+    "v1": {
+      "free": 0.24,
+      "residual": {
+        "vs": "c1",
+        "pp": 22.5,
+        "ci95": [
+          16.5,
+          28.5
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": -0.5,
+        "ci95": [
+          -1.5,
+          0.0
+        ],
+        "n": 200
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.305,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -2.0,
+        "ci95": [
+          -8.0,
+          4.0
+        ],
+        "n": 200
+      },
+      "internalized": true
+    },
+    "v4": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -4.0,
+        "ci95": [
+          -7.0,
+          -1.5
+        ],
+        "n": 200
+      },
+      "internalized": false
+    }
+  },
+  "smollm2-1.7b-instruct_ssd_s0__lora_scale=20|linalg_125": {
+    "v1": {
+      "free": 0.544,
+      "residual": {
+        "vs": "c1",
+        "pp": 54.4,
+        "ci95": [
+          45.6,
+          63.2
+        ],
+        "n": 125
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 125
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.128,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": 4.0,
+        "ci95": [
+          -0.8,
+          8.8
+        ],
+        "n": 125
+      },
+      "internalized": false
+    },
+    "v4": {
+      "free": 0.056,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -11.2,
+        "ci95": [
+          -16.8,
+          -5.6
+        ],
+        "n": 125
+      },
+      "internalized": false
+    }
+  },
+  "smollm2-1.7b-instruct_ssd_s0__lora_scale=20_final|arith_func_200": {
+    "v1": {
+      "free": 0.24,
+      "residual": {
+        "vs": "c1",
+        "pp": 22.5,
+        "ci95": [
+          17.0,
+          28.5
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.015,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": 0.5,
+        "ci95": [
+          0.0,
+          1.5
+        ],
+        "n": 200
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.275,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -3.5,
+        "ci95": [
+          -8.5,
+          1.5
+        ],
+        "n": 200
+      },
+      "internalized": true
+    },
+    "v4": {
+      "free": 0.005,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -3.0,
+        "ci95": [
+          -5.5,
+          -1.0
+        ],
+        "n": 200
+      },
+      "internalized": false
+    }
+  },
+  "smollm2-1.7b-instruct_ssd_s0__lora_scale=20_final|linalg_125": {
+    "v1": {
+      "free": 0.528,
+      "residual": {
+        "vs": "c1",
+        "pp": 52.8,
+        "ci95": [
+          44.0,
+          61.6
+        ],
+        "n": 125
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 125
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.152,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": 10.4,
+        "ci95": [
+          4.8,
+          16.8
+        ],
+        "n": 125
+      },
+      "internalized": false
+    },
+    "v4": {
+      "free": 0.168,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -23.2,
+        "ci95": [
+          -30.4,
+          -16.0
+        ],
+        "n": 125
+      },
+      "internalized": false
+    }
+  },
+  "smollm2-135m-instruct_base|arith_func_200": {
+    "v1": {
+      "free": 1.0,
+      "residual": {
+        "vs": "c1",
+        "pp": 100.0,
+        "ci95": [
+          100.0,
+          100.0
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": -0.5,
+        "ci95": [
+          -1.5,
+          0.0
+        ],
+        "n": 200
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -13.0,
+        "ci95": [
+          -18.0,
+          -8.5
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v4": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -1.0,
+        "ci95": [
+          -2.5,
+          0.0
+        ],
+        "n": 200
+      },
+      "internalized": true
+    }
+  },
+  "smollm2-135m-instruct_base|linalg_125": {
+    "v1": {
+      "free": 1.0,
+      "residual": {
+        "vs": "c1",
+        "pp": 100.0,
+        "ci95": [
+          100.0,
+          100.0
+        ],
+        "n": 125
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 125
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -15.2,
+        "ci95": [
+          -21.6,
+          -9.6
+        ],
+        "n": 125
+      },
+      "internalized": false
+    },
+    "v4": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -1.6,
+        "ci95": [
+          -4.0,
+          0.0
+        ],
+        "n": 125
+      },
+      "internalized": true
+    }
+  },
+  "smollm2-360m-instruct_base|arith_func_200": {
+    "v1": {
+      "free": 1.0,
+      "residual": {
+        "vs": "c1",
+        "pp": 98.5,
+        "ci95": [
+          96.5,
+          100.0
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": -2.0,
+        "ci95": [
+          -4.0,
+          -0.5
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v3": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -14.0,
+        "ci95": [
+          -19.0,
+          -9.5
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v4": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -7.5,
+        "ci95": [
+          -11.5,
+          -4.0
+        ],
+        "n": 200
+      },
+      "internalized": false
+    }
+  },
+  "smollm2-360m-instruct_base|linalg_125": {
+    "v1": {
+      "free": 1.0,
+      "residual": {
+        "vs": "c1",
+        "pp": 96.8,
+        "ci95": [
+          93.6,
+          99.2
+        ],
+        "n": 125
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 125
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -4.8,
+        "ci95": [
+          -8.8,
+          -1.6
+        ],
+        "n": 125
+      },
+      "internalized": false
+    },
+    "v4": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -8.8,
+        "ci95": [
+          -13.6,
+          -4.0
+        ],
+        "n": 125
+      },
+      "internalized": false
+    }
+  },
+  "smollm2-360m-instruct_grpo_s0|arith_func_200": {
+    "v1": {
+      "free": 1.0,
+      "residual": {
+        "vs": "c1",
+        "pp": 99.0,
+        "ci95": [
+          97.5,
+          100.0
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": -1.5,
+        "ci95": [
+          -3.5,
+          0.0
+        ],
+        "n": 200
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -14.5,
+        "ci95": [
+          -19.5,
+          -10.0
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v4": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -9.0,
+        "ci95": [
+          -13.0,
+          -5.0
+        ],
+        "n": 200
+      },
+      "internalized": false
+    }
+  },
+  "smollm2-360m-instruct_grpo_s0|linalg_125": {
+    "v1": {
+      "free": 1.0,
+      "residual": {
+        "vs": "c1",
+        "pp": 96.8,
+        "ci95": [
+          93.6,
+          99.2
+        ],
+        "n": 125
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 125
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -5.6,
+        "ci95": [
+          -10.4,
+          -1.6
+        ],
+        "n": 125
+      },
+      "internalized": false
+    },
+    "v4": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -8.0,
+        "ci95": [
+          -12.8,
+          -4.0
+        ],
+        "n": 125
+      },
+      "internalized": false
+    }
+  },
+  "smollm2-360m-instruct_rft_s0|arith_func_200": {
+    "v1": {
+      "free": 0.29,
+      "residual": {
+        "vs": "c1",
+        "pp": 27.0,
+        "ci95": [
+          21.0,
+          33.0
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 200
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.035,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -5.0,
+        "ci95": [
+          -9.5,
+          -1.0
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v4": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -0.5,
+        "ci95": [
+          -1.5,
+          0.0
+        ],
+        "n": 200
+      },
+      "internalized": true
+    }
+  },
+  "smollm2-360m-instruct_rft_s0|linalg_125": {
+    "v1": {
+      "free": 0.704,
+      "residual": {
+        "vs": "c1",
+        "pp": 70.4,
+        "ci95": [
+          62.4,
+          78.4
+        ],
+        "n": 125
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 125
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.008,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -17.6,
+        "ci95": [
+          -24.0,
+          -11.2
+        ],
+        "n": 125
+      },
+      "internalized": false
+    },
+    "v4": {
+      "free": 0.032,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -25.6,
+        "ci95": [
+          -33.6,
+          -17.6
+        ],
+        "n": 125
+      },
+      "internalized": false
+    }
+  },
+  "smollm2-360m-instruct_sft_s0|arith_func_200": {
+    "v1": {
+      "free": 0.62,
+      "residual": {
+        "vs": "c1",
+        "pp": 60.0,
+        "ci95": [
+          53.0,
+          67.0
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.02,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": 1.0,
+        "ci95": [
+          0.0,
+          2.5
+        ],
+        "n": 200
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.04,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -18.5,
+        "ci95": [
+          -24.5,
+          -12.5
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v4": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -6.5,
+        "ci95": [
+          -10.0,
+          -3.5
+        ],
+        "n": 200
+      },
+      "internalized": false
+    }
+  },
+  "smollm2-360m-instruct_sft_s0|linalg_125": {
+    "v1": {
+      "free": 0.584,
+      "residual": {
+        "vs": "c1",
+        "pp": 56.0,
+        "ci95": [
+          47.2,
+          64.8
+        ],
+        "n": 125
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.032,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": 3.2,
+        "ci95": [
+          0.8,
+          6.4
+        ],
+        "n": 125
+      },
+      "internalized": false
+    },
+    "v3": {
+      "free": 0.032,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -0.8,
+        "ci95": [
+          -3.2,
+          1.6
+        ],
+        "n": 125
+      },
+      "internalized": true
+    },
+    "v4": {
+      "free": 0.048,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -16.8,
+        "ci95": [
+          -23.2,
+          -10.4
+        ],
+        "n": 125
+      },
+      "internalized": false
+    }
+  },
+  "smollm2-360m-instruct_ssd_s0|arith_func_200": {
+    "v1": {
+      "free": 0.155,
+      "residual": {
+        "vs": "c1",
+        "pp": 15.0,
+        "ci95": [
+          10.0,
+          20.0
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.01,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": 1.0,
+        "ci95": [
+          0.0,
+          2.5
+        ],
+        "n": 200
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.135,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": 4.5,
+        "ci95": [
+          0.0,
+          9.0
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v4": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -1.5,
+        "ci95": [
+          -3.5,
+          0.0
+        ],
+        "n": 200
+      },
+      "internalized": true
+    }
+  },
+  "smollm2-360m-instruct_ssd_s0|linalg_125": {
+    "v1": {
+      "free": 0.456,
+      "residual": {
+        "vs": "c1",
+        "pp": 43.2,
+        "ci95": [
+          34.4,
+          52.0
+        ],
+        "n": 125
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 125
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.064,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": 0.8,
+        "ci95": [
+          -4.8,
+          6.4
+        ],
+        "n": 125
+      },
+      "internalized": true
+    },
+    "v4": {
+      "free": 0.048,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -9.6,
+        "ci95": [
+          -15.2,
+          -4.8
+        ],
+        "n": 125
+      },
+      "internalized": false
+    }
+  },
+  "smollm3-3b_base|arith_func_200": {
+    "v1": {
+      "free": 0.83,
+      "residual": {
+        "vs": "c1",
+        "pp": 81.5,
+        "ci95": [
+          76.0,
+          86.5
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.015,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": 1.5,
+        "ci95": [
+          0.0,
+          3.5
+        ],
+        "n": 200
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.01,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -26.0,
+        "ci95": [
+          -32.5,
+          -20.0
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v4": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -8.0,
+        "ci95": [
+          -12.0,
+          -4.5
+        ],
+        "n": 200
+      },
+      "internalized": false
+    }
+  },
+  "smollm3-3b_base|linalg_125": {
+    "v1": {
+      "free": 0.904,
+      "residual": {
+        "vs": "c1",
+        "pp": 66.4,
+        "ci95": [
+          57.6,
+          74.4
+        ],
+        "n": 125
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 125
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.008,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -2.4,
+        "ci95": [
+          -5.6,
+          0.8
+        ],
+        "n": 125
+      },
+      "internalized": true
+    },
+    "v4": {
+      "free": 0.024,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -17.6,
+        "ci95": [
+          -24.8,
+          -10.4
+        ],
+        "n": 125
+      },
+      "internalized": false
+    }
+  },
+  "smollm3-3b_ssd_s0|arith_func_200": {
+    "v1": {
+      "free": 0.315,
+      "residual": {
+        "vs": "c1",
+        "pp": 31.5,
+        "ci95": [
+          25.0,
+          38.0
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.015,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": -3.0,
+        "ci95": [
+          -5.5,
+          -1.0
+        ],
+        "n": 200
+      },
+      "internalized": false
+    },
+    "v3": {
+      "free": 0.185,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -3.0,
+        "ci95": [
+          -7.5,
+          1.5
+        ],
+        "n": 200
+      },
+      "internalized": true
+    },
+    "v4": {
+      "free": 0.005,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -2.0,
+        "ci95": [
+          -4.0,
+          -0.5
+        ],
+        "n": 200
+      },
+      "internalized": false
+    }
+  },
+  "smollm3-3b_ssd_s0|linalg_125": {
+    "v1": {
+      "free": 0.808,
+      "residual": {
+        "vs": "c1",
+        "pp": 78.4,
+        "ci95": [
+          71.2,
+          85.6
+        ],
+        "n": 125
+      },
+      "internalized": false
+    },
+    "v2": {
+      "free": 0.0,
+      "residual": {
+        "vs": "c1_c2",
+        "pp": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 125
+      },
+      "internalized": true
+    },
+    "v3": {
+      "free": 0.032,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "n": 125
+      },
+      "internalized": true
+    },
+    "v4": {
+      "free": 0.008,
+      "residual": {
+        "vs": "c1_c2_c3",
+        "pp": -22.4,
+        "ci95": [
+          -29.6,
+          -15.2
+        ],
+        "n": 125
+      },
+      "internalized": false
+    }
+  }
+}

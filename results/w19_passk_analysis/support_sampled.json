@@ -1,0 +1,182 @@
+{
+ "base_pass_at_256": {
+  "360M": 49,
+  "1.7B": 59,
+  "3B": 61
+ },
+ "students": {
+  "smollm2-360m-instruct_ssd_s0": {
+   "scale": "360M",
+   "label": "SSD",
+   "kind": "on-policy",
+   "n": 143,
+   "base_256": 49,
+   "solved_16": 27,
+   "outside": 1,
+   "outside_ids": [
+    25
+   ]
+  },
+  "smollm2-360m-instruct_sft_s0": {
+   "scale": "360M",
+   "label": "SFT-gold",
+   "kind": "gold",
+   "n": 143,
+   "base_256": 49,
+   "solved_16": 61,
+   "outside": 26,
+   "outside_ids": [
+    10,
+    12,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    40,
+    45,
+    48,
+    53,
+    66,
+    67,
+    68,
+    77,
+    78,
+    95,
+    97,
+    99,
+    100,
+    103,
+    113,
+    122,
+    136
+   ]
+  },
+  "smollm2-360m-instruct_ssd_s0__gold_in_group=1": {
+   "scale": "360M",
+   "label": "SSD + one gold per group",
+   "kind": "gold",
+   "n": 143,
+   "base_256": 49,
+   "solved_16": 61,
+   "outside": 23,
+   "outside_ids": [
+    10,
+    12,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    45,
+    48,
+    53,
+    61,
+    66,
+    67,
+    68,
+    82,
+    95,
+    97,
+    99,
+    100,
+    122,
+    136,
+    137
+   ]
+  },
+  "smollm2-1.7b-instruct_ssd_s0": {
+   "scale": "1.7B",
+   "label": "SSD s0",
+   "kind": "on-policy",
+   "n": 143,
+   "base_256": 59,
+   "solved_16": 49,
+   "outside": 11,
+   "outside_ids": [
+    26,
+    27,
+    29,
+    53,
+    67,
+    75,
+    96,
+    97,
+    99,
+    104,
+    105
+   ]
+  },
+  "smollm2-1.7b-instruct_ssd_s1": {
+   "scale": "1.7B",
+   "label": "SSD s1",
+   "kind": "on-policy",
+   "n": 143,
+   "base_256": 59,
+   "solved_16": 55,
+   "outside": 10,
+   "outside_ids": [
+    12,
+    23,
+    29,
+    53,
+    67,
+    75,
+    87,
+    104,
+    105,
+    122
+   ]
+  },
+  "smollm2-1.7b-instruct_rft_s0": {
+   "scale": "1.7B",
+   "label": "RFT",
+   "kind": "on-policy",
+   "n": 143,
+   "base_256": 59,
+   "solved_16": 27,
+   "outside": 1,
+   "outside_ids": [
+    102
+   ]
+  },
+  "smollm3-3b_ssd_s0": {
+   "scale": "3B",
+   "label": "SSD",
+   "kind": "on-policy",
+   "n": 143,
+   "base_256": 61,
+   "solved_16": 59,
+   "outside": 12,
+   "outside_ids": [
+    23,
+    26,
+    27,
+    29,
+    35,
+    38,
+    76,
+    78,
+    96,
+    97,
+    105,
+    133
+   ]
+  },
+  "smollm3-3b_rft_s0": {
+   "scale": "3B",
+   "label": "RFT",
+   "kind": "on-policy",
+   "n": 143,
+   "base_256": 61,
+   "solved_16": 7,
+   "outside": 1,
+   "outside_ids": [
+    104
+   ]
+  }
+ }
+}

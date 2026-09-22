@@ -1,0 +1,72 @@
+{
+ "smollm2-1.7b-instruct": {
+  "label": "1.7B base",
+  "pass1": 31.1,
+  "ci95": [
+   23.1,
+   39.5
+  ],
+  "pass8": 55,
+  "n": 143
+ },
+ "smollm2-1.7b-instruct_ssd_s0": {
+  "label": "1.7B SSD s0",
+  "pass1": 40.9,
+  "ci95": [
+   31.0,
+   51.5
+  ],
+  "pass8": 49,
+  "n": 143
+ },
+ "smollm2-1.7b-instruct_ssd_s1": {
+  "label": "1.7B SSD s1",
+  "pass1": 44.1,
+  "ci95": [
+   34.4,
+   54.5
+  ],
+  "pass8": 55,
+  "n": 143
+ },
+ "smollm2-1.7b-instruct_rft_s0": {
+  "label": "1.7B RFT s0",
+  "pass1": 26.2,
+  "ci95": [
+   17.5,
+   35.2
+  ],
+  "pass8": 27,
+  "n": 143
+ },
+ "smollm3-3b": {
+  "label": "3B base",
+  "pass1": 37.1,
+  "ci95": [
+   28.5,
+   46.1
+  ],
+  "pass8": 61,
+  "n": 143
+ },
+ "smollm3-3b_ssd_s0": {
+  "label": "3B SSD s0",
+  "pass1": 54.4,
+  "ci95": [
+   43.4,
+   65.5
+  ],
+  "pass8": 59,
+  "n": 143
+ },
+ "smollm3-3b_rft_s0": {
+  "label": "3B RFT s0",
+  "pass1": 6.0,
+  "ci95": [
+   2.0,
+   11.0
+  ],
+  "pass8": 7,
+  "n": 143
+ }
+}

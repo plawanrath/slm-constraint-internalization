@@ -23,8 +23,17 @@ from sci.constraints.parser import generation_grammar_path
 
 
 def lark_grammar(name: str = "mlir_gen_c1c2") -> str:
-    """Compiled llguidance grammar spec from a bundled LARK generation grammar."""
-    return LLMatcher.grammar_from_lark(generation_grammar_path(name).read_text())
+    """Compiled llguidance grammar spec from a bundled LARK generation grammar (MLIR grammars first,
+    then the synthetic-language grammars in `sci.synth`)."""
+    if name.startswith("llvm_"):
+        from sci.transfer.llvmir.grammar import grammar_path as llvm_grammar_path  # optional second target
+        p = llvm_grammar_path(name)
+    else:
+        p = generation_grammar_path(name)
+        if not p.exists():
+            from sci.synth.grammar import grammar_path
+            p = grammar_path(name)
+    return LLMatcher.grammar_from_lark(p.read_text())
 
 
 def llg_tokenizer(hf_tokenizer) -> LLTokenizer:

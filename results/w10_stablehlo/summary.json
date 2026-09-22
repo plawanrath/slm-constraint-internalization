@@ -1,0 +1,694 @@
+{
+  "cells": {
+    "smollm2-1.7b-instruct_grpo_s0": {
+      "stablehlo_held_out_200": {
+        "c1": {
+          "n": 200,
+          "parse_rate": 0.35,
+          "verify_rate": 0.35,
+          "verify_ci95": [
+            0.285,
+            0.415
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 18.195,
+          "unfinished": 130
+        },
+        "c1_c2": {
+          "n": 200,
+          "parse_rate": 0.35,
+          "verify_rate": 0.35,
+          "verify_ci95": [
+            0.285,
+            0.415
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 18.215,
+          "unfinished": 130
+        },
+        "c1_c2_c3": {
+          "n": 200,
+          "parse_rate": 0.35,
+          "verify_rate": 0.35,
+          "verify_ci95": [
+            0.285,
+            0.415
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 18.214,
+          "unfinished": 130
+        },
+        "none": {
+          "n": 200,
+          "parse_rate": 0.085,
+          "verify_rate": 0.085,
+          "verify_ci95": [
+            0.05,
+            0.125
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 1.496,
+          "unfinished": 0
+        },
+        "paired_deltas": {
+          "c1-none": {
+            "pp": 26.5,
+            "ci95_pp": [
+              20.5,
+              32.5
+            ],
+            "p_one_sided": 0.0,
+            "n_pairs": 200
+          },
+          "c1_c2-c1": {
+            "pp": 0.0,
+            "ci95_pp": [
+              0.0,
+              0.0
+            ],
+            "p_one_sided": 1.0,
+            "n_pairs": 200
+          },
+          "c1_c2_c3-c1_c2": {
+            "pp": 0.0,
+            "ci95_pp": [
+              0.0,
+              0.0
+            ],
+            "p_one_sided": 1.0,
+            "n_pairs": 200
+          },
+          "c1_c2_c3-none": {
+            "pp": 26.5,
+            "ci95_pp": [
+              20.5,
+              32.5
+            ],
+            "p_one_sided": 0.0,
+            "n_pairs": 200
+          }
+        }
+      },
+      "stablehlo_spec_30": {
+        "c1": {
+          "n": 30,
+          "parse_rate": 0.9333,
+          "verify_rate": 0.7333,
+          "verify_ci95": [
+            0.5667,
+            0.8667
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 2.37,
+          "unfinished": 2
+        },
+        "c1_c2": {
+          "n": 30,
+          "parse_rate": 0.9333,
+          "verify_rate": 0.7333,
+          "verify_ci95": [
+            0.5667,
+            0.8667
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 2.372,
+          "unfinished": 2
+        },
+        "c1_c2_c3": {
+          "n": 30,
+          "parse_rate": 0.9333,
+          "verify_rate": 0.7333,
+          "verify_ci95": [
+            0.5667,
+            0.8667
+          ],
+          "mean_attempts": 1.133,
+          "mean_dt": 2.748,
+          "unfinished": 2
+        },
+        "none": {
+          "n": 30,
+          "parse_rate": 0.2333,
+          "verify_rate": 0.2,
+          "verify_ci95": [
+            0.0667,
+            0.3667
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 1.748,
+          "unfinished": 0
+        },
+        "paired_deltas": {
+          "c1-none": {
+            "pp": 53.3,
+            "ci95_pp": [
+              36.7,
+              70.0
+            ],
+            "p_one_sided": 0.0,
+            "n_pairs": 30
+          },
+          "c1_c2-c1": {
+            "pp": 0.0,
+            "ci95_pp": [
+              0.0,
+              0.0
+            ],
+            "p_one_sided": 1.0,
+            "n_pairs": 30
+          },
+          "c1_c2_c3-c1_c2": {
+            "pp": 0.0,
+            "ci95_pp": [
+              0.0,
+              0.0
+            ],
+            "p_one_sided": 1.0,
+            "n_pairs": 30
+          },
+          "c1_c2_c3-none": {
+            "pp": 53.3,
+            "ci95_pp": [
+              36.7,
+              70.0
+            ],
+            "p_one_sided": 0.0,
+            "n_pairs": 30
+          }
+        }
+      }
+    },
+    "smollm2-1.7b-instruct_ssd_s0__full_ft": {
+      "stablehlo_held_out_200": {
+        "c1": {
+          "n": 200,
+          "parse_rate": 0.93,
+          "verify_rate": 0.93,
+          "verify_ci95": [
+            0.895,
+            0.965
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 0.957,
+          "unfinished": 14
+        },
+        "c1_c2": {
+          "n": 200,
+          "parse_rate": 0.93,
+          "verify_rate": 0.93,
+          "verify_ci95": [
+            0.895,
+            0.965
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 0.952,
+          "unfinished": 14
+        },
+        "c1_c2_c3": {
+          "n": 200,
+          "parse_rate": 0.93,
+          "verify_rate": 0.93,
+          "verify_ci95": [
+            0.895,
+            0.965
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 0.958,
+          "unfinished": 14
+        },
+        "none": {
+          "n": 200,
+          "parse_rate": 0.165,
+          "verify_rate": 0.165,
+          "verify_ci95": [
+            0.115,
+            0.22
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 0.658,
+          "unfinished": 0
+        },
+        "paired_deltas": {
+          "c1-none": {
+            "pp": 76.5,
+            "ci95_pp": [
+              70.5,
+              82.5
+            ],
+            "p_one_sided": 0.0,
+            "n_pairs": 200
+          },
+          "c1_c2-c1": {
+            "pp": 0.0,
+            "ci95_pp": [
+              0.0,
+              0.0
+            ],
+            "p_one_sided": 1.0,
+            "n_pairs": 200
+          },
+          "c1_c2_c3-c1_c2": {
+            "pp": 0.0,
+            "ci95_pp": [
+              0.0,
+              0.0
+            ],
+            "p_one_sided": 1.0,
+            "n_pairs": 200
+          },
+          "c1_c2_c3-none": {
+            "pp": 76.5,
+            "ci95_pp": [
+              70.5,
+              82.5
+            ],
+            "p_one_sided": 0.0,
+            "n_pairs": 200
+          }
+        }
+      },
+      "stablehlo_spec_30": {
+        "c1": {
+          "n": 30,
+          "parse_rate": 0.9667,
+          "verify_rate": 0.7333,
+          "verify_ci95": [
+            0.5667,
+            0.8667
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 0.954,
+          "unfinished": 1
+        },
+        "c1_c2": {
+          "n": 30,
+          "parse_rate": 0.9667,
+          "verify_rate": 0.7333,
+          "verify_ci95": [
+            0.5667,
+            0.8667
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 0.952,
+          "unfinished": 1
+        },
+        "c1_c2_c3": {
+          "n": 30,
+          "parse_rate": 0.9667,
+          "verify_rate": 0.7333,
+          "verify_ci95": [
+            0.5667,
+            0.8667
+          ],
+          "mean_attempts": 1.267,
+          "mean_dt": 1.202,
+          "unfinished": 1
+        },
+        "none": {
+          "n": 30,
+          "parse_rate": 0.3667,
+          "verify_rate": 0.2667,
+          "verify_ci95": [
+            0.1333,
+            0.4333
+          ],
+          "mean_attempts": 1.0,
+          "mean_dt": 0.758,
+          "unfinished": 0
+        },
+        "paired_deltas": {
+          "c1-none": {
+            "pp": 46.7,
+            "ci95_pp": [
+              30.0,
+              63.3
+            ],
+            "p_one_sided": 0.0,
+            "n_pairs": 30
+          },
+          "c1_c2-c1": {
+            "pp": 0.0,
+            "ci95_pp": [
+              0.0,
+              0.0
+            ],
+            "p_one_sided": 1.0,
+            "n_pairs": 30
+          },
+          "c1_c2_c3-c1_c2": {
+            "pp": 0.0,
+            "ci95_pp": [
+              0.0,
+              0.0
+            ],
+            "p_one_sided": 1.0,
+            "n_pairs": 30
+          },
+          "c1_c2_c3-none": {
+            "pp": 46.7,
+            "ci95_pp": [
+              30.0,
+              63.3
+            ],
+            "p_one_sided": 0.0,
+            "n_pairs": 30
+          }
+        }
+      }
+    }
+  },
+  "residuals": {
+    "smollm2-1.7b-instruct_grpo_s0": {
+      "stablehlo_held_out_200": {
+        "n": {
+          "none": 200,
+          "c1": 200,
+          "c1_c2": 200,
+          "c1_c2_c3": 200
+        },
+        "rates": {
+          "none": {
+            "v1": 0.915,
+            "v2": 0.0,
+            "v3": 0.0,
+            "v4": 0.0,
+            "verify_valid": 0.085
+          },
+          "c1": {
+            "v1": 0.65,
+            "v2": 0.0,
+            "v3": 0.0,
+            "v4": 0.0,
+            "verify_valid": 0.35
+          },
+          "c1_c2": {
+            "v1": 0.65,
+            "v2": 0.0,
+            "v3": 0.0,
+            "v4": 0.0,
+            "verify_valid": 0.35
+          },
+          "c1_c2_c3": {
+            "v1": 0.65,
+            "v2": 0.0,
+            "v3": 0.0,
+            "v4": 0.0,
+            "verify_valid": 0.35
+          }
+        },
+        "residual_pp": {
+          "v1": {
+            "vs": "c1",
+            "pp": 26.5,
+            "ci95": [
+              20.5,
+              32.5
+            ],
+            "n": 200
+          },
+          "v2": {
+            "vs": "c1_c2",
+            "pp": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n": 200
+          },
+          "v3": {
+            "vs": "c1_c2_c3",
+            "pp": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n": 200
+          },
+          "v4": {
+            "vs": "c1_c2_c3",
+            "pp": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n": 200
+          }
+        },
+        "functional_rate": {
+          "none": 0.0,
+          "c1": 0.0,
+          "c1_c2": 0.0,
+          "c1_c2_c3": 0.0
+        }
+      },
+      "stablehlo_spec_30": {
+        "n": {
+          "none": 30,
+          "c1": 30,
+          "c1_c2": 30,
+          "c1_c2_c3": 30
+        },
+        "rates": {
+          "none": {
+            "v1": 0.7667,
+            "v2": 0.0,
+            "v3": 0.0,
+            "v4": 0.0333,
+            "verify_valid": 0.2
+          },
+          "c1": {
+            "v1": 0.0667,
+            "v2": 0.0,
+            "v3": 0.0333,
+            "v4": 0.1667,
+            "verify_valid": 0.7333
+          },
+          "c1_c2": {
+            "v1": 0.0667,
+            "v2": 0.0,
+            "v3": 0.0333,
+            "v4": 0.1667,
+            "verify_valid": 0.7333
+          },
+          "c1_c2_c3": {
+            "v1": 0.0667,
+            "v2": 0.0,
+            "v3": 0.0333,
+            "v4": 0.1667,
+            "verify_valid": 0.7333
+          }
+        },
+        "residual_pp": {
+          "v1": {
+            "vs": "c1",
+            "pp": 70.0,
+            "ci95": [
+              53.3,
+              86.7
+            ],
+            "n": 30
+          },
+          "v2": {
+            "vs": "c1_c2",
+            "pp": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n": 30
+          },
+          "v3": {
+            "vs": "c1_c2_c3",
+            "pp": -3.3,
+            "ci95": [
+              -10.0,
+              0.0
+            ],
+            "n": 30
+          },
+          "v4": {
+            "vs": "c1_c2_c3",
+            "pp": -13.3,
+            "ci95": [
+              -26.7,
+              -3.3
+            ],
+            "n": 30
+          }
+        },
+        "functional_rate": {
+          "none": 0.0,
+          "c1": 0.0,
+          "c1_c2": 0.0,
+          "c1_c2_c3": 0.0
+        }
+      }
+    },
+    "smollm2-1.7b-instruct_ssd_s0__full_ft": {
+      "stablehlo_held_out_200": {
+        "n": {
+          "none": 200,
+          "c1": 200,
+          "c1_c2": 200,
+          "c1_c2_c3": 200
+        },
+        "rates": {
+          "none": {
+            "v1": 0.835,
+            "v2": 0.0,
+            "v3": 0.0,
+            "v4": 0.0,
+            "verify_valid": 0.165
+          },
+          "c1": {
+            "v1": 0.07,
+            "v2": 0.0,
+            "v3": 0.0,
+            "v4": 0.0,
+            "verify_valid": 0.93
+          },
+          "c1_c2": {
+            "v1": 0.07,
+            "v2": 0.0,
+            "v3": 0.0,
+            "v4": 0.0,
+            "verify_valid": 0.93
+          },
+          "c1_c2_c3": {
+            "v1": 0.07,
+            "v2": 0.0,
+            "v3": 0.0,
+            "v4": 0.0,
+            "verify_valid": 0.93
+          }
+        },
+        "residual_pp": {
+          "v1": {
+            "vs": "c1",
+            "pp": 76.5,
+            "ci95": [
+              70.5,
+              82.5
+            ],
+            "n": 200
+          },
+          "v2": {
+            "vs": "c1_c2",
+            "pp": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n": 200
+          },
+          "v3": {
+            "vs": "c1_c2_c3",
+            "pp": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n": 200
+          },
+          "v4": {
+            "vs": "c1_c2_c3",
+            "pp": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n": 200
+          }
+        },
+        "functional_rate": {
+          "none": 0.0,
+          "c1": 0.0,
+          "c1_c2": 0.0,
+          "c1_c2_c3": 0.0
+        }
+      },
+      "stablehlo_spec_30": {
+        "n": {
+          "none": 30,
+          "c1": 30,
+          "c1_c2": 30,
+          "c1_c2_c3": 30
+        },
+        "rates": {
+          "none": {
+            "v1": 0.6333,
+            "v2": 0.0,
+            "v3": 0.0,
+            "v4": 0.1,
+            "verify_valid": 0.2667
+          },
+          "c1": {
+            "v1": 0.0333,
+            "v2": 0.0,
+            "v3": 0.0667,
+            "v4": 0.2,
+            "verify_valid": 0.7333
+          },
+          "c1_c2": {
+            "v1": 0.0333,
+            "v2": 0.0,
+            "v3": 0.0667,
+            "v4": 0.2,
+            "verify_valid": 0.7333
+          },
+          "c1_c2_c3": {
+            "v1": 0.0333,
+            "v2": 0.0,
+            "v3": 0.0667,
+            "v4": 0.2333,
+            "verify_valid": 0.7333
+          }
+        },
+        "residual_pp": {
+          "v1": {
+            "vs": "c1",
+            "pp": 60.0,
+            "ci95": [
+              43.3,
+              76.7
+            ],
+            "n": 30
+          },
+          "v2": {
+            "vs": "c1_c2",
+            "pp": 0.0,
+            "ci95": [
+              0.0,
+              0.0
+            ],
+            "n": 30
+          },
+          "v3": {
+            "vs": "c1_c2_c3",
+            "pp": -6.7,
+            "ci95": [
+              -16.7,
+              0.0
+            ],
+            "n": 30
+          },
+          "v4": {
+            "vs": "c1_c2_c3",
+            "pp": -13.3,
+            "ci95": [
+              -26.7,
+              -3.3
+            ],
+            "n": 30
+          }
+        },
+        "functional_rate": {
+          "none": 0.0,
+          "c1": 0.0,
+          "c1_c2": 0.0,
+          "c1_c2_c3": 0.0
+        }
+      }
+    }
+  }
+}

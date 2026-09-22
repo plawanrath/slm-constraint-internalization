@@ -1,0 +1,53 @@
+{"dialect": "arith", "id": "001_add-two-ints", "idx": 0, "gate": "pass", "reason": null, "sig": {"name": "add", "arg_types": ["i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "002_subtract-two-ints", "idx": 1, "gate": "pass", "reason": null, "sig": {"name": "sub", "arg_types": ["i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "003_multiply-ints", "idx": 2, "gate": "pass", "reason": null, "sig": {"name": "mul", "arg_types": ["i64", "i64"], "ret": "i64"}}
+{"dialect": "arith", "id": "004_add-floats", "idx": 3, "gate": "pass", "reason": null, "sig": {"name": "addf", "arg_types": ["f32", "f32"], "ret": "f32"}}
+{"dialect": "arith", "id": "005_integer-constant", "idx": 4, "gate": "pass", "reason": null, "sig": {"name": "const42", "arg_types": [], "ret": "i32"}}
+{"dialect": "arith", "id": "006_compare-ints-slt", "idx": 5, "gate": "pass", "reason": null, "sig": {"name": "lt", "arg_types": ["i32", "i32"], "ret": "i1"}}
+{"dialect": "arith", "id": "007_select-by-predicate", "idx": 6, "gate": "pass", "reason": null, "sig": {"name": "pick", "arg_types": ["i1", "f32", "f32"], "ret": "f32"}}
+{"dialect": "arith", "id": "008_chain-add-then-multiply", "idx": 7, "gate": "pass", "reason": null, "sig": {"name": "fma_like", "arg_types": ["i32", "i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "009_alloc-dealloc-memref", "idx": 8, "gate": "excluded", "reason": "no_observable_output", "detail": null}
+{"dialect": "arith", "id": "010_load-from-memref", "idx": 9, "gate": "pass", "reason": null, "sig": {"name": "load", "arg_types": ["memref<?xf32>", "index"], "ret": "f32"}}
+{"dialect": "arith", "id": "011_store-to-memref", "idx": 10, "gate": "pass", "reason": null, "sig": {"name": "store", "arg_types": ["memref<32xf32>", "index", "f32"], "ret": ""}}
+{"dialect": "arith", "id": "012_swap-via-memref", "idx": 11, "gate": "pass", "reason": null, "sig": {"name": "swap", "arg_types": ["memref<2xi32>"], "ret": ""}}
+{"dialect": "arith", "id": "013_index-cast", "idx": 12, "gate": "pass", "reason": null, "sig": {"name": "idx_to_i32", "arg_types": ["index"], "ret": "i32"}}
+{"dialect": "arith", "id": "014_float-constant", "idx": 13, "gate": "pass", "reason": null, "sig": {"name": "pi", "arg_types": [], "ret": "f32"}}
+{"dialect": "arith", "id": "015_neg-float", "idx": 14, "gate": "pass", "reason": null, "sig": {"name": "neg", "arg_types": ["f32"], "ret": "f32"}}
+{"dialect": "arith", "id": "016_bitwise-and", "idx": 15, "gate": "pass", "reason": null, "sig": {"name": "band", "arg_types": ["i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "017_bitwise-or", "idx": 16, "gate": "pass", "reason": null, "sig": {"name": "bor", "arg_types": ["i64", "i64"], "ret": "i64"}}
+{"dialect": "arith", "id": "018_bitwise-xor", "idx": 17, "gate": "pass", "reason": null, "sig": {"name": "bxor", "arg_types": ["i16", "i16"], "ret": "i16"}}
+{"dialect": "arith", "id": "019_shift-left", "idx": 18, "gate": "pass", "reason": null, "sig": {"name": "shl", "arg_types": ["i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "020_shift-right-signed", "idx": 19, "gate": "pass", "reason": null, "sig": {"name": "shr", "arg_types": ["i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "021_divide-signed", "idx": 20, "gate": "pass", "reason": null, "sig": {"name": "divs", "arg_types": ["i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "022_divide-float", "idx": 21, "gate": "pass", "reason": null, "sig": {"name": "divf", "arg_types": ["f64", "f64"], "ret": "f64"}}
+{"dialect": "arith", "id": "023_compare-ints-eq", "idx": 22, "gate": "pass", "reason": null, "sig": {"name": "eq", "arg_types": ["i64", "i64"], "ret": "i1"}}
+{"dialect": "arith", "id": "024_compare-floats-olt", "idx": 23, "gate": "pass", "reason": null, "sig": {"name": "flt", "arg_types": ["f32", "f32"], "ret": "i1"}}
+{"dialect": "arith", "id": "025_extend-int", "idx": 24, "gate": "pass", "reason": null, "sig": {"name": "sext", "arg_types": ["i16"], "ret": "i32"}}
+{"dialect": "arith", "id": "026_truncate-int", "idx": 25, "gate": "pass", "reason": null, "sig": {"name": "trunc", "arg_types": ["i64"], "ret": "i8"}}
+{"dialect": "arith", "id": "027_int-to-float", "idx": 26, "gate": "pass", "reason": null, "sig": {"name": "i2f", "arg_types": ["i32"], "ret": "f32"}}
+{"dialect": "arith", "id": "028_float-to-int", "idx": 27, "gate": "pass", "reason": null, "sig": {"name": "f2i", "arg_types": ["f64"], "ret": "i64"}}
+{"dialect": "arith", "id": "029_extend-float", "idx": 28, "gate": "pass", "reason": null, "sig": {"name": "fext", "arg_types": ["f32"], "ret": "f64"}}
+{"dialect": "arith", "id": "030_truncate-float", "idx": 29, "gate": "pass", "reason": null, "sig": {"name": "ftrunc", "arg_types": ["f64"], "ret": "f32"}}
+{"dialect": "arith", "id": "031_index-constant", "idx": 30, "gate": "pass", "reason": null, "sig": {"name": "zero", "arg_types": [], "ret": "index"}}
+{"dialect": "arith", "id": "032_min-max-ints", "idx": 31, "gate": "pass", "reason": null, "sig": {"name": "min_i", "arg_types": ["i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "033_increment-by-one", "idx": 32, "gate": "pass", "reason": null, "sig": {"name": "inc", "arg_types": ["i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "034_double-value", "idx": 33, "gate": "pass", "reason": null, "sig": {"name": "dbl", "arg_types": ["f32"], "ret": "f32"}}
+{"dialect": "arith", "id": "035_is-positive", "idx": 34, "gate": "pass", "reason": null, "sig": {"name": "is_pos", "arg_types": ["i32"], "ret": "i1"}}
+{"dialect": "arith", "id": "036_abs-value", "idx": 35, "gate": "pass", "reason": null, "sig": {"name": "abs", "arg_types": ["i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "037_memref-load-store-copy", "idx": 36, "gate": "pass", "reason": null, "sig": {"name": "copy_first", "arg_types": ["memref<4xi32>", "memref<4xi32>"], "ret": ""}}
+{"dialect": "arith", "id": "038_memref-sum-two", "idx": 37, "gate": "pass", "reason": null, "sig": {"name": "sum2", "arg_types": ["memref<2xi32>"], "ret": "i32"}}
+{"dialect": "arith", "id": "039_linear-combination", "idx": 38, "gate": "pass", "reason": null, "sig": {"name": "linear", "arg_types": ["f32", "f32", "f32", "f32", "f32"], "ret": "f32"}}
+{"dialect": "arith", "id": "040_square", "idx": 39, "gate": "pass", "reason": null, "sig": {"name": "square", "arg_types": ["i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "041_cube", "idx": 40, "gate": "pass", "reason": null, "sig": {"name": "cube", "arg_types": ["f32"], "ret": "f32"}}
+{"dialect": "arith", "id": "042_boolean-and", "idx": 41, "gate": "pass", "reason": null, "sig": {"name": "land", "arg_types": ["i1", "i1"], "ret": "i1"}}
+{"dialect": "arith", "id": "043_clamp-to-zero", "idx": 42, "gate": "pass", "reason": null, "sig": {"name": "clamp_pos", "arg_types": ["i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "044_memref-write-const", "idx": 43, "gate": "pass", "reason": null, "sig": {"name": "write7", "arg_types": ["memref<4xi32>"], "ret": ""}}
+{"dialect": "arith", "id": "045_alloc-load-dealloc", "idx": 44, "gate": "fail", "reason": "trial0:nondeterministic", "sig": {"name": "alloc_read", "arg_types": [], "ret": "f32"}}
+{"dialect": "arith", "id": "046_bitcast-i32-f32", "idx": 45, "gate": "pass", "reason": null, "sig": {"name": "bc", "arg_types": ["i32"], "ret": "f32"}}
+{"dialect": "arith", "id": "047_not-float-cmp", "idx": 46, "gate": "pass", "reason": null, "sig": {"name": "fne", "arg_types": ["f32", "f32"], "ret": "i1"}}
+{"dialect": "arith", "id": "048_remainder", "idx": 47, "gate": "pass", "reason": null, "sig": {"name": "rem", "arg_types": ["i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "049_memref-2d", "idx": 48, "gate": "pass", "reason": null, "sig": {"name": "load2d", "arg_types": ["memref<4x8xf32>", "index", "index"], "ret": "f32"}}
+{"dialect": "arith", "id": "050_square-root-via-mul", "idx": 49, "gate": "pass", "reason": null, "sig": {"name": "fn", "arg_types": ["f64"], "ret": "f64"}}
+{"dialect": "arith", "id": "051_mean-of-three-ints", "idx": 50, "gate": "pass", "reason": null, "sig": {"name": "mean3", "arg_types": ["i32", "i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "052_abs-diff-ints", "idx": 51, "gate": "pass", "reason": null, "sig": {"name": "absdiff", "arg_types": ["i32", "i32"], "ret": "i32"}}
+{"dialect": "arith", "id": "053_polynomial-2x-plus-1", "idx": 52, "gate": "pass", "reason": null, "sig": {"name": "lin", "arg_types": ["i32"], "ret": "i32"}}
