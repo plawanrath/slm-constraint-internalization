@@ -9,3 +9,7 @@ models, with MLIR as the instrument.
 - `RUNBOOK.md` — environment setup and reproduction commands.
 
 Hardware target: one Apple M4 Max, 128 GB unified memory.
+
+## License
+
+Apache 2.0. See [LICENSE](LICENSE).
